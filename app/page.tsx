@@ -6,6 +6,7 @@ import PricingSection from "@/components/layouts/PricingSection";
 import AdditionalModules from "@/components/layouts/AdditionalModules";
 import WorkProcess from "@/components/layouts/WorkProcess";
 import Footer from "@/components/layouts/Footer";
+import ContactForm from "@/components/layouts/ContactForm";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <PricingSection />
       <AdditionalModules />
       <WorkProcess />
+      <ContactForm/>
       <Footer />
 
     </main>
