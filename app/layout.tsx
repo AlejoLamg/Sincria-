@@ -14,8 +14,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sincro.ia | Desarrollo Web de Alto Rendimiento y Automatización con IA",
+  title: "Sincroia.lat | Desarrollo Web de Alto Rendimiento y Automatización con IA",
   description: "Desplegamos portales web ultra veloces y agentes conversacionales de IA autónomos 24/7 para maximizar las ventas de tu negocio.",
+  icons: {
+    icon: '/favicon.jpg',
+  },
   keywords: [
     "Sincro", "Desarrollo web premium", "Agentes de IA", "Automatización de negocios", 
     "Portales web Next.js", "Inteligencia Artificial para empresas", "Optimización web performance"
@@ -28,6 +31,7 @@ export const metadata: Metadata = {
     siteName: "Sincro.ia",
     locale: "es_CO",
     type: "website",
+    
   },
 };
 
