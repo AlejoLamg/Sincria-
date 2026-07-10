@@ -7,6 +7,7 @@ import AdditionalModules from "@/components/layouts/AdditionalModules";
 import WorkProcess from "@/components/layouts/WorkProcess";
 import Footer from "@/components/layouts/Footer";
 import ContactForm from "@/components/layouts/ContactForm";
+import TechStack from "@/components/layouts/TechStack";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <AdditionalModules />
       <WorkProcess />
       <ContactForm/>
+      <TechStack/>
       <Footer />
 
     </main>
