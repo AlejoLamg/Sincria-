@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -8,15 +11,16 @@ export default function Footer() {
         
         {/* 2. Logo con relación de aspecto optimizada */}
         <div className="text-center md:text-left flex flex-col items-center md:items-start gap-3">
-          <a href="/" aria-label="Ir al inicio">
-            <img 
-              src="/logo.webp" 
-              alt="Logo de Sincro.ia - Ingeniería de Software" 
-              className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" 
-              width={120} 
-              height={32}
-            />
-          </a>
+<Link href="/" aria-label="Ir al inicio">
+  <Image 
+    src="/logo.webp" 
+    alt="Logo de Sincro.ia - Ingeniería de Software" 
+    className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" 
+    width={120} 
+    height={32}
+    priority
+  />
+</Link>
           
           <div className="flex items-center gap-2 text-gray-500 text-xs" role="status">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" aria-hidden="true"></span>
