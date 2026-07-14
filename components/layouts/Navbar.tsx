@@ -52,17 +52,18 @@ export default function Navbar() {
               <span className="absolute bottom-4 left-0 w-0 h-[1px] bg-brand-cyan transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
-              href="#planes"
-              className="group relative text-[11px] font-mono tracking-[0.2em] text-gray-400 hover:text-brand-cyan transition-all duration-300 py-6"
-            >
-              PLANES
-              <span className="absolute bottom-4 left-0 w-0 h-[1px] bg-brand-cyan transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link
               href="#proceso"
               className="group relative text-[11px] font-mono tracking-[0.2em] text-gray-400 hover:text-brand-cyan transition-all duration-300 py-6"
             >
               PROCESO
+              <span className="absolute bottom-4 left-0 w-0 h-[1px] bg-brand-cyan transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+
+            <Link
+              href="#planes"
+              className="group relative text-[11px] font-mono tracking-[0.2em] text-gray-400 hover:text-brand-cyan transition-all duration-300 py-6"
+            >
+              PLANES
               <span className="absolute bottom-4 left-0 w-0 h-[1px] bg-brand-cyan transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </div>
