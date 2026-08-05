@@ -1,43 +1,59 @@
-import { supabase } from '@/lib/supabase';
-import Link from 'next/link';
+import Sidebar from '@/components/layouts/admin/Sidebar';
+import LeadsTable from '@/components/layouts/admin/LeadsTable';
+// Aquí importaremos los demás módulos luego
 
-export default async function DetalleClientePage({ params }: { params: { id: string } }) {
-  const { data: lead, error } = await supabase
-    .from('leads')
-    .select('*')
-    .eq('id', params.id)
-    .single();
-
-  if (error || !lead) {
-    return <div className="text-white p-10">Cliente no encontrado.</div>;
-  }
-
+export default function DashboardPage() {
   return (
-    <div className="space-y-6 max-w-2xl mx-auto p-6 bg-neutral-900 rounded-xl border border-neutral-800">
-      <Link href="/admin" className="text-blue-400 hover:underline">← Volver al Dashboard</Link>
+    <div className="min-h-screen flex bg-sincro-background text-white font-sans">
       
-      <h1 className="text-3xl font-bold text-white">{lead.nombre}</h1>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="p-4 bg-neutral-800 rounded-lg">
-          <p className="text-neutral-500 text-xs uppercase">Email</p>
-          <p className="text-white">{lead.email}</p>
-        </div>
-        <div className="p-4 bg-neutral-800 rounded-lg">
-          <p className="text-neutral-500 text-xs uppercase">Teléfono</p>
-          <p className="text-white">{lead.telefono}</p>
-        </div>
-      </div>
+      {/* 1. Nuestro Sidebar actual (lo estilizaremos después) */}
+      <Sidebar />
 
-      <div className="p-4 bg-neutral-800 rounded-lg">
-        <p className="text-neutral-500 text-xs uppercase">Objetivo</p>
-        <p className="text-blue-400 font-semibold">{lead.objetivo}</p>
-      </div>
+      {/* Área Central Principal */}
+      <main className="flex-1 p-8 overflow-y-auto">
+        
+        {/* Cabecera */}
+        <header className="flex justify-between items-end mb-8">
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight">Welcome back, Alejandro 👋</h1>
+            <p className="text-neutral-400 mt-1 text-sm">Here's what's happening with your business today.</p>
+          </div>
+          {/* Botones de acción (Buscar, Notificaciones) irían aquí */}
+        </header>
 
-      <div className="p-4 bg-neutral-800 rounded-lg">
-        <p className="text-neutral-500 text-xs uppercase">Comentarios adicionales</p>
-        <p className="text-white mt-1">{lead.comentarios || "Sin comentarios."}</p>
-      </div>
+        {/* Espacio para las 4 Tarjetas de Métricas */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+           {/* Aquí crearemos los StatCards */}
+           <div className="h-32 bg-sincro-surface border border-sincro-border rounded-xl"></div>
+           <div className="h-32 bg-sincro-surface border border-sincro-border rounded-xl"></div>
+           <div className="h-32 bg-sincro-surface border border-sincro-border rounded-xl"></div>
+           <div className="h-32 bg-sincro-surface border border-sincro-border rounded-xl"></div>
+        </div>
+
+        {/* Pantalla Dividida: Leads vs Proyectos */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          
+          {/* Columna Izquierda: Nuestra tabla de Leads */}
+          <div className="bg-sincro-surface border border-sincro-border rounded-xl p-6">
+            <h2 className="text-lg font-semibold mb-6 flex items-center gap-2">
+              <span className="text-sincro-blue">🛡️</span> Leads Pipeline
+            </h2>
+            <LeadsTable />
+          </div>
+
+          {/* Columna Derecha: Proyectos (Próximo paso) */}
+          <div className="bg-sincro-surface border border-sincro-border rounded-xl p-6">
+            <h2 className="text-lg font-semibold mb-6 flex items-center gap-2">
+              <span className="text-neutral-400">📁</span> Active Projects
+            </h2>
+            {/* Aquí irá nuestro ProjectsWidget */}
+            <div className="h-64 flex items-center justify-center text-neutral-600 text-sm border border-dashed border-sincro-border rounded-lg">
+              Módulo de proyectos en construcción...
+            </div>
+          </div>
+
+        </div>
+      </main>
     </div>
   );
 }

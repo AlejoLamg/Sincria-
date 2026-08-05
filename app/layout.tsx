@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Sincro Agency" }],
   openGraph: {
-    title: "Sincro.ia | Ecosistema de Automatización Total",
+    title: "SincroIA.LAT | Ecosistema de Automatización Total",
     description: "Portales web de rendimiento extremo y agentes IA autónomos que califican y cierran clientes en piloto automático.",
     url: "https://sincroia.lat",
     siteName: "SincroIA.lat",
