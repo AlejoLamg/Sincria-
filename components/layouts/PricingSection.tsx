@@ -72,7 +72,7 @@ export default function PricingSection() {
           <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">03 / Inversión</span>
           {/* H2 para SEO de servicios */}
           <h2 className="text-4xl md:text-6xl font-light text-white tracking-tight">
-            Soluciones diseñadas <br /> para escalar.
+            Soluciones diseñadas para escalar.
           </h2>
         </motion.div>
         
@@ -109,13 +109,24 @@ export default function PricingSection() {
                   </ul>
                 </div>
 
-                {/* 4. Enlace como botón para mejor SEO */}
-                <a 
-                  href="#contacto" 
-                  className="block text-center w-full py-3 border border-white/20 rounded-lg text-white hover:bg-brand-cyan hover:text-brand-navy transition-all font-bold text-xs tracking-wider group-hover:border-brand-cyan"
+                {/* 4. Botón interactivo que selecciona el plan y desplaza al formulario */}
+                <button 
+                  type="button"
+                  onClick={() => {
+                    const optionMap: { [key: string]: string } = {
+                      "WEB BASE": "Plan Web Base (Página web rápida y moderna)",
+                      "E-COMMERCE": "Plan E-commerce (Tienda virtual optimizada para vender)",
+                      "IA PRO": "Plan IA Pro (Asistente virtual y automatización 24/7)",
+                      "ECOSISTEMA TOTAL": "Plan Ecosistema Total (Solución integral y dashboard)"
+                    };
+                    
+                    window.dispatchEvent(new CustomEvent('selectPlan', { detail: optionMap[plan.name] }));
+                    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="block text-center w-full py-3 border border-white/20 rounded-lg text-white hover:bg-brand-cyan hover:text-brand-navy transition-all font-bold text-xs tracking-wider group-hover:border-brand-cyan cursor-pointer"
                 >
                   ELEGIR {plan.name}
-                </a>
+                </button>
               </article>
             </motion.li>
           ))}
