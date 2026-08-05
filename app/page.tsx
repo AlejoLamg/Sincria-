@@ -16,7 +16,6 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <SolutionsSection />
-      <ProcessSection  />
       <PricingSection />
       <AdditionalModules />
       <WorkProcess />

@@ -40,7 +40,7 @@ export default function HeroSection() {
             href="#contacto" 
             className="w-full sm:w-auto px-8 py-4 rounded-lg bg-brand-cyan text-brand-navy font-mono text-sm tracking-widest font-bold hover:bg-white transition-all shadow-[0_0_20px_rgba(0,229,255,0.2)] hover:shadow-[0_0_30px_rgba(0,229,255,0.4)] active:scale-[0.98]"
           >
-            AGENDAR_AUDITORÍA_IA
+            NICIAR PROYECTO
           </a>
         </div>
       </div>

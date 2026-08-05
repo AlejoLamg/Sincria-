@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import { Toaster } from "sonner"; // 1. Importamos Toaster de sonner
 import "./globals.css";
 
 // Cargamos una fuente geométrica para títulos y una limpia para lectura
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     title: "Sincro.ia | Ecosistema de Automatización Total",
     description: "Portales web de rendimiento extremo y agentes IA autónomos que califican y cierran clientes en piloto automático.",
     url: "https://sincroia.lat",
-    siteName: "Sincro.ia",
+    siteName: "SincroIA.lat",
     locale: "es_CO",
     type: "website",
     
@@ -44,6 +45,8 @@ export default function RootLayout({
     <html lang="es" className="scroll-smooth">
       <body className={`${spaceGrotesk.variable} ${inter.variable} antialiased bg-brand-navy text-white`}>
         {children}
+        {/* 2. Agregamos el contenedor de notificaciones globales con diseño oscuro premium */}
+        <Toaster theme="dark" position="bottom-right" richColors />
       </body>
     </html>
   );

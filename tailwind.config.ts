@@ -14,6 +14,11 @@ const config: Config = {
           cyan: '#00E5FF',    // Flujos de datos e IA (Electric Cyan)
           violet: '#8B5CF6',  // Profundidad y tecnología (Tech Violet)
           coral: '#FF4D00',   // El Spark disruptivo de conversión (Neon Coral)
+          background: "#0A0A0B", // El fondo súper oscuro
+          surface: "#131316",    // El color de las tarjetas
+          border: "#27272A",     // Bordes sutiles
+          blue: "#3B82F6",       // Azul eléctrico
+          purple: "#A855F7",
         },
       },
     },

@@ -41,7 +41,6 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* MENÚ DESKTOP */}
           {/* MENÚ DESKTOP: Estructura Comercial Optimizada */}
           <div className="hidden md:flex items-center space-x-10">
             <Link
@@ -68,11 +67,14 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* BOTÓN CTA: Enfoque en Conversión */}
+          {/* BOTÓN CTA DESKTOP: Ahora es un Link funcional hacia el formulario de contacto */}
           <div className="hidden md:block">
-            <button className="px-6 py-2 rounded-lg bg-brand-cyan text-brand-navy font-mono text-[11px] tracking-widest font-bold hover:bg-white transition-all duration-300">
-              AGENDAR_CONSULTA
-            </button>
+            <Link 
+              href="#contacto"
+              className="inline-block px-6 py-2 rounded-lg bg-brand-cyan text-brand-navy font-mono text-[11px] tracking-widest font-bold hover:bg-white transition-all duration-300"
+            >
+              INICIAR PROYECTO
+            </Link>
           </div>
 
           {/* BOTÓN MENÚ MÓVIL */}
@@ -138,9 +140,15 @@ export default function Navbar() {
           >
             [ PANEL ]
           </Link>
-          <button className="w-full py-3 bg-brand-cyan/10 border border-brand-cyan/40 text-brand-cyan font-mono text-xs rounded-lg tracking-wider">
-            EJECUTAR_IA ⚡
-          </button>
+          
+          {/* BOTÓN CTA MÓVIL: Ahora es funcional, cierra el menú y lleva al contacto */}
+          <Link 
+            href="#contacto"
+            onClick={() => setIsOpen(false)}
+            className="block text-center w-full py-3 bg-brand-cyan/10 border border-brand-cyan/40 text-brand-cyan font-mono text-xs rounded-lg tracking-wider hover:bg-brand-cyan/20 transition-colors"
+          >
+            INICIAR PROYECTO
+          </Link>
         </div>
       </div>
     </nav>
