@@ -5,15 +5,17 @@ import { toast } from "sonner";
 
 export default function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState("¿Qué te gustaría construir o automatizar hoy?");
+  const [selected, setSelected] = useState("Selecciona una opción para tu negocio...");
   const [loading, setLoading] = useState(false);
 
-  const options = ["Una página web rápida y moderna para mi negocio",
-  "Una tienda virtual o e-commerce optimizado para vender con IA",
-  "Un asistente virtual o chat de ventas con IA (24/7)",
-  "Una plataforma completa (Web + Automatizaciones + IA)",
-  "Asesoría técnica para mi empresa",
-  "Optimizar o revisar un sistema que ya tengo"];
+  // Opciones alineadas perfectamente con los planes y el valor de SincroIA
+  const options = [
+    "Plan Web Base (Página web rápida y moderna)",
+    "Plan E-commerce (Tienda virtual optimizada para vender)",
+    "Plan IA Pro (Asistente virtual y automatización 24/7)",
+    "Plan Ecosistema Total (Solución integral y dashboard)",
+    "Asesoría técnica o optimización a medida"
+  ];
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -40,7 +42,7 @@ export default function ContactForm() {
         description: "Nuestro equipo analizará tu caso y te contactará pronto.",
       });
       e.currentTarget.reset();
-      setSelected("Selecciona tu objetivo de inversión");
+      setSelected("Selecciona una opción para tu negocio...");
     }
     setLoading(false);
   };
@@ -88,7 +90,7 @@ export default function ContactForm() {
             id="telefono" 
             name="telefono" 
             type="tel" 
-            placeholder="+57 322 555 6666" 
+            placeholder="+57 300 000 0000" 
             required 
             className="w-full bg-brand-surface border border-white/5 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan/50 outline-none transition-all" 
           />
@@ -96,7 +98,7 @@ export default function ContactForm() {
 
         <div className="space-y-2">
           <label className="block text-xs font-mono uppercase tracking-wider text-gray-400">
-            Objetivo de inversión <span className="text-brand-cyan">*</span>
+            ¿Qué te gustaría construir o automatizar hoy? <span className="text-brand-cyan">*</span>
           </label>
           <div className="relative z-50">
             <button 
@@ -114,7 +116,7 @@ export default function ContactForm() {
                   <li 
                     key={opt}
                     onClick={() => { setSelected(opt); setIsOpen(false); }}
-                    className="p-4 text-gray-300 hover:text-white hover:bg-brand-cyan/10 cursor-pointer transition-colors"
+                    className="p-4 text-gray-300 hover:text-white hover:bg-brand-cyan/10 cursor-pointer transition-colors text-sm"
                   >
                     {opt}
                   </li>

@@ -8,36 +8,48 @@ export default function PricingSection() {
       name: "WEB BASE",
       price: "200",
       features: [
-        "Desarrollo Web en Next.js (Velocidad)",
-        "Hosting de alto rendimiento (Vercel)",
-        "Dominio .com profesional incluido",
-        "SEO Técnico & SSL de seguridad",
-        "Diseño UI/UX adaptativo (Responsive)",
-        "Soporte técnico de lanzamiento"
+        "Páginas ultra veloces que atraen clientes (Next.js)",
+        "Garantía de estabilidad total (Hosting Vercel)",
+        "Identidad lista para operar (Dominio .com incluido)",
+        "Tu web aparece en Google y transmite confianza (SEO & SSL)",
+        "Diseño impecable en celulares y PCs (UI/UX Adaptativo)",
+        "Acompañamiento inicial de lanzamiento"
+      ],
+    },
+    {
+      name: "E-COMMERCE",
+      price: "600",
+      features: [
+        "Tienda virtual optimizada para vender en piloto automático",
+        "Pasarelas de pago y gestión de inventarios integradas",
+        "Velocidad de carga superior para evitar carritos abandonados",
+        "Diseño enfocado 100% en conversión y ventas",
+        "Estructura lista para escalar catálogos grandes",
+        "Soporte técnico especializado de lanzamiento"
       ],
     },
     {
       name: "IA PRO",
       price: "400",
       features: [
-        "Todo lo incluido en Web Base",
-        "Agente de IA personalizado 24/7",
-        "Integración con CRM de ventas",
-        "Automatización de email marketing",
-        "Dashboard básico de prospectos",
-        "Configuración de flujos de venta"
+        "Atención y calificación de clientes 24/7 (Agente IA)",
+        "Centralización de prospectos (Integración con CRM)",
+        "Fidelización en piloto automático (Email marketing)",
+        "Visibilidad clara de tus clientes (Dashboard de prospectos)",
+        "Tus clientes compran de forma guiada (Flujos de venta)",
+        "Automatización operativa inicial"
       ],
     },
     {
       name: "ECOSISTEMA TOTAL",
       price: "1100",
       features: [
-        "Todo lo incluido en IA Pro",
-        "Dashboard de métricas en tiempo real",
-        "Membresía Partner IA (Soporte mensual)",
-        "Automatización de procesos internos",
-        "Reportes estratégicos de ROI",
-        "Soporte técnico prioritario 24/7"
+        "Control total de tu negocio en tiempo real (Dashboard)",
+        "Acompañamiento continuo mensual (Membresía Partner IA)",
+        "Eliminación de tareas manuales (Automatización interna)",
+        "Toma decisiones basadas en datos (Reportes estratégicos)",
+        "Atención preferencial sin filas (Soporte prioritario 24/7)",
+        "La solución integral definitiva para escalar sin límites"
       ],
     }
   ];
@@ -60,36 +72,38 @@ export default function PricingSection() {
           </h2>
         </motion.div>
         
-        {/* 2. Lista semántica (sin alterar tu grid) */}
-        <ul className="grid md:grid-cols-3 gap-8" role="list">
+        {/* 2. Lista semántica adaptada a 4 columnas */}
+        <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" role="list">
           {plans.map((plan, index) => (
             <motion.li 
               key={plan.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
               viewport={{ once: true }}
-              className="p-8 border border-white/10 rounded-2xl bg-white/5 flex flex-col hover:border-brand-cyan/50 transition-all group list-none"
+              className="p-6 border border-white/10 rounded-2xl bg-white/5 flex flex-col justify-between hover:border-brand-cyan/50 transition-all group list-none"
             >
               {/* 3. Article para cada unidad de servicio */}
-              <article>
-                <h3 className="text-brand-cyan font-mono text-xs tracking-widest mb-2">{plan.name}</h3>
-                <div className="text-4xl font-bold text-white mb-6">
-                  ${plan.price} <span className="text-sm font-normal text-gray-500">USD</span>
+              <article className="flex flex-col h-full justify-between">
+                <div>
+                  <h3 className="text-brand-cyan font-mono text-xs tracking-widest mb-2">{plan.name}</h3>
+                  <div className="text-3xl font-bold text-white mb-6">
+                    ${plan.price} <span className="text-sm font-normal text-gray-500">USD</span>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-8" role="list">
+                    {plan.features.map((feat) => (
+                      <li key={feat} className="text-gray-300 text-xs leading-relaxed flex items-start">
+                        <span className="text-brand-cyan mr-2 shrink-0" aria-hidden="true">•</span> {feat}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                
-                <ul className="space-y-4 mb-8 flex-grow" role="list">
-                  {plan.features.map((feat) => (
-                    <li key={feat} className="text-gray-300 text-sm flex items-start">
-                      <span className="text-brand-cyan mr-2" aria-hidden="true">•</span> {feat}
-                    </li>
-                  ))}
-                </ul>
 
                 {/* 4. Enlace como botón para mejor SEO */}
                 <a 
                   href="#contacto" 
-                  className="block text-center w-full py-4 border border-white/20 rounded-lg text-white hover:bg-brand-cyan hover:text-brand-navy transition-all font-bold group-hover:border-brand-cyan"
+                  className="block text-center w-full py-3 border border-white/20 rounded-lg text-white hover:bg-brand-cyan hover:text-brand-navy transition-all font-bold text-xs tracking-wider group-hover:border-brand-cyan"
                 >
                   ELEGIR {plan.name}
                 </a>
