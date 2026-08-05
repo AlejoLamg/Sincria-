@@ -24,6 +24,7 @@ export default function AdditionalModules() {
           className="text-center mb-12"
         >
           {/* 2. H2 para jerarquía de página */}
+          <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">04 / MODULOS</span>
           <h2 id="modules-heading" className="text-3xl font-light text-white mb-2">
             Personaliza tu ecosistema digital
           </h2>

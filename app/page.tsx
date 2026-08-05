@@ -16,9 +16,9 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <SolutionsSection />
+      <WorkProcess />
       <PricingSection />
       <AdditionalModules />
-      <WorkProcess />
       <ContactForm/>
       <TechStack/>
       <Footer />

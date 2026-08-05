@@ -13,7 +13,7 @@ export default function WorkProcess() {
     <section id="proceso" className="py-24 bg-brand-navy border-t border-white/5" aria-labelledby="process-heading">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-20">
-          <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">04 / Metodología</span>
+          <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">02 / Metodología</span>
           <h2 id="process-heading" className="text-4xl md:text-6xl font-light text-white tracking-tight">Tu transformación, <br />en cuatro etapas.</h2>
         </div>
 
