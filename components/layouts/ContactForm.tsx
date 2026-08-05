@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase"; 
 import { toast } from "sonner"; 
+import { motion } from "framer-motion";
 
 export default function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,27 +83,44 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contacto" className="max-w-3xl mx-auto px-6 py-24" aria-labelledby="form-heading">
+    <section id="contacto" className="max-w-4xl mx-auto px-6 py-24 relative overflow-hidden" aria-labelledby="form-heading">
       
+      {/* Halo de luz difuminada de fondo para dar profundidad (Blur) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-cyan/5 blur-[150px] pointer-events-none rounded-full" />
+
       {/* SEÑAL DE CONFIANZA Y TIEMPO DE RESPUESTA */}
-      <div className="text-center mb-10">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-center mb-12 relative z-10"
+      >
         <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-2 block">05 / Contacto Directo</span>
-        <h2 id="form-heading" className="text-3xl font-light text-white tracking-tight mb-3">
+        <h2 id="form-heading" className="text-3xl md:text-5xl font-light text-white tracking-tight mb-3">
           Comencemos a escalar tu negocio
         </h2>
         <p className="text-gray-400 text-sm max-w-lg mx-auto">
           Completa el formulario o escríbenos directamente. Nuestro agente y equipo técnico te atenderán de manera <span className="text-brand-cyan font-medium">inmediata vía WhatsApp</span>.
         </p>
-      </div>
+      </motion.div>
 
-      <form className="space-y-8 bg-brand-background p-8 md:p-10 rounded-2xl border border-white/5 shadow-[0_0_50px_rgba(0,0,0,0.5)]" onSubmit={handleSubmit}>
+      <motion.form 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="space-y-8 bg-brand-surface/40 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.7)] relative z-10" 
+        onSubmit={handleSubmit}
+      >
         
         {/* BLOQUE 1: DATOS DE CONTACTO */}
         <div className="space-y-6">
-          <div className="border-b border-white/10 pb-3">
+          <div className="border-b border-white/10 pb-3 flex items-center justify-between">
             <h3 className="text-xs font-mono uppercase tracking-widest text-brand-cyan">
               1. Tus Datos de Contacto
             </h3>
+            <span className="text-[10px] font-mono text-gray-500">* Campos obligatorios</span>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -116,7 +134,7 @@ export default function ContactForm() {
                 type="text" 
                 placeholder="Ej. Carlos Pérez" 
                 required 
-                className="w-full bg-brand-surface border border-white/5 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan/50 outline-none transition-all" 
+                className="w-full bg-brand-navy/60 border border-white/10 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" 
               />
             </div>
             <div className="space-y-2">
@@ -129,7 +147,7 @@ export default function ContactForm() {
                 type="email" 
                 placeholder="carlos@tuempresa.com" 
                 required 
-                className="w-full bg-brand-surface border border-white/5 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan/50 outline-none transition-all" 
+                className="w-full bg-brand-navy/60 border border-white/10 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" 
               />
             </div>
           </div>
@@ -144,7 +162,7 @@ export default function ContactForm() {
               type="tel" 
               placeholder="+57 300 000 0000" 
               required 
-              className="w-full bg-brand-surface border border-white/5 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan/50 outline-none transition-all" 
+              className="w-full bg-brand-navy/60 border border-white/10 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" 
             />
           </div>
         </div>
@@ -165,19 +183,19 @@ export default function ContactForm() {
               <button 
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full bg-brand-surface border border-white/5 p-4 rounded-xl text-gray-300 text-left flex justify-between items-center hover:border-white/10 transition-all focus:outline-none focus:ring-1 focus:ring-brand-cyan/50"
+                className="w-full bg-brand-navy/60 border border-white/10 p-4 rounded-xl text-gray-300 text-left flex justify-between items-center hover:border-brand-cyan/50 transition-all focus:outline-none focus:ring-1 focus:ring-brand-cyan"
               >
                 {selected}
-                <span className="text-brand-cyan/50">▼</span>
+                <span className="text-brand-cyan transition-transform duration-300" style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>▼</span>
               </button>
               
               {isOpen && (
-                <ul className="absolute left-0 w-full mt-2 bg-brand-navy border border-white/20 rounded-xl overflow-hidden z-[100] shadow-[0_0_40px_rgba(0,0,0,0.8)]">
+                <ul className="absolute left-0 w-full mt-2 bg-brand-navy border border-white/20 rounded-xl overflow-hidden z-[100] shadow-[0_10px_40px_rgba(0,0,0,0.9)] backdrop-blur-xl">
                   {options.map((opt) => (
                     <li 
                       key={opt}
                       onClick={() => { setSelected(opt); setIsOpen(false); }}
-                      className="p-4 text-gray-300 hover:text-white hover:bg-brand-cyan/10 cursor-pointer transition-colors text-sm"
+                      className="p-4 text-gray-300 hover:text-white hover:bg-brand-cyan/10 cursor-pointer transition-colors text-sm border-b border-white/5 last:border-none"
                     >
                       {opt}
                     </li>
@@ -195,7 +213,7 @@ export default function ContactForm() {
               id="comentarios" 
               name="comentarios" 
               placeholder="Cuéntanos brevemente sobre tu proyecto o necesidades actuales..." 
-              className="w-full bg-brand-surface border border-white/5 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan/50 outline-none transition-all h-32 resize-none" 
+              className="w-full bg-brand-navy/60 border border-white/10 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all h-32 resize-none" 
             />
           </div>
         </div>
@@ -211,11 +229,11 @@ export default function ContactForm() {
         <button 
           type="submit" 
           disabled={loading}
-          className="w-full py-4 bg-brand-cyan text-brand-navy font-mono text-xs tracking-widest font-bold rounded-xl hover:bg-white transition-all disabled:opacity-50 cursor-pointer"
+          className="w-full py-4 bg-brand-cyan text-brand-navy font-mono text-xs tracking-widest font-bold rounded-xl hover:bg-white transition-all shadow-[0_0_25px_rgba(0,229,255,0.25)] hover:shadow-[0_0_35px_rgba(0,255,255,0.4)] disabled:opacity-50 cursor-pointer active:scale-[0.99]"
         >
           {loading ? "Iniciando proyecto..." : "Iniciar Proyecto"}
         </button>
-      </form>
+      </motion.form>
     </section>
   );
 }

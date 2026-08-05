@@ -47,6 +47,7 @@ export default function PricingSection() {
       name: "ECOSISTEMA TOTAL",
       price: "1100",
       billing: "+ Soporte mensual",
+      popular: true, // Destacamos este como la opción más robusta
       features: [
         "Control total de tu negocio en tiempo real (Dashboard)",
         "Acompañamiento continuo mensual (Membresía Partner IA)",
@@ -59,9 +60,13 @@ export default function PricingSection() {
   ];
 
   return (
-    // 1. Semantic <section>
-    <section id="planes" className="py-24 bg-brand-navy" aria-label="Planes de inversión">
-      <div className="max-w-7xl mx-auto px-6">
+    // 1. Semantic <section> con un sutil gradiente de profundidad de fondo
+    <section id="planes" className="py-24 bg-brand-navy relative overflow-hidden" aria-label="Planes de inversión">
+      
+      {/* Halo de luz difuminada (Blur de fondo) para dar profundidad */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-brand-cyan/5 blur-[140px] pointer-events-none rounded-full" />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,14 +75,13 @@ export default function PricingSection() {
           className="text-center mb-16"
         >
           <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">03 / Inversión</span>
-          {/* H2 para SEO de servicios */}
           <h2 className="text-4xl md:text-6xl font-light text-white tracking-tight">
             Soluciones diseñadas para escalar.
           </h2>
         </motion.div>
         
         {/* 2. Lista semántica adaptada a 4 columnas */}
-        <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" role="list">
+        <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch" role="list">
           {plans.map((plan, index) => (
             <motion.li 
               key={plan.name}
@@ -85,8 +89,18 @@ export default function PricingSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               viewport={{ once: true }}
-              className="p-6 border border-white/10 rounded-2xl bg-white/5 flex flex-col justify-between hover:border-brand-cyan/50 transition-all group list-none"
+              className={`p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 list-none group relative ${
+                plan.popular 
+                  ? "bg-brand-surface/90 border-2 border-brand-cyan shadow-[0_20px_50px_rgba(0,229,255,0.12)] hover:-translate-y-2" 
+                  : "bg-brand-surface/40 backdrop-blur-sm border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:-translate-y-1.5 hover:border-brand-cyan/40 hover:shadow-[0_15px_40px_rgba(0,0,0,0.7)]"
+              }`}
             >
+              {plan.popular && (
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-brand-cyan text-brand-navy font-mono text-[9px] tracking-widest font-bold rounded-full uppercase shadow-lg">
+                  Recomendado
+                </span>
+              )}
+
               {/* 3. Article para cada unidad de servicio */}
               <article className="flex flex-col h-full justify-between">
                 <div>
@@ -109,7 +123,7 @@ export default function PricingSection() {
                   </ul>
                 </div>
 
-                {/* 4. Botón interactivo que selecciona el plan y desplaza al formulario */}
+                {/* 4. Botón interactivo */}
                 <button 
                   type="button"
                   onClick={() => {
@@ -123,7 +137,11 @@ export default function PricingSection() {
                     window.dispatchEvent(new CustomEvent('selectPlan', { detail: optionMap[plan.name] }));
                     document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="block text-center w-full py-3 border border-white/20 rounded-lg text-white hover:bg-brand-cyan hover:text-brand-navy transition-all font-bold text-xs tracking-wider group-hover:border-brand-cyan cursor-pointer"
+                  className={`block text-center w-full py-3 rounded-lg transition-all font-bold text-xs tracking-wider cursor-pointer ${
+                    plan.popular
+                      ? "bg-brand-cyan text-brand-navy hover:bg-white shadow-[0_0_20px_rgba(0,229,255,0.3)]"
+                      : "border border-white/20 text-white hover:bg-brand-cyan hover:text-brand-navy hover:border-brand-cyan"
+                  }`}
                 >
                   ELEGIR {plan.name}
                 </button>
