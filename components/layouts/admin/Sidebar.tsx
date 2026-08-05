@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function Sidebar() {
   // En tu lista de menuItems
-const menuItems = ["Dashboard", "Clientes", "Automatizaciones", "Configuración"];
+const menuItems = ["Clientes", "Automatizaciones", "Configuración"];
   return (
     <aside className="w-64 bg-neutral-900 border-r border-neutral-800 h-screen flex flex-col p-6">
       {/* Logo Area */}
       <div className="mb-10 flex justify-center">
         <Image 
           src="/logo.webp" 
-          alt="Sincro.ia Logo" 
+          alt="SincroIA.lat Logo" 
           width={140} 
           height={40} 
           priority 

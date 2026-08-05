@@ -7,6 +7,7 @@ export default function PricingSection() {
     {
       name: "WEB BASE",
       price: "200",
+      billing: "Pago único",
       features: [
         "Páginas ultra veloces que atraen clientes (Next.js)",
         "Garantía de estabilidad total (Hosting Vercel)",
@@ -19,6 +20,7 @@ export default function PricingSection() {
     {
       name: "E-COMMERCE",
       price: "600",
+      billing: "Pago único",
       features: [
         "Tienda virtual optimizada para vender en piloto automático",
         "Pasarelas de pago y gestión de inventarios integradas",
@@ -31,6 +33,7 @@ export default function PricingSection() {
     {
       name: "IA PRO",
       price: "400",
+      billing: "Pago único",
       features: [
         "Atención y calificación de clientes 24/7 (Agente IA)",
         "Centralización de prospectos (Integración con CRM)",
@@ -43,6 +46,7 @@ export default function PricingSection() {
     {
       name: "ECOSISTEMA TOTAL",
       price: "1100",
+      billing: "+ Soporte mensual",
       features: [
         "Control total de tu negocio en tiempo real (Dashboard)",
         "Acompañamiento continuo mensual (Membresía Partner IA)",
@@ -87,8 +91,13 @@ export default function PricingSection() {
               <article className="flex flex-col h-full justify-between">
                 <div>
                   <h3 className="text-brand-cyan font-mono text-xs tracking-widest mb-2">{plan.name}</h3>
-                  <div className="text-3xl font-bold text-white mb-6">
-                    ${plan.price} <span className="text-sm font-normal text-gray-500">USD</span>
+                  <div className="mb-6">
+                    <div className="text-3xl font-bold text-white">
+                      ${plan.price} <span className="text-sm font-normal text-gray-500">USD</span>
+                    </div>
+                    <span className="text-[11px] font-mono text-brand-cyan mt-1 block">
+                      {plan.billing}
+                    </span>
                   </div>
                   
                   <ul className="space-y-3 mb-8" role="list">
