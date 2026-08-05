@@ -27,13 +27,11 @@ export default function AdditionalModules() {
     }
 
     setSelectedModules(updated);
-
-    // Disparamos el evento para que el formulario de contacto lo capture y lo agregue a los comentarios
     window.dispatchEvent(new CustomEvent('selectModules', { detail: updated }));
   };
 
   return (
-    <section className="py-16 bg-brand-navy border-t border-white/5" aria-labelledby="modules-heading">
+    <section className="py-16 bg-brand-navy border-t border-white/5 overflow-hidden" aria-labelledby="modules-heading">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0 }}
@@ -46,20 +44,24 @@ export default function AdditionalModules() {
             Personaliza tu ecosistema digital
           </h2>
           <p className="text-gray-400 text-sm max-w-lg mx-auto">
-            Potencia tu plataforma con módulos de ingeniería avanzada. Selecciona los que necesites para sumarlos a tu proyecto.
+            Potencia tu plataforma con módulos avanzados. Desliza y selecciona los que necesites para tu proyecto.
           </p>
         </motion.div>
 
-        <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-4" role="list">
+        {/* 
+          MODO MOBILE: Carrusel horizontal con scroll-snap y barra oculta
+          MODO DESKTOP: Grid clásico de 4 columnas
+        */}
+        <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-auto md:overflow-visible pb-6 md:pb-0 snap-x snap-mandatory scrollbar-none">
           {modules.map((mod) => {
             const itemText = `${mod.name} (${mod.price} USD)`;
             const isSelected = selectedModules.includes(itemText);
 
             return (
-              <motion.li 
+              <motion.div 
                 key={mod.name}
                 whileHover={{ y: -5 }}
-                className={`p-6 border rounded-xl bg-white/[0.02] transition-all list-none flex flex-col justify-between ${
+                className={`min-w-[280px] md:min-w-0 p-6 border rounded-xl bg-white/[0.02] transition-all flex flex-col justify-between snap-center shrink-0 ${
                   isSelected ? "border-brand-cyan bg-brand-cyan/5 shadow-[0_0_20px_rgba(0,229,255,0.15)]" : "border-white/10 hover:border-brand-cyan/50"
                 }`}
               >
@@ -84,10 +86,10 @@ export default function AdditionalModules() {
                     {isSelected ? "✓ Agregado" : "+ Agregar al proyecto"}
                   </button>
                 </article>
-              </motion.li>
+              </motion.div>
             );
           })}
-        </ul>
+        </div>
       </div>
     </section>
   );
