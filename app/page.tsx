@@ -9,6 +9,7 @@ import Footer from "@/components/layouts/Footer";
 import ContactForm from "@/components/layouts/ContactForm";
 import TechStack from "@/components/layouts/TechStack";
 import WhatsAppButton from "@/components/layouts/WhatsAppButton";
+import FaqSection from "@/components/layouts/FaqSection";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <PricingSection />
       <AdditionalModules />
       <ContactForm/>
+      <FaqSection/>
       <TechStack/>
       <Footer />
       <WhatsAppButton/>
