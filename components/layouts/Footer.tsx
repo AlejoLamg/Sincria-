@@ -14,7 +14,7 @@ export default function Footer() {
           <Link href="/" aria-label="Ir al inicio">
             <Image 
               src="/logo.webp" 
-              alt="Logo de Sincro.ia - Ingeniería de Software" 
+              alt="Logo de SincroIA.lat - Ingeniería de Software" 
               className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" 
               width={120} 
               height={32}

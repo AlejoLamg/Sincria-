@@ -3,12 +3,16 @@ import { motion } from "framer-motion";
 
 export default function AdditionalModules() {
   const modules = [
-    { name: "E-commerce Completo", desc: "Catálogo, carrito y pagos seguros.", price: "+$500" },
-    { name: "Facturación Electrónica", desc: "API para procesos legales automáticos.", price: "+$300" },
+   { 
+  name: "Cobros Recurrentes", 
+  desc: "Automatiza membresías, cobros periódicos y pasarelas de pago.", 
+  price: "+$100"
+},
+    { name: "Facturación Electrónica", desc: "API para procesos legales automáticos.", price: "+$500" },
     { name: "Métricas Avanzadas", desc: "Dashboard con insights en tiempo real.", price: "+$250" },
     { name: "Agente Ventas Pro", desc: "IA con base de datos personalizada.", price: "+$400" },
-    { name: "CRM Omnicanal", desc: "Gestiona WhatsApp, IG y Web en un solo lugar.", price: "+$350" },
-    { name: "Sistema de Reservas", desc: "Booking automático y recordatorios.", price: "+$200" },
+    { name: "CRM Omnicanal", desc: "Gestiona WhatsApp, IG y Web en un solo lugar.", price: "+$250" },
+    { name: "Sistema de Reservas", desc: "Booking automático y recordatorios.", price: "+$150" },
     { name: "Seguridad & Backups", desc: "Protección premium y copias diarias.", price: "+$150" },
     { name: "Integraciones API", desc: "Conecta tu web con cualquier sistema.", price: "+$600" },
   ];
@@ -24,7 +28,7 @@ export default function AdditionalModules() {
           className="text-center mb-12"
         >
           {/* 2. H2 para jerarquía de página */}
-          <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">04 / MODULOS</span>
+          <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">04 / Modulos</span>
           <h2 id="modules-heading" className="text-3xl font-light text-white mb-2">
             Personaliza tu ecosistema digital
           </h2>

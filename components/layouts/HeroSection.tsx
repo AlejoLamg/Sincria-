@@ -30,7 +30,8 @@ export default function HeroSection() {
 
         {/* SUBTÍTULO: Beneficio claro + Solución */}
         <p className="mt-4 max-w-2xl mx-auto text-base md:text-xl text-gray-400 mb-10 font-sans leading-relaxed">
-          Diseñamos sistemas autónomos a medida que eliminan tareas manuales. 
+          Diseñamos sistemas autónomos a medida que eliminan tareas manuales.  
+          
           <span className="block text-white mt-2 font-medium">Transforma tu operación y escala tu rentabilidad con ingeniería de alto impacto.</span>
         </p>
 

@@ -123,7 +123,7 @@ export default async function AdminDashboardPage({
   return (
     <div className="space-y-6">
       <header className="flex justify-between items-center bg-neutral-900 p-6 rounded-xl border border-neutral-800 shadow-sm">
-        <h1 className="text-2xl font-bold text-white">Dashboard Sincro.ia</h1>
+        <h1 className="text-2xl font-bold text-white">Dashboard SincroIA.lat</h1>
         <button className="bg-neutral-800 text-white px-4 py-2 rounded-md hover:bg-neutral-700 transition">
           Actualizar Datos
         </button>
@@ -210,50 +210,6 @@ export default async function DetalleClientePage({ params }: { params: { id: str
 }
 </file>
 
-<file path="components/layouts/admin/Sidebar.tsx">
-import Image from "next/image";
-
-export default function Sidebar() {
-  // En tu lista de menuItems
-const menuItems = ["Dashboard", "Clientes", "Automatizaciones", "Configuración"];
-  return (
-    <aside className="w-64 bg-neutral-900 border-r border-neutral-800 h-screen flex flex-col p-6">
-      {/* Logo Area */}
-      <div className="mb-10 flex justify-center">
-        <Image 
-          src="/logo.webp" 
-          alt="Sincro.ia Logo" 
-          width={140} 
-          height={40} 
-          priority 
-        />
-      </div>
-
-      {/* Navigation */}
-      <nav className="flex-1 space-y-2">
-        {menuItems.map((item) => (
-          <a 
-            key={item} 
-            href={`/admin/${item.toLowerCase()}`} 
-            className="block px-4 py-3 text-neutral-400 hover:text-white hover:bg-neutral-800 rounded-lg transition-all font-medium text-sm tracking-tight"
-          >
-            {item}
-          </a>
-        ))}
-      </nav>
-
-      {/* User Section (Opcional, pero muy pro) */}
-      <div className="pt-6 border-t border-neutral-800">
-        <p className="text-xs text-neutral-500 uppercase tracking-widest font-semibold">
-          Administrador
-        </p>
-        <p className="text-sm text-white mt-1">Alejo Melo</p>
-      </div>
-    </aside>
-  );
-}
-</file>
-
 <file path="components/layouts/WhatsAppButton.tsx">
 "use client";
 import React from 'react';
@@ -261,7 +217,7 @@ import React from 'react';
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/57TU_NUMERO_AQUI?text=Hola,%20me%20gustaría%20más%20información%20sobre%20los%20servicios%20de%20Sincro.ia"
+      href="https://wa.me/57TU_NUMERO_AQUI?text=Hola,%20me%20gustaría%20más%20información%20sobre%20los%20servicios%20de%20SincroIA.lat"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-8 right-8 z-50 w-14 h-14 flex items-center justify-center rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-all duration-300"
@@ -431,37 +387,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 </file>
 
-<file path="tailwind.config.ts">
-import type { Config } from "tailwindcss";
-
-const config: Config = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        brand: {
-          navy: '#0A0F1E',    // Fondo inmersivo base (Midnight Navy)
-          cyan: '#00E5FF',    // Flujos de datos e IA (Electric Cyan)
-          violet: '#8B5CF6',  // Profundidad y tecnología (Tech Violet)
-          coral: '#FF4D00',   // El Spark disruptivo de conversión (Neon Coral)
-          background: "#0A0A0B", // El fondo súper oscuro
-          surface: "#131316",    // El color de las tarjetas
-          border: "#27272A",     // Bordes sutiles
-          blue: "#3B82F6",       // Azul eléctrico
-          purple: "#A855F7",
-        },
-      },
-    },
-  },
-  plugins: [],
-};
-export default config;
-</file>
-
 <file path="tsconfig.json">
 {
   "compilerOptions": {
@@ -602,370 +527,46 @@ export default async function LeadsTable({ query = "" }: LeadsTableProps) {
 }
 </file>
 
-<file path="components/layouts/AdditionalModules.tsx">
-"use client";
-import { motion } from "framer-motion";
+<file path="components/layouts/admin/Sidebar.tsx">
+import Image from "next/image";
 
-export default function AdditionalModules() {
-  const modules = [
-    { name: "E-commerce Completo", desc: "Catálogo, carrito y pagos seguros.", price: "+$500" },
-    { name: "Facturación Electrónica", desc: "API para procesos legales automáticos.", price: "+$300" },
-    { name: "Métricas Avanzadas", desc: "Dashboard con insights en tiempo real.", price: "+$250" },
-    { name: "Agente Ventas Pro", desc: "IA con base de datos personalizada.", price: "+$400" },
-    { name: "CRM Omnicanal", desc: "Gestiona WhatsApp, IG y Web en un solo lugar.", price: "+$350" },
-    { name: "Sistema de Reservas", desc: "Booking automático y recordatorios.", price: "+$200" },
-    { name: "Seguridad & Backups", desc: "Protección premium y copias diarias.", price: "+$150" },
-    { name: "Integraciones API", desc: "Conecta tu web con cualquier sistema.", price: "+$600" },
-  ];
-
+export default function Sidebar() {
+  // En tu lista de menuItems
+const menuItems = ["Clientes", "Automatizaciones", "Configuración"];
   return (
-    // 1. Semantic Section
-    <section className="py-16 bg-brand-navy border-t border-white/5" aria-labelledby="modules-heading">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="text-center mb-12"
-        >
-          {/* 2. H2 para jerarquía de página */}
-          <h2 id="modules-heading" className="text-3xl font-light text-white mb-2">
-            Personaliza tu ecosistema digital
-          </h2>
-          <p className="text-gray-400 text-sm max-w-lg mx-auto">
-            Potencia tu plataforma con módulos de ingeniería avanzada, diseñados para escalar tu operación.
-          </p>
-        </motion.div>
-
-        {/* 3. List semántica para motores de búsqueda */}
-        <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-4" role="list">
-          {modules.map((mod) => (
-            <motion.li 
-              key={mod.name}
-              whileHover={{ y: -5 }}
-              className="p-6 border border-white/10 rounded-xl bg-white/[0.02] hover:border-brand-cyan/50 transition-all list-none"
-            >
-              <article>
-                <h3 className="text-white font-medium mb-1">{mod.name}</h3>
-                <p className="text-gray-500 text-[11px] mb-4">{mod.desc}</p>
-                <div className="text-brand-cyan font-bold text-sm" aria-label={`Precio: ${mod.price}`}>
-                  {mod.price} USD
-                </div>
-              </article>
-            </motion.li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  );
-}
-</file>
-
-<file path="components/layouts/HeroSection.tsx">
-export default function HeroSection() {
-  return (
-    // 1. Semantic Section
-    <section 
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-navy pt-20"
-      aria-label="Introducción a servicios de automatización"
-    >
-      
-      {/* GRILLA TÉCNICA Y GLOW */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-brand-violet opacity-20 blur-[120px]"></div>
+    <aside className="w-64 bg-neutral-900 border-r border-neutral-800 h-screen flex flex-col p-6">
+      {/* Logo Area */}
+      <div className="mb-10 flex justify-center">
+        <Image 
+          src="/logo.webp" 
+          alt="SincroIA.lat Logo" 
+          width={140} 
+          height={40} 
+          priority 
+        />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        
-        {/* GANCHO SEO: Especificidad técnica */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan font-mono text-[10px] tracking-widest mb-8">
-          <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse" aria-hidden="true"></span>
-          AGENCIA DE INGENIERÍA DE SOFTWARE EN BOGOTÁ
-        </div>
-
-        {/* TITULAR: Clarity + Keywords */}
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 font-space leading-[1.1]">
-          Automatización de Negocios e <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-violet">
-            Inteligencia Artificial
-          </span>
-        </h1>
-
-        {/* SUBTÍTULO: Beneficio claro + Solución */}
-        <p className="mt-4 max-w-2xl mx-auto text-base md:text-xl text-gray-400 mb-10 font-sans leading-relaxed">
-          Diseñamos sistemas autónomos a medida que eliminan tareas manuales. 
-          <span className="block text-white mt-2 font-medium">Transforma tu operación y escala tu rentabilidad con ingeniería de alto impacto.</span>
-        </p>
-
-        {/* CTA */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+      {/* Navigation */}
+      <nav className="flex-1 space-y-2">
+        {menuItems.map((item) => (
           <a 
-            href="#contacto" 
-            className="w-full sm:w-auto px-8 py-4 rounded-lg bg-brand-cyan text-brand-navy font-mono text-sm tracking-widest font-bold hover:bg-white transition-all shadow-[0_0_20px_rgba(0,229,255,0.2)] hover:shadow-[0_0_30px_rgba(0,229,255,0.4)] active:scale-[0.98]"
+            key={item} 
+            href={`/admin/${item.toLowerCase()}`} 
+            className="block px-4 py-3 text-neutral-400 hover:text-white hover:bg-neutral-800 rounded-lg transition-all font-medium text-sm tracking-tight"
           >
-            AGENDAR_AUDITORÍA_IA
+            {item}
           </a>
-        </div>
+        ))}
+      </nav>
+
+      {/* User Section (Opcional, pero muy pro) */}
+      <div className="pt-6 border-t border-neutral-800">
+        <p className="text-xs text-neutral-500 uppercase tracking-widest font-semibold">
+          Administrador
+        </p>
+        <p className="text-sm text-white mt-1">Alejo Melo</p>
       </div>
-    </section>
-  );
-}
-</file>
-
-<file path="components/layouts/Navbar.tsx">
-"use client";
-
-import { useState, useEffect } from "react";
-import Link from "next/link";
-
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  // Efecto de vidrio líquido al hacer scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        isScrolled
-          ? "h-16 bg-brand-navy/80 backdrop-blur-lg border-b border-brand-violet/10 shadow-[0_4px_30px_rgba(10,15,30,0.4)]"
-          : "h-24 bg-transparent border-b border-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-full">
-          {/* LOGO: Imagen PNG Transparente Original */}
-          <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center group cursor-pointer">
-              <img
-                src="/logo.webp"
-                alt="Sincro.ia Logo"
-                className="h-9 md:h-10 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
-              />
-            </Link>
-          </div>
-
-          {/* MENÚ DESKTOP */}
-          {/* MENÚ DESKTOP: Estructura Comercial Optimizada */}
-          <div className="hidden md:flex items-center space-x-10">
-            <Link
-              href="#soluciones"
-              className="group relative text-[11px] font-mono tracking-[0.2em] text-gray-400 hover:text-brand-cyan transition-all duration-300 py-6"
-            >
-              SOLUCIONES
-              <span className="absolute bottom-4 left-0 w-0 h-[1px] bg-brand-cyan transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link
-              href="#proceso"
-              className="group relative text-[11px] font-mono tracking-[0.2em] text-gray-400 hover:text-brand-cyan transition-all duration-300 py-6"
-            >
-              PROCESO
-              <span className="absolute bottom-4 left-0 w-0 h-[1px] bg-brand-cyan transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-
-            <Link
-              href="#planes"
-              className="group relative text-[11px] font-mono tracking-[0.2em] text-gray-400 hover:text-brand-cyan transition-all duration-300 py-6"
-            >
-              PLANES
-              <span className="absolute bottom-4 left-0 w-0 h-[1px] bg-brand-cyan transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          </div>
-
-          {/* BOTÓN CTA: Enfoque en Conversión */}
-          <div className="hidden md:block">
-            <button className="px-6 py-2 rounded-lg bg-brand-cyan text-brand-navy font-mono text-[11px] tracking-widest font-bold hover:bg-white transition-all duration-300">
-              AGENDAR_CONSULTA
-            </button>
-          </div>
-
-          {/* BOTÓN MENÚ MÓVIL */}
-          <div className="flex md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white transition-colors"
-            >
-              <svg
-                className="h-6 w-6"
-                stroke="currentColor"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                {isOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* MENÚ MÓVIL DESPLEGABLE */}
-      <div
-        className={`md:hidden absolute top-full left-0 w-full bg-brand-navy/95 backdrop-blur-lg border-b border-brand-violet/10 transition-all duration-300 overflow-hidden ${
-          isOpen
-            ? "max-h-64 opacity-100 py-4 px-4"
-            : "max-h-0 opacity-0 pointer-events-none"
-        }`}
-      >
-        <div className="flex flex-col space-y-4">
-          <Link
-            href="#caracteristicas"
-            onClick={() => setIsOpen(false)}
-            className="text-sm font-mono text-gray-400 hover:text-brand-cyan py-1"
-          >
-            [ CARACTERÍSTICAS ]
-          </Link>
-          <Link
-            href="#planes"
-            onClick={() => setIsOpen(false)}
-            className="text-sm font-mono text-gray-400 hover:text-brand-cyan py-1"
-          >
-            [ PLANES ]
-          </Link>
-          <Link
-            href="/dashboard"
-            onClick={() => setIsOpen(false)}
-            className="text-sm font-mono text-gray-400 hover:text-brand-cyan py-1"
-          >
-            [ PANEL ]
-          </Link>
-          <button className="w-full py-3 bg-brand-cyan/10 border border-brand-cyan/40 text-brand-cyan font-mono text-xs rounded-lg tracking-wider">
-            EJECUTAR_IA ⚡
-          </button>
-        </div>
-      </div>
-    </nav>
-  );
-}
-</file>
-
-<file path="components/layouts/PricingSection.tsx">
-"use client";
-
-import { motion } from "framer-motion";
-
-export default function PricingSection() {
-  const plans = [
-    {
-      name: "WEB BASE",
-      price: "200",
-      features: [
-        "Desarrollo Web en Next.js (Velocidad)",
-        "Hosting de alto rendimiento (Vercel)",
-        "Dominio .com profesional incluido",
-        "SEO Técnico & SSL de seguridad",
-        "Diseño UI/UX adaptativo (Responsive)",
-        "Soporte técnico de lanzamiento"
-      ],
-    },
-    {
-      name: "IA PRO",
-      price: "400",
-      features: [
-        "Todo lo incluido en Web Base",
-        "Agente de IA personalizado 24/7",
-        "Integración con CRM de ventas",
-        "Automatización de email marketing",
-        "Dashboard básico de prospectos",
-        "Configuración de flujos de venta"
-      ],
-    },
-    {
-      name: "ECOSISTEMA TOTAL",
-      price: "1100",
-      features: [
-        "Todo lo incluido en IA Pro",
-        "Dashboard de métricas en tiempo real",
-        "Membresía Partner IA (Soporte mensual)",
-        "Automatización de procesos internos",
-        "Reportes estratégicos de ROI",
-        "Soporte técnico prioritario 24/7"
-      ],
-    }
-  ];
-
-  return (
-    // 1. Semantic <section>
-    <section id="planes" className="py-24 bg-brand-navy" aria-label="Planes de inversión">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">03 / Inversión</span>
-          {/* H2 para SEO de servicios */}
-          <h2 className="text-4xl md:text-6xl font-light text-white tracking-tight">
-            Soluciones diseñadas <br /> para escalar.
-          </h2>
-        </motion.div>
-        
-        {/* 2. Lista semántica (sin alterar tu grid) */}
-        <ul className="grid md:grid-cols-3 gap-8" role="list">
-          {plans.map((plan, index) => (
-            <motion.li 
-              key={plan.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="p-8 border border-white/10 rounded-2xl bg-white/5 flex flex-col hover:border-brand-cyan/50 transition-all group list-none"
-            >
-              {/* 3. Article para cada unidad de servicio */}
-              <article>
-                <h3 className="text-brand-cyan font-mono text-xs tracking-widest mb-2">{plan.name}</h3>
-                <div className="text-4xl font-bold text-white mb-6">
-                  ${plan.price} <span className="text-sm font-normal text-gray-500">USD</span>
-                </div>
-                
-                <ul className="space-y-4 mb-8 flex-grow" role="list">
-                  {plan.features.map((feat) => (
-                    <li key={feat} className="text-gray-300 text-sm flex items-start">
-                      <span className="text-brand-cyan mr-2" aria-hidden="true">•</span> {feat}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* 4. Enlace como botón para mejor SEO */}
-                <a 
-                  href="#contacto" 
-                  className="block text-center w-full py-4 border border-white/20 rounded-lg text-white hover:bg-brand-cyan hover:text-brand-navy transition-all font-bold group-hover:border-brand-cyan"
-                >
-                  ELEGIR {plan.name}
-                </a>
-              </article>
-            </motion.li>
-          ))}
-        </ul>
-      </div>
-    </section>
+    </aside>
   );
 }
 </file>
@@ -1138,6 +739,106 @@ export default function TechStack() {
 }
 </file>
 
+<file path="lib/supabase.ts">
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = 'https://zntgtcpalrfefwzntije.supabase.co';
+const supabaseKey = 'sb_publishable_JUBag4x9yx1YK0jXr8eMOQ_zNVYRGX3';
+
+export const supabase = createClient(supabaseUrl, supabaseKey);
+</file>
+
+<file path="tailwind.config.ts">
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          navy: '#0A0F1E',    // Fondo inmersivo base (Midnight Navy)
+          cyan: '#00E5FF',    // Flujos de datos e IA (Electric Cyan)
+          violet: '#8B5CF6',  // Profundidad y tecnología (Tech Violet)
+          coral: '#FF4D00',   // El Spark disruptivo de conversión (Neon Coral)
+          background: "#0A0A0B", // El fondo súper oscuro
+          surface: "#131316",    // El color de las tarjetas
+          border: "#27272A",     // Bordes sutiles
+          blue: "#3B82F6",       // Azul eléctrico
+          purple: "#A855F7",
+        },
+      },
+    },
+  },
+  plugins: [],
+};
+export default config;
+</file>
+
+<file path="components/layouts/AdditionalModules.tsx">
+"use client";
+import { motion } from "framer-motion";
+
+export default function AdditionalModules() {
+  const modules = [
+    { name: "E-commerce Completo", desc: "Catálogo, carrito y pagos seguros.", price: "+$500" },
+    { name: "Facturación Electrónica", desc: "API para procesos legales automáticos.", price: "+$300" },
+    { name: "Métricas Avanzadas", desc: "Dashboard con insights en tiempo real.", price: "+$250" },
+    { name: "Agente Ventas Pro", desc: "IA con base de datos personalizada.", price: "+$400" },
+    { name: "CRM Omnicanal", desc: "Gestiona WhatsApp, IG y Web en un solo lugar.", price: "+$350" },
+    { name: "Sistema de Reservas", desc: "Booking automático y recordatorios.", price: "+$200" },
+    { name: "Seguridad & Backups", desc: "Protección premium y copias diarias.", price: "+$150" },
+    { name: "Integraciones API", desc: "Conecta tu web con cualquier sistema.", price: "+$600" },
+  ];
+
+  return (
+    // 1. Semantic Section
+    <section className="py-16 bg-brand-navy border-t border-white/5" aria-labelledby="modules-heading">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-center mb-12"
+        >
+          {/* 2. H2 para jerarquía de página */}
+          <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">04 / MODULOS</span>
+          <h2 id="modules-heading" className="text-3xl font-light text-white mb-2">
+            Personaliza tu ecosistema digital
+          </h2>
+          <p className="text-gray-400 text-sm max-w-lg mx-auto">
+            Potencia tu plataforma con módulos de ingeniería avanzada, diseñados para escalar tu operación.
+          </p>
+        </motion.div>
+
+        {/* 3. List semántica para motores de búsqueda */}
+        <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-4" role="list">
+          {modules.map((mod) => (
+            <motion.li 
+              key={mod.name}
+              whileHover={{ y: -5 }}
+              className="p-6 border border-white/10 rounded-xl bg-white/[0.02] hover:border-brand-cyan/50 transition-all list-none"
+            >
+              <article>
+                <h3 className="text-white font-medium mb-1">{mod.name}</h3>
+                <p className="text-gray-500 text-[11px] mb-4">{mod.desc}</p>
+                <div className="text-brand-cyan font-bold text-sm" aria-label={`Precio: ${mod.price}`}>
+                  {mod.price} USD
+                </div>
+              </article>
+            </motion.li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+</file>
+
 <file path="components/layouts/WorkProcess.tsx">
 "use client";
 import { motion } from "framer-motion";
@@ -1154,7 +855,7 @@ export default function WorkProcess() {
     <section id="proceso" className="py-24 bg-brand-navy border-t border-white/5" aria-labelledby="process-heading">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-20">
-          <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">04 / Metodología</span>
+          <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">02 / Metodología</span>
           <h2 id="process-heading" className="text-4xl md:text-6xl font-light text-white tracking-tight">Tu transformación, <br />en cuatro etapas.</h2>
         </div>
 
@@ -1187,18 +888,10 @@ export default function WorkProcess() {
 }
 </file>
 
-<file path="lib/supabase.ts">
-import { createClient } from '@supabase/supabase-js';
-
-const supabaseUrl = 'https://zntgtcpalrfefwzntije.supabase.co';
-const supabaseKey = 'sb_publishable_JUBag4x9yx1YK0jXr8eMOQ_zNVYRGX3';
-
-export const supabase = createClient(supabaseUrl, supabaseKey);
-</file>
-
 <file path="app/layout.tsx">
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import { Toaster } from "sonner"; // 1. Importamos Toaster de sonner
 import "./globals.css";
 
 // Cargamos una fuente geométrica para títulos y una limpia para lectura
@@ -1227,7 +920,7 @@ export const metadata: Metadata = {
     title: "Sincro.ia | Ecosistema de Automatización Total",
     description: "Portales web de rendimiento extremo y agentes IA autónomos que califican y cierran clientes en piloto automático.",
     url: "https://sincroia.lat",
-    siteName: "Sincro.ia",
+    siteName: "SincroIA.lat",
     locale: "es_CO",
     type: "website",
     
@@ -1243,8 +936,350 @@ export default function RootLayout({
     <html lang="es" className="scroll-smooth">
       <body className={`${spaceGrotesk.variable} ${inter.variable} antialiased bg-brand-navy text-white`}>
         {children}
+        {/* 2. Agregamos el contenedor de notificaciones globales con diseño oscuro premium */}
+        <Toaster theme="dark" position="bottom-right" richColors />
       </body>
     </html>
+  );
+}
+</file>
+
+<file path="components/layouts/HeroSection.tsx">
+export default function HeroSection() {
+  return (
+    // 1. Semantic Section
+    <section 
+      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-navy pt-20"
+      aria-label="Introducción a servicios de automatización"
+    >
+      
+      {/* GRILLA TÉCNICA Y GLOW */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-brand-violet opacity-20 blur-[120px]"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        {/* GANCHO SEO: Especificidad técnica */}
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan font-mono text-[10px] tracking-widest mb-8">
+          <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse" aria-hidden="true"></span>
+          AGENCIA DE INGENIERÍA DE SOFTWARE EN BOGOTÁ
+        </div>
+
+        {/* TITULAR: Clarity + Keywords */}
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 font-space leading-[1.1]">
+          Automatización de Negocios e <br className="hidden md:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-violet">
+            Inteligencia Artificial
+          </span>
+        </h1>
+
+        {/* SUBTÍTULO: Beneficio claro + Solución */}
+        <p className="mt-4 max-w-2xl mx-auto text-base md:text-xl text-gray-400 mb-10 font-sans leading-relaxed">
+          Diseñamos sistemas autónomos a medida que eliminan tareas manuales.  
+          
+          <span className="block text-white mt-2 font-medium">Transforma tu operación y escala tu rentabilidad con ingeniería de alto impacto.</span>
+        </p>
+
+        {/* CTA */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="#contacto" 
+            className="w-full sm:w-auto px-8 py-4 rounded-lg bg-brand-cyan text-brand-navy font-mono text-sm tracking-widest font-bold hover:bg-white transition-all shadow-[0_0_20px_rgba(0,229,255,0.2)] hover:shadow-[0_0_30px_rgba(0,229,255,0.4)] active:scale-[0.98]"
+          >
+            INICIAR PROYECTO
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="components/layouts/Navbar.tsx">
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Efecto de vidrio líquido al hacer scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        isScrolled
+          ? "h-16 bg-brand-navy/80 backdrop-blur-lg border-b border-brand-violet/10 shadow-[0_4px_30px_rgba(10,15,30,0.4)]"
+          : "h-24 bg-transparent border-b border-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-full">
+          {/* LOGO: Imagen PNG Transparente Original */}
+          <div className="flex-shrink-0 flex items-center">
+            <Link href="/" className="flex items-center group cursor-pointer">
+              <img
+                src="/logo.webp"
+                alt="SincroIA Logo"
+                className="h-9 md:h-10 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+              />
+            </Link>
+          </div>
+
+          {/* MENÚ DESKTOP: Estructura Comercial Optimizada */}
+          <div className="hidden md:flex items-center space-x-10">
+            <Link
+              href="#soluciones"
+              className="group relative text-[11px] font-mono tracking-[0.2em] text-gray-400 hover:text-brand-cyan transition-all duration-300 py-6"
+            >
+              SOLUCIONES
+              <span className="absolute bottom-4 left-0 w-0 h-[1px] bg-brand-cyan transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            <Link
+              href="#proceso"
+              className="group relative text-[11px] font-mono tracking-[0.2em] text-gray-400 hover:text-brand-cyan transition-all duration-300 py-6"
+            >
+              PROCESO
+              <span className="absolute bottom-4 left-0 w-0 h-[1px] bg-brand-cyan transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            <Link
+              href="#planes"
+              className="group relative text-[11px] font-mono tracking-[0.2em] text-gray-400 hover:text-brand-cyan transition-all duration-300 py-6"
+            >
+              PLANES
+              <span className="absolute bottom-4 left-0 w-0 h-[1px] bg-brand-cyan transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+          </div>
+
+          {/* BOTÓN CTA DESKTOP */}
+          <div className="hidden md:block">
+            <Link 
+              href="#contacto"
+              className="inline-block px-6 py-2 rounded-lg bg-brand-cyan text-brand-navy font-mono text-[11px] tracking-widest font-bold hover:bg-white transition-all duration-300"
+            >
+              INICIAR PROYECTO
+            </Link>
+          </div>
+
+          {/* BOTÓN MENÚ MÓVIL */}
+          <div className="flex md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white transition-colors"
+            >
+              <svg
+                className="h-6 w-6"
+                stroke="currentColor"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* MENÚ MÓVIL DESPLEGABLE (Sincronizado y sin 404) */}
+      <div
+        className={`md:hidden absolute top-full left-0 w-full bg-brand-navy/95 backdrop-blur-lg border-b border-brand-violet/10 transition-all duration-300 overflow-hidden ${
+          isOpen
+            ? "max-h-96 opacity-100 py-6 px-6"
+            : "max-h-0 opacity-0 pointer-events-none py-0 px-6"
+        }`}
+      >
+        <div className="flex flex-col space-y-4">
+          <Link
+            href="#soluciones"
+            onClick={() => setIsOpen(false)}
+            className="text-sm font-mono text-gray-400 hover:text-brand-cyan py-1 transition-colors"
+          >
+            [ SOLUCIONES ]
+          </Link>
+          <Link
+            href="#proceso"
+            onClick={() => setIsOpen(false)}
+            className="text-sm font-mono text-gray-400 hover:text-brand-cyan py-1 transition-colors"
+          >
+            [ PROCESO ]
+          </Link>
+          <Link
+            href="#planes"
+            onClick={() => setIsOpen(false)}
+            className="text-sm font-mono text-gray-400 hover:text-brand-cyan py-1 transition-colors"
+          >
+            [ PLANES ]
+          </Link>
+          
+          {/* BOTÓN CTA MÓVIL UNIFICADO */}
+          <Link 
+            href="#contacto"
+            onClick={() => setIsOpen(false)}
+            className="block text-center w-full py-3 bg-brand-cyan text-brand-navy font-mono text-xs rounded-lg tracking-wider font-bold hover:bg-white transition-colors mt-2"
+          >
+            INICIAR PROYECTO
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+}
+</file>
+
+<file path="components/layouts/PricingSection.tsx">
+"use client";
+
+import { motion } from "framer-motion";
+
+export default function PricingSection() {
+  const plans = [
+    {
+      name: "WEB BASE",
+      price: "200",
+      billing: "Pago único",
+      features: [
+        "Páginas ultra veloces que atraen clientes (Next.js)",
+        "Garantía de estabilidad total (Hosting Vercel)",
+        "Identidad lista para operar (Dominio .com incluido)",
+        "Tu web aparece en Google y transmite confianza (SEO & SSL)",
+        "Diseño impecable en celulares y PCs (UI/UX Adaptativo)",
+        "Acompañamiento inicial de lanzamiento"
+      ],
+    },
+    {
+      name: "E-COMMERCE",
+      price: "600",
+      billing: "Pago único",
+      features: [
+        "Tienda virtual optimizada para vender en piloto automático",
+        "Pasarelas de pago y gestión de inventarios integradas",
+        "Velocidad de carga superior para evitar carritos abandonados",
+        "Diseño enfocado 100% en conversión y ventas",
+        "Estructura lista para escalar catálogos grandes",
+        "Soporte técnico especializado de lanzamiento"
+      ],
+    },
+    {
+      name: "IA PRO",
+      price: "400",
+      billing: "Pago único",
+      features: [
+        "Atención y calificación de clientes 24/7 (Agente IA)",
+        "Centralización de prospectos (Integración con CRM)",
+        "Fidelización en piloto automático (Email marketing)",
+        "Visibilidad clara de tus clientes (Dashboard de prospectos)",
+        "Tus clientes compran de forma guiada (Flujos de venta)",
+        "Automatización operativa inicial"
+      ],
+    },
+    {
+      name: "ECOSISTEMA TOTAL",
+      price: "1100",
+      billing: "+ Soporte mensual",
+      features: [
+        "Control total de tu negocio en tiempo real (Dashboard)",
+        "Acompañamiento continuo mensual (Membresía Partner IA)",
+        "Eliminación de tareas manuales (Automatización interna)",
+        "Toma decisiones basadas en datos (Reportes estratégicos)",
+        "Atención preferencial sin filas (Soporte prioritario 24/7)",
+        "La solución integral definitiva para escalar sin límites"
+      ],
+    }
+  ];
+
+  return (
+    // 1. Semantic <section>
+    <section id="planes" className="py-24 bg-brand-navy" aria-label="Planes de inversión">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">03 / Inversión</span>
+          {/* H2 para SEO de servicios */}
+          <h2 className="text-4xl md:text-6xl font-light text-white tracking-tight">
+            Soluciones diseñadas <br /> para escalar.
+          </h2>
+        </motion.div>
+        
+        {/* 2. Lista semántica adaptada a 4 columnas */}
+        <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" role="list">
+          {plans.map((plan, index) => (
+            <motion.li 
+              key={plan.name}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              viewport={{ once: true }}
+              className="p-6 border border-white/10 rounded-2xl bg-white/5 flex flex-col justify-between hover:border-brand-cyan/50 transition-all group list-none"
+            >
+              {/* 3. Article para cada unidad de servicio */}
+              <article className="flex flex-col h-full justify-between">
+                <div>
+                  <h3 className="text-brand-cyan font-mono text-xs tracking-widest mb-2">{plan.name}</h3>
+                  <div className="mb-6">
+                    <div className="text-3xl font-bold text-white">
+                      ${plan.price} <span className="text-sm font-normal text-gray-500">USD</span>
+                    </div>
+                    <span className="text-[11px] font-mono text-brand-cyan mt-1 block">
+                      {plan.billing}
+                    </span>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-8" role="list">
+                    {plan.features.map((feat) => (
+                      <li key={feat} className="text-gray-300 text-xs leading-relaxed flex items-start">
+                        <span className="text-brand-cyan mr-2 shrink-0" aria-hidden="true">•</span> {feat}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* 4. Enlace como botón para mejor SEO */}
+                <a 
+                  href="#contacto" 
+                  className="block text-center w-full py-3 border border-white/20 rounded-lg text-white hover:bg-brand-cyan hover:text-brand-navy transition-all font-bold text-xs tracking-wider group-hover:border-brand-cyan"
+                >
+                  ELEGIR {plan.name}
+                </a>
+              </article>
+            </motion.li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 }
 </file>
@@ -1252,14 +1287,22 @@ export default function RootLayout({
 <file path="components/layouts/ContactForm.tsx">
 "use client";
 import { useState } from "react";
-import { supabase } from "@/lib/supabase"; // Asegúrate de que esta ruta sea correcta
+import { supabase } from "@/lib/supabase"; 
+import { toast } from "sonner"; 
 
 export default function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState("Selecciona tu objetivo de inversión");
+  const [selected, setSelected] = useState("Selecciona una opción para tu negocio...");
   const [loading, setLoading] = useState(false);
 
-  const options = ["Web Base", "IA Pro", "Ecosistema Total", "Consultoría de IA", "Auditoría Técnica"];
+  // Opciones alineadas perfectamente con los planes y el valor de SincroIA
+  const options = [
+    "Plan Web Base (Página web rápida y moderna)",
+    "Plan E-commerce (Tienda virtual optimizada para vender)",
+    "Plan IA Pro (Asistente virtual y automatización 24/7)",
+    "Plan Ecosistema Total (Solución integral y dashboard)",
+    "Asesoría técnica o optimización a medida"
+  ];
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -1267,7 +1310,6 @@ export default function ContactForm() {
 
     const formData = new FormData(e.currentTarget);
     
-    // Enviamos los datos a la tabla 'leads' de Supabase
     const { error } = await supabase.from("leads").insert([
       {
         nombre: formData.get("nombre"),
@@ -1279,11 +1321,15 @@ export default function ContactForm() {
     ]);
 
     if (error) {
-      alert("Error al enviar: " + error.message);
+      toast.error("Error al procesar la solicitud", {
+        description: error.message,
+      });
     } else {
-      alert("¡Recibido! Nos pondremos en contacto pronto.");
+      toast.success("¡Solicitud recibida con éxito!", {
+        description: "Nuestro equipo analizará tu caso y te contactará pronto.",
+      });
       e.currentTarget.reset();
-      setSelected("Selecciona tu objetivo de inversión");
+      setSelected("Selecciona una opción para tu negocio...");
     }
     setLoading(false);
   };
@@ -1292,65 +1338,99 @@ export default function ContactForm() {
     <section id="contacto" className="max-w-3xl mx-auto px-6 py-24" aria-labelledby="form-heading">
       <h2 id="form-heading" className="sr-only">Formulario de contacto para servicios de ingeniería</h2>
       
-      <form className="space-y-6 bg-[#0a0a0a] p-8 rounded-2xl border border-white/5" onSubmit={handleSubmit}>
+      <form className="space-y-6 bg-brand-background p-8 rounded-2xl border border-white/5" onSubmit={handleSubmit}>
         
         <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <label htmlFor="nombre" className="sr-only">Nombre</label>
-            <input id="nombre" name="nombre" type="text" placeholder="Nombre" required className="w-full bg-[#111] border border-white/5 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan/50 outline-none transition-all" />
+          <div className="space-y-2">
+            <label htmlFor="nombre" className="block text-xs font-mono uppercase tracking-wider text-gray-400">
+              Nombre <span className="text-brand-cyan">*</span>
+            </label>
+            <input 
+              id="nombre" 
+              name="nombre" 
+              type="text" 
+              placeholder="Ej. Carlos Pérez" 
+              required 
+              className="w-full bg-brand-surface border border-white/5 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan/50 outline-none transition-all" 
+            />
           </div>
-          <div>
-            <label htmlFor="email" className="sr-only">Correo electrónico</label>
-            <input id="email" name="email" type="email" placeholder="Correo" required className="w-full bg-[#111] border border-white/5 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan/50 outline-none transition-all" />
+          <div className="space-y-2">
+            <label htmlFor="email" className="block text-xs font-mono uppercase tracking-wider text-gray-400">
+              Correo electrónico <span className="text-brand-cyan">*</span>
+            </label>
+            <input 
+              id="email" 
+              name="email" 
+              type="email" 
+              placeholder="carlos@tuempresa.com" 
+              required 
+              className="w-full bg-brand-surface border border-white/5 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan/50 outline-none transition-all" 
+            />
           </div>
         </div>
 
-        <div>
-          <label htmlFor="telefono" className="sr-only">Teléfono / WhatsApp</label>
-          <input id="telefono" name="telefono" type="tel" placeholder="Teléfono o WhatsApp" required className="w-full bg-[#111] border border-white/5 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan/50 outline-none transition-all" />
+        <div className="space-y-2">
+          <label htmlFor="telefono" className="block text-xs font-mono uppercase tracking-wider text-gray-400">
+            Teléfono / WhatsApp <span className="text-brand-cyan">*</span>
+          </label>
+          <input 
+            id="telefono" 
+            name="telefono" 
+            type="tel" 
+            placeholder="+57 300 000 0000" 
+            required 
+            className="w-full bg-brand-surface border border-white/5 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan/50 outline-none transition-all" 
+          />
         </div>
 
-        <div className="relative">
-          <button 
-            type="button"
-            onClick={() => setIsOpen(!isOpen)}
-            className="w-full bg-[#111] border border-white/5 p-4 rounded-xl text-gray-400 text-left flex justify-between items-center hover:border-white/10 transition-all"
-          >
-            {selected}
-            <span className="text-brand-cyan/50">▼</span>
-          </button>
-          
-          {isOpen && (
-            <ul className="absolute w-full mt-2 bg-[#111] border border-white/10 rounded-xl overflow-hidden z-10 shadow-2xl">
-              {options.map((opt) => (
-                <li 
-                  key={opt}
-                  onClick={() => { setSelected(opt); setIsOpen(false); }}
-                  className="p-4 text-gray-400 hover:text-white hover:bg-white/5 cursor-pointer transition-colors"
-                >
-                  {opt}
-                </li>
-              ))}
-            </ul>
-          )}
+        <div className="space-y-2">
+          <label className="block text-xs font-mono uppercase tracking-wider text-gray-400">
+            ¿Qué te gustaría construir o automatizar hoy? <span className="text-brand-cyan">*</span>
+          </label>
+          <div className="relative z-50">
+            <button 
+              type="button"
+              onClick={() => setIsOpen(!isOpen)}
+              className="w-full bg-brand-surface border border-white/5 p-4 rounded-xl text-gray-300 text-left flex justify-between items-center hover:border-white/10 transition-all focus:outline-none focus:ring-1 focus:ring-brand-cyan/50"
+            >
+              {selected}
+              <span className="text-brand-cyan/50">▼</span>
+            </button>
+            
+            {isOpen && (
+              <ul className="absolute left-0 w-full mt-2 bg-brand-navy border border-white/20 rounded-xl overflow-hidden z-[100] shadow-[0_0_40px_rgba(0,0,0,0.8)]">
+                {options.map((opt) => (
+                  <li 
+                    key={opt}
+                    onClick={() => { setSelected(opt); setIsOpen(false); }}
+                    className="p-4 text-gray-300 hover:text-white hover:bg-brand-cyan/10 cursor-pointer transition-colors text-sm"
+                  >
+                    {opt}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
 
-        <div>
-          <label htmlFor="comentarios" className="sr-only">Comentarios adicionales</label>
+        <div className="space-y-2">
+          <label htmlFor="comentarios" className="block text-xs font-mono uppercase tracking-wider text-gray-400">
+            Comentarios adicionales <span className="text-gray-600">(Opcional)</span>
+          </label>
           <textarea 
             id="comentarios" 
             name="comentarios" 
-            placeholder="¿Algo más que debamos saber? (Opcional)" 
-            className="w-full bg-[#111] border border-white/5 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan/50 outline-none transition-all h-32 resize-none" 
+            placeholder="Cuéntanos brevemente sobre tu proyecto o necesidades actuales..." 
+            className="w-full bg-brand-surface border border-white/5 p-4 rounded-xl text-gray-300 placeholder-gray-600 focus:border-brand-cyan/50 outline-none transition-all h-32 resize-none" 
           />
         </div>
 
         <button 
           type="submit" 
           disabled={loading}
-          className="w-full py-4 bg-white/5 text-white font-medium rounded-xl hover:bg-brand-cyan hover:text-black transition-all disabled:opacity-50"
+          className="w-full py-4 bg-brand-cyan text-brand-navy font-mono text-xs tracking-widest font-bold rounded-xl hover:bg-white transition-all disabled:opacity-50"
         >
-          {loading ? "Enviando..." : "Enviar solicitud"}
+          {loading ? "Iniciando proyecto..." : "Iniciar Proyecto"}
         </button>
       </form>
     </section>
@@ -1366,76 +1446,41 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    // 1. Footer semántico
     <footer className="py-12 bg-[#050505] border-t border-white/5" aria-label="Pie de página">
       <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
         
-        {/* 2. Logo con relación de aspecto optimizada */}
+        {/* Logo y estado */}
+  {/* Logo sin el badge falso */}
         <div className="text-center md:text-left flex flex-col items-center md:items-start gap-3">
-<Link href="/" aria-label="Ir al inicio">
-  <Image 
-    src="/logo.webp" 
-    alt="Logo de Sincro.ia - Ingeniería de Software" 
-    className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" 
-    width={120} 
-    height={32}
-    priority
-  />
-</Link>
-          
-          <div className="flex items-center gap-2 text-gray-500 text-xs" role="status">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" aria-hidden="true"></span>
-            SYSTEMS OPERATIONAL
-          </div>
+          <Link href="/" aria-label="Ir al inicio">
+            <Image 
+              src="/logo.webp" 
+              alt="Logo de SincroIA.lat - Ingeniería de Software" 
+              className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" 
+              width={120} 
+              height={32}
+              priority
+            />
+          </Link>
+          <p className="text-gray-500 text-xs">
+            Ingeniería y desarrollo de alto rendimiento.
+          </p>
         </div>
 
-        {/* 3. Navegación con enlaces externos optimizados */}
-        <nav className="flex gap-8" aria-label="Enlaces legales y sociales">
-          <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-cyan transition-colors text-sm">GitHub</a>
-          <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-cyan transition-colors text-sm">LinkedIn</a>
+        {/* Navegación corporativa sin placeholders */}
+        <nav className="flex gap-6 md:gap-8" aria-label="Enlaces legales y de contacto">
+          <a href="#contacto" className="text-gray-400 hover:text-brand-cyan transition-colors text-sm">Contacto</a>
+          <a href="/terminos" className="text-gray-400 hover:text-brand-cyan transition-colors text-sm">Términos</a>
           <a href="/privacidad" className="text-gray-400 hover:text-brand-cyan transition-colors text-sm">Privacidad</a>
         </nav>
 
-        {/* 4. Copyright con copyright técnico */}
+        {/* Copyright */}
         <div className="text-gray-600 text-xs text-center md:text-right">
-          <p>&copy; {currentYear} Sincro.ia</p>
-          <p className="mt-1">Ingeniería de software boutique en Bogotá</p>
+          <p>&copy; {currentYear} SincroIA.lat</p>
+          <p className="mt-1">Ingeniería de software en Bogotá</p>
         </div>
       </div>
     </footer>
-  );
-}
-</file>
-
-<file path="app/page.tsx">
-import Navbar from "@/components/layouts/Navbar";
-import HeroSection from "@/components/layouts/HeroSection";
-import SolutionsSection from "@/components/layouts/SolutionsSection";
-import ProcessSection from "@/components/layouts/ProcessSection";
-import PricingSection from "@/components/layouts/PricingSection";
-import AdditionalModules from "@/components/layouts/AdditionalModules";
-import WorkProcess from "@/components/layouts/WorkProcess";
-import Footer from "@/components/layouts/Footer";
-import ContactForm from "@/components/layouts/ContactForm";
-import TechStack from "@/components/layouts/TechStack";
-import WhatsAppButton from "@/components/layouts/WhatsAppButton";
-
-export default function Home() {
-  return (
-    <main className="min-h-screen bg-brand-navy">
-      <Navbar />
-      <HeroSection />
-      <SolutionsSection />
-      <ProcessSection  />
-      <PricingSection />
-      <AdditionalModules />
-      <WorkProcess />
-      <ContactForm/>
-      <TechStack/>
-      <Footer />
-      <WhatsAppButton/>
-
-    </main>
   );
 }
 </file>
@@ -1471,6 +1516,38 @@ export default function Home() {
     "tailwindcss": "^4",
     "typescript": "^5"
   }
+}
+</file>
+
+<file path="app/page.tsx">
+import Navbar from "@/components/layouts/Navbar";
+import HeroSection from "@/components/layouts/HeroSection";
+import SolutionsSection from "@/components/layouts/SolutionsSection";
+import ProcessSection from "@/components/layouts/ProcessSection";
+import PricingSection from "@/components/layouts/PricingSection";
+import AdditionalModules from "@/components/layouts/AdditionalModules";
+import WorkProcess from "@/components/layouts/WorkProcess";
+import Footer from "@/components/layouts/Footer";
+import ContactForm from "@/components/layouts/ContactForm";
+import TechStack from "@/components/layouts/TechStack";
+import WhatsAppButton from "@/components/layouts/WhatsAppButton";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-brand-navy">
+      <Navbar />
+      <HeroSection />
+      <SolutionsSection />
+      <WorkProcess />
+      <PricingSection />
+      <AdditionalModules />
+      <ContactForm/>
+      <TechStack/>
+      <Footer />
+      <WhatsAppButton/>
+
+    </main>
+  );
 }
 </file>
 

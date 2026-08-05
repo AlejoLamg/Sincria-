@@ -10,7 +10,7 @@ export default async function AdminDashboardPage({
   return (
     <div className="space-y-6">
       <header className="flex justify-between items-center bg-neutral-900 p-6 rounded-xl border border-neutral-800 shadow-sm">
-        <h1 className="text-2xl font-bold text-white">Dashboard Sincro.ia</h1>
+        <h1 className="text-2xl font-bold text-white">Dashboard SincroIA.lat</h1>
         <button className="bg-neutral-800 text-white px-4 py-2 rounded-md hover:bg-neutral-700 transition">
           Actualizar Datos
         </button>
