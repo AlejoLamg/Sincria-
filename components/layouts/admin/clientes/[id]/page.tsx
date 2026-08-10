@@ -16,7 +16,7 @@ export default function DashboardPage() {
         <header className="flex justify-between items-end mb-8">
           <div>
             <h1 className="text-3xl font-bold tracking-tight">Welcome back, Alejandro 👋</h1>
-            <p className="text-neutral-400 mt-1 text-sm">Here's what's happening with your business today.</p>
+            <p className="text-neutral-400 mt-1 text-sm">Here&apos;s what&apos;s happening with your business today.</p>
           </div>
           {/* Botones de acción (Buscar, Notificaciones) irían aquí */}
         </header>
