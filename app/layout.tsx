@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   description: "Desplegamos portales web ultra veloces y agentes conversacionales de IA autónomos 24/7 en Colombia y LATAM para maximizar las ventas de tu negocio.",
   icons: {
     icon: '/favicon.jpg',
+    apple: '/favicon.jpg',
   },
   keywords: [
     "Sincro", "Desarrollo web Colombia", "Agentes de IA Bogotá", "Automatización de negocios Colombia", 

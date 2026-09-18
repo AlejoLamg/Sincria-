@@ -28,16 +28,24 @@ export default function FaqSection() {
       answer: "Incluimos el registro de tu dominio .com por el primer año y despliegue en infraestructura global edge de Vercel, garantizando tiempos de carga inferiores a 1 segundo y certificado SSL automático."
     },
     {
+      question: "¿El Agente de IA funciona con mi número actual de WhatsApp?",
+      answer: "Totalmente. Podemos integrar el agente a tu número empresarial actual mediante vinculación segura o WhatsApp Cloud API. El agente responderá en 2 segundos día y noche, y tu equipo humano puede tomar el control de la conversación en cualquier momento sin fricción."
+    },
+    {
+      question: "¿Qué pasa si ya tengo un sitio web en WordPress o Wix?",
+      answer: "Realizamos una migración técnica completa hacia Next.js 15. Diseñamos una plataforma mucho más rápida (< 0.8s), moderna y de alta conversión, preservando tus correos corporativos y tu posicionamiento en Google, pero eliminando las caídas y la lentitud de WordPress."
+    },
+    {
       question: "¿Cómo se integran los agentes de IA?",
-      answer: "Diseñamos asistentes conversacionales entrenados con la información de tu negocio, conectados a tus bases de datos, WhatsApp o CRM para calificar leads y agendar reuniones 24/7."
+      answer: "Diseñamos asistentes conversacionales entrenados con la base de conocimiento de tu empresa, conectados a tus bases de datos, WhatsApp, CRM o Google Calendar para calificar prospectos y agendar citas de venta 24/7."
     },
     {
       question: "¿Atienden fuera de Bogotá?",
-      answer: "Sí. Aunque nuestra sede principal está en Bogotá, trabajamos de forma 100% remota y ágil con clientes en Colombia, México, Estados Unidos y toda Latinoamérica."
+      answer: "Sí. Aunque nuestra sede principal está en Bogotá, trabajamos de forma 100% remota y ágil con clientes en toda Colombia y Latinoamérica."
     },
     {
       question: "¿Cuál es el siguiente paso para iniciar?",
-      answer: "Elige tu plan en la sección de inversión, selecciona los módulos que necesites y completa el formulario. Nuestro equipo te contactará de inmediato por WhatsApp para coordinar la reunión inicial."
+      answer: "Elige tu plan en la sección de inversión, selecciona los módulos que necesites y completa el formulario de cotización. Nuestro equipo te contactará de inmediato por WhatsApp para coordinar la reunión inicial y diagnóstico."
     }
   ];
 
