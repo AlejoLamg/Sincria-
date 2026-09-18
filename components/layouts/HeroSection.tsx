@@ -1,7 +1,7 @@
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-navy pt-20"
+      className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-navy pt-24 sm:pt-28 pb-12"
       aria-label="Software a medida y automatización con Inteligencia Artificial"
     >
       {/* Background */}
@@ -26,49 +26,58 @@ export default function HeroSection() {
         </div>
 
         {/* Headline */}
-
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-[1.05] tracking-tight text-white font-space">
-
-          Automatizamos procesos
-
+        <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight text-white font-space">
+          Portales web ultra veloces y{" "}
           <br className="hidden md:block" />
-
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-violet">
-
-            para que tu empresa crezca más rápido.
-
+            Agentes de IA que cierran clientes 24/7.
           </span>
-
         </h1>
 
         {/* Subtitle */}
-
-        <p className="mt-8 max-w-2xl mx-auto text-lg md:text-xl text-gray-400 leading-relaxed">
-
-          Desarrollamos <span className="text-white">software a medida</span> y
-          <span className="text-white"> agentes de IA</span> que trabajan 24/7,
-          optimizando operaciones, reduciendo tareas manuales y acelerando el crecimiento de tu negocio.
-
+        <p className="mt-8 max-w-2xl mx-auto text-lg md:text-xl text-gray-300 leading-relaxed font-light">
+          Sustituye páginas web lentas y tareas operativas manuales por un <span className="text-white font-medium">ecosistema digital automatizado</span> que califica prospectos, responde de inmediato y multiplica tus ventas en piloto automático.
         </p>
 
-        {/* CTA */}
-
-        <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
-
+        {/* CTAs de Alta Conversión */}
+        <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
           <a
             href="#contacto"
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-cyan text-brand-navy font-bold font-mono tracking-widest text-sm transition-all duration-300 hover:bg-white hover:shadow-[0_0_35px_rgba(0,229,255,0.45)] active:scale-[0.98]"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-cyan text-brand-navy font-bold font-mono tracking-widest text-xs sm:text-sm transition-all duration-300 hover:bg-white hover:shadow-[0_0_35px_rgba(0,229,255,0.45)] active:scale-[0.98] shadow-lg"
           >
-            AGENDA UNA CONSULTORÍA
+            SOLICITAR DIAGNÓSTICO GRATIS
           </a>
 
           <a
-            href="#proyectos"
-            className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/15 text-white hover:border-brand-cyan hover:text-brand-cyan transition-all duration-300"
+            href="#demo-ia"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/20 text-white hover:border-brand-cyan hover:text-brand-cyan transition-all duration-300 font-mono tracking-wider text-xs sm:text-sm"
           >
-            VER PROYECTOS
+            PROBAR DEMO DE IA
           </a>
+        </div>
 
+        <p className="text-xs font-mono text-gray-400 mt-4">
+          ⚡ Respuesta en menos de 2 horas hábiles • Diagnóstico y cotización sin compromiso
+        </p>
+
+        {/* BARRA DE AUTORIDAD Y MÉTRICAS (Social Proof) */}
+        <div className="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="space-y-1">
+            <span className="text-2xl sm:text-3xl font-bold font-mono text-brand-cyan">&lt; 0.8s</span>
+            <p className="text-xs text-gray-400">Tiempo de carga promedio</p>
+          </div>
+          <div className="space-y-1">
+            <span className="text-2xl sm:text-3xl font-bold font-mono text-white">24/7</span>
+            <p className="text-xs text-gray-400">Atención y ventas autónomas</p>
+          </div>
+          <div className="space-y-1">
+            <span className="text-2xl sm:text-3xl font-bold font-mono text-brand-cyan">0</span>
+            <p className="text-xs text-gray-400">Leads perdidos por espera</p>
+          </div>
+          <div className="space-y-1">
+            <span className="text-2xl sm:text-3xl font-bold font-mono text-white">100%</span>
+            <p className="text-xs text-gray-400">Código a medida en Next.js</p>
+          </div>
         </div>
 
       </div>

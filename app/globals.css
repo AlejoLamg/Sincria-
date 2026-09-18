@@ -5,7 +5,19 @@
   --color-brand-cyan: #00E5FF;
   --color-brand-violet: #8B5CF6;
   --color-brand-coral: #FF4D00;
+  --color-brand-surface: #131316;
+  --color-brand-border: #27272A;
+  --color-brand-blue: #3B82F6;
+  --color-brand-purple: #A855F7;
   
   --font-space: var(--font-space);
   --font-sans: var(--font-inter);
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }

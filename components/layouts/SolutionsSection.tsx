@@ -2,18 +2,18 @@ export default function SolutionsSection() {
   const solutions = [
     { 
       id: "01", 
-      title: "Arquitectura Web", 
-      desc: "Transformamos interfaces en activos digitales. Webs de carga instantánea diseñadas para convertir visitantes en clientes." 
+      title: "Webs de Rendimiento Extremo", 
+      desc: "Desarrollamos portales con carga inferior a 0.8s en Next.js. Cero clientes perdidos por lentitud, diseño optimizado para conversión móvil y posicionamiento superior en Google." 
     },
     { 
       id: "02", 
-      title: "Automatización con IA", 
-      desc: "Eliminamos tareas repetitivas mediante agentes inteligentes que operan 24/7, optimizando costos y eficiencia operativa." 
+      title: "Agentes de IA para WhatsApp y Web", 
+      desc: "Tu mejor vendedor operando 24/7. Responde dudas en 2 segundos, califica prospectos, entrega presupuestos y agenda reuniones en tu calendario sin intervención humana." 
     },
     { 
       id: "03", 
-      title: "Escalabilidad Técnica", 
-      desc: "Arquitectura robusta y flexible preparada para manejar picos de tráfico y crecimiento exponencial sin interrupciones." 
+      title: "Infraestructura Lista para Escalar", 
+      desc: "Sistemas robustos preparados para procesar picos de tráfico masivo y pasarelas de pago automatizadas sin caídas de servidor ni interrupciones comerciales." 
     }
   ];
 

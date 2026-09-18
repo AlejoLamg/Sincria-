@@ -1,46 +1,53 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function FaqSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0); // Primera abierta por defecto
+
   const faqs = [
     {
       question: "¿Cuánto tiempo toma desarrollar una web o IA?",
-      answer: "Una Web Base toma de 1 a 2 semanas. Portales de E-commerce o integraciones complejas de IA toman entre 3 y 4 semanas."
+      answer: "Una Web Base toma de 1 a 2 semanas. Portales de E-commerce o integraciones complejas de IA toman entre 3 y 4 semanas con despliegue continuo."
     },
     {
       question: "¿Los precios son de pago único o mensual?",
-      answer: "Nuestros planes de desarrollo son de pago único. Solo el 'Ecosistema Total' incluye una membresía de soporte mensual opcional."
+      answer: "Nuestros planes de desarrollo son de pago único en pesos colombianos (COP). No cobramos mensualidades obligatorias ni comisiones sobre tus ventas; el código y la plataforma son 100% de tu propiedad."
     },
     {
       question: "¿Necesito conocimientos técnicos para administrarla?",
-      answer: "Para nada. Entregamos plataformas autoadministrables, intuitivas y te capacitamos para gestionar todo sin programar."
+      answer: "Para nada. Entregamos plataformas autoadministrables, intuitivas y te capacitamos para gestionar contenidos, ventas y datos sin tocar una sola línea de código."
     },
     {
       question: "¿Cómo funciona el soporte técnico?",
-      answer: "Incluimos acompañamiento inicial de lanzamiento. Para monitoreo continuo 24/7 y reportes, cuentas con nuestra membresía especializada."
+      answer: "Incluimos acompañamiento inicial de lanzamiento sin costo adicional. Para monitoreo proactivo 24/7, optimización continua y reportes de rendimiento, cuentas con nuestros planes de membresía especializada."
     },
     {
       question: "¿Qué incluye el dominio y el hosting?",
-      answer: "Incluimos el registro de tu dominio .com y despliegue global en Vercel, garantizando velocidad extrema y certificado SSL."
+      answer: "Incluimos el registro de tu dominio .com por el primer año y despliegue en infraestructura global edge de Vercel, garantizando tiempos de carga inferiores a 1 segundo y certificado SSL automático."
     },
     {
       question: "¿Cómo se integran los agentes de IA?",
-      answer: "Diseñamos asistentes conversacionales conectados a tus bases de datos o catálogos para atender y calificar prospectos 24/7."
+      answer: "Diseñamos asistentes conversacionales entrenados con la información de tu negocio, conectados a tus bases de datos, WhatsApp o CRM para calificar leads y agendar reuniones 24/7."
     },
     {
       question: "¿Atienden fuera de Bogotá?",
-      answer: "Sí. Aunque estamos en Bogotá, desarrollamos soluciones digitales de alto rendimiento para clientes en toda Colombia y Latinoamérica."
+      answer: "Sí. Aunque nuestra sede principal está en Bogotá, trabajamos de forma 100% remota y ágil con clientes en Colombia, México, Estados Unidos y toda Latinoamérica."
     },
     {
       question: "¿Cuál es el siguiente paso para iniciar?",
-      answer: "Solo elige tu plan ideal en la sección de inversión o escríbenos directamente. Nuestro equipo te atenderá de inmediato."
+      answer: "Elige tu plan en la sección de inversión, selecciona los módulos que necesites y completa el formulario. Nuestro equipo te contactará de inmediato por WhatsApp para coordinar la reunión inicial."
     }
   ];
 
+  const toggleFaq = (index: number) => {
+    setOpenIndex((prev) => (prev === index ? null : index));
+  };
+
   return (
-    <section className="py-24 bg-brand-navy border-t border-white/5" aria-labelledby="faq-heading">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="faq" className="py-24 bg-brand-navy border-t border-white/5" aria-labelledby="faq-heading">
+      <div className="max-w-4xl mx-auto px-6">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -58,28 +65,73 @@ export default function FaqSection() {
           </p>
         </motion.div>
 
-        <ul className="grid md:grid-cols-2 gap-6" role="list">
-          {faqs.map((faq, index) => (
-            <motion.li 
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              viewport={{ once: true }}
-              className="p-6 border border-white/10 rounded-2xl bg-white/[0.02] hover:border-brand-cyan/40 transition-all list-none flex flex-col justify-between"
-            >
-              <article>
-                <h3 className="text-white font-medium text-base mb-2 flex items-start gap-2">
-                  <span className="text-brand-cyan font-mono text-sm shrink-0">0{index + 1}.</span>
-                  {faq.question}
-                </h3>
-                <p className="text-gray-400 text-xs md:text-sm leading-relaxed pl-5">
-                  {faq.answer}
-                </p>
-              </article>
-            </motion.li>
-          ))}
-        </ul>
+        <div className="space-y-4" role="region" aria-label="Acordeón de preguntas frecuentes">
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+
+            return (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                  isOpen 
+                    ? "bg-brand-surface/90 border-brand-cyan/50 shadow-[0_0_25px_rgba(0,229,255,0.12)]" 
+                    : "bg-white/[0.02] border-white/10 hover:border-white/20 hover:bg-white/[0.04]"
+                }`}
+              >
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(index)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${index}`}
+                  id={`faq-question-${index}`}
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-brand-cyan font-mono text-xs shrink-0">
+                      0{index + 1}.
+                    </span>
+                    <h3 className="text-white font-medium text-base sm:text-lg">
+                      {faq.question}
+                    </h3>
+                  </div>
+
+                  <span 
+                    className={`w-7 h-7 rounded-full flex items-center justify-center border shrink-0 transition-all duration-300 ${
+                      isOpen 
+                        ? "border-brand-cyan text-brand-cyan rotate-180 bg-brand-cyan/10" 
+                        : "border-white/20 text-gray-400"
+                    }`}
+                    aria-hidden="true"
+                  >
+                    ▼
+                  </span>
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      id={`faq-answer-${index}`}
+                      role="region"
+                      aria-labelledby={`faq-question-${index}`}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      <div className="px-6 pb-6 pt-2 text-gray-300 text-sm leading-relaxed border-t border-white/5 pl-12">
+                        {faq.answer}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

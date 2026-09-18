@@ -1,37 +1,24 @@
 "use client";
+
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useProjectConfig, formatCOP } from "@/context/ProjectConfigContext";
 
 export default function AdditionalModules() {
-  const [selectedModules, setSelectedModules] = useState<string[]>([]);
+  const { toggleModule, isModuleSelected, selectedModules, modulesPrice } = useProjectConfig();
 
   const modules = [
-    { name: "Cobros Recurrentes", desc: "Automatiza membresías y cobros periódicos.", price: "+$500" },
-    { name: "Facturación Electrónica", desc: "API para procesos legales automáticos.", price: "+$300" },
-    { name: "Métricas Avanzadas", desc: "Dashboard con insights en tiempo real.", price: "+$250" },
-    { name: "Agente Ventas Pro", desc: "IA con base de datos personalizada.", price: "+$400" },
-    { name: "CRM Omnicanal", desc: "Gestiona WhatsApp, IG y Web en un solo lugar.", price: "+$350" },
-    { name: "Sistema de Reservas", desc: "Booking automático y recordatorios.", price: "+$200" },
-    { name: "Seguridad & Backups", desc: "Protección premium y copias diarias.", price: "+$150" },
-    { name: "Integraciones API", desc: "Conecta tu web con cualquier sistema.", price: "+$600" },
+    { name: "Agente IA WhatsApp 24/7", desc: "IA entrenada con tu catálogo y agenda directa.", price: "+$950.000", priceNum: 950000 },
+    { name: "Pasarela Wompi / PSE / Bold", desc: "Cobros en línea con tarjetas, Nequi y Daviplata.", price: "+$650.000", priceNum: 650000 },
+    { name: "Cobros Recurrentes & Membresías", desc: "Automatiza suscripciones y cobros periódicos.", price: "+$750.000", priceNum: 750000 },
+    { name: "Facturación Electrónica DIAN", desc: "Integración API para emisión legal automática.", price: "+$850.000", priceNum: 850000 },
+    { name: "CRM & Automatización Omnicanal", desc: "Centraliza WhatsApp, correo y prospectos.", price: "+$550.000", priceNum: 550000 },
+    { name: "Sistema de Citas y Reservas", desc: "Agenda sincronizada con Google Calendar.", price: "+$490.000", priceNum: 490000 },
+    { name: "Multi-idioma (Inglés / Español)", desc: "Traducción optimizada para clientes globales.", price: "+$400.000", priceNum: 400000 },
+    { name: "Integraciones API & Webhooks", desc: "Conecta tu web con ERPs o bases externas.", price: "+$790.000", priceNum: 790000 },
   ];
 
-  const toggleModule = (modName: string, modPrice: string) => {
-    const itemText = `${modName} (${modPrice} USD)`;
-    let updated: string[];
-    
-    if (selectedModules.includes(itemText)) {
-      updated = selectedModules.filter((m) => m !== itemText);
-    } else {
-      updated = [...selectedModules, itemText];
-    }
-
-    setSelectedModules(updated);
-    window.dispatchEvent(new CustomEvent('selectModules', { detail: updated }));
-  };
-
   return (
-    <section className="py-16 bg-brand-navy border-t border-white/5 overflow-hidden" aria-labelledby="modules-heading">
+    <section id="modulos" className="py-16 bg-brand-navy border-t border-white/5 overflow-hidden" aria-labelledby="modules-heading">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0 }}
@@ -52,34 +39,36 @@ export default function AdditionalModules() {
           MODO MOBILE: Carrusel horizontal con scroll-snap y barra oculta
           MODO DESKTOP: Grid clásico de 4 columnas
         */}
-        <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-auto md:overflow-visible pb-6 md:pb-0 snap-x snap-mandatory scrollbar-none">
+        <div 
+          style={{ WebkitOverflowScrolling: "touch" }}
+          className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-auto md:overflow-visible pb-6 md:pb-0 snap-x snap-mandatory scrollbar-none"
+        >
           {modules.map((mod) => {
-            const itemText = `${mod.name} (${mod.price} USD)`;
-            const isSelected = selectedModules.includes(itemText);
+            const isSelected = isModuleSelected(mod.name);
 
             return (
               <motion.div 
                 key={mod.name}
                 whileHover={{ y: -5 }}
                 className={`min-w-[280px] md:min-w-0 p-6 border rounded-xl bg-white/[0.02] transition-all flex flex-col justify-between snap-center shrink-0 ${
-                  isSelected ? "border-brand-cyan bg-brand-cyan/5 shadow-[0_0_20px_rgba(0,229,255,0.15)]" : "border-white/10 hover:border-brand-cyan/50"
+                  isSelected ? "border-brand-cyan bg-brand-cyan/10 shadow-[0_0_20px_rgba(0,229,255,0.2)]" : "border-white/10 hover:border-brand-cyan/50"
                 }`}
               >
                 <article className="flex flex-col h-full justify-between">
                   <div>
                     <h3 className="text-white font-medium mb-1">{mod.name}</h3>
-                    <p className="text-gray-500 text-[11px] mb-4">{mod.desc}</p>
-                    <div className="text-brand-cyan font-bold text-sm mb-4">
-                      {mod.price} USD
+                    <p className="text-gray-400 text-[11px] mb-4">{mod.desc}</p>
+                    <div className="text-brand-cyan font-bold text-sm mb-4 font-mono">
+                      {mod.price} COP
                     </div>
                   </div>
 
                   <button
                     type="button"
-                    onClick={() => toggleModule(mod.name, mod.price)}
+                    onClick={() => toggleModule({ name: mod.name, desc: mod.desc, price: mod.priceNum })}
                     className={`w-full py-2.5 rounded-lg text-xs font-mono font-bold transition-all cursor-pointer ${
                       isSelected 
-                        ? "bg-brand-cyan text-brand-navy" 
+                        ? "bg-brand-cyan text-brand-navy shadow-md" 
                         : "border border-white/20 text-gray-300 hover:border-brand-cyan hover:text-white"
                     }`}
                   >
@@ -90,6 +79,31 @@ export default function AdditionalModules() {
             );
           })}
         </div>
+
+        {/* Barra de confirmación rápida si hay módulos seleccionados */}
+        {selectedModules.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-8 p-4 rounded-xl bg-brand-surface border border-brand-cyan/30 flex flex-col sm:flex-row justify-between items-center gap-4 max-w-2xl mx-auto shadow-[0_0_30px_rgba(0,229,255,0.15)]"
+          >
+            <div className="text-center sm:text-left">
+              <p className="text-xs text-brand-cyan font-mono uppercase tracking-wider">
+                {selectedModules.length} {selectedModules.length === 1 ? "módulo seleccionado" : "módulos seleccionados"}
+              </p>
+              <p className="text-white text-sm font-semibold mt-0.5">
+                Subtotal módulos: +{formatCOP(modulesPrice)}
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })}
+              className="px-5 py-2.5 bg-brand-cyan text-brand-navy font-mono text-xs font-bold rounded-lg hover:bg-white transition-all cursor-pointer shadow-md"
+            >
+              Completar Solicitud →
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );

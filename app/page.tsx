@@ -1,7 +1,8 @@
 import Navbar from "@/components/layouts/Navbar";
 import HeroSection from "@/components/layouts/HeroSection";
 import SolutionsSection from "@/components/layouts/SolutionsSection";
-import ProcessSection from "@/components/layouts/ProcessSection";
+import AIDemoSection from "@/components/layouts/AIDemoSection";
+import ROICalculator from "@/components/layouts/ROICalculator";
 import PricingSection from "@/components/layouts/PricingSection";
 import AdditionalModules from "@/components/layouts/AdditionalModules";
 import WorkProcess from "@/components/layouts/WorkProcess";
@@ -17,6 +18,8 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <SolutionsSection />
+      <AIDemoSection />
+      <ROICalculator />
       <WorkProcess />
       <PricingSection />
       <AdditionalModules />
@@ -25,7 +28,6 @@ export default function Home() {
       <TechStack/>
       <Footer />
       <WhatsAppButton/>
-
     </main>
   );
 }
