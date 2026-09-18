@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://sincroia.lat/sitemap.xml",
+    sitemap: "https://www.sincroia.lat/sitemap.xml",
   };
 }

@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sincroia.lat"),
+  metadataBase: new URL("https://www.sincroia.lat"),
   title: "SincroIA.lat | Desarrollo Web de Alto Rendimiento y Automatización con IA en Colombia",
   description: "Desplegamos portales web ultra veloces y agentes conversacionales de IA autónomos 24/7 en Colombia y LATAM para maximizar las ventas de tu negocio.",
   icons: {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SincroIA.LAT | Desarrollo Web de Alto Rendimiento & Agentes de IA",
     description: "Portales web de rendimiento extremo y agentes de IA autónomos 24/7 en Colombia que califican y cierran clientes en piloto automático.",
-    url: "https://sincroia.lat",
+    url: "https://www.sincroia.lat",
     siteName: "SincroIA.lat",
     locale: "es_CO",
     type: "website",
@@ -62,10 +62,10 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://sincroia.lat/#organization",
+      "@id": "https://www.sincroia.lat/#organization",
       "name": "SincroIA",
-      "url": "https://sincroia.lat",
-      "logo": "https://sincroia.lat/logo.webp",
+      "url": "https://www.sincroia.lat",
+      "logo": "https://www.sincroia.lat/logo.webp",
       "description": "Agencia de ingeniería de software de alto rendimiento y automatización con agentes de Inteligencia Artificial para empresas en Bogotá, Colombia.",
       "address": {
         "@type": "PostalAddress",
@@ -80,9 +80,9 @@ const jsonLd = {
     },
     {
       "@type": "ProfessionalService",
-      "@id": "https://sincroia.lat/#service",
+      "@id": "https://www.sincroia.lat/#service",
       "name": "SincroIA - Desarrollo Web & Agentes de IA",
-      "url": "https://sincroia.lat",
+      "url": "https://www.sincroia.lat",
       "priceRange": "$$",
       "currenciesAccepted": "COP",
       "paymentAccepted": "Wompi, PSE, Bold, Tarjeta de Crédito, Transferencia Bancaria",

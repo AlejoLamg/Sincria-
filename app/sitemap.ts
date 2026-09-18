@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://sincroia.lat';
+  const baseUrl = 'https://www.sincroia.lat';
 
   return [
     {
