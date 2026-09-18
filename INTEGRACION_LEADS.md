@@ -88,3 +88,23 @@ En cuanto compres tu SIM card mañana:
    NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
    ```
 El código ya está programado con `next/script` y empezará a registrar visitas, conversiones y tiempos de permanencia sin penalizar la velocidad de la web.
+
+---
+
+## 🔍 5. Conectar Google Search Console
+
+1. Entra a [Google Search Console](https://search.google.com/search-console).
+2. Agrega una nueva propiedad seleccionando **Prefijo de la URL** y escribe:
+   `https://sincroia.lat`
+3. En los métodos de verificación, despliega **Etiqueta HTML**.
+4. Verás una etiqueta similar a:
+   `<meta name="google-site-verification" content="TU_CODIGO_AQUI" />`
+5. Copia únicamente el valor dentro de las comillas (`TU_CODIGO_AQUI`) y pégalo en tu `.env.local` y en Vercel:
+   ```env
+   NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=TU_CODIGO_AQUI
+   ```
+   *(También puedes enviármelo aquí directamente y yo te lo inyecto en el código).*
+6. Una vez desplegado, haz clic en **Verificar** en Search Console.
+7. **Paso final en Search Console:** Ve a la pestaña **Sitemaps** en el menú lateral izquierdo y envía tu sitemap:
+   `https://sincroia.lat/sitemap.xml`
+

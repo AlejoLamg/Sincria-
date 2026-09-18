@@ -52,6 +52,9 @@ export const metadata: Metadata = {
     description: "Portales web de rendimiento extremo y agentes IA autónomos que cierran clientes 24/7.",
     images: ["/og-image.jpg"],
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 const jsonLd = {
