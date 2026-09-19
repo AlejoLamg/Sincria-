@@ -106,7 +106,7 @@ const jsonLd = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Desarrollo Web Ultra Veloz Next.js",
+              "name": "Portal Web Ultra Veloz Next.js",
               "description": "Portales web de carga < 0.8s diseñados para maximizar la conversión y el posicionamiento orgánico en Google."
             },
             "price": "1890000",
@@ -116,20 +116,30 @@ const jsonLd = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "E-commerce Transaccional Pro",
-              "description": "Tiendas virtuales optimizadas con pasarelas de pago colombianas (Wompi, Bold, PSE) y carga instantánea."
+              "name": "Agente de IA Conversacional Pro 24/7",
+              "description": "Asistente inteligente para WhatsApp y Web que califica prospectos, entrega presupuestos y agenda citas en automático."
             },
-            "price": "3490000",
+            "price": "2490000",
             "priceCurrency": "COP"
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ecosistema Total con Agentes de IA 24/7",
-              "description": "Automatización conversacional y calificación de prospectos para WhatsApp y Web."
+              "name": "E-commerce Transaccional Pro",
+              "description": "Tiendas virtuales ultra veloces con pasarelas de pago colombianas (Wompi, Bold, PSE, Nequi) y checkout instantáneo."
             },
-            "price": "5490000",
+            "price": "3690000",
+            "priceCurrency": "COP"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ecosistema Total (Web Ultra Veloz + Agente IA)",
+              "description": "Solución integral sincronizada: Portal web de alto rendimiento y Agente de IA 24/7 conectado a WhatsApp y Web."
+            },
+            "price": "4890000",
             "priceCurrency": "COP"
           }
         ]

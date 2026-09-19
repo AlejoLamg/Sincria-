@@ -7,14 +7,14 @@ export default function AdditionalModules() {
   const { toggleModule, isModuleSelected, selectedModules, modulesPrice } = useProjectConfig();
 
   const modules = [
-    { name: "Agente IA WhatsApp 24/7", desc: "IA entrenada con tu catálogo y agenda directa.", price: "+$950.000", priceNum: 950000 },
-    { name: "Pasarela Wompi / PSE / Bold", desc: "Cobros en línea con tarjetas, Nequi y Daviplata.", price: "+$650.000", priceNum: 650000 },
-    { name: "Cobros Recurrentes & Membresías", desc: "Automatiza suscripciones y cobros periódicos.", price: "+$750.000", priceNum: 750000 },
-    { name: "Facturación Electrónica DIAN", desc: "Integración API para emisión legal automática.", price: "+$850.000", priceNum: 850000 },
-    { name: "CRM & Automatización Omnicanal", desc: "Centraliza WhatsApp, correo y prospectos.", price: "+$550.000", priceNum: 550000 },
-    { name: "Sistema de Citas y Reservas", desc: "Agenda sincronizada con Google Calendar.", price: "+$490.000", priceNum: 490000 },
-    { name: "Multi-idioma (Inglés / Español)", desc: "Traducción optimizada para clientes globales.", price: "+$400.000", priceNum: 400000 },
-    { name: "Integraciones API & Webhooks", desc: "Conecta tu web con ERPs o bases externas.", price: "+$790.000", priceNum: 790000 },
+    { name: "Agente IA para Instagram DM y Messenger", desc: "Centraliza WhatsApp, Instagram y Facebook en el mismo cerebro inteligente.", price: "+$750.000", priceNum: 750000 },
+    { name: "Facturación Electrónica DIAN Automática", desc: "Conexión directa con Siigo, Alegra o Factus para emitir facturas legales.", price: "+$850.000", priceNum: 850000 },
+    { name: "Pasarela Colombia (Wompi / PSE / Bold)", desc: "Recibe pagos instantáneos con Nequi, Daviplata, PSE y tarjetas sin fricción.", price: "+$590.000", priceNum: 590000 },
+    { name: "Sistema de Citas y Reservas Sincronizado", desc: "Agenda conectada a Google Calendar con recordatorios automáticos anti-inasistencias.", price: "+$490.000", priceNum: 490000 },
+    { name: "CRM y Base de Datos de Clientes", desc: "Registro automático de prospectos en Google Sheets/CRM con métricas de ventas.", price: "+$490.000", priceNum: 490000 },
+    { name: "Blog y Gestor de Contenidos SEO", desc: "Panel autogestionable para posicionar artículos y captar tráfico en Google.", price: "+$550.000", priceNum: 550000 },
+    { name: "Sistema Multi-idioma (Español / Inglés)", desc: "Traducción optimizada y detección automática para clientes internacionales.", price: "+$450.000", priceNum: 450000 },
+    { name: "Cobros Recurrentes & Suscripciones", desc: "Automatiza cobros periódicos y membresías mensuales sin gestión manual.", price: "+$690.000", priceNum: 690000 },
   ];
 
   return (

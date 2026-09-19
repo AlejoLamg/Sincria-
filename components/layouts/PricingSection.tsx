@@ -12,25 +12,12 @@ export default function PricingSection() {
       price: "1.890.000",
       billing: "Pago único • Sin mensualidades",
       features: [
-        "Páginas ultra veloces que convierten visitantes (Next.js 15)",
+        "Páginas ultra veloces (< 0.8s) que retienen tráfico móvil (Next.js 15)",
         "Garantía de estabilidad global (Hosting Edge Vercel)",
         "Dominio profesional .com o .co incluido por 1 año",
-        "Tu web en Google transmitiendo autoridad (SEO & SSL)",
-        "Diseño impecable y 100% Mobile-First (WCAG 2.1)",
-        "Acompañamiento y entrega guiada de lanzamiento"
-      ],
-    },
-    {
-      name: "E-COMMERCE",
-      price: "3.490.000",
-      billing: "Pago único • Cero comisiones por venta",
-      features: [
-        "Tienda virtual de alta velocidad optimizada para vender",
-        "Integración con pasarelas de Colombia: Wompi, Bold, PSE",
-        "Carga instantánea < 0.8s para evitar carritos abandonados",
-        "Gestión ágil de catálogo, inventario y pedidos",
-        "Base de datos segura en la nube (Supabase)",
-        "Capacitación personalizada para operar tu tienda"
+        "Tu web en Google transmitiendo autoridad (SEO técnico & SSL)",
+        "Diseño impecable y 100% Mobile-First de alta conversión",
+        "Entrega ágil en 1 a 2 semanas con garantía de lanzamiento"
       ],
     },
     {
@@ -38,26 +25,39 @@ export default function PricingSection() {
       price: "2.490.000",
       billing: "Pago único • Automatización 24/7",
       features: [
-        "Agente de IA entrenado con la información de tu negocio",
-        "Atención y calificación de prospectos 24/7 en WhatsApp/Web",
-        "Respuestas en 2 segundos sin pausas ni descansos",
-        "Agendamiento automático con Google Calendar",
-        "Centralización directa de clientes en tu correo o CRM",
-        "Flujos guiados para maximizar cierres y ventas"
+        "Agente de IA entrenado con la información y catálogo de tu empresa",
+        "Atención y calificación de prospectos 24/7 en WhatsApp y Web",
+        "Respuestas instantáneas en < 2 segundos sin pausas ni descansos",
+        "Agendamiento automático sincronizado con Google Calendar",
+        "Protocolo de Relevo Humano: si tú intervienes, el bot se silencia solo",
+        "Alertas push inmediatas a tu celular cuando un cliente esté listo para comprar"
+      ],
+    },
+    {
+      name: "E-COMMERCE",
+      price: "3.690.000",
+      billing: "Pago único • Cero comisiones por venta",
+      features: [
+        "Tienda virtual transaccional de alta velocidad optimizada para vender",
+        "Integración de pasarelas Colombia: Wompi, Bold, PSE, Nequi y Tarjetas",
+        "Carga instantánea < 0.8s para evitar carritos abandonados",
+        "Gestión ágil de catálogo, inventario, tallas y pedidos",
+        "Botón de pedido asistido directo a WhatsApp con resumen de orden",
+        "Capacitación personalizada y acompañamiento de lanzamiento"
       ],
     },
     {
       name: "ECOSISTEMA TOTAL",
-      price: "5.490.000",
-      billing: "Pago único • Solución integral",
+      price: "4.890.000",
+      billing: "Pago único • Ahorras $700.000 COP",
       popular: true,
       features: [
-        "Portal Web Ultra Veloz + Agente de IA para WhatsApp y Web",
-        "Ecosistema integral diseñado para liderar tu sector",
-        "Automatización completa de captación, filtro y cierre",
-        "Conexión con pasarelas de pago, CRM y bases de datos",
-        "Soporte prioritario durante y tras el despliegue",
-        "100% código propio sin ataduras a plataformas mensuales"
+        "Portal Web Ultra Veloz (<0.8s) + Agente de IA para WhatsApp y Web",
+        "Sincronización total: los leads web pasan a WhatsApp en automático",
+        "Pasarela de pagos colombiana o cotizador dinámico incluido",
+        "Calificación de prospectos y agendamiento 24/7 sin intervención humana",
+        "Soporte técnico prioritario VIP + 1 hora de capacitación privada",
+        "100% código propio sin ataduras ni mensualidades forzosas"
       ],
     }
   ];

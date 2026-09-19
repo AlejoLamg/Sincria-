@@ -23,10 +23,10 @@ export default function ContactForm() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const options = [
-    "Plan Web Base (Página web rápida y moderna - $1.890.000 COP)",
-    "Plan E-commerce (Tienda virtual con Wompi/PSE - $3.490.000 COP)",
-    "Plan IA Pro (Agente virtual y automatización 24/7 - $2.490.000 COP)",
-    "Plan Ecosistema Total (Web ultra veloz + Agente IA - $5.490.000 COP)",
+    "Plan Web Base (Portal ultra veloz <0.8s Next.js - $1.890.000 COP)",
+    "Plan Agente IA Pro 24/7 (Ventas y atención autónoma - $2.490.000 COP)",
+    "Plan E-commerce Pro (Tienda transaccional con Wompi/Bold/PSE - $3.690.000 COP)",
+    "Plan Ecosistema Total (Web Ultra Veloz + Agente IA - $4.890.000 COP)",
     "Un plan base con módulos adicionales a la medida",
     "Asesoría técnica o desarrollo a medida"
   ];

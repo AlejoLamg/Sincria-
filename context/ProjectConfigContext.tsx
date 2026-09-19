@@ -24,25 +24,25 @@ export const AVAILABLE_PLANS: Record<string, PlanItem> = {
     name: "WEB BASE",
     price: 1890000,
     billing: "Pago único",
-    label: "Plan Web Base (Página web rápida y moderna - $1.890.000 COP)",
-  },
-  "E-COMMERCE": {
-    name: "E-COMMERCE",
-    price: 3490000,
-    billing: "Pago único",
-    label: "Plan E-commerce (Tienda virtual con Wompi/PSE - $3.490.000 COP)",
+    label: "Plan Web Base (Portal ultra veloz <0.8s Next.js - $1.890.000 COP)",
   },
   "IA PRO": {
     name: "IA PRO",
     price: 2490000,
     billing: "Pago único",
-    label: "Plan IA Pro (Agente virtual y automatización 24/7 - $2.490.000 COP)",
+    label: "Plan Agente IA Pro 24/7 (Ventas y atención autónoma - $2.490.000 COP)",
+  },
+  "E-COMMERCE": {
+    name: "E-COMMERCE",
+    price: 3690000,
+    billing: "Pago único",
+    label: "Plan E-commerce Pro (Tienda transaccional con Wompi/Bold/PSE - $3.690.000 COP)",
   },
   "ECOSISTEMA TOTAL": {
     name: "ECOSISTEMA TOTAL",
-    price: 5490000,
-    billing: "Pago único",
-    label: "Plan Ecosistema Total (Web ultra veloz + Agente IA - $5.490.000 COP)",
+    price: 4890000,
+    billing: "Pago único (Ahorras $700.000)",
+    label: "Plan Ecosistema Total (Web Ultra Veloz + Agente IA - $4.890.000 COP)",
   },
 };
 
