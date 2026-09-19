@@ -1,10 +1,42 @@
-﻿import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { processAgentMessage } from "@/lib/agent/engine";
+import { clearSession, resumeSession, isSessionPaused } from "@/lib/agent/memory";
+
+export async function GET() {
+  return NextResponse.json({
+    hasGeminiKey: Boolean(process.env.GEMINI_API_KEY),
+  });
+}
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { message, sessionId = "test-session", contactName } = body;
+    const { message, sessionId = "test-session", contactName, action, apiKey } = body;
+
+    // Guardar apiKey temporalmente en runtime si se envía
+    if (apiKey && typeof apiKey === "string" && apiKey.trim().startsWith("AIzaSy")) {
+      process.env.GEMINI_API_KEY = apiKey.trim();
+    }
+
+    // Acción para reiniciar historial
+    if (action === "reset") {
+      clearSession(sessionId);
+      return NextResponse.json({
+        success: true,
+        message: "Historial de conversación reiniciado con éxito.",
+        isPaused: false,
+      });
+    }
+
+    // Acción para reanudar el bot tras un relevo humano
+    if (action === "resume") {
+      resumeSession(sessionId);
+      return NextResponse.json({
+        success: true,
+        message: "Agente reanudado. Sofía volverá a responder.",
+        isPaused: false,
+      });
+    }
 
     if (!message || typeof message !== "string") {
       return NextResponse.json(
@@ -13,11 +45,12 @@ export async function POST(request: Request) {
       );
     }
 
-    const result = await processAgentMessage(message, sessionId, contactName);
+    const result = await processAgentMessage(message, sessionId, contactName, apiKey);
 
     return NextResponse.json({
       success: true,
       data: result,
+      isPaused: isSessionPaused(sessionId),
     });
   } catch (error) {
     console.error("Error en /api/agent/chat:", error);

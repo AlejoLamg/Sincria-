@@ -1,4 +1,4 @@
-﻿import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI } from "@google/genai";
 import { AGENT_SYSTEM_PROMPT } from "./prompt";
 import {
   getSessionHistoryForGemini,
@@ -17,7 +17,8 @@ export interface AgentResponse {
 export async function processAgentMessage(
   userMessage: string,
   sessionId: string,
-  contactName?: string
+  contactName?: string,
+  customApiKey?: string
 ): Promise<AgentResponse> {
   // 1. Si la sesión está en pausa (relevo humano activo), no responder
   if (isSessionPaused(sessionId)) {
@@ -55,37 +56,60 @@ export async function processAgentMessage(
   }
 
   // 3. Procesar con Gemini API
-  const apiKey = process.env.GEMINI_API_KEY;
+  const activeKey = customApiKey || process.env.GEMINI_API_KEY;
   let rawReply = "";
 
-  if (apiKey) {
+  if (activeKey) {
     try {
-      const ai = new GoogleGenAI({ apiKey });
+      const ai = new GoogleGenAI({ apiKey: activeKey });
       const history = getSessionHistoryForGemini(sessionId);
 
-      const response = await ai.models.generateContent({
-        model: "gemini-2.5-flash",
-        contents: [
-          ...history,
-          {
-            role: "user",
-            parts: [{ text: userMessage }],
+      let response;
+      try {
+        response = await ai.models.generateContent({
+          model: "gemini-2.5-flash",
+          contents: [
+            ...history,
+            {
+              role: "user",
+              parts: [{ text: userMessage }],
+            },
+          ],
+          config: {
+            systemInstruction: AGENT_SYSTEM_PROMPT,
+            temperature: 0.7,
           },
-        ],
-        config: {
-          systemInstruction: AGENT_SYSTEM_PROMPT,
-          temperature: 0.7,
-        },
-      });
+        });
+      } catch {
+        // Fallback a gemini-2.0-flash si gemini-2.5-flash no está disponible en la cuenta
+        response = await ai.models.generateContent({
+          model: "gemini-2.0-flash",
+          contents: [
+            ...history,
+            {
+              role: "user",
+              parts: [{ text: userMessage }],
+            },
+          ],
+          config: {
+            systemInstruction: AGENT_SYSTEM_PROMPT,
+            temperature: 0.7,
+          },
+        });
+      }
 
       rawReply = response.text || "";
-    } catch (error) {
+    } catch (error: unknown) {
+      const errDetail = error instanceof Error ? error.message : "Error desconocido";
       console.error("Error en GoogleGenAI engine:", error);
-      rawReply = generateIntelligentMockReply(userMessage, contactName);
+      rawReply = `⚠️ Error al consultar Gemini API: ${errDetail}. Por favor verifica que tu GEMINI_API_KEY sea válida.`;
     }
   } else {
-    // Si aún no se ha ingresado GEMINI_API_KEY, opera con respuestas de demostración estructuradas
-    rawReply = generateIntelligentMockReply(userMessage, contactName);
+    // Si no hay API key, avisar claramente
+    rawReply = `⚠️ *[MOTOR DE IA DESCONECTADO]*
+Aún no se ha ingresado una *GEMINI_API_KEY*. Sin la clave de IA, el agente no puede razonar ni dialogar fluidamente y solo mostraba plantillas preguardadas.
+
+👉 Consigue tu clave gratuita en 15 segundos en *aistudio.google.com/apikey*, pégala en la barra superior del simulador y verás a Sofía razonar y vender como un profesional.`;
   }
 
   // 4. Analizar etiquetas de acción
@@ -173,27 +197,4 @@ ${waLink ? `💬 *Abrir chat:* [Chatear con el cliente](${waLink})` : ""}
   }
 }
 
-function generateIntelligentMockReply(userMsg: string, contactName?: string): string {
-  const lower = userMsg.toLowerCase();
-  const nameGreeting = contactName ? ` ${contactName}` : "";
 
-  if (lower.includes("precio") || lower.includes("cuanto cuesta") || lower.includes("costo") || lower.includes("planes")) {
-    return `¡Hola${nameGreeting}! 👋 En SincroIA tenemos opciones a medida en pago único:
-• *Web Base Next.js:* $1.890.000 COP (<0.8s de carga).
-• *Agente IA Pro 24/7:* $2.490.000 COP (atención y ventas en automático).
-• *E-commerce:* $3.490.000 COP (con pasarelas Wompi/Bold/PSE).
-• *Ecosistema Total:* $5.490.000 COP (Web + Agente IA).
-
-¿Qué tipo de solución se adapta mejor a tu modelo de negocio hoy?`;
-  }
-
-  if (lower.includes("reunión") || lower.includes("llamada") || lower.includes("demo") || lower.includes("agendar")) {
-    return `¡Con mucho gusto${nameGreeting}! Podemos hacer una sesión corta de 15 minutos en Google Meet para mostrarte cómo opera el Agente de IA y analizar tu proyecto sin compromiso. ¿Te queda mejor mañana en la mañana o en la tarde? [ACTION:SCHEDULE_MEETING]`;
-  }
-
-  if (lower.includes("comprar") || lower.includes("contratar") || lower.includes("pago") || lower.includes("empezar")) {
-    return `¡Excelente decisión${nameGreeting}! 🚀 Trabajamos con 50% de anticipo al inicio y 50% contra entrega con garantía de lanzamiento. Por favor indícame tu nombre completo, nombre de tu empresa y correo electrónico para generarte la propuesta formal y orden de inicio. [ACTION:READY_TO_BUY]`;
-  }
-
-  return `¡Hola${nameGreeting}! 👋 Soy Sofía de SincroIA.lat. Ayudamos a empresas a triplicar su conversión con portales web ultrarrápidos y agentes de Inteligencia Artificial que atienden 24/7. ¿Qué tipo de negocio tienes o qué proyecto te gustaría cotizar?`;
-}

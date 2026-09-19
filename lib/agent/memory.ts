@@ -1,4 +1,4 @@
-﻿export interface ChatMessage {
+export interface ChatMessage {
   role: "user" | "model";
   text: string;
   timestamp: number;
@@ -68,6 +68,10 @@ export function resumeSession(sessionId: string): void {
 export function isSessionPaused(sessionId: string): boolean {
   const session = getSession(sessionId);
   return session.isPaused;
+}
+
+export function clearSession(sessionId: string): void {
+  sessionsMap.delete(sessionId);
 }
 
 export function getSessionHistoryForGemini(sessionId: string): { role: "user" | "model"; parts: { text: string }[] }[] {
