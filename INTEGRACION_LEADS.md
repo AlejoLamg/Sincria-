@@ -73,7 +73,7 @@ Si quieres que cada cotización se guarde automáticamente en una hoja de cálcu
 En cuanto compres tu SIM card mañana:
 1. Añade el número en tu `.env.local` y en Vercel con el código de país (57 para Colombia), sin signos `+` ni espacios:
    ```env
-   NEXT_PUBLIC_WHATSAPP_NUMBER=573001234567
+   NEXT_PUBLIC_WHATSAPP_NUMBER=573124630488
    ```
 2. La web actualizará automáticamente todos los enlaces de contacto y el botón proactivo de WhatsApp.
 

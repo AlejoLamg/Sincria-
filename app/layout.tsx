@@ -74,6 +74,7 @@ const jsonLd = {
       },
       "contactPoint": {
         "@type": "ContactPoint",
+        "telephone": "+57-312-463-0488",
         "contactType": "Customer Service",
         "availableLanguage": ["Spanish", "English"]
       }
@@ -82,6 +83,7 @@ const jsonLd = {
       "@type": "ProfessionalService",
       "@id": "https://www.sincroia.lat/#service",
       "name": "SincroIA - Desarrollo Web & Agentes de IA",
+      "telephone": "+57-312-463-0488",
       "url": "https://www.sincroia.lat",
       "priceRange": "$$",
       "currenciesAccepted": "COP",

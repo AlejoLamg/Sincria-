@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function WhatsAppButton() {
   const [showPrompt, setShowPrompt] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
-  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "573000000000";
+  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "573124630488";
 
   // Disparador proactivo tras 6 segundos para capturar la atención en LATAM
   useEffect(() => {
