@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: ["/test-agent"],
       },
     ],
     sitemap: "https://www.sincroia.lat/sitemap.xml",
