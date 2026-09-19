@@ -13,8 +13,8 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { message, sessionId = "test-session", contactName, action, apiKey } = body;
 
-    // Guardar apiKey temporalmente en runtime si se envía
-    if (apiKey && typeof apiKey === "string" && apiKey.trim().startsWith("AIzaSy")) {
+    // Guardar apiKey en runtime si se envía
+    if (apiKey && typeof apiKey === "string" && apiKey.trim().length > 10) {
       process.env.GEMINI_API_KEY = apiKey.trim();
     }
 

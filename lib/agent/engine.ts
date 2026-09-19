@@ -67,7 +67,7 @@ export async function processAgentMessage(
       let response;
       try {
         response = await ai.models.generateContent({
-          model: "gemini-2.5-flash",
+          model: "gemini-3.6-flash",
           contents: [
             ...history,
             {
@@ -81,9 +81,9 @@ export async function processAgentMessage(
           },
         });
       } catch {
-        // Fallback a gemini-2.0-flash si gemini-2.5-flash no está disponible en la cuenta
+        // Fallback a gemini-3.5-flash-lite
         response = await ai.models.generateContent({
-          model: "gemini-2.0-flash",
+          model: "gemini-3.5-flash-lite",
           contents: [
             ...history,
             {
