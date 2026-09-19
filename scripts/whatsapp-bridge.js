@@ -1,4 +1,4 @@
-﻿const {
+const {
   default: makeWASocket,
   useMultiFileAuthState,
   DisconnectReason,
@@ -283,8 +283,8 @@ async function startWhatsAppBridge() {
 
         const data = await res.json();
 
-        // Pausa natural de 1.8 segundos para simular lectura y tipeo humano
-        await new Promise((r) => setTimeout(r, 1800));
+        // Micro-pausa de 200ms para fluidez instantánea
+        await new Promise((r) => setTimeout(r, 200));
 
         if (data.data?.reply) {
           await sock.sendMessage(remoteJid, { text: data.data.reply });
