@@ -137,7 +137,6 @@ export default function PricingSection() {
                     type="button"
                     onClick={() => {
                       selectPlanByName(plan.name);
-                      // Desplazar suavemente a módulos para animar a personalizar, o a contacto
                       document.getElementById('modulos')?.scrollIntoView({ behavior: 'smooth' });
                     }}
                     className={`block text-center w-full py-3 rounded-lg transition-all font-bold text-xs tracking-wider cursor-pointer ${
@@ -156,8 +155,55 @@ export default function PricingSection() {
           })}
         </ul>
 
+        {/* PLAN DE CONTINUIDAD OPERATIVA Y RETENCIÓN (SincroCare) */}
+        <div className="mt-14 p-8 rounded-2xl bg-gradient-to-br from-brand-surface/90 via-neutral-900/90 to-brand-surface/90 border border-brand-cyan/30 shadow-[0_15px_40px_rgba(0,0,0,0.6)]">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-white/10">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan font-mono text-[10px] tracking-wider uppercase mb-2">
+                <span>🛡️</span> Plan de Continuidad Operativa (SincroCare)
+              </div>
+              <h3 className="text-xl font-bold text-white">¿Cómo funcionan los servidores cloud y el consumo de IA?</h3>
+              <p className="text-xs text-gray-400 mt-1 max-w-2xl">
+                Tu implementación incluye el <span className="text-brand-cyan font-medium">primer mes de servidor 24/7 y bolsa de mensajes de IA 100% GRATIS</span>. A partir del 2do mes, cuentas con nuestro plan de acompañamiento para que nunca te preocupes por caídas técnicas.
+              </p>
+            </div>
+            <div className="text-left md:text-right shrink-0">
+              <span className="text-2xl font-bold font-mono text-white">$190.000 <span className="text-xs text-brand-cyan font-normal">COP/mes</span></span>
+              <span className="block text-[10px] font-mono text-gray-400">A partir del mes 2 • Sin permanencia</span>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 pt-6 text-xs text-gray-300">
+            <div className="flex items-start gap-3">
+              <span className="text-emerald-400 text-base shrink-0">✓</span>
+              <div>
+                <strong className="text-white block mb-0.5">Servidor Cloud 24/7 & Hosting Edge:</strong>
+                Tu bot y web se mantienen en servidores dedicados de alta disponibilidad con uptime 99.9%.
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-emerald-400 text-base shrink-0">✓</span>
+              <div>
+                <strong className="text-white block mb-0.5">Bolsa de Tokens & Calibración de IA:</strong>
+                Cubre el consumo de miles de respuestas mensuales y re-entrenamiento periódico de prompts.
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-emerald-400 text-base shrink-0">✓</span>
+              <div>
+                <strong className="text-white block mb-0.5">Soporte Técnico & Reconexiones:</strong>
+                Monitoreo de sesión de WhatsApp, copias de seguridad continuas y asistencia prioritaria.
+              </div>
+            </div>
+          </div>
+
+          <p className="text-[11px] font-mono text-gray-400 text-center mt-6 pt-4 border-t border-white/5">
+            💡 <span className="text-gray-300 font-semibold">100% Libertad:</span> Si tu empresa prefiere gestionar sus propias cuentas de API y servidores, te entregamos el código completo sin ataduras ni intermediarios.
+          </p>
+        </div>
+
         {/* Garantías y Reducción de Riesgo (Neuromarketing) */}
-        <div className="mt-14 p-6 rounded-2xl bg-brand-surface/70 border border-white/10 grid md:grid-cols-3 gap-6 text-center">
+        <div className="mt-8 p-6 rounded-2xl bg-brand-surface/70 border border-white/10 grid md:grid-cols-3 gap-6 text-center">
           <div className="flex items-center justify-center gap-3">
             <span className="text-2xl text-brand-cyan" aria-hidden="true">⚡</span>
             <div className="text-left">

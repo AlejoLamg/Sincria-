@@ -35,7 +35,7 @@ export default function WhatsAppButton() {
             ×
           </button>
           <a
-            href={`https://wa.me/${phoneNumber}?text=Hola,%20vi%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20ver%20una%20demostraci%C3%B3n%20de%20IA%20para%20mi%20empresa.`}
+            href={`https://wa.me/${phoneNumber}?text=Hola%20Sof%C3%ADa%2C%20quiero%20ver%20c%C3%B3mo%20vendes%20en%20vivo%20y%20hacerte%20unas%20preguntas.`}
             target="_blank"
             rel="noopener noreferrer"
             className="block"
@@ -52,7 +52,7 @@ export default function WhatsAppButton() {
       )}
 
       <a
-        href={`https://wa.me/${phoneNumber}?text=Hola,%20vi%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20ver%20una%20demostraci%C3%B3n%20de%20IA%20para%20mi%20empresa.`}
+        href={`https://wa.me/${phoneNumber}?text=Hola%20Sof%C3%ADa%2C%20quiero%20ver%20c%C3%B3mo%20vendes%20en%20vivo%20y%20hacerte%20unas%20preguntas.`}
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 shrink-0 flex items-center justify-center rounded-full shadow-[0_4px_25px_rgba(37,211,102,0.4)] hover:shadow-[0_4px_35px_rgba(37,211,102,0.6)] hover:scale-110 active:scale-95 transition-all duration-300 bg-[#25D366] pointer-events-auto cursor-pointer"

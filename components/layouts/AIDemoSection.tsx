@@ -3,32 +3,63 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-
 export default function AIDemoSection() {
   const [activeScenario, setActiveScenario] = useState<number>(0);
 
   const scenarios = [
     {
       id: 0,
-      title: "Calificación y Cierre 24/7",
-      userQuestion: "Hola, me interesa automatizar la atención de mi negocio por WhatsApp. ¿Cómo funciona?",
-      botAnswer: "¡Hola! Diseñamos un agente conversacional entrenado con todo tu catálogo, precios y políticas. Atiende a tus clientes en 2 segundos a cualquier hora, responde preguntas frecuentes, filtra prospectos calificados y agenda citas o ventas directamente en tu calendario o CRM. ¿En qué sector está tu empresa?",
-      metrics: "Respuesta: 1.8s • Tasa de conversión: +45%",
+      title: "Clínicas & Salud (Citas 24/7)",
+      industry: "Salud y Estética",
+      userQuestion: "Buenas noches, ¿tienen disponibilidad para una valoración de ortodoncia este sábado en la tarde?",
+      botAnswer: "¡Hola! Con mucho gusto. Para este sábado tenemos disponibles las 3:30 PM y las 5:00 PM con la Dra. Gómez en la sede norte. La valoración incluye diagnóstico 3D preliminar. ¿Cuál de estos dos horarios te queda más cómodo para apartar tu cupo?",
+      metrics: "Respuesta: 1.4s • Agendamiento: Automático",
     },
     {
       id: 1,
-      title: "Ventas y Catálogo en E-commerce",
-      userQuestion: "¿Tienen disponibilidad de la solución E-commerce y pasarelas de pago colombianas?",
-      botAnswer: "Sí, integramos las pasarelas líderes en Colombia: Wompi (Bancolombia), Bold, PayU y PSE. La plataforma cobra en COP, carga en menos de 0.8s en celulares para evitar carritos abandonados e incluye gestión de inventario en tiempo real. ¿Manejas productos físicos o digitales?",
-      metrics: "Carga: 0.6s • Pasarelas: Wompi, Bold, PSE",
+      title: "Inmobiliarias & B2B (Calificación)",
+      industry: "Bienes Raíces / Asesoría",
+      userQuestion: "Hola, me interesa información del apartamento en venta en Rosales.",
+      botAnswer: "¡Excelente día! El apartamento en Rosales tiene 115m², 3 habitaciones, 2 parqueaderos y vista panorámica. Su valor es de $780M COP (admón: $520.000). ¿Buscas para inversión o para habitar con tu familia? ¿Cuentas con crédito aprobado o pago de contado?",
+      metrics: "Filtro de prospectos: 100% autónomo",
     },
     {
       id: 2,
-      title: "Soporte Técnico y Reservas",
-      userQuestion: "¿Puedo sincronizar el agente con Google Calendar para que los clientes reserven solos?",
-      botAnswer: "Totalmente. El agente verifica tus horarios disponibles en tiempo real, le ofrece opciones al cliente en WhatsApp, confirma la cita y envía recordatorios automáticos 24 horas antes para evitar inasistencias.",
-      metrics: "Reducción de ausencias: 70% • Sincronización: 100%",
+      title: "Retail & E-commerce (Cobro Wompi/Bold)",
+      industry: "Tiendas y Comercio",
+      userQuestion: "¿Tienen la chaqueta impermeable en talla M color negro y cuánto cuesta el envío a Medellín?",
+      botAnswer: "¡Hola! Sí la tenemos disponible en talla M negro para despacho inmediato. Su valor es de $189.000 COP y el envío a Medellín toma 24-48 horas ($14.000 o GRATIS por compras superiores a $250.000). ¿Deseas que te genere el enlace de pago seguro por Wompi/Bancolombia o Nequi?",
+      metrics: "Cierre de venta: Inmediato con pasarela",
     },
+    {
+      id: 3,
+      title: "Sofía de SincroIA (Ventas de Software)",
+      industry: "Agencia SincroIA",
+      userQuestion: "¿Por qué debería contratar su Agente de IA en vez de contratar a una recepcionista?",
+      botAnswer: "¡Gran pregunta! Una persona solo atiende 8 horas al día, descansa fines de semana y puede demorar minutos en responder mientras atiende a otro cliente. Nuestro agente atiende a 50 clientes en simultáneo en menos de 2 segundos, no descansa nunca y cuesta una fracción de una nómina mensual. Además, si tú deseas intervenir en cualquier chat, el bot se silencia y te cede el control. ¿Quieres agendar una demo corta de 15 min por Meet?",
+      metrics: "Disponibilidad: 24/7/365 • Relevo Humano: Activo",
+    },
+  ];
+
+  const verticalBenefits = [
+    {
+      icon: "🏥",
+      vertical: "Salud & Clínicas Estéticas",
+      headline: "+65% Citas Agendadas",
+      description: "Los pacientes buscan citas de noche o fines de semana. El bot sincroniza Google Calendar y envía recordatorios reduciendo inasistencias.",
+    },
+    {
+      icon: "🏢",
+      vertical: "Inmobiliarias & Concesionarios",
+      headline: "Cero Tiempo Perdido en Curiosos",
+      description: "Filtra en 3 preguntas el presupuesto y capacidad crediticia antes de transferir el lead calificado al WhatsApp de tu equipo comercial.",
+    },
+    {
+      icon: "🛍️",
+      vertical: "Comercio & Servicios B2B",
+      headline: "Cobros en Caliente 24/7",
+      description: "Muestra catálogo, responde dudas técnicas de productos y envía botones de pago por Wompi, Bold o PSE en el momento exacto de interés.",
+    }
   ];
 
   return (
@@ -51,17 +82,17 @@ export default function AIDemoSection() {
             Así atiende tu negocio un <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-violet font-semibold">Agente de IA</span>
           </h2>
           <p className="text-gray-400 text-sm mt-3 max-w-xl mx-auto">
-            Interactúa con los diferentes escenarios para comprobar la velocidad, tono y precisión con la que nuestros agentes atienden y cierran prospectos.
+            Comprueba la velocidad, naturalidad y psicología de cierre de nuestros agentes en diferentes sectores comerciales de Colombia.
           </p>
         </motion.div>
 
         {/* Contenedor del Simulador */}
-        <div className="max-w-4xl mx-auto grid md:grid-cols-12 gap-8 items-center">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-12 gap-8 items-center">
           
           {/* Selector de Escenarios */}
           <div className="md:col-span-5 space-y-3">
             <span className="text-xs font-mono uppercase tracking-wider text-gray-400 block mb-2">
-              Selecciona un caso de uso:
+              Selecciona una industria:
             </span>
             {scenarios.map((scen, idx) => {
               const isSelected = activeScenario === idx;
@@ -69,35 +100,31 @@ export default function AIDemoSection() {
                 <button
                   key={scen.id}
                   onClick={() => setActiveScenario(idx)}
-                  className={`w-full text-left p-4 rounded-xl border transition-all duration-300 cursor-pointer ${
+                  className={`w-full text-left p-3.5 rounded-xl border transition-all duration-300 cursor-pointer ${
                     isSelected
                       ? "bg-brand-surface border-brand-cyan shadow-[0_0_20px_rgba(0,229,255,0.2)]"
                       : "bg-white/[0.02] border-white/10 hover:border-white/20 hover:bg-white/[0.04]"
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <h3 className={`text-sm font-medium ${isSelected ? "text-brand-cyan" : "text-white"}`}>
-                      {scen.title}
-                    </h3>
+                    <div>
+                      <span className="text-[10px] font-mono text-brand-cyan/80 block uppercase tracking-wider">
+                        {scen.industry}
+                      </span>
+                      <h3 className={`text-sm font-medium ${isSelected ? "text-white font-semibold" : "text-gray-200"}`}>
+                        {scen.title}
+                      </h3>
+                    </div>
                     {isSelected && (
                       <span className="w-2 h-2 rounded-full bg-brand-cyan animate-pulse" />
                     )}
                   </div>
-                  <p className="text-xs text-gray-400 mt-1 font-mono">
+                  <p className="text-[11px] text-gray-400 mt-1 font-mono">
                     {scen.metrics}
                   </p>
                 </button>
               );
             })}
-
-            <div className="pt-4">
-              <a
-                href="#contacto"
-                className="inline-flex items-center gap-2 text-xs font-mono text-brand-cyan hover:text-white transition"
-              >
-                <span>→</span> ¿Quieres este agente en tu empresa? Solicítalo aquí
-              </a>
-            </div>
           </div>
 
           {/* Ventana de Chat Mockup */}
@@ -114,18 +141,18 @@ export default function AIDemoSection() {
                     <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-neutral-900" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-white">Sincro Asistente Pro</h4>
-                    <p className="text-[11px] text-emerald-400 font-mono">● En línea 24/7 (Respuesta instantánea)</p>
+                    <h4 className="text-sm font-semibold text-white">Sofía • Sincro Asistente Pro</h4>
+                    <p className="text-[11px] text-emerald-400 font-mono">● En línea 24/7 (Respuesta &lt; 2s)</p>
                   </div>
                 </div>
 
                 <span className="text-[10px] font-mono uppercase tracking-widest text-gray-400 bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
-                  Demo en Vivo
+                  Simulación
                 </span>
               </div>
 
               {/* Cuerpo de Mensajes */}
-              <div className="p-6 space-y-4 min-h-[290px] flex flex-col justify-end bg-gradient-to-b from-transparent to-black/20">
+              <div className="p-6 space-y-4 min-h-[300px] flex flex-col justify-end bg-gradient-to-b from-transparent to-black/20">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeScenario}
@@ -151,7 +178,7 @@ export default function AIDemoSection() {
                       <div className="max-w-[85%] bg-neutral-900 border border-white/10 text-gray-200 rounded-2xl rounded-tl-sm px-4 py-3 text-xs md:text-sm leading-relaxed shadow-md">
                         {scenarios[activeScenario].botAnswer}
                         <span className="block text-[9px] text-brand-cyan text-right mt-1 font-mono">
-                          ✓✓ Atendido en 1.8s
+                          ✓✓ Atendido en tiempo récord
                         </span>
                       </div>
                     </div>
@@ -164,7 +191,7 @@ export default function AIDemoSection() {
                 <input 
                   type="text" 
                   disabled 
-                  value="Elige un escenario a la izquierda para ver más respuestas..." 
+                  value="Elige una industria a la izquierda para ver cómo responde..." 
                   className="w-full bg-neutral-950/80 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-gray-400 outline-none"
                 />
                 <button 
@@ -178,6 +205,59 @@ export default function AIDemoSection() {
           </div>
 
         </div>
+
+        {/* TARJETA DE CONVERSIÓN DIRECTA A WHATSAPP REAL (Elimina el escepticismo) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-12 max-w-4xl mx-auto p-6 rounded-2xl bg-gradient-to-r from-brand-surface via-neutral-900 to-brand-surface border-2 border-emerald-500/40 shadow-[0_0_40px_rgba(16,185,129,0.15)] flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left"
+        >
+          <div className="space-y-1">
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-[10px] uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+              Agente en Vivo Disponible
+            </div>
+            <h3 className="text-lg font-bold text-white">¿Quieres probar a Sofía en tu propio WhatsApp ahora mismo?</h3>
+            <p className="text-xs text-gray-400 max-w-lg">
+              Haz clic y envíale cualquier pregunta difícil sobre desarrollo o cotizaciones. Te responderá en menos de 2 segundos.
+            </p>
+          </div>
+
+          <a
+            href="https://wa.me/573124630488?text=Hola%20Sof%C3%ADa%2C%20quiero%20ver%20c%C3%B3mo%20vendes%20en%20vivo%20y%20hacerte%20unas%20preguntas."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-neutral-950 font-bold font-mono text-xs tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(16,185,129,0.4)] active:scale-95 flex items-center gap-2"
+          >
+            <span>💬 CHATEAR CON SOFÍA EN VIVO</span>
+            <span>→</span>
+          </a>
+        </motion.div>
+
+        {/* CASOS DE ESTUDIO / VERTICALES DE NEGOCIO */}
+        <div className="mt-20">
+          <div className="text-center mb-10">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-brand-cyan">Sectores de Alto Impacto</span>
+            <h3 className="text-2xl font-light text-white mt-1">Soluciones diseñadas para los dolores de tu industria</h3>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {verticalBenefits.map((item) => (
+              <div 
+                key={item.vertical}
+                className="p-6 rounded-2xl bg-brand-surface/40 border border-white/10 hover:border-brand-cyan/40 transition-all duration-300 space-y-3"
+              >
+                <span className="text-3xl block" aria-hidden="true">{item.icon}</span>
+                <span className="text-xs font-mono text-brand-cyan block">{item.vertical}</span>
+                <h4 className="text-base font-bold text-white">{item.headline}</h4>
+                <p className="text-xs text-gray-400 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

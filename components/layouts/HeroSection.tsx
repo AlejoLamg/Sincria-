@@ -42,23 +42,33 @@ export default function HeroSection() {
         {/* CTAs de Alta Conversión */}
         <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
           <a
-            href="#contacto"
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-cyan text-brand-navy font-bold font-mono tracking-widest text-xs sm:text-sm transition-all duration-300 hover:bg-white hover:shadow-[0_0_35px_rgba(0,229,255,0.45)] active:scale-[0.98] shadow-lg"
+            href="https://wa.me/573124630488?text=Hola%20Sof%C3%ADa%2C%20quiero%20ver%20c%C3%B3mo%20vendes%20en%20vivo%20y%20hacerte%20unas%20preguntas."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-teal-400 to-brand-cyan text-brand-navy font-bold font-mono tracking-wider text-xs sm:text-sm transition-all duration-300 hover:shadow-[0_0_35px_rgba(0,229,255,0.5)] active:scale-[0.98] shadow-lg flex items-center justify-center gap-3 group"
           >
-            SOLICITAR DIAGNÓSTICO GRATIS
+            <span className="w-2.5 h-2.5 rounded-full bg-brand-navy animate-ping" />
+            <span>PROBAR AGENTE EN TU WHATSAPP (EN VIVO)</span>
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
           </a>
 
           <a
-            href="#demo-ia"
-            className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/20 text-white hover:border-brand-cyan hover:text-brand-cyan transition-all duration-300 font-mono tracking-wider text-xs sm:text-sm"
+            href="#contacto"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/20 text-white hover:border-brand-cyan hover:text-brand-cyan transition-all duration-300 font-mono tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2"
           >
-            PROBAR DEMO DE IA
+            <span>SOLICITAR DIAGNÓSTICO GRATIS</span>
           </a>
         </div>
 
-        <p className="text-xs font-mono text-gray-400 mt-4">
-          ⚡ Respuesta en menos de 2 horas hábiles • Diagnóstico y cotización sin compromiso
-        </p>
+        <div className="flex items-center justify-center gap-6 mt-5 text-xs font-mono text-gray-400">
+          <span className="flex items-center gap-1.5">
+            <span className="text-emerald-400">●</span> Respuesta en WhatsApp &lt; 2 segundos
+          </span>
+          <span className="hidden sm:inline text-gray-600">•</span>
+          <a href="#demo-ia" className="text-brand-cyan hover:underline hidden sm:inline">
+            O explora el simulador web ↓
+          </a>
+        </div>
 
         {/* BARRA DE AUTORIDAD Y MÉTRICAS (Social Proof) */}
         <div className="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
