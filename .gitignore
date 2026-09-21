@@ -45,3 +45,4 @@ next-env.d.ts
 whatsapp_auth/
 *.qr.png
 public/whatsapp-qr.html
+data/sessions.json

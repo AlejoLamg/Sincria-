@@ -208,7 +208,10 @@ async function startWhatsAppBridge() {
         `⚠️ Conexión cerrada. Razón: ${lastDisconnect?.error?.message || "Desconocida"}. ¿Reconectando?: ${shouldReconnect}`
       );
       if (shouldReconnect) {
-        startWhatsAppBridge();
+        console.log("🔄 Reintentando conexión en 3 segundos...");
+        setTimeout(() => {
+          startWhatsAppBridge();
+        }, 3000);
       } else {
         console.log("❌ Sesión cerrada por el usuario en WhatsApp. Por favor reinicia para generar un nuevo QR.");
       }
@@ -248,13 +251,14 @@ async function startWhatsAppBridge() {
 
       // 1. RELEVO HUMANO: Si Alejo envió el mensaje desde el celular o la PC
       if (msg.key.fromMe) {
-        console.log(`👨‍💻 [ALEJO INTERVINO EN CHAT] Con: ${senderNumber}. Bot silenciado 24h.`);
+        console.log(`👨‍💻 [ALEJO INTERVINO EN CHAT] Con: ${senderNumber}. Bot en pausa por 2 horas.`);
         try {
           await fetch(API_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               action: "pause",
+              pauseHours: 2,
               sessionId: senderNumber,
             }),
           });
@@ -280,6 +284,12 @@ async function startWhatsAppBridge() {
             contactName: senderName,
           }),
         });
+
+        if (!res.ok) {
+          const errText = await res.text();
+          console.error(`❌ [ERROR API ${res.status}]:`, errText);
+          continue;
+        }
 
         const data = await res.json();
 

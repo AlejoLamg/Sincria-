@@ -5,6 +5,7 @@ import {
   addMessage,
   isSessionPaused,
   pauseSession,
+  setContactInfo,
 } from "./memory";
 
 export interface AgentResponse {
@@ -20,6 +21,10 @@ export async function processAgentMessage(
   contactName?: string,
   customApiKey?: string
 ): Promise<AgentResponse> {
+  if (contactName) {
+    setContactInfo(sessionId, contactName);
+  }
+
   // 1. Si la sesión está en pausa (relevo humano activo), no responder
   if (isSessionPaused(sessionId)) {
     return {
@@ -63,6 +68,9 @@ export async function processAgentMessage(
     try {
       const ai = new GoogleGenAI({ apiKey: activeKey });
       const history = getSessionHistoryForGemini(sessionId);
+      const systemInstruction = contactName
+        ? `${AGENT_SYSTEM_PROMPT}\n\n[DATO DEL CLIENTE: El nombre de este cliente en WhatsApp es "${contactName}". Puedes saludarlo o referirte a él con naturalidad si es la primera vez o si lo amerita el contexto.]`
+        : AGENT_SYSTEM_PROMPT;
 
       let response;
       try {
@@ -76,7 +84,7 @@ export async function processAgentMessage(
             },
           ],
           config: {
-            systemInstruction: AGENT_SYSTEM_PROMPT,
+            systemInstruction,
             temperature: 0.7,
           },
         });
@@ -92,7 +100,7 @@ export async function processAgentMessage(
             },
           ],
           config: {
-            systemInstruction: AGENT_SYSTEM_PROMPT,
+            systemInstruction,
             temperature: 0.7,
           },
         });

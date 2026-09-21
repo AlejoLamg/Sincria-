@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { processAgentMessage } from "@/lib/agent/engine";
-import { clearSession, resumeSession, isSessionPaused } from "@/lib/agent/memory";
+import { clearSession, resumeSession, pauseSession, isSessionPaused } from "@/lib/agent/memory";
 
 export async function GET() {
   return NextResponse.json({
@@ -11,11 +11,21 @@ export async function GET() {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { message, sessionId = "test-session", contactName, action, apiKey } = body;
+    const { message, sessionId = "test-session", contactName, action, apiKey, pauseHours = 2 } = body;
 
     // Guardar apiKey en runtime si se envía
     if (apiKey && typeof apiKey === "string" && apiKey.trim().length > 10) {
       process.env.GEMINI_API_KEY = apiKey.trim();
+    }
+
+    // Acción para pausar bot por relevo humano
+    if (action === "pause") {
+      pauseSession(sessionId, pauseHours);
+      return NextResponse.json({
+        success: true,
+        message: `Sesión en pausa durante ${pauseHours} horas por relevo humano.`,
+        isPaused: true,
+      });
     }
 
     // Acción para reiniciar historial
