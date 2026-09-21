@@ -85,7 +85,7 @@ SincroIA opera con un modelo dual: **Tarifa de Implementación Inicial (Cash Flo
   * Arquitectura optimizada para carga < 0.8s en celulares (Edge Computing).
   * Dominio profesional .com o .co por 1 año incluido.
   * Configuración técnica SEO inicial para indexación en Google.
-  * Entrega en 1 a 2 semanas.
+  * Entrega ágil: **5 a 7 días hábiles** tras recepción de insumos y accesos.
 
 #### 2. Plan Agente IA Pro — $2.490.000 COP
 * **Dirigido a:** Negocios que ya tienen tráfico o mensajes diarios pero pierden ventas por demoras en la respuesta manual.
@@ -95,6 +95,7 @@ SincroIA opera con un modelo dual: **Tarifa de Implementación Inicial (Cash Flo
   * Calificación automática de prospectos y agendamiento en Google Calendar.
   * Protocolo de Relevo Humano (si el asesor escribe, la IA se silencia 2 horas automáticamente).
   * Alertas push de compra al celular del dueño.
+  * Entrega ágil: **7 a 10 días hábiles** tras recepción de catálogo y vinculación de WhatsApp.
 
 #### 3. Plan E-commerce Pro — $3.690.000 COP
 * **Dirigido a:** Marcas de moda, calzado, tecnología o retail que quieren vender online sin pagar comisiones mensuales a Shopify o pasarelas extranjeras.
@@ -103,6 +104,7 @@ SincroIA opera con un modelo dual: **Tarifa de Implementación Inicial (Cash Flo
   * Pasarelas Colombia: Wompi (Bancolombia), Bold, PSE, Nequi y Tarjetas.
   * Botón de compra asistida directo a WhatsApp con resumen de pedido.
   * Cero comisiones de plataforma por venta realizada.
+  * Entrega ágil: **12 a 15 días hábiles** tras recepción de catálogo y aprobación de pasarelas.
 
 #### 4. Plan Ecosistema Total (Paquete Insignia) — $4.890.000 COP
 * **Dirigido a:** Empresas que buscan transformar completamente su canal comercial digital.
@@ -110,6 +112,7 @@ SincroIA opera con un modelo dual: **Tarifa de Implementación Inicial (Cash Flo
   * Portal Web Ultra Veloz + Agente de IA para WhatsApp + Pasarela de pagos o cotizador dinámico.
   * Sincronización completa: cada visitante web puede continuar la compra en WhatsApp.
   * Soporte prioritario y capacitación privada de entrega.
+  * Entrega integral: **15 a 20 días hábiles** tras recepción de insumos completos.
   * *(Ahorro comercial de $700.000 COP frente a contratar los servicios por separado).*
 
 ---
@@ -297,7 +300,27 @@ Para gestionar los prospectos sin pagar costosos CRMs en la etapa inicial, se ut
 
 ## 12. MODELO OPERATIVO, STACK TÉCNICO & ENTREGA ÁGIL
 
-Para mantener márgenes altos, la entrega de cada proyecto debe estar estandarizada como una línea de ensamblaje en **4 fases (1 a 2 semanas)**:
+Para mantener márgenes altos y relaciones comerciales saludables, la entrega de cada proyecto está estandarizada según el plan contratado y su nivel de complejidad técnica.
+
+### 12.1 Matriz Oficial de Tiempos de Entrega por Plan y Complejidad
+
+| Plan | Complejidad Técnica | Tiempo de Entrega Estimado | Hito Crítico de Inicio |
+|---|:---:|:---:|---|
+| **1. Web Base** ($1.890.000) | 🟢 **Baja** | **5 a 7 días hábiles** (~1 semana) | Entrega de logo, textos, fotos y secciones aprobadas. |
+| **2. Agente IA Pro** ($2.490.000) | 🟡 **Media** | **7 a 10 días hábiles** (~1.5 a 2 semanas) | Carga de catálogo/precios y escaneo de QR WhatsApp. |
+| **3. E-commerce Pro** ($3.690.000) | 🟠 **Media - Alta** | **12 a 15 días hábiles** (~2.5 a 3 semanas) | Catálogo de productos y aprobación de cuenta Wompi/Bold. |
+| **4. Ecosistema Total** ($4.890.000) | 🔴 **Alta** | **15 a 20 días hábiles** (~3 a 4 semanas) | Entrega integral de insumos, web + IA + pasarelas. |
+
+### 12.2 Factores que Modifican los Tiempos de Entrega (Módulos Complejos)
+Cuando el cliente contrata módulos adicionales, los plazos se ajustan de forma transparente en la cotización:
+* **Facturación Electrónica DIAN (Siigo / Factus / Alegra):** **+3 a 5 días hábiles** *(sujeto a que el cliente disponga de software contable activo y suministre las credenciales API)*.
+* **Catálogos Extensos (> 50 SKUs en E-commerce):** **+3 a 5 días hábiles** *(o se entrega la tienda con 30 productos y plantilla de importación masiva en CSV)*.
+* **Integración Omnicanal (Instagram DM + Messenger):** **+2 a 3 días hábiles** *(sujeto a permisos de administrador en Meta Business Suite)*.
+* **Sistema Multi-idioma:** **+2 días hábiles**.
+
+### 12.3 Cláusula de Protección Operativa: "El Reloj del Cliente"
+> **Regla de Oro:** Los días hábiles de entrega comienzan a contabilizarse **únicamente a partir del momento en que el cliente entrega el 100% de los insumos mínimos obligatorios** (formulario de onboarding diligenciado, catálogo con precios, logo y acceso a su WhatsApp o pasarela).  
+> Si el cliente demora 5 días en responder o enviar sus contenidos, el cronómetro de entrega de la agencia queda **automáticamente suspendido** hasta la recepción efectiva del material.
 
 ```mermaid
 sequenceDiagram
@@ -308,6 +331,7 @@ sequenceDiagram
     participant AI as Calibración Gemini
 
     Cliente->>PM: Pago 50% anticipo + Formulario de Onboarding
+    Note over Cliente,PM: El reloj inicia al recibir 100% de insumos
     PM->>Dev: Inicialización de Repositorio & Template Next.js 15
     PM->>AI: Estructuración de Prompt, Catálogo y Reglas de Negocio
     Dev->>Dev: Despliegue en Vercel Edge + Pasarelas Wompi/Bold
@@ -317,8 +341,9 @@ sequenceDiagram
     PM->>Cliente: Pase a Producción + Capacitación + Activación SincroCare
 ```
 
-### Regla Operativa de Oro:
-* **Anticipo 50% / Saldo 50% contra entrega:** Nunca se inicia código sin el 50% de anticipo. Las llaves finales del dominio y accesos se entregan con el 100% cancelado.
+### Reglas Operativas Financieras:
+* **Anticipo 50% / Saldo 50% contra entrega:** Nunca se inicia desarrollo sin el 50% de anticipo. Las llaves finales del dominio, código y accesos se transfieren exclusivamente contra la cancelación del 100%.
+* **Rondas de Ajustes:** La entrega preliminar incluye hasta **2 rondas de revisiones menores** dentro del alcance contratado, las cuales deben ser comunicadas por el cliente en un plazo máximo de 5 días hábiles.
 
 ---
 
