@@ -1,10 +1,19 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useProjectConfig } from "@/context/ProjectConfigContext";
 
 export default function PricingSection() {
   const { selectedPlan, selectPlanByName } = useProjectConfig();
+  const [expandedPlans, setExpandedPlans] = useState<Record<string, boolean>>({});
+
+  const togglePlanExpanded = (planName: string) => {
+    setExpandedPlans((prev) => ({
+      ...prev,
+      [planName]: !prev[planName],
+    }));
+  };
 
   const plans = [
     {
@@ -124,13 +133,41 @@ export default function PricingSection() {
                       </span>
                     </div>
                     
-                    <ul className="space-y-3 mb-8" role="list">
-                      {plan.features.map((feat) => (
-                        <li key={feat} className="text-gray-300 text-xs leading-relaxed flex items-start">
-                          <span className="text-brand-cyan mr-2 shrink-0" aria-hidden="true">•</span> {feat}
-                        </li>
-                      ))}
-                    </ul>
+                    {(() => {
+                      const isExpanded = !!expandedPlans[plan.name];
+                      return (
+                        <>
+                          <ul className="space-y-3 mb-4" role="list">
+                            {plan.features.map((feat, fIndex) => {
+                              const hideOnMobile = fIndex >= 3 && !isExpanded;
+                              return (
+                                <li 
+                                  key={feat} 
+                                  className={`text-gray-300 text-xs leading-relaxed items-start ${
+                                    hideOnMobile ? "hidden md:flex" : "flex"
+                                  }`}
+                                >
+                                  <span className="text-brand-cyan mr-2 shrink-0" aria-hidden="true">•</span> {feat}
+                                </li>
+                              );
+                            })}
+                          </ul>
+
+                          {/* Botón de revelación progresiva visible solo en celulares */}
+                          {plan.features.length > 3 && (
+                            <div className="md:hidden mb-6 text-center">
+                              <button
+                                type="button"
+                                onClick={() => togglePlanExpanded(plan.name)}
+                                className="inline-flex items-center gap-1.5 text-[11px] font-mono text-brand-cyan hover:text-white py-1.5 px-3 rounded-lg border border-brand-cyan/20 bg-brand-cyan/5 transition-colors active:scale-95 cursor-pointer"
+                              >
+                                <span>{isExpanded ? "Ocultar detalles ↑" : `+ Ver ${plan.features.length - 3} características más ↓`}</span>
+                              </button>
+                            </div>
+                          )}
+                        </>
+                      );
+                    })()}
                   </div>
 
                   <button 

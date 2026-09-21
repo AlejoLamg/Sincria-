@@ -212,9 +212,10 @@ export default function ContactForm() {
                 id="nombre" 
                 name="nombre" 
                 type="text" 
+                autoComplete="name"
                 placeholder="Ej. Carlos Pérez" 
                 required 
-                className="w-full bg-brand-navy/80 border border-white/10 p-4 rounded-xl text-gray-100 placeholder-gray-500 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" 
+                className="w-full bg-brand-navy/80 border border-white/10 p-4 rounded-xl text-base md:text-sm text-gray-100 placeholder-gray-500 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" 
               />
             </div>
             <div className="space-y-2">
@@ -225,9 +226,11 @@ export default function ContactForm() {
                 id="email" 
                 name="email" 
                 type="email" 
+                autoComplete="email"
+                inputMode="email"
                 placeholder="carlos@tuempresa.com" 
                 required 
-                className="w-full bg-brand-navy/80 border border-white/10 p-4 rounded-xl text-gray-100 placeholder-gray-500 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" 
+                className="w-full bg-brand-navy/80 border border-white/10 p-4 rounded-xl text-base md:text-sm text-gray-100 placeholder-gray-500 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" 
               />
             </div>
           </div>
@@ -240,9 +243,11 @@ export default function ContactForm() {
               id="telefono" 
               name="telefono" 
               type="tel" 
+              autoComplete="tel"
+              inputMode="tel"
               placeholder="+57 300 000 0000" 
               required 
-              className="w-full bg-brand-navy/80 border border-white/10 p-4 rounded-xl text-gray-100 placeholder-gray-500 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" 
+              className="w-full bg-brand-navy/80 border border-white/10 p-4 rounded-xl text-base md:text-sm text-gray-100 placeholder-gray-500 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all" 
             />
           </div>
         </div>
@@ -340,7 +345,7 @@ export default function ContactForm() {
               id="comentarios" 
               name="comentarios" 
               placeholder="Cuéntanos brevemente sobre tu empresa, objetivos o dudas adicionales..." 
-              className="w-full bg-brand-navy/80 border border-white/10 p-4 rounded-xl text-gray-100 placeholder-gray-500 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all h-32 resize-none" 
+              className="w-full bg-brand-navy/80 border border-white/10 p-4 rounded-xl text-base md:text-sm text-gray-100 placeholder-gray-500 focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none transition-all h-32 resize-none" 
             />
           </div>
         </div>

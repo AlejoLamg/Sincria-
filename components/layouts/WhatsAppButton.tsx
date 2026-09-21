@@ -20,7 +20,7 @@ export default function WhatsAppButton() {
   }, [isDismissed]);
 
   return (
-    <div className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 flex flex-col sm:flex-row items-end gap-3 pointer-events-none">
+    <div className="hidden md:flex fixed bottom-8 right-8 z-50 flex-col sm:flex-row items-end gap-3 pointer-events-none">
       {/* Burbuja proactiva conversacional */}
       {showPrompt && !isDismissed && (
         <div className="relative max-w-[270px] sm:max-w-xs p-3.5 bg-brand-surface/95 border border-brand-cyan/40 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.8)] text-white backdrop-blur-xl pointer-events-auto">

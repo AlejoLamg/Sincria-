@@ -89,42 +89,53 @@ export default function AIDemoSection() {
         {/* Contenedor del Simulador */}
         <div className="max-w-5xl mx-auto grid md:grid-cols-12 gap-8 items-center">
           
-          {/* Selector de Escenarios */}
-          <div className="md:col-span-5 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-wider text-gray-400 block mb-2">
-              Selecciona una industria:
-            </span>
-            {scenarios.map((scen, idx) => {
-              const isSelected = activeScenario === idx;
-              return (
-                <button
-                  key={scen.id}
-                  onClick={() => setActiveScenario(idx)}
-                  className={`w-full text-left p-3.5 rounded-xl border transition-all duration-300 cursor-pointer ${
-                    isSelected
-                      ? "bg-brand-surface border-brand-cyan shadow-[0_0_20px_rgba(0,229,255,0.2)]"
-                      : "bg-white/[0.02] border-white/10 hover:border-white/20 hover:bg-white/[0.04]"
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-[10px] font-mono text-brand-cyan/80 block uppercase tracking-wider">
-                        {scen.industry}
-                      </span>
-                      <h3 className={`text-sm font-medium ${isSelected ? "text-white font-semibold" : "text-gray-200"}`}>
-                        {scen.title}
-                      </h3>
+          {/* Selector de Escenarios: Horizontal scroll en móviles, vertical en desktop */}
+          <div className="md:col-span-5">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-xs font-mono uppercase tracking-wider text-gray-400">
+                Selecciona una industria:
+              </span>
+              <span className="text-[10px] font-mono text-brand-cyan/70 md:hidden">
+                Desliza →
+              </span>
+            </div>
+            
+            <div 
+              style={{ WebkitOverflowScrolling: "touch" }}
+              className="flex md:flex-col overflow-x-auto md:overflow-visible gap-2.5 md:space-y-3 md:gap-0 pb-3 md:pb-0 snap-x snap-mandatory scrollbar-none"
+            >
+              {scenarios.map((scen, idx) => {
+                const isSelected = activeScenario === idx;
+                return (
+                  <button
+                    key={scen.id}
+                    onClick={() => setActiveScenario(idx)}
+                    className={`min-w-[240px] md:min-w-0 md:w-full text-left p-3.5 rounded-xl border transition-all duration-300 cursor-pointer snap-start shrink-0 ${
+                      isSelected
+                        ? "bg-brand-surface border-brand-cyan shadow-[0_0_20px_rgba(0,229,255,0.2)]"
+                        : "bg-white/[0.02] border-white/10 hover:border-white/20 hover:bg-white/[0.04]"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <span className="text-[10px] font-mono text-brand-cyan/80 block uppercase tracking-wider">
+                          {scen.industry}
+                        </span>
+                        <h3 className={`text-sm font-medium ${isSelected ? "text-white font-semibold" : "text-gray-200"}`}>
+                          {scen.title}
+                        </h3>
+                      </div>
+                      {isSelected && (
+                        <span className="w-2 h-2 rounded-full bg-brand-cyan animate-pulse" />
+                      )}
                     </div>
-                    {isSelected && (
-                      <span className="w-2 h-2 rounded-full bg-brand-cyan animate-pulse" />
-                    )}
-                  </div>
-                  <p className="text-[11px] text-gray-400 mt-1 font-mono">
-                    {scen.metrics}
-                  </p>
-                </button>
-              );
-            })}
+                    <p className="text-[11px] text-gray-400 mt-1 font-mono">
+                      {scen.metrics}
+                    </p>
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           {/* Ventana de Chat Mockup */}

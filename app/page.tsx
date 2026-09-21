@@ -11,11 +11,12 @@ import Footer from "@/components/layouts/Footer";
 import ContactForm from "@/components/layouts/ContactForm";
 import TechStack from "@/components/layouts/TechStack";
 import WhatsAppButton from "@/components/layouts/WhatsAppButton";
+import MobileBottomBar from "@/components/layouts/MobileBottomBar";
 import FaqSection from "@/components/layouts/FaqSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-brand-navy">
+    <main className="min-h-screen bg-brand-navy pb-20 md:pb-0">
       <Navbar />
       <HeroSection />
       <SolutionsSection />
@@ -30,6 +31,7 @@ export default function Home() {
       <TechStack/>
       <Footer />
       <WhatsAppButton/>
+      <MobileBottomBar />
     </main>
   );
 }
