@@ -23,8 +23,8 @@ export default function Home() {
       <WorkProcess />
       <PricingSection />
       <AdditionalModules />
-      <ContactForm/>
-      <FaqSection/>
+      <FaqSection />
+      <ContactForm />
       <TechStack/>
       <Footer />
       <WhatsAppButton/>

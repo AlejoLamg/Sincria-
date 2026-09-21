@@ -19,6 +19,7 @@ export default function ContactForm() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [acceptedHabeasData, setAcceptedHabeasData] = useState(true);
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -72,6 +73,12 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!acceptedHabeasData) {
+      toast.error("Por favor autoriza el tratamiento de datos personales para continuar.");
+      return;
+    }
+
     setLoading(true);
 
     const formElement = e.currentTarget;
@@ -338,17 +345,23 @@ export default function ContactForm() {
           </div>
         </div>
 
-        {/* AVISO DE PRIVACIDAD / CONSENTIMIENTO */}
-        <p className="text-gray-400 text-xs text-center leading-relaxed pt-2">
-          Al enviar este formulario, aceptas el tratamiento de tus datos personales conforme a nuestra{" "}
-          <a href="/privacidad" className="text-brand-cyan hover:underline font-medium">
-            Política de Privacidad
-          </a>{" "}
-          y{" "}
-          <a href="/terminos" className="text-brand-cyan hover:underline font-medium">
-            Términos de Servicio
-          </a>.
-        </p>
+        {/* CONSENTIMIENTO EXPLÍCITO HABEAS DATA (LEY 1581 DE 2012) */}
+        <div className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/10 text-left">
+          <input 
+            id="habeasData" 
+            type="checkbox" 
+            checked={acceptedHabeasData} 
+            onChange={(e) => setAcceptedHabeasData(e.target.checked)}
+            required
+            className="mt-0.5 w-4 h-4 rounded border-white/20 bg-brand-navy text-brand-cyan focus:ring-brand-cyan focus:ring-offset-0 cursor-pointer shrink-0 accent-cyan-400" 
+          />
+          <label htmlFor="habeasData" className="text-xs text-gray-300 leading-relaxed cursor-pointer select-none">
+            Autorizo a SincroIA el tratamiento de mis datos personales para recibir el diagnóstico y cotización solicitada, conforme a la <strong className="text-white font-medium">Ley 1581 de 2012 (Habeas Data)</strong> y su{" "}
+            <a href="/privacidad" target="_blank" rel="noopener noreferrer" className="text-brand-cyan hover:underline font-medium">
+              Política de Privacidad
+            </a>.
+          </label>
+        </div>
 
         <button 
           type="submit" 

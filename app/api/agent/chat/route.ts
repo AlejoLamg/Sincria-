@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { processAgentMessage } from "@/lib/agent/engine";
 import { clearSession, resumeSession, pauseSession, isSessionPaused } from "@/lib/agent/memory";
+import { checkRateLimit, getClientIp } from "@/lib/rate-limiter";
 
 export async function GET() {
   return NextResponse.json({
@@ -10,6 +11,28 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    const clientIp = getClientIp(request);
+    // Rate limit: 25 peticiones por minuto por IP (suficiente para pruebas fluidas pero detiene ataques)
+    const isLocalBridge = clientIp === "127.0.0.1" || clientIp === "::1";
+    const limit = isLocalBridge ? 120 : 25;
+    const rateCheck = checkRateLimit(clientIp, limit, 60000);
+
+    if (!rateCheck.allowed) {
+      return NextResponse.json(
+        {
+          error: "Has alcanzado el límite de mensajes por minuto. Por favor espera 30 segundos antes de enviar otro mensaje.",
+        },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": "30",
+            "X-RateLimit-Limit": limit.toString(),
+            "X-RateLimit-Remaining": "0",
+          },
+        }
+      );
+    }
+
     const body = await request.json();
     const { message, sessionId = "test-session", contactName, action, apiKey, pauseHours = 2 } = body;
 

@@ -1,7 +1,19 @@
 import { NextResponse } from "next/server";
+import { checkRateLimit, getClientIp } from "@/lib/rate-limiter";
 
 export async function POST(request: Request) {
   try {
+    const clientIp = getClientIp(request);
+    // Rate limit: 6 solicitudes por minuto para evitar spam de formularios
+    const rateCheck = checkRateLimit(clientIp, 6, 60000);
+
+    if (!rateCheck.allowed) {
+      return NextResponse.json(
+        { error: "Has enviado demasiadas solicitudes. Por favor espera un minuto antes de reintentar." },
+        { status: 429 }
+      );
+    }
+
     const data = await request.json();
     const { nombre, email, telefono, objetivo, comentarios, totalEstimatedPrice } = data;
 

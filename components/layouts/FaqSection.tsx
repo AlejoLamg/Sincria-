@@ -8,44 +8,36 @@ export default function FaqSection() {
 
   const faqs = [
     {
-      question: "¿Cuánto tiempo toma desarrollar una web o IA?",
-      answer: "Una Web Base toma de 1 a 2 semanas. Portales de E-commerce o integraciones complejas de IA toman entre 3 y 4 semanas con despliegue continuo."
+      question: "¿Cuánto tiempo toma tener mi web o agente de IA funcionando?",
+      answer: "El Plan Web Base y el Agente de IA toman entre 1 y 2 semanas de desarrollo ágil. El Plan E-commerce y el Ecosistema Total toman de 2 a 3 semanas. Todos nuestros proyectos incluyen cronograma transparente de entregas y garantía de lanzamiento a satisfacción."
     },
     {
-      question: "¿Los precios son de pago único o mensual?",
-      answer: "Nuestros planes de desarrollo son de pago único en pesos colombianos (COP). No cobramos mensualidades obligatorias ni comisiones sobre tus ventas; el código y la plataforma son 100% de tu propiedad."
+      question: "¿Los precios son de pago único o cobran mensualidades?",
+      answer: "La arquitectura, diseño y entrenamiento inicial son de PAGO ÚNICO en pesos colombianos ($1.890.000 a $4.890.000 COP). Además, incluimos el primer mes de servidor en la nube y bolsa de mensajes de IA 100% GRATIS. A partir del mes 2, cuentas con nuestro plan de continuidad SincroCare por solo $190.000 COP/mes (sin contratos de permanencia), o si lo prefieres, te entregamos el código completo para que lo autogestiones sin costo de intermediación."
     },
     {
-      question: "¿Necesito conocimientos técnicos para administrarla?",
-      answer: "Para nada. Entregamos plataformas autoadministrables, intuitivas y te capacitamos para gestionar contenidos, ventas y datos sin tocar una sola línea de código."
+      question: "¿Emiten factura legal o soporte tributario para mi empresa?",
+      answer: "Totalmente. Emitimos factura legal y cuenta de cobro con RUT comercial vigente para que tu empresa pueda deducir el 100% de la inversión en su contabilidad e impuestos ante la DIAN."
     },
     {
-      question: "¿Cómo funciona el soporte técnico?",
-      answer: "Incluimos acompañamiento inicial de lanzamiento sin costo adicional. Para monitoreo proactivo 24/7, optimización continua y reportes de rendimiento, cuentas con nuestros planes de membresía especializada."
+      question: "¿Cómo garantizan que el bot de IA no invente respuestas falsas ni se equivoque?",
+      answer: "Nuestros agentes operan con guardrails de ingeniería estrictos: el modelo solo responde basándose en tu catálogo, políticas y documentos oficiales. Sofía jamás inventa precios ni promete servicios no autorizados. Si un cliente hace una consulta compleja o pide un humano, el bot le avisa, se silencia automáticamente y te envía una alerta prioritaria a tu celular."
     },
     {
-      question: "¿Qué incluye el dominio y el hosting?",
-      answer: "Incluimos el registro de tu dominio .com por el primer año y despliegue en infraestructura global edge de Vercel, garantizando tiempos de carga inferiores a 1 segundo y certificado SSL automático."
+      question: "¿El agente funciona si mi computador está apagado o se va la luz?",
+      answer: "Sí, 100%. Tu agente opera en servidores dedicados en la nube 24/7 con disponibilidad 99.9%. No depende de que tu computador o celular estén encendidos ni conectados a Wi-Fi; atiende, cotiza y califica prospectos incluso mientras duermes o estás de viaje."
     },
     {
-      question: "¿El Agente de IA funciona con mi número actual de WhatsApp?",
-      answer: "Totalmente. Podemos integrar el agente a tu número empresarial actual mediante vinculación segura o WhatsApp Cloud API. El agente responderá en 2 segundos día y noche, y tu equipo humano puede tomar el control de la conversación en cualquier momento sin fricción."
+      question: "¿Qué pasa si ya tengo un hosting o dominio comprado?",
+      answer: "Lo integramos sin costo adicional. Conectamos tus registros DNS y desplegamos la plataforma sobre tu infraestructura existente o migramos todo a Next.js 15 sin interrumpir tus correos corporativos ni tu posicionamiento previo en Google."
     },
     {
-      question: "¿Qué pasa si ya tengo un sitio web en WordPress o Wix?",
-      answer: "Realizamos una migración técnica completa hacia Next.js 15. Diseñamos una plataforma mucho más rápida (< 0.8s), moderna y de alta conversión, preservando tus correos corporativos y tu posicionamiento en Google, pero eliminando las caídas y la lentitud de WordPress."
+      question: "¿El agente funciona con mi número actual de WhatsApp Business?",
+      answer: "Sí. Podemos vincularlo de forma transparente a tu número actual en menos de 1 minuto mediante conexión multi-dispositivo o WhatsApp Cloud API oficial, sin perder tus chats históricos ni interrumpir tu comunicación diaria."
     },
     {
-      question: "¿Cómo se integran los agentes de IA?",
-      answer: "Diseñamos asistentes conversacionales entrenados con la base de conocimiento de tu empresa, conectados a tus bases de datos, WhatsApp, CRM o Google Calendar para calificar prospectos y agendar citas de venta 24/7."
-    },
-    {
-      question: "¿Atienden fuera de Bogotá?",
-      answer: "Sí. Aunque nuestra sede principal está en Bogotá, trabajamos de forma 100% remota y ágil con clientes en toda Colombia y Latinoamérica."
-    },
-    {
-      question: "¿Cuál es el siguiente paso para iniciar?",
-      answer: "Elige tu plan en la sección de inversión, selecciona los módulos que necesites y completa el formulario de cotización. Nuestro equipo te contactará de inmediato por WhatsApp para coordinar la reunión inicial y diagnóstico."
+      question: "¿Cómo es el proceso de pago y contratación?",
+      answer: "Manejamos una modalidad segura de 50% de anticipo al firmar la propuesta y 50% final contra entrega a entera satisfacción tras verificar la web o el bot en un entorno privado de pruebas. Aceptamos transferencias Bancolombia, Davivienda, Nequi, Daviplata y links de tarjeta de crédito/débito con Wompi o Bold."
     }
   ];
 
