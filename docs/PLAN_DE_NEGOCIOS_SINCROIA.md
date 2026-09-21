@@ -344,6 +344,7 @@ sequenceDiagram
 ### Reglas Operativas Financieras:
 * **Anticipo 50% / Saldo 50% contra entrega:** Nunca se inicia desarrollo sin el 50% de anticipo. Las llaves finales del dominio, código y accesos se transfieren exclusivamente contra la cancelación del 100%.
 * **Rondas de Ajustes:** La entrega preliminar incluye hasta **2 rondas de revisiones menores** dentro del alcance contratado, las cuales deben ser comunicadas por el cliente en un plazo máximo de 5 días hábiles.
+* **Procedimiento Operativo Estandarizado (SOP Completo):** El paso a paso detallado desde la prospección, kit de onboarding de insumos, línea de ensamblaje, capacitación 1 a 1 y plantillas de mensajes oficiales se encuentra documentado en [**`docs/PROTOCOLO_FLUJO_CLIENTE_SINCROIA.md`**](./PROTOCOLO_FLUJO_CLIENTE_SINCROIA.md).
 
 ---
 
