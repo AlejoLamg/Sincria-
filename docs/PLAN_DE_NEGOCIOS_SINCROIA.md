@@ -19,11 +19,13 @@
 5. [Estrategia de Ingresos Recurrentes (MRR - SincroCare)](#5-estrategia-de-ingresos-recurrentes-mrr---sincrocare)
 6. [Unit Economics & Estructura de Márgenes](#6-unit-economics--estructura-de-márgenes)
 7. [Perfil de Cliente Ideal (ICP) & Nichos Clave](#7-perfil-de-cliente-ideal-icp--nichos-clave)
-8. [Estrategia Go-To-Market (GTM) & Adquisición de Clientes](#8-estrategia-go-to-market-gtm--adquisición-de-clientes)
-9. [Guión Comercial & Manejo de Objeciones](#9-guión-comercial--manejo-de-objeciones)
-10. [Modelo Operativo, Stack Técnico & Entrega Ágil](#10-modelo-operativo-stack-técnico--entrega-ágil)
-11. [Proyección Financiera a 12 Meses](#11-proyección-financiera-a-12-meses)
-12. [Gestión de Riesgos & Blindaje Jurídico](#12-gestión-de-riesgos--blindaje-jurídico)
+8. [Estrategia Go-To-Market & Los 3 Motores de Adquisición](#8-estrategia-go-to-market--los-3-motores-de-adquisición)
+9. [Guiones de Prospección Fría (Listos para Enviar)](#9-guiones-de-prospección-fría-listos-para-enviar)
+10. [Framework de Cierre en Meet (15 Minutos) & Manejo de Objeciones](#10-framework-de-cierre-en-meet-15-minutos--manejo-de-objeciones)
+11. [Gestión Comercial, Pipeline en WhatsApp & Rutina Diaria](#11-gestión-comercial-pipeline-en-whatsapp--rutina-diaria)
+12. [Modelo Operativo, Stack Técnico & Entrega Ágil](#12-modelo-operativo-stack-técnico--entrega-ágil)
+13. [Proyección Financiera a 12 Meses](#13-proyección-financiera-a-12-meses)
+14. [Gestión de Riesgos & Blindaje Jurídico](#14-gestión-de-riesgos--blindaje-jurídico)
 
 ---
 
@@ -181,47 +183,119 @@ graph TD
 
 ---
 
-## 8. ESTRATEGIA GO-TO-MARKET (GTM) & ADQUISICIÓN DE CLIENTES
+## 8. ESTRATEGIA GO-TO-MARKET & LOS 3 MOTORES DE ADQUISICIÓN
 
-Para crecer con solidez, utilizaremos 3 canales de adquisición complementarios:
+Para escalar la facturación sin depender de la suerte o de que alguien encuentre la web por casualidad, SincroIA opera con **3 motores comerciales simultáneos**:
 
-### Canal 1: Inbound con "Efecto Demostración" (Meta Ads a WhatsApp)
-* **El anuncio:** Videos cortos mostrando la pantalla de un celular: *"Mira cómo este negocio responde y agenda citas en 1.8 segundos mientras el dueño duerme"*.
-* **El gancho:** *"Haz clic y habla en vivo con Sofía, nuestro agente de IA, para que veas cómo atiende a tus propios clientes"*.
-* **El cierre:** Al entrar a WhatsApp, **Sofía misma vende el servicio**. El cliente experimenta el producto antes de comprarlo. Esto genera una tasa de conversión superior al 35%.
+```mermaid
+flowchart TD
+    M1["Motor 1: Outbound Quirúrgico<br/>(Semana 1 - $0 COP - Prospección Directa)"] --> Pipe["Pipeline de Ventas en WhatsApp Business"]
+    M2["Motor 2: Inbound con Meta Ads<br/>($25.000 COP/día - Anuncio a WhatsApp con Sofía)"] --> Pipe
+    M3["Motor 3: Oferta 'Cliente Fundador'<br/>(Red Cercana & Alianzas Estratégicas B2B)"] --> Pipe
+    Pipe --> Meet["Demo y Diagnóstico en Meet (15 min)"]
+    Meet --> Pay["Cierre Comercial & Anticipo 50%"]
+```
 
-### Canal 2: Outbound de Precisión ("La Auditoría de 60 Segundos")
-* **Prospección en frío:** Identificar 10 empresas al día en Instagram que pauten activamente pero que:
-  * Su enlace web cargue lento en Google PageSpeed.
-  * O su WhatsApp tarde más de 15 minutos en responder.
-* **El mensaje no invasivo:**
-  > *"Hola [Nombre/Marca], noté que están pautando en Instagram pero su web tarda 4.2 segundos en abrir en celulares, lo que según Google hace perder hasta el 40% de los clics pagados. Les grabé un video de 45 segundos mostrándoles cómo corregir este cuello de botella y cómo un agente de IA puede atender a sus clientes de noche en 2 segundos. ¿Les interesa que se los envíe sin compromiso?"*
-* **Tasa esperada:** De 50 contactos, 15 responden, 5 agendan diagnóstico y 1 a 2 cierran.
+### Motor 1: Outbound Quirúrgico ("La Auditoría de 60 Segundos")
+* **Objetivo:** Generar los primeros ingresos de inmediato con $0 de inversión en pauta.
+* **Proceso de Prospección:**
+  1. Identificar en Instagram o Facebook Ad Library 10 empresas de tu ciudad que estén pagando publicidad en los nichos clave (clínicas odontológicas/estéticas, tiendas de calzado/moda o empresas B2B).
+  2. Abrir su enlace web desde el celular y medir el tiempo de carga.
+  3. Escribir a su WhatsApp a las 7:30 PM para medir su tiempo de respuesta manual.
+  4. Enviar un mensaje personalizado no invasivo ofreciéndoles un video de 45 segundos con el diagnóstico exacto.
+* **Métrica de conversión esperada:**
+  * 10 mensajes diarios = 50 a la semana.
+  * 12 a 15 respuestas positivas.
+  * 4 a 5 diagnósticos agendados.
+  * **1 a 2 cierres semanales ($2.49M a $4.89M COP facturados por semana)**.
 
-### Canal 3: Alianzas Estratégicas B2B (Efecto Multiplicador)
-* Aliarse con:
-  * **Contadores públicos y firmas de nómina:** Ellos conocen empresas que necesitan facturación electrónica DIAN o que quieren recortar costos operativos.
-  * **Agencias de Marketing Digital / Media Buyers:** Agencias de pauta que sufren porque sus clientes no convierten las visitas en WhatsApp. SincroIA actúa como su socio tecnológico en marca blanca o con comisión del 10% por referido.
+### Motor 2: Inbound con "Efecto Demostración" (Meta Ads a WhatsApp)
+* **Presupuesto recomendado:** $20.000 a $30.000 COP / día.
+* **El Anuncio:** Video corto mostrando la pantalla del celular:
+  > *«¿Tu equipo tarda horas en responder WhatsApp y pierdes ventas en las noches? Mira cómo Sofía atiende en 1.8 segundos, califica el presupuesto del cliente y agenda citas en automático. Toca el botón, escríbele ahora mismo y ponla a prueba en vivo.»*
+* **Por qué es imbatible:** En lugar de prometer en una landing estática, el cliente experimenta la tecnología en su propio WhatsApp. Sofía se encarga de venderse a sí misma, responder preguntas y filtrar el interés del prospecto antes de transferirlo al fundador para cerrar.
+* **Costo por conversación iniciada:** ~$1.500 a $3.000 COP en Colombia. Con $25.000 COP diarios se generan entre 8 y 15 conversaciones con dueños de negocio al día.
+
+### Motor 3: Oferta "Cliente Fundador" para Red Cercana
+* **Objetivo:** Conseguir los primeros 3 casos de éxito documentados en los primeros 10 días.
+* **La Oferta:**
+  > *"Estamos seleccionando a 3 empresas aliadas para implementarles nuestro Agente de IA para WhatsApp con un 30% de descuento y el primer mes de mantenimiento en la nube GRATIS, a cambio de que nos permitan documentar sus métricas y grabar un testimonio corto de 30 segundos tras los primeros 30 días."*
+* Esto remueve cualquier fricción de precio y activa de inmediato ingresos recurrentes en SincroCare.
 
 ---
 
-## 9. GUIÓN COMERCIAL & MANEJO DE OBJECIONES
+## 9. GUIONES DE PROSPECCIÓN FRÍA (LISTOS PARA ENVIAR)
 
-### Objeción 1: *"Es que ya tenemos una persona atendiendo el WhatsApp."*
-* **Respuesta:**
-  > *"Excelente, y esa persona es clave para ventas complejas. El problema es que una persona solo puede responder un chat a la vez, se cansa, y a las 7:00 PM o fines de semana deja de atender. Nuestro Agente de IA no reemplaza a tu asesor: se encarga de los primeros 2 minutos, filtra curiosos, responde preguntas repetitivas y cuando el cliente está con la billetera lista para comprar, le pasa el cliente calificado a tu asesor. Es un multiplicador para tu equipo, no una amenaza."*
+### Guion 1: Sector Clínicas Dentales & Medicina Estética
+> *"Hola [Nombre del Doctor o Clínica], un gusto saludarte. Vi que tienen campañas activas en Instagram ofreciendo [Tratamiento / Valoración], pero al consultar por WhatsApp después de las 7:00 PM no encontré atención automática para apartar cita.*  
+> *En clínicas similares, hasta el 55% de los pacientes consultan de noche y el 70% termina agendando con el primer consultorio que les responde de inmediato.*  
+> *Les grabé un video rápido de 45 segundos mostrando cómo un Agente de IA califica el tratamiento y sincroniza la cita directo en Google Calendar en 1.8 segundos. ¿A qué número o correo les puedo compartir el video sin compromiso?"*
 
-### Objeción 2: *"Me parece costoso comparado con otras opciones de $500.000."*
-* **Respuesta:**
-  > *"Es comprensible fijarse en el precio. Esas opciones baratas suelen ser bots antiguos de botones ('Presione 1 para horario, 2 para ubicación') que frustran a los clientes y no entienden preguntas naturales, o webs de WordPress que demoran 4 segundos en abrir. Con una sola venta que recuperes de noche al mes o evitando 3 carritos abandonados, la inversión de SincroIA se paga sola en los primeros 30 a 60 días."*
+### Guion 2: Sector Retail & E-commerce de Moda / Calzado
+> *"Hola equipo de [Marca], felicitaciones por la colección que tienen en pauta. Noté que al abrir su tienda desde el celular tarda más de 4 segundos en cargar el catálogo, y en móviles cada segundo de espera causa hasta un 30% de carritos abandonados.*  
+> *En SincroIA desarrollamos tiendas en Next.js que cargan en menos de 0.8 segundos con botón de cobro directo a Wompi/Nequi y compra asistida por WhatsApp.*  
+> *Si les interesa, les comparto una auditoría rápida de 1 minuto con las 3 mejoras técnicas clave para duplicar la retención de sus campañas. ¿Les gustaría revisarla?"*
 
-### Objeción 3: *"¿Y si el bot se equivoca o inventa información (alucina)?"*
-* **Respuesta:**
-  > *"Ese es el mayor miedo con la IA amateur. En SincroIA programamos guardarraíles técnicos estrictos: el agente tiene prohibido inventar precios o promesas que no estén en tu base de conocimientos autorizada. Si no sabe un dato, dice con total transparencia: 'Ese detalle específico prefiero consultarlo con un especialista del equipo; ya mismo te comunico con ellos'. Además, cuentas con el protocolo de relevo humano: en cuanto tú escribes una sola palabra en el chat, el bot se silencia automáticamente."*
+### Guion 3: Sector B2B & Servicios Industriales / Logística
+> *"Hola [Nombre], qué tal. Noté que para cotizar sus servicios de [Servicio específico] los clientes deben enviar un formulario y esperar entre 24 y 48 horas una respuesta por correo.*  
+> *Hoy en día los compradores corporativos cierran con el proveedor más ágil. Implementamos portales con cotizador dinámico paramétrico y Agentes de IA que entregan un presupuesto preliminar y agendan reunión por Meet en menos de 10 segundos.*  
+> *¿Tendrías 10 minutos esta semana para mostrarte cómo funciona en vivo con un caso real de tu sector?"*
 
 ---
 
-## 10. MODELO OPERATIVO, STACK TÉCNICO & ENTREGA ÁGIL
+## 10. FRAMEWORK DE CIERRE EN MEET (15 MINUTOS) & MANEJO DE OBJECIONES
+
+Las reuniones comerciales no deben ser charlas largas de 1 hora que aburren al cliente. Se cierran en **15 a 20 minutos** siguiendo esta estructura estricta:
+
+```mermaid
+flowchart LR
+    F1["Min 0-4: Diagnóstico<br/>(Preguntas de dolor)"] --> F2["Min 5-9: Demo en Vivo<br/>(Probar a Sofía y la web)"]
+    F2 --> F3["Min 10-12: El Retorno (ROI)<br/>(Simular su caso con la calculadora)"]
+    F3 --> F4["Min 13-15: Cierre & Anticipo<br/>(Pagar 50% para agendar entrega)"]
+```
+
+1. **Minutos 0 a 4 (Diagnóstico y Cuello de Botella):**  
+   * *«¿Cuántos mensajes o visitas reciben hoy al día?»*  
+   * *«¿Qué pasa cuando alguien escribe a las 9:00 PM o un domingo?»*  
+   * *«¿Cuánto tiempo le toma a tu equipo responder y cotizar?»*
+2. **Minutos 5 a 9 (Demostración de Impacto en Vivo):**  
+   * Compartir pantalla: mostrar la web de SincroIA cargando al instante en celular.
+   * Abrir WhatsApp y hacer que el cliente mismo le escriba una pregunta real a Sofía. Dejar que el cliente se sorprenda con la respuesta en 1.8 segundos.
+3. **Minutos 10 a 12 (El Retorno de Inversión):**  
+   * Abrir la Calculadora de ROI en `sincroia.lat#calculadora-roi` con los números del cliente:  
+     *«Si recibes 300 mensajes al mes con un ticket de $150.000 COP y tardas 1 hora en responder, estás perdiendo cerca de $2.500.000 COP mensuales. El plan IA Pro cuesta $2.490.000 COP pago único. Se paga solo en el primer mes.»*
+4. **Minutos 13 a 15 (Llamado a la Acción y Cierre):**  
+   * *«Podemos iniciar tu implementación mañana mismo y tenerlo funcionando en tu WhatsApp en 10 a 12 días hábiles. Iniciamos con el 50% de anticipo y el saldo contra entrega. ¿Prefieres hacer la transferencia por Bancolombia, Wompi o PSE?»*
+
+### Respuestas Maestras a Objeciones:
+* **Objeción 1: *"Es que ya tenemos una persona atendiendo el WhatsApp."***  
+  * *Respuesta:* «Excelente, y esa persona es indispensable para cerrar los clientes grandes. El problema es que una persona no puede atender a 5 clientes a la vez ni responde a medianoche. Nuestro bot filtra a los curiosos, responde horarios y precios, y le entrega a tu asesor solo a los clientes calificados con intención de compra. Es un asistente para multiplicar sus ventas, no para reemplazarla.»
+* **Objeción 2: *"Me parece costoso comparado con otras opciones de $500.000."***  
+  * *Respuesta:* «Totalmente comprensible fijarse en el costo inicial. Esas opciones baratas son bots antiguos de botones rígidos ('Presione 1 o 2') que enfurecen a los clientes y no entienden lenguaje natural. SincroIA implementa IA generativa con el catálogo completo de tu empresa y código propio. Con solo 2 ventas extras que recuperes en una noche, la inversión queda pagada.»
+* **Objeción 3: *"¿Y si el bot se equivoca o inventa información?"***  
+  * *Respuesta:* «Programamos guardarraíles técnicos estrictos: la IA solo responde lo que esté en tu dossier oficial autorizado. Si le preguntan algo fuera de catálogo, dice con educación: 'Ese detalle específico prefiero consultarlo con un especialista del equipo; ya mismo te pongo en contacto'. Y si tú escribes en el chat, el bot se silencia al instante gracias al protocolo de relevo humano.»
+
+---
+
+## 11. GESTIÓN COMERCIAL, PIPELINE EN WHATSAPP & RUTINA DIARIA
+
+Para gestionar los prospectos sin pagar costosos CRMs en la etapa inicial, se utiliza el sistema de **Etiquetas de WhatsApp Business**:
+
+### Las 4 Etiquetas del Embudo:
+* 🟡 **Amarillo - Nuevo Prospecto:** El usuario escribió por primera vez o hizo clic en el anuncio. Sofía está en conversación activa.
+* 🔵 **Azul - Calificado / Interesado:** El prospecto ya confirmó volumen de mensajes, presupuesto y solicitó cotización.
+* 🟣 **Morado - Demo Agendada (Meet):** Tiene videollamada programada en Google Calendar para ver la propuesta.
+* 🟢 **Verde - Cliente Ganado (Anticipo 50% Pagado):** Se envía el formulario de onboarding y se asigna fecha de entrega en el cronograma.
+
+### La Rutina Diaria del Fundador / Director Comercial:
+* **09:00 AM – 10:30 AM (Bloque Sagrado de Prospección):** Enviar 10 mensajes de auditoría en frío por Instagram a negocios calificados.
+* **10:30 AM – 12:30 PM (Seguimiento y Chats Calientes):** Revisar las conversaciones donde Sofía detectó interés y responder dudas avanzadas.
+* **02:30 PM – 05:00 PM (Llamadas de Cierre en Meet):** Ejecutar las demos de 15 minutos agendadas y enviar enlaces de pago de anticipo por Bancolombia/Wompi.
+* **05:00 PM – 06:00 PM (Supervisión Operativa):** Revisar avances técnicos de entregas y calibración de prompts.
+
+---
+
+## 12. MODELO OPERATIVO, STACK TÉCNICO & ENTREGA ÁGIL
 
 Para mantener márgenes altos, la entrega de cada proyecto debe estar estandarizada como una línea de ensamblaje en **4 fases (1 a 2 semanas)**:
 
@@ -248,7 +322,7 @@ sequenceDiagram
 
 ---
 
-## 11. PROYECCIÓN FINANCIERA A 12 MESES
+## 13. PROYECCIÓN FINANCIERA A 12 MESES
 
 Proyección financiera realista basada en una meta de adquisición conservadora de **3 a 6 proyectos mensuales** y retención en SincroCare del 80%:
 
@@ -272,7 +346,7 @@ Proyección financiera realista basada en una meta de adquisición conservadora 
 
 ---
 
-## 12. GESTIÓN DE RIESGOS & BLINDAJE JURÍDICO
+## 14. GESTIÓN DE RIESGOS & BLINDAJE JURÍDICO
 
 Para garantizar la viabilidad a largo plazo de SincroIA en el marco legal colombiano:
 
