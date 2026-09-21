@@ -26,6 +26,8 @@
 12. [Modelo Operativo, Stack Técnico & Entrega Ágil](#12-modelo-operativo-stack-técnico--entrega-ágil)
 13. [Proyección Financiera a 12 Meses](#13-proyección-financiera-a-12-meses)
 14. [Gestión de Riesgos & Blindaje Jurídico](#14-gestión-de-riesgos--blindaje-jurídico)
+15. [Plan de Escalabilidad, Delegación & Contratación por Hitos](#15-plan-de-escalabilidad-delegación--contratación-por-hitos)
+16. [Programa de Partners & Marca Blanca para Agencias (SincroPartners B2B)](#16-programa-de-partners--marca-blanca-para-agencias-sincropartners-b2b)
 
 ---
 
@@ -134,14 +136,15 @@ Los módulos se venden como complementos en el formulario de cotización:
 
 Para evitar la trampa de las agencias de depender exclusivamente de vender proyectos nuevos cada mes, todo cliente pasa a formar parte de **SincroCare**.
 
-### ¿Qué es SincroCare?
-* **Precio:** **$190.000 COP / mes** (a partir del mes 2).
-* **Garantía Comercial:** El **primer mes es 100% GRATIS** con la compra de cualquier paquete con IA o web.
-* **Qué cubre:**
-  1. **Servidor Cloud 24/7 Dedicado:** La instancia del bot de WhatsApp y el hosting edge de la web corren en servidores de alta disponibilidad sin depender de la computadora del cliente.
-  2. **Bolsa de Tokens de IA:** Cubre miles de consultas y respuestas mensuales procesadas con el modelo Gemini Flash.
-  3. **Mantenimiento y Reconexión:** Monitoreo activo de la sesión de WhatsApp, actualización de parches y copias de seguridad de datos.
-  4. **Ajuste y Calibración Mensual de Prompts:** Si el cliente cambia precios, horarios o añade un producto al catálogo, se calibra sin costo extra.
+### 5.1 Los 3 Tiers Escalonados de SincroCare (Por Volumen y Tráfico)
+
+| Nivel | Inversión Mensual | Volumen de Mensajes IA | Servidor Cloud & Hosting | Soporte & Mantenimiento |
+|---|:---:|:---:|:---:|---|
+| 🥉 **Starter**<br>*(Estándar)* | **$190.000 COP/mes** | Hasta **5.000 chats/mes** | Servidor Cloud 24/7 + Hosting Edge 99.9% | 1 ajuste mensual de catálogo, reconexión de sesión y monitoreo. |
+| 🥈 **Growth**<br>*(Pauta Activa)* | **$350.000 COP/mes** | Hasta **20.000 chats/mes** | Instancia cloud optimizada para picos | 2 ajustes mensuales de catálogo, alertas push de compra y soporte en < 4h. |
+| 🥇 **Enterprise**<br>*(Alto Volumen)* | **$590.000 COP/mes** | **Chats Ilimitados** | Servidor exclusivo de alto rendimiento | Soporte VIP en < 1 hora, recalibración quincenal y reportes de conversión. |
+
+> **Condición Comercial:** Todo paquete de implementación incluye el **primer mes de SincroCare Starter 100% GRATIS**. A partir del día 31, el cliente continúa en su nivel correspondiente según su volumen de atención.
 
 ---
 
@@ -383,6 +386,91 @@ Para garantizar la viabilidad a largo plazo de SincroIA en el marco legal colomb
    No realizamos envíos masivos de spam no solicitados (*outbound spam*). Sofía responde exclusivamente a **inbound** (usuarios que inician la conversación por iniciativa propia tras ver un anuncio o entrar a la web), operando 100% dentro de las directrices de Meta.
 3. **Contratos de Servicios de Software:**  
    Todo cliente firma un acuerdo de alcance técnico detallando qué incluye el proyecto, plazos de entrega y aclarando que las integraciones con APIs externas (Google, Meta, pasarelas) están sujetas a la disponibilidad de sus respectivos proveedores.
+
+---
+
+## 15. PLAN DE ESCALABILIDAD, DELEGACIÓN & CONTRATACIÓN POR HITOS
+
+El mayor riesgo de una agencia de desarrollo y automatización de alto rendimiento es el **cuello de botella del fundador** (*solopreneur trap*): cuando el fundador vende, programa, atiende el soporte y cobra, la capacidad máxima se satura en 3 a 5 clientes mensuales, frenando el crecimiento.
+
+Para escalar de forma rentable y ordenada sin inflar costos fijos antes de tiempo, SincroIA implementa un **modelo de delegación gatillado por hitos de facturación mensual sostenida (durante al menos 60 días consecutivos)**:
+
+```mermaid
+flowchart LR
+    H0["Hito 0 ($0 - $8M)<br/>Fundador Solo<br/>Ventas + Delivery Ágil"] --> H1["Hito 1 ($10M+/mes)<br/>+ Dev Frontend Jr (Freelance)<br/>Delegación de Maquetación"]
+    H1 --> H2["Hito 2 ($20M+/mes)<br/>+ Closer B2B (Comisión)<br/>Delegación de Cierres Meet"]
+    H2 --> H3["Hito 3 ($35M+/mes)<br/>+ PM / Client Success<br/>Onboarding & Soporte SincroCare"]
+```
+
+### 15.1 Matriz de Contratación Escalonada por Hitos
+
+| Hito Financiero | Rol a Incorporar | Modalidad & Remuneración | Responsabilidades Clave | Horas Liberadas para el Fundador |
+|:---:|---|---|---|:---:|
+| **Hito 0**<br>*(Etapa Semilla)*<br>Hasta **$8M COP/mes** | **Fundador / Operador Único** | 100% Utilidad neta reinvertible | • Prospección activa y llamadas de cierre.<br>• Ensamblaje modular en Next.js y calibración de prompts Gemini.<br>• Despliegues en Vercel y vinculación de WhatsApp. | 0 h (Fase de tracción y validación) |
+| **Hito 1**<br>*(Primer Cuello de Botella)*<br>**$10M COP/mes** sostenido | **Desarrollador Frontend Junior / Integrador** | Contrato de prestación de servicios por proyecto:<br>**$700.000 a $1.100.000 COP** por sitio web entregado | • Clonación y maquetación de componentes visuales en Tailwind.<br>• Carga de catálogos de productos (CSV/Sheets).<br>• Pruebas de responsividad móvil y verificación de enlaces.<br>• El fundador mantiene la arquitectura de IA y la relación con el cliente. | **15 - 20 horas / semana** (Permite duplicar la prospección comercial) |
+| **Hito 2**<br>*(Expansión Comercial)*<br>**$20M COP/mes** sostenido | **Closer Comercial B2B** | Sueldo base de apoyo ($800.000 COP) + **Comisión del 10% al 15%** sobre cada proyecto cerrado y cobrado | • Conducción de las sesiones de Meet de 15 minutos (diagnóstico y cierre).<br>• Seguimiento del pipeline de WhatsApp y reactivación de cotizaciones.<br>• El fundador pasa a ser Director de Operaciones y Estrategia. | **15 horas / semana** (El fundador ya no atiende llamadas rutinarias) |
+| **Hito 3**<br>*(Institucionalización)*<br>**$35M - $50M COP/mes** | **Project Manager (PM) & Soporte SincroCare** | Salario fijo: **$1.800.000 a $2.400.000 COP/mes** + bono por retención de MRR | • Gestión del formulario de onboarding y recolección de insumos con el cliente.<br>• Control del cronómetro de entrega ("El Reloj del Cliente").<br>• Atención de tickets de soporte SincroCare (< 4 horas).<br>• Protocolo de referidos del Día 21. | **20 horas / semana** (La operación corre en piloto automático) |
+
+### 15.2 Distribución del Tiempo del Fundador en Cada Etapa
+
+```
+Hito 0 ($0 - $8M):     [ 40% Ventas/Prospección ] [ 50% Programación/Técnico ] [ 10% Admin ]
+Hito 1 ($10M):          [ 60% Ventas/Prospección ] [ 25% Supervisión Técnica ]  [ 15% Admin ]
+Hito 2 ($20M):          [ 40% Alianzas/Partners  ] [ 30% Supervisión Delivery ] [ 30% Estrategia ]
+Hito 3 ($35M+):         [ 50% Estrategia/Scale   ] [ 30% Grandes Cuentas B2B  ] [ 20% Liderazgo ]
+```
+
+---
+
+## 16. PROGRAMA DE PARTNERS & MARCA BLANCA PARA AGENCIAS (SINCROPARTNERS B2B)
+
+### 16.1 La Oportunidad B2B Desatendida
+En Colombia y Latinoamérica existen más de **4.500 agencias de marketing digital, traffikers independientes, community managers y diseñadores web** que enfrentan una debilidad crítica:
+* Son expertos en correr pauta publicitaria en Meta Ads o Google Ads.
+* **NO saben programar agentes autónomos de IA en WhatsApp ni webs de alto rendimiento en Next.js.**
+* Sus clientes les reclaman: *"Los anuncios traen leads pero nadie responde a tiempo en WhatsApp y no vendo, voy a cancelar la pauta"*.
+
+**SincroPartners** convierte a estas agencias en nuestro canal de distribución indirecto más potente, multiplicando las ventas de SincroIA sin gastar un solo peso en publicidad directa.
+
+### 16.2 Las 2 Modalidades de Alianza SincroPartners
+
+```mermaid
+flowchart TD
+    SP["Agencia Aliada / Traffiker"] --> M1["Modalidad 1: Referidor Oficial (Comisión)<br/>• SincroIA atiende, cierra y entrega<br/>• La agencia gana 20% de la venta + 10% MRR"]
+    SP --> M2["Modalidad 2: Marca Blanca / White-Label<br/>• La agencia vende con su propio logo y marca<br/>• SincroIA actúa como fábrica de software invisible<br/>• Tarifa mayorista SincroIA con 25% de descuento"]
+```
+
+#### Modalidad 1: Afiliado / Referidor Oficial (Para creadores de contenido, consultores y traffikers)
+* La agencia o consultor detecta que su cliente de pauta pierde ventas por no tener bot de WhatsApp o web veloz.
+* Le presenta a SincroIA como su *socio tecnológico oficial*.
+* SincroIA conduce el diagnóstico en Meet, cobra y ejecuta el proyecto.
+* **Compensación a la agencia:**
+  * **20% de comisión inmediata** sobre la tarifa de implementación cobrada ($378.000 a $978.000 COP por cliente).
+  * **10% mensual recurrente** de la suscripción SincroCare mientras el cliente permanezca activo ($19.000 a $59.000 COP/mes por cliente de forma pasiva).
+
+#### Modalidad 2: Marca Blanca / White-Label (Para agencias medianas que no quieren perder protagonismo)
+* La agencia le ofrece a su cliente un *"Ecosistema Integral de Automatización"* bajo su propia identidad visual y nombre de agencia.
+* SincroIA opera como su **departamento de tecnología invisible** (*behind the scenes*).
+* SincroIA le factura a la agencia su tarifa base con un **25% de descuento mayorista**:
+  * Plan Agente IA Pro: Tarifa SincroIA mayorista **$1.867.500 COP** (la agencia suele venderlo en $2.800.000 a $3.500.000 COP a su cliente, embolsándose un margen de hasta $1.600.000 COP limpios).
+  * SincroCare Mayorista: **$140.000 COP/mes** (la agencia lo cobra a su cliente en $250.000 a $350.000 COP/mes).
+* Toda la comunicación técnica la canaliza el PM de la agencia.
+
+### 16.3 Guion de Prospección Fría para Directores de Agencia (LinkedIn / WhatsApp B2B)
+
+> **Mensaje de Apertura (Directo y de Alto Valor):**  
+> *"Hola [Nombre], vi los resultados de las campañas que corren en [Nombre de su Agencia], brutal el trabajo que hacen en pauta.*  
+>  
+> *Te escribo porque muchos media buyers y agencias amigas tienen el mismo dolor de cabeza: le llenan el WhatsApp de prospectos a los clientes, pero el equipo de ventas del cliente demora 3 horas en responder y terminan culpando a la pauta por las pocas ventas.*  
+>  
+> *Nosotros desarrollamos una infraestructura de agentes de IA en WhatsApp nativos para Next.js que responden y cotizan en menos de 2 segundos 24/7. Estamos operando como brazo tecnológico de marca blanca para agencias: ustedes se quedan con el cliente y el margen, y nosotros nos encargamos del software detrás de bambalinas.*  
+>  
+> *¿Te interesaría ver una demo de 3 minutos de cómo se ve funcionando para implementarlo en tus cuentas actuales?"*
+
+### 16.4 Ventajas Estratégicas para SincroIA
+1. **Costo de Adquisición de Clientes (CAC) = $0 COP:** Cada alianza con una agencia puede inyectar entre 2 y 5 clientes nuevos recurrentes cada trimestre.
+2. **Volumen Predecible:** Las agencias ya tienen la cartera de clientes calientes pagando mensualmente; solo necesitan añadir este servicio adicional (*up-sell*).
+3. **Blindaje de Cartera:** La tasa de retención (*churn rate*) de agencias en marca blanca es inferior al 5% porque cambiar de proveedor de software les implica riesgo técnico.
 
 ---
 

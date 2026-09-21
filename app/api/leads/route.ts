@@ -93,6 +93,7 @@ ${comentarios ? comentarios : "Sin comentarios adicionales."}`;
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
+          redirect: "follow",
         });
       } catch (err) {
         console.error("Error al enviar webhook de leads:", err);
