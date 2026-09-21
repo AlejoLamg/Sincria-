@@ -45,13 +45,13 @@ export default function AIDemoSection() {
     {
       icon: "🏥",
       vertical: "Salud & Clínicas Estéticas",
-      headline: "+65% Citas Agendadas",
-      description: "Los pacientes buscan citas de noche o fines de semana. El bot sincroniza Google Calendar y envía recordatorios reduciendo inasistencias.",
+      headline: "Hasta +65% en Citas Efectivas",
+      description: "Métrica observada en pilotos del sector salud: los pacientes agendan fuera de horario y los recordatorios automáticos reducen el absentismo.",
     },
     {
       icon: "🏢",
       vertical: "Inmobiliarias & Concesionarios",
-      headline: "Cero Tiempo Perdido en Curiosos",
+      headline: "Filtro Automático de Curiosos",
       description: "Filtra en 3 preguntas el presupuesto y capacidad crediticia antes de transferir el lead calificado al WhatsApp de tu equipo comercial.",
     },
     {

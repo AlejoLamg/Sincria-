@@ -81,8 +81,8 @@ export default function HeroSection() {
             <p className="text-xs text-gray-400">Atención y ventas autónomas</p>
           </div>
           <div className="space-y-1">
-            <span className="text-2xl sm:text-3xl font-bold font-mono text-brand-cyan">0</span>
-            <p className="text-xs text-gray-400">Leads perdidos por espera</p>
+            <span className="text-2xl sm:text-3xl font-bold font-mono text-brand-cyan">&lt; 2s</span>
+            <p className="text-xs text-gray-400">Tiempo objetivo de respuesta</p>
           </div>
           <div className="space-y-1">
             <span className="text-2xl sm:text-3xl font-bold font-mono text-white">100%</span>

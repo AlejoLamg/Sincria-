@@ -74,7 +74,7 @@ export default function ROICalculator() {
             </span>
           </h2>
           <p className="text-gray-400 text-sm mt-3 max-w-2xl mx-auto font-light leading-relaxed">
-            El 78% de los compradores en internet cierran con el primer proveedor que responde. Ajusta los valores de tu negocio y calcula el impacto financiero de automatizar tu atención con IA.
+            El 78% de los compradores en internet cierran con el primer proveedor que responde. Modela tus variables operativas actuales y proyecta el impacto económico estimado de automatizar tu atención con IA.
           </p>
         </motion.div>
 
@@ -185,7 +185,7 @@ export default function ROICalculator() {
           >
             <div>
               <span className="text-[10px] font-mono tracking-widest text-brand-cyan uppercase block mb-2">
-                Pérdida Mensual Estimada
+                Pérdida Mensual Estimada (Simulación)
               </span>
               
               {/* Cifra de Pérdida en Grande */}
@@ -237,6 +237,9 @@ export default function ROICalculator() {
               </button>
               <p className="text-[10px] text-center text-gray-400 font-mono">
                 ⚡ Respuesta en 1.8 segundos • Atención ininterrumpida 24/7
+              </p>
+              <p className="text-[9px] text-gray-500 font-mono leading-relaxed text-center pt-2 border-t border-white/5">
+                * Estimación matemática basada en los datos ingresados. Los resultados son aproximaciones ilustrativas y no constituyen una promesa o garantía de ventas o retorno.
               </p>
             </div>
 

@@ -21,7 +21,7 @@ export default function PricingSection() {
       price: "1.890.000",
       billing: "Pago único • Sin mensualidades",
       features: [
-        "Páginas ultra veloces (< 0.8s) que retienen tráfico móvil (Next.js 15)",
+        "Arquitectura de alto rendimiento optimizada para carga < 0.8s (Next.js 15)",
         "Infraestructura Cloud Edge con disponibilidad 99.9% (Vercel)",
         "Dominio profesional .com o .co incluido por 1 año",
         "Configuración SEO técnica inicial para facilitar indexación en Google",
@@ -36,7 +36,7 @@ export default function PricingSection() {
       features: [
         "Agente de IA entrenado con la información y catálogo de tu empresa",
         "Atención y calificación de prospectos 24/7 en WhatsApp y Web",
-        "Respuestas instantáneas en < 2 segundos sin pausas ni descansos",
+        "Respuestas en tiempo real con objetivo < 2s sin pausas ni descansos",
         "Agendamiento automático sincronizado con Google Calendar",
         "Protocolo de Relevo Humano: si tú intervienes, el bot se silencia solo",
         "Alertas push inmediatas a tu celular cuando un cliente esté listo para comprar"
@@ -49,7 +49,7 @@ export default function PricingSection() {
       features: [
         "Tienda virtual transaccional de alta velocidad optimizada para vender",
         "Integración de pasarelas Colombia: Wompi, Bold, PSE, Nequi y Tarjetas",
-        "Carga instantánea < 0.8s para evitar carritos abandonados",
+        "Optimización de velocidad < 0.8s para reducir el abandono de carritos",
         "Gestión ágil de catálogo, inventario, tallas y pedidos",
         "Botón de pedido asistido directo a WhatsApp con resumen de orden",
         "Capacitación personalizada y acompañamiento de lanzamiento"
@@ -244,8 +244,8 @@ export default function PricingSection() {
           <div className="flex items-center justify-center gap-3">
             <span className="text-2xl text-brand-cyan" aria-hidden="true">⚡</span>
             <div className="text-left">
-              <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono">Carga &lt; 0.8s Garantizada</h4>
-              <p className="text-[11px] text-gray-400">Puntaje 90+ certificado en Google PageSpeed.</p>
+              <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono">Arquitectura &lt; 0.8s</h4>
+              <p className="text-[11px] text-gray-400">Optimización orientada a score 90+ en Google PageSpeed.</p>
             </div>
           </div>
           <div className="flex items-center justify-center gap-3">
