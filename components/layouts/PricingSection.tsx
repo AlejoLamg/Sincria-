@@ -13,9 +13,9 @@ export default function PricingSection() {
       billing: "Pago único • Sin mensualidades",
       features: [
         "Páginas ultra veloces (< 0.8s) que retienen tráfico móvil (Next.js 15)",
-        "Garantía de estabilidad global (Hosting Edge Vercel)",
+        "Infraestructura Cloud Edge con disponibilidad 99.9% (Vercel)",
         "Dominio profesional .com o .co incluido por 1 año",
-        "Tu web en Google transmitiendo autoridad (SEO técnico & SSL)",
+        "Configuración SEO técnica inicial para facilitar indexación en Google",
         "Diseño impecable y 100% Mobile-First de alta conversión",
         "Entrega ágil en 1 a 2 semanas con garantía de lanzamiento"
       ],

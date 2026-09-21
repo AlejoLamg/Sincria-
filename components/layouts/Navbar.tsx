@@ -15,7 +15,7 @@ export default function Navbar() {
       setIsScrolled(window.scrollY > 20);
 
       // Detectar sección activa
-      const sections = ["soluciones", "demo-ia", "calculadora-roi", "proceso", "planes", "contacto"];
+      const sections = ["soluciones", "demo-ia", "proyectos", "calculadora-roi", "proceso", "planes", "faq", "contacto"];
       const scrollPosition = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -49,8 +49,9 @@ export default function Navbar() {
   const navLinks = [
     { href: "#soluciones", label: "SOLUCIONES", id: "soluciones" },
     { href: "#demo-ia", label: "DEMO IA", id: "demo-ia" },
-    { href: "#calculadora-roi", label: "CALCULADORA ROI", id: "calculadora-roi" },
+    { href: "#proyectos", label: "CASOS REALES", id: "proyectos" },
     { href: "#planes", label: "PLANES", id: "planes" },
+    { href: "#faq", label: "FAQ", id: "faq" },
   ];
 
   return (

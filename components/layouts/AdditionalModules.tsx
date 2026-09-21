@@ -26,12 +26,12 @@ export default function AdditionalModules() {
           transition={{ duration: 1 }}
           className="text-center mb-12"
         >
-          <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">04 / MÓDULOS</span>
+          <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block font-mono">05 / MÓDULOS DE INTEGRACIÓN</span>
           <h2 id="modules-heading" className="text-3xl font-light text-white mb-2">
-            Personaliza tu ecosistema digital
+            Módulos complementarios para tu ecosistema
           </h2>
-          <p className="text-gray-400 text-sm max-w-lg mx-auto">
-            Potencia tu plataforma con módulos avanzados. Desliza y selecciona los que necesites para tu proyecto.
+          <p className="text-gray-400 text-sm max-w-xl mx-auto font-light">
+            Componentes especializados listos para acoplarse a tu Web o Agente de IA. Selecciona únicamente las integraciones que tu empresa necesita para operar.
           </p>
         </motion.div>
 

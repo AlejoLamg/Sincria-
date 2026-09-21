@@ -3,6 +3,7 @@ import HeroSection from "@/components/layouts/HeroSection";
 import SolutionsSection from "@/components/layouts/SolutionsSection";
 import AIDemoSection from "@/components/layouts/AIDemoSection";
 import ROICalculator from "@/components/layouts/ROICalculator";
+import ProjectsShowcase from "@/components/layouts/ProjectsShowcase";
 import PricingSection from "@/components/layouts/PricingSection";
 import AdditionalModules from "@/components/layouts/AdditionalModules";
 import WorkProcess from "@/components/layouts/WorkProcess";
@@ -19,6 +20,7 @@ export default function Home() {
       <HeroSection />
       <SolutionsSection />
       <AIDemoSection />
+      <ProjectsShowcase />
       <ROICalculator />
       <WorkProcess />
       <PricingSection />
