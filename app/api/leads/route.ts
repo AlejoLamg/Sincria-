@@ -75,6 +75,8 @@ ${comentarios ? comentarios : "Sin comentarios adicionales."}`;
     if (webhookUrl) {
       try {
         const isDiscord = webhookUrl.includes("discord.com");
+        const isGoogleAppsScript = webhookUrl.includes("script.google.com");
+
         const payload = isDiscord
           ? {
               content: `🔔 **Nuevo Prospecto en SincroIA.lat**\n**Nombre:** ${nombre}\n**Teléfono:** ${telefono}\n**Email:** ${email}\n**Plan:** ${objetivo}\n**Presupuesto:** ${formattedPrice}`,
@@ -82,16 +84,23 @@ ${comentarios ? comentarios : "Sin comentarios adicionales."}`;
           : {
               fecha: fechaBogota,
               nombre,
-              email,
-              telefono,
-              objetivo,
+              empresa: data.empresa || "No especificada",
+              email: email || "No especificado",
+              telefono: telefono || "No especificado",
+              tipoProyecto: objetivo || "Diagnóstico general",
+              presupuesto: formattedPrice,
+              objetivo: objetivo || "Diagnóstico general",
               inversionEstimada: formattedPrice,
-              comentarios,
+              comentarios: comentarios || "",
             };
 
         await fetch(webhookUrl, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": isGoogleAppsScript
+              ? "text/plain;charset=utf-8"
+              : "application/json",
+          },
           body: JSON.stringify(payload),
           redirect: "follow",
         });
