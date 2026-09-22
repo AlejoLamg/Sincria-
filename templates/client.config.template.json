@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "client": {
+    "name": "Nombre de la Empresa o Clínica",
+    "slug": "empresa-ejemplo",
+    "category": "Salud / Inmobiliaria / E-commerce / Servicios",
+    "city": "Bogotá, Colombia",
+    "country": "Colombia",
+    "contact": {
+      "phone": "+57 300 000 0000",
+      "whatsappNumber": "573000000000",
+      "email": "contacto@empresa.com",
+      "address": "Dirección completa de la sede física"
+    },
+    "branding": {
+      "primaryColor": "#0f172a",
+      "accentColor": "#0ea5e9",
+      "logoUrl": "/images/logo.png",
+      "tagline": "Eslogan comercial o promesa de valor"
+    }
+  },
+  "agent": {
+    "name": "Nombre del Asistente (ej. Sofía)",
+    "role": "Asesor Comercial y Consultivo Senior",
+    "tone": "Cálido, profesional, empático y resolutivo",
+    "calendarLink": "https://calendar.google.com/calendar/appointments/schedules/...",
+    "guardrails": [
+      "Precios estrictamente inmutables del catálogo",
+      "Cero invención de rebajas o promociones no autorizadas",
+      "Reorientación temática hacia los servicios de la empresa"
+    ],
+    "faqs": [
+      {
+        "question": "¿Cuáles son sus horarios de atención?",
+        "answer": "Nuestra atención digital y asistente IA está activa 24/7. Nuestro equipo humano en sede atiende de Lunes a Viernes de 8:00 AM a 6:00 PM y Sábados de 9:00 AM a 2:00 PM."
+      },
+      {
+        "question": "¿Qué métodos de pago aceptan?",
+        "answer": "Aceptamos pagos electrónicos mediante Wompi, Bold, PSE, tarjetas de crédito/débito, transferencias Bancolombia y Nequi."
+      }
+    ]
+  },
+  "catalog": [
+    {
+      "id": "servicio-1",
+      "name": "Servicio o Producto Principal",
+      "price": 150000,
+      "category": "Principal",
+      "description": "Descripción detallada del servicio o producto para que la IA responda preguntas técnicas y de valor."
+    },
+    {
+      "id": "servicio-2",
+      "name": "Servicio o Producto Secundario",
+      "price": 280000,
+      "category": "Complementario",
+      "description": "Descripción detallada para el asistente de IA."
+    }
+  ],
+  "integrations": {
+    "whatsappProvider": "meta_cloud",
+    "googleCalendar": true,
+    "googleSheetsCrm": true,
+    "paymentGateway": "wompi"
+  }
+}

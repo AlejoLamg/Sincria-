@@ -14,6 +14,7 @@
 3. [Protocolo 3: Custodia y Bóveda Segura de Credenciales](#protocolo-3-custodia-y-bóveda-segura-de-credenciales)
 4. [Protocolo 4: Customer Success, Health Check (Día 21) & Bucle de Referidos](#protocolo-4-customer-success-health-check-día-21--bucle-de-referidos)
 5. [Protocolo 5: Gestión Administrativa, Tributaria y Flujo de Caja (50/30/20)](#protocolo-5-gestión-administrativa-tributaria-y-flujo-de-caja-503020)
+6. [Protocolo 6: Línea de Ensamblaje & Boilerplate de Cliente (< 2 Horas)](#protocolo-6-línea-de-ensamblaje--boilerplate-de-cliente--2-horas)
 
 ---
 
@@ -65,12 +66,17 @@ flowchart TD
 * **Severidad 3 (Baja / Evolutiva):** Dudas de administración, reportes mensuales de leads o solicitud de cotizaciones para nuevos módulos.
   * **Tiempo de Respuesta Inicial:** **< 24 horas hábiles**.
 
-### 2.2 Procedimiento de Reconexión de Emergencia en WhatsApp (Baileys)
-Si el cliente desvincula accidentalmente el WhatsApp desde su teléfono:
-1. El servidor de monitoreo detecta el estado `connection: close`.
-2. Se envía notificación automática al cliente:
-   > *«Hola [Nombre], detectamos que se cerró la sesión de WhatsApp en tu línea. Por favor ingresa a este enlace seguro [ENLACE QR] y escanea el código desde Dispositivos Vinculados en tu celular para reactivar a Sofía de inmediato.»*
-3. Una vez escaneado, la sesión se reanuda en menos de 60 segundos conservando todo el historial previo gracias a la memoria en disco.
+### 2.2 Arquitectura Dual & Procedimiento de Reconexión 24/7
+Para asegurar disponibilidad ininterrumpida (99.9% Uptime) y evitar que el cliente dependa de una laptop o teléfono con batería:
+
+1. **Estándar Corporativo (Meta Cloud API Oficial):**
+   - Configuración nativa por Webhooks directos con los servidores de Meta.
+   - **Cero teléfonos encendidos, cero códigos QR y cero riesgo de caídas por batería o wifi.**
+   - Aplicable a clientes de planes Agente IA Pro, E-commerce Pro y Ecosistema Total.
+2. **Estándar Chip Físico (Contenedor Docker Cloud con Watchdog de Salud):**
+   - Para números físicos preexistentes, la sesión corre en un contenedor Docker con persistencia SSD y Redis en la nube (Railway/VPS).
+   - Si la sesión reporta estado `connection: close`, el **Watchdog de Salud** dispara una alerta automática e inmediata a Telegram de SincroIA y genera un enlace seguro de re-escaneo para el cliente.
+   - Para el procedimiento paso a paso de aprovisionamiento, consultar [**`docs/ARQUITECTURA_FARM_CLIENTES_BOILERPLATE.md`**](./ARQUITECTURA_FARM_CLIENTES_BOILERPLATE.md).
 
 ---
 
@@ -159,11 +165,33 @@ pie title Distribución del Flujo de Caja en SincroIA
    * Se deposita en una cuenta de ahorros de alto rendimiento (Nu, Lulo, Rendimientos fiduciarios).
    * **Propósito exclusivo:** Acumular un colchón equivalente a **tres (3) meses de costos fijos de la agencia** para amortiguar cualquier eventualidad de mercado o temporada baja sin comprometer la operación.
 
-### 5.3 Procedimiento de Cobranza Recurrente de SincroCare
-* **Emisión de Cuenta de Cobro:** Día 25 de cada mes (facturación mes anticipado).
-* **Fecha Límite de Pago:** Día 5 del mes en curso.
-* **Día 6 (Mora Leve):** Recordatorio cordial automático por WhatsApp.
-* **Día 10 (Mora Grave / Suspensión preventiva):** Notificación de pausa de servicio. Si no se normaliza, la instancia cloud del bot se detiene temporalmente protegiendo los recursos de la agencia.
+### 5.3 Procedimiento de Cobranza Recurrente Amigable & Reporte de ROI
+Para evitar la fricción de cobro manual y asegurar pagos puntuales:
+* **Día -5 (Día 25):** Envío obligatorio del **Reporte de Impacto Ejecutivo (Día 28)** demostrando métricas de chats atendidos, leads calificados y ahorro en nómina.
+* **Día 0 (Fecha de Corte):** Emisión de la cuenta de cobro digital con enlace de pago directo en un clic (Wompi/Bold - tarjetas, PSE, Nequi).
+* **Día +3 (Recordatorio Amigable):** Mensaje cordial por WhatsApp en tono de socio tecnológico.
+* **Día +5 (Modo Pausa Preventivo):** Para no asumir costos de servidores impagos, la línea entra en respuesta de cortesía institucional temporal.
+* **Plantilla y guiones completos:** Consultar la guía oficial en [**`docs/PLANTILLA_REPORTE_IMPACTO_SINCROCARE.md`**](./PLANTILLA_REPORTE_IMPACTO_SINCROCARE.md).
+
+---
+
+## PROTOCOLO 6: LÍNEA DE ENSAMBLAJE & BOILERPLATE DE CLIENTE (< 2 HORAS)
+
+Para garantizar que un nuevo proyecto se entregue en 5 a 7 días hábiles manteniendo márgenes superiores al 85%, el desarrollo técnico sigue una línea de montaje estandarizada:
+
+### 6.1 Repositorio Modular y Configuración Parametrizada
+Todo proyecto de cliente se basa en el template maestro **`sincro-client-starter`**.
+* La personalización de colores, logo, catálogo, preguntas frecuentes y reglas del agente no se programa desde cero; se parametriza en el archivo maestro **`templates/client.config.template.json`**.
+* El ingeniero de SincroIA únicamente clona el repositorio base, vuelca los insumos del formulario de onboarding en el archivo JSON y ejecuta el despliegue en Vercel.
+
+### 6.2 Flujo de Aprovisionamiento en 45 Minutos
+1. **Fork del Boilerplate:** Creación del repositorio privado para el cliente.
+2. **Carga de Datos:** Reemplazo de `client.json` con catálogo y reglas de negocio.
+3. **Conexión de WhatsApp:**
+   - **Meta Cloud API Oficial:** Vinculación directa por Webhook HTTPS a los servidores de Meta (cero celulares físicos).
+   - **Evolution API Cloud Docker:** Para números físicos, conexión a contenedor con Redis y Watchdog de salud.
+4. **Despliegue Edge en Vercel:** Compilación y asignación de dominio personalizado en menos de 60 segundos.
+5. Para especificaciones de arquitectura y diagramas, consultar [**`docs/ARQUITECTURA_FARM_CLIENTES_BOILERPLATE.md`**](./ARQUITECTURA_FARM_CLIENTES_BOILERPLATE.md).
 
 ---
 

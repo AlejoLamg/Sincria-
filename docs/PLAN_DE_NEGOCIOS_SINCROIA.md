@@ -349,6 +349,8 @@ sequenceDiagram
 * **Rondas de Ajustes:** La entrega preliminar incluye hasta **2 rondas de revisiones menores** dentro del alcance contratado, las cuales deben ser comunicadas por el cliente en un plazo máximo de 5 días hábiles.
 * **Procedimiento Operativo Estandarizado (SOP Completo):** El paso a paso detallado desde la prospección, kit de onboarding de insumos, línea de ensamblaje, capacitación 1 a 1 y plantillas de mensajes oficiales se encuentra documentado en [**`docs/PROTOCOLO_FLUJO_CLIENTE_SINCROIA.md`**](./PROTOCOLO_FLUJO_CLIENTE_SINCROIA.md).
 * **Manual de Operaciones, Soporte, Seguridad y Finanzas (SOP):** Los protocolos de freno a peticiones infinitas (*Scope Creep*), acuerdos de nivel de servicio (SLA), custodia de credenciales, programa de referidos del Día 21 y la regla financiera 50/30/20 se encuentran detallados en [**`docs/MANUAL_DE_OPERACIONES_Y_PROTOCOLOS_SINCROIA.md`**](./MANUAL_DE_OPERACIONES_Y_PROTOCOLOS_SINCROIA.md).
+* **Infraestructura Cloud 24/7 & Boilerplate de Despliegue Rápido (< 2 Horas):** La arquitectura profesional dual (Meta Cloud API vs Evolution Docker con Redis) y el template de aprovisionamiento ágil se detallan en [**`docs/ARQUITECTURA_FARM_CLIENTES_BOILERPLATE.md`**](./ARQUITECTURA_FARM_CLIENTES_BOILERPLATE.md).
+* **Reporte de Impacto Mensual (Día 28) & Cobranza Amigable:** Las métricas de retención, cálculo de nómina ahorrada y mensajes amigables se encuentran en [**`docs/PLANTILLA_REPORTE_IMPACTO_SINCROCARE.md`**](./PLANTILLA_REPORTE_IMPACTO_SINCROCARE.md).
 
 ---
 

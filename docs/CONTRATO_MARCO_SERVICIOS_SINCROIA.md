@@ -45,10 +45,16 @@ Como contraprestación por los servicios objeto de este contrato, **EL CONTRATAN
 
 ### CLÁUSULA QUINTA: CONTINUIDAD OPERATIVA Y RETENCIÓN (SINCROCARE)
 1. **Primer Mes de Cortesía:** La implementación incluye **treinta (30) días calendario de servicio de soporte y servidor cloud 24/7 sin costo adicional** contados a partir del lanzamiento oficial.
-2. **Tarifa Recurrente:** A partir del segundo mes, **EL CONTRATANTE** contará con el plan de continuidad operativa **SincroCare** por un valor mensual de **CIENTO NOVENTA MIL PESOS COLOMBIANOS (\$190.000 COP/mes)**, pagaderos mes anticipado dentro de los primeros cinco (5) días de cada período mensual.
-3. **Servicios de SincroCare:** Cubre el alojamiento en servidores dedicados de alta disponibilidad (hosting edge / VPS docker), bolsa de tokens para el consumo de respuestas de IA generativa (Gemini Flash), monitoreo y reconexión de sesión de WhatsApp, copias de seguridad periódicas y recalibración mensual de prompts ante cambios de catálogo.
-4. **Suspensión por Mora:** En caso de mora superior a cinco (5) días calendario en el pago de la mensualidad de SincroCare, **EL CONTRATISTA** queda facultado para suspender temporalmente la instancia del agente de IA y/o servidores asociados hasta la normalización del pago, sin perjuicio de la reactivación inmediata una vez cancelado el saldo.
-5. **Libertad y Cancelación:** El plan SincroCare no exige cláusulas de permanencia mínima. **EL CONTRATANTE** podrá cancelarlo en cualquier momento con un preaviso escrito de quince (15) días calendario, caso en el cual **EL CONTRATISTA** facilitará la entrega del código para que **EL CONTRATANTE** asuma directamente la gestión de sus propios servidores y API keys si así lo prefiere.
+2. **Planes y Tarifas Recurrentes:** A partir del segundo mes, **EL CONTRATANTE** continuará con el plan de continuidad operativa **SincroCare** según el volumen contratado:
+   - **Plan Starter:** \$190.000 COP/mes (hasta 5.000 conversaciones/mes, servidor cloud 24/7, 1 ajuste mensual de catálogo y monitoreo).
+   - **Plan Growth:** \$350.000 COP/mes (hasta 20.000 conversaciones/mes, soporte prioritario en < 4h, 2 ajustes mensuales de catálogo).
+   - **Plan Enterprise:** \$590.000 COP/mes (conversaciones ilimitadas, servidor dedicado de alto tráfico y soporte VIP en < 1h).
+3. **Servicios de SincroCare:** Cubre el alojamiento en servidores dedicados de alta disponibilidad (hosting edge / instancias cloud), bolsa de tokens de IA generativa, monitoreo continuo de conectividad de WhatsApp, copias de seguridad y recalibración periódica de prompts ante variaciones de catálogo o políticas.
+4. **Ciclo de Facturación y Protocolo de Cobro Amigable:** La factura o cuenta de cobro digital se emitirá en la fecha de corte mensual con botón de pago digital en un clic (tarjetas de crédito, débito automático, PSE o Nequi). 
+   - **Día de Corte:** Emisión de cuenta de cobro.
+   - **Día 3 posterior al corte:** Recordatorio preventivo y cordial.
+   - **Día 5 posterior al corte (Modo Pausa Preventivo):** Para evitar sobrecostos de servidor no cancelados, la instancia entrará en suspensión preventiva temporal mediante un mensaje institucional de cortesía, reactivándose de forma inmediata e ininterrumpida una vez procesado el pago.
+5. **Libertad y Cancelación:** El plan SincroCare no exige cláusulas de permanencia mínima forzosa. **EL CONTRATANTE** podrá cancelarlo en cualquier momento con un preaviso escrito de quince (15) días calendario, caso en el cual **EL CONTRATISTA** facilitará la entrega del código y credenciales para que **EL CONTRATANTE** asuma directamente la autogestión de su infraestructura si así lo decide.
 
 ---
 
@@ -68,6 +74,7 @@ Como contraprestación por los servicios objeto de este contrato, **EL CONTRATAN
 1. **EL CONTRATISTA** garantiza la programación e integración de **guardarraíles técnicos estrictos (system prompts y reglas deterministas)** para condicionar las respuestas del Agente de IA exclusivamente a la base de información verídica y catálogo suministrado por **EL CONTRATANTE**.
 2. No obstante, dado que los modelos de Inteligencia Artificial Generativa operan sobre arquitecturas probabilísticas de lenguaje natural, **EL CONTRATANTE** asume la responsabilidad de supervisar periódicamente las conversaciones de su línea comercial y de mantener actualizado su dossier de precios y políticas.
 3. **Protocolo de Relevo Humano:** El sistema incluye la función de silenciado automático en caso de intervención humana en el chat, permitiendo al equipo de **EL CONTRATANTE** asumir el control total de cualquier conversación sensible en cualquier momento.
+4. **Carácter Orientativo de Cotizaciones y Precios:** Las respuestas, cálculos, cotizaciones o estimaciones emitidas por el Agente de IA son de naturaleza preliminar e informativa. En ningún caso constituyen una oferta mercantil irrevocable según los artículos 845 y subsiguientes del Código de Comercio colombiano, requiriendo siempre la validación y confirmación expresa por parte del personal administrativo o comercial de **EL CONTRATANTE** previo a la concreción final de cualquier venta o servicio.
 
 ---
 
