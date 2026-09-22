@@ -11,7 +11,7 @@ import {
 export interface AgentResponse {
   reply: string | null;
   isPaused: boolean;
-  action?: "HUMAN_TAKEOVER" | "SCHEDULE_MEETING" | "READY_TO_BUY";
+  action?: "HUMAN_TAKEOVER" | "SCHEDULE_MEETING" | "READY_TO_BUY" | "PARTNER_LEAD";
   sessionId: string;
 }
 
@@ -130,6 +130,8 @@ Aún no se ha ingresado una *GEMINI_API_KEY*. Sin la clave de IA, el agente no p
     action = "SCHEDULE_MEETING";
   } else if (rawReply.includes("[ACTION:READY_TO_BUY]")) {
     action = "READY_TO_BUY";
+  } else if (rawReply.includes("[ACTION:PARTNER_LEAD]")) {
+    action = "PARTNER_LEAD";
   }
 
   // 5. Limpiar etiquetas internas del mensaje antes de enviarlo
@@ -179,6 +181,8 @@ async function notifyTelegramAlert(data: {
     title = "📅 *PROSPECTO INTERESADO EN AGENDAR REUNIÓN*";
   } else if (data.type === "READY_TO_BUY") {
     title = "🔥 *¡PROSPECTO LISTO PARA COTIZACIÓN / PAGO!*";
+  } else if (data.type === "PARTNER_LEAD") {
+    title = "🤝 *¡AGENCIA / PARTNER B2B INTERESADO EN ALIANZA!*";
   }
 
   const text = `${title}
