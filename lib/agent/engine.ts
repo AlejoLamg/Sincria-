@@ -12,6 +12,7 @@ export interface AgentResponse {
   reply: string | null;
   isPaused: boolean;
   action?: "HUMAN_TAKEOVER" | "SCHEDULE_MEETING" | "READY_TO_BUY" | "PARTNER_LEAD";
+  actionDetails?: Record<string, string>;
   sessionId: string;
 }
 
@@ -85,7 +86,7 @@ export async function processAgentMessage(
           ],
           config: {
             systemInstruction,
-            temperature: 0.7,
+            temperature: 0.6,
           },
         });
       } catch {
@@ -101,7 +102,7 @@ export async function processAgentMessage(
           ],
           config: {
             systemInstruction,
-            temperature: 0.7,
+            temperature: 0.6,
           },
         });
       }
@@ -120,23 +121,44 @@ Aún no se ha ingresado una *GEMINI_API_KEY*. Sin la clave de IA, el agente no p
 👉 Consigue tu clave gratuita en 15 segundos en *aistudio.google.com/apikey*, pégala en la barra superior del simulador y verás a Sofía razonar y vender como un profesional.`;
   }
 
-  // 4. Analizar etiquetas de acción
+  // 4. Analizar etiquetas de acción (simples o enriquecidas con payload)
   let action: AgentResponse["action"] = undefined;
+  const actionDetails: Record<string, string> = {};
 
-  if (rawReply.includes("[ACTION:HUMAN_TAKEOVER]")) {
-    action = "HUMAN_TAKEOVER";
-    pauseSession(sessionId, 24);
-  } else if (rawReply.includes("[ACTION:SCHEDULE_MEETING]")) {
-    action = "SCHEDULE_MEETING";
-  } else if (rawReply.includes("[ACTION:READY_TO_BUY]")) {
-    action = "READY_TO_BUY";
-  } else if (rawReply.includes("[ACTION:PARTNER_LEAD]")) {
-    action = "PARTNER_LEAD";
+  const actionMatch = rawReply.match(/\[ACTION:([A-Z_]+)(?:\s*\|\s*([^\]]+))?\]/);
+  if (actionMatch) {
+    const rawActionType = actionMatch[1];
+    const rawPayload = actionMatch[2];
+
+    if (rawActionType === "HUMAN_TAKEOVER") {
+      action = "HUMAN_TAKEOVER";
+      pauseSession(sessionId, 24);
+    } else if (rawActionType === "SCHEDULE_MEETING") {
+      action = "SCHEDULE_MEETING";
+    } else if (rawActionType === "READY_TO_BUY") {
+      action = "READY_TO_BUY";
+    } else if (rawActionType === "PARTNER_LEAD") {
+      action = "PARTNER_LEAD";
+    }
+
+    if (rawPayload) {
+      const parts = rawPayload.split("|");
+      for (const part of parts) {
+        const colonIdx = part.indexOf(":");
+        if (colonIdx !== -1) {
+          const key = part.slice(0, colonIdx).trim().toLowerCase();
+          const val = part.slice(colonIdx + 1).trim();
+          if (key && val) {
+            actionDetails[key] = val;
+          }
+        }
+      }
+    }
   }
 
   // 5. Limpiar etiquetas internas del mensaje antes de enviarlo
   const cleanReply = rawReply
-    .replace(/\[ACTION:[A-Z_]+\]/g, "")
+    .replace(/\[ACTION:[^\]]+\]/g, "")
     .trim();
 
   // 6. Guardar en memoria
@@ -150,6 +172,7 @@ Aún no se ha ingresado una *GEMINI_API_KEY*. Sin la clave de IA, el agente no p
       sessionId,
       contactName,
       message: userMessage,
+      details: Object.keys(actionDetails).length > 0 ? actionDetails : undefined,
     });
   }
 
@@ -157,6 +180,7 @@ Aún no se ha ingresado una *GEMINI_API_KEY*. Sin la clave de IA, el agente no p
     reply: cleanReply,
     isPaused: action === "HUMAN_TAKEOVER",
     action,
+    actionDetails: Object.keys(actionDetails).length > 0 ? actionDetails : undefined,
     sessionId,
   };
 }
@@ -166,6 +190,7 @@ async function notifyTelegramAlert(data: {
   sessionId: string;
   contactName?: string;
   message: string;
+  details?: Record<string, string>;
 }): Promise<void> {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -185,10 +210,18 @@ async function notifyTelegramAlert(data: {
     title = "🤝 *¡AGENCIA / PARTNER B2B INTERESADO EN ALIANZA!*";
   }
 
+  let detailsText = "";
+  if (data.details && Object.keys(data.details).length > 0) {
+    const lines = Object.entries(data.details).map(
+      ([k, v]) => `• *${k.charAt(0).toUpperCase() + k.slice(1)}:* ${v}`
+    );
+    detailsText = `\n📋 *Ficha Resumen del Lead:*\n${lines.join("\n")}\n`;
+  }
+
   const text = `${title}
 
 👤 *Contacto:* ${data.contactName || "Usuario WhatsApp"}
-📱 *Chat ID:* ${data.sessionId}
+📱 *Chat ID:* ${data.sessionId}${detailsText}
 ${waLink ? `💬 *Abrir chat:* [Chatear con el cliente](${waLink})` : ""}
 📝 *Último mensaje recibido:*
 "${data.message}"
