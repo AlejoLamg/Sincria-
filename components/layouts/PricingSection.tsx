@@ -140,6 +140,8 @@ export default function PricingSection() {
                 <button
                   key={item.plan}
                   type="button"
+                  aria-pressed={isMatch}
+                  aria-label={`Seleccionar prioridad: ${item.label} (Recomienda ${item.plan})`}
                   onClick={() => selectPlanByName(item.plan)}
                   className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                     isMatch
@@ -248,6 +250,8 @@ export default function PricingSection() {
                             <div className="md:hidden mb-6 text-center">
                               <button
                                 type="button"
+                                aria-expanded={isExpanded}
+                                aria-label={`${isExpanded ? "Ocultar" : "Ver"} características adicionales del plan ${plan.name}`}
                                 onClick={() => togglePlanExpanded(plan.name)}
                                 className="inline-flex items-center gap-1.5 text-[11px] font-mono text-brand-cyan hover:text-white py-1.5 px-3 rounded-lg border border-brand-cyan/20 bg-brand-cyan/5 transition-colors active:scale-95 cursor-pointer"
                               >

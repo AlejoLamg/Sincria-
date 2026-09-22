@@ -17,7 +17,7 @@ export default function TechStack() {
     <section className="py-12 md:py-20 bg-[#050505]" aria-label="Tecnologías utilizadas">
       <div className="max-w-5xl mx-auto px-6 text-center">
         {/* H2 semántico para SEO de stack tecnológico */}
-        <h2 className="text-sm uppercase tracking-[0.3em] text-gray-500 mb-8 md:mb-12">
+        <h2 className="text-sm uppercase tracking-[0.3em] text-gray-400 font-medium mb-8 md:mb-12">
           Tecnología de precisión
         </h2>
         

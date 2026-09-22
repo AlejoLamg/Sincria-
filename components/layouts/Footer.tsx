@@ -21,20 +21,20 @@ export default function Footer() {
               priority
             />
           </Link>
-          <p className="text-gray-500 text-xs">
+          <p className="text-gray-400 text-xs">
             Ingeniería y desarrollo de alto rendimiento.
           </p>
         </div>
 
         {/* Navegación corporativa sin placeholders */}
-        <nav className="flex gap-6 md:gap-8" aria-label="Enlaces legales y de contacto">
-          <a href="#contacto" className="text-gray-400 hover:text-brand-cyan transition-colors text-sm">Contacto</a>
-          <a href="/terminos" className="text-gray-400 hover:text-brand-cyan transition-colors text-sm">Términos</a>
-          <a href="/privacidad" className="text-gray-400 hover:text-brand-cyan transition-colors text-sm">Privacidad</a>
+        <nav className="flex gap-4 sm:gap-6 md:gap-8" aria-label="Enlaces legales y de contacto">
+          <a href="#contacto" className="text-gray-300 hover:text-brand-cyan transition-colors text-sm py-2 px-1 inline-block">Contacto</a>
+          <a href="/terminos" className="text-gray-300 hover:text-brand-cyan transition-colors text-sm py-2 px-1 inline-block">Términos</a>
+          <a href="/privacidad" className="text-gray-300 hover:text-brand-cyan transition-colors text-sm py-2 px-1 inline-block">Privacidad</a>
         </nav>
 
         {/* Copyright */}
-        <div className="text-gray-600 text-xs text-center md:text-right">
+        <div className="text-gray-400 text-xs text-center md:text-right">
           <p>&copy; {currentYear} SincroIA.lat</p>
           <p className="mt-1">Ingeniería de software en Bogotá</p>
         </div>

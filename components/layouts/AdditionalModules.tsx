@@ -144,6 +144,8 @@ export default function AdditionalModules() {
 
                   <button
                     type="button"
+                    aria-pressed={isSelected}
+                    aria-label={`${isSelected ? "Quitar del proyecto:" : "Agregar al proyecto:"} ${mod.name}`}
                     onClick={() => toggleModule({ name: mod.name, desc: mod.desc, price: mod.priceNum })}
                     className={`w-full py-2.5 rounded-lg text-xs font-mono font-bold transition-all cursor-pointer ${
                       isSelected 
@@ -164,6 +166,8 @@ export default function AdditionalModules() {
           <div className="md:hidden mt-4 text-center">
             <button
               type="button"
+              aria-expanded={showAllModules}
+              aria-label="Ver todos los módulos adicionales"
               onClick={() => setShowAllModules(true)}
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-brand-cyan/30 bg-brand-cyan/5 text-brand-cyan font-mono text-xs font-semibold hover:bg-brand-cyan/15 transition-all cursor-pointer"
             >

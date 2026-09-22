@@ -339,7 +339,7 @@ export default function ContactForm() {
 
           <div className="space-y-2">
             <label htmlFor="comentarios" className="block text-xs font-mono uppercase tracking-wider text-gray-300">
-              Comentarios adicionales o requerimientos especiales <span className="text-gray-500">(Opcional)</span>
+              Comentarios adicionales o requerimientos especiales <span className="text-gray-400 font-normal">(Opcional)</span>
             </label>
             <textarea 
               id="comentarios" 

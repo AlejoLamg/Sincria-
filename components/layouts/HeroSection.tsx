@@ -64,7 +64,7 @@ export default function HeroSection() {
           <span className="flex items-center gap-1.5">
             <span className="text-emerald-400">●</span> Respuesta en WhatsApp &lt; 2 segundos
           </span>
-          <span className="hidden sm:inline text-gray-600">•</span>
+          <span className="hidden sm:inline text-gray-400">•</span>
           <a href="#demo-ia" className="text-brand-cyan hover:underline hidden sm:inline">
             O explora el simulador web ↓
           </a>

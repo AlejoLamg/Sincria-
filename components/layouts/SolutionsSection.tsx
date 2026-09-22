@@ -46,7 +46,7 @@ export default function SolutionsSection() {
                 </div>
                 <header className="md:w-4/12 text-2xl font-medium text-white group-hover:text-brand-cyan transition-colors">
                   <h3>{item.title}</h3>
-                  <p className="text-xs text-red-400/90 font-mono mt-2 leading-relaxed">
+                  <p className="text-xs text-red-400 font-mono mt-2 leading-relaxed">
                     ⚠️ {item.problem}
                   </p>
                 </header>

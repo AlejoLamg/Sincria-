@@ -97,12 +97,14 @@ export default function AIDemoSection() {
               </span>
               <span className="text-[10px] font-mono text-brand-cyan md:hidden flex items-center gap-1.5">
                 <span className="truncate max-w-[120px]">{scenarios[activeScenario].industry.split('/')[0]}</span>
-                <span className="text-gray-500 font-mono">({activeScenario + 1}/4)</span>
+                <span className="text-gray-400 font-mono">({activeScenario + 1}/4)</span>
                 <span>Desliza →</span>
               </span>
             </div>
             
             <div 
+              role="tablist"
+              aria-label="Industrias de demostración"
               style={{ WebkitOverflowScrolling: "touch" }}
               className="w-full min-w-0 max-w-full flex md:flex-col overflow-x-auto md:overflow-visible gap-2.5 md:space-y-3 md:gap-0 pb-3 md:pb-0 snap-x snap-mandatory scrollbar-none"
             >
@@ -111,6 +113,9 @@ export default function AIDemoSection() {
                 return (
                   <button
                     key={scen.id}
+                    role="tab"
+                    aria-selected={isSelected}
+                    aria-controls="scenario-preview"
                     onClick={() => setActiveScenario(idx)}
                     className={`w-[78vw] max-w-[280px] md:w-full md:max-w-none text-left p-3.5 rounded-xl border transition-all duration-300 cursor-pointer snap-start shrink-0 ${
                       isSelected
@@ -140,8 +145,13 @@ export default function AIDemoSection() {
             </div>
           </div>
 
-          {/* Ventana de Chat Mockup */}
-          <div className="w-full min-w-0 md:col-span-7">
+          {/* Vista Previa del Chat Simulado */}
+          <div 
+            id="scenario-preview"
+            role="tabpanel"
+            aria-label={`Demostración interactiva de IA para ${scenarios[activeScenario].industry}`}
+            className="w-full min-w-0 md:col-span-7"
+          >
             <div className="w-full max-w-full bg-brand-surface/90 border border-brand-cyan/30 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden backdrop-blur-xl">
               
               {/* Header de la ventana de chat */}
@@ -203,12 +213,15 @@ export default function AIDemoSection() {
               <div className="p-3 sm:p-4 bg-neutral-900/60 border-t border-white/10 flex items-center gap-2 sm:gap-3">
                 <input 
                   type="text" 
-                  disabled 
+                  readOnly 
+                  aria-label="Mensaje simulado del chat"
                   value="Elige una industria para ver cómo responde..." 
                   className="w-full min-w-0 bg-neutral-950/80 border border-white/10 rounded-xl px-3 sm:px-4 py-2 text-xs text-gray-400 outline-none truncate"
                 />
                 <button 
+                  type="button"
                   disabled 
+                  aria-label="Enviar mensaje a la demostración"
                   className="p-2 sm:p-2.5 rounded-xl bg-brand-cyan text-brand-navy font-bold text-xs opacity-80 shrink-0"
                 >
                   ➤

@@ -111,7 +111,7 @@ export default function ROICalculator() {
                 className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-brand-cyan"
                 aria-label="Mensajes o prospectos mensuales"
               />
-              <div className="flex justify-between text-[10px] font-mono text-gray-500">
+              <div className="flex justify-between text-[10px] font-mono text-gray-400">
                 <span>20 al mes</span>
                 <span>500</span>
                 <span>1.000+ al mes</span>
@@ -139,7 +139,7 @@ export default function ROICalculator() {
                 className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-brand-cyan"
                 aria-label="Valor promedio de venta por cliente en COP"
               />
-              <div className="flex justify-between text-[10px] font-mono text-gray-500">
+              <div className="flex justify-between text-[10px] font-mono text-gray-400">
                 <span>$50.000 COP</span>
                 <span>$1.000.000 COP</span>
                 <span>$2.500.000+ COP</span>
@@ -239,7 +239,7 @@ export default function ROICalculator() {
               <p className="text-[10px] text-center text-gray-400 font-mono">
                 ⚡ Respuesta en 1.8 segundos • Atención ininterrumpida 24/7
               </p>
-              <p className="text-[9px] text-gray-500 font-mono leading-relaxed text-center pt-2 border-t border-white/5">
+              <p className="text-[9px] text-gray-400 font-mono leading-relaxed text-center pt-2 border-t border-white/5">
                 * Estimación matemática basada en los datos ingresados. Los resultados son aproximaciones ilustrativas y no constituyen una promesa o garantía de ventas o retorno.
               </p>
             </div>
