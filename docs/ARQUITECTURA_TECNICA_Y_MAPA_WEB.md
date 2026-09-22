@@ -69,15 +69,15 @@ flowchart TD
 
 | Tecnología | Rol en SincroIA | ¿Por qué se eligió? |
 |---|---|---|
-| **Next.js 15 (App Router)** | Framework Core Full-Stack | Permite Server Components (carga < 0.8s) y rutas de API Serverless en un solo repositorio. |
+| **Next.js 15 (App Router)** | Framework Core Full-Stack | Permite Server Components (optimizado para cargas < 0.8s bajo condiciones objetivo) y rutas de API Serverless en un solo repositorio. |
 | **React 19** | Biblioteca de UI | Máxima velocidad de renderizado, transiciones asíncronas y optimización de render en móviles. |
 | **TypeScript** | Lenguaje de tipado estricto | Cero errores de tipos en tiempo de ejecución (`strict: true`), contratos de datos fiables. |
 | **Tailwind CSS 3.4** | Motor de estilos atómicos | Cero hojas de estilo pesadas; solo compila las clases usadas (~13 KB de CSS total en producción). |
 | **Framer Motion** | Animaciones físicas | Microinteracciones suaves y fluidas en menús, cards y acordeones a 60 FPS. |
 | **Google GenAI SDK** | Motor de Inteligencia Artificial | Conexión directa a **Gemini 3.6 Flash** (tiempo de respuesta < 1.2s y costo de tokens ultra bajo). |
-| **Baileys (@whiskeysockets)** | Gateway de WhatsApp Multi-Device | Conexión directa por WebSockets sin intermediarios costosos ni comisiones por mensaje. |
+| **Baileys (@whiskeysockets)** | Gateway de WhatsApp Multi-Device | Conexión directa por WebSockets con auto-recuperación y visor QR en servidor local. |
 | **Sonner** | Notificaciones Toast | Alertas visuales no invasivas y accesibles en confirmación de formularios. |
-| **Vercel Edge Network** | Infraestructura de Despliegue | Distribución CDN global con servidores en más de 300 ciudades para latencias mínimas en Colombia y LATAM. |
+| **Vercel Edge Network** | Infraestructura de Despliegue | Distribución CDN global con infraestructura orientada a 99.9% de disponibilidad en más de 300 ciudades. |
 
 ---
 
@@ -174,22 +174,34 @@ graph TD
    Barra superior con efecto *glassmorphism* (fondo translúcido con desenfoque). Contiene anclas directas a `#soluciones`, `#demo`, `#precios`, `#roi` y un botón de llamada a la acción ("Cotizar Proyecto").
 
 2. **`HeroSection.tsx`:**  
-   Titular de alto impacto orientado a la velocidad y la automatización. Incluye badges dinámicos ("⚡ Next.js 15 Edge", "🤖 Gemini Flash"), llamada a la acción hacia el formulario y botón de prueba directa en WhatsApp.
+   Titular de alto impacto orientado a la velocidad y la automatización. Incluye badges dinámicos ("⚡ Next.js 15 Edge", "🤖 Gemini Flash"), llamada a la acción hacia el formulario y botón de prueba directa en WhatsApp. Barra de métricas con redacción calibrada (`< 0.8s`, `24/7`, `< 2s`, `100%`).
 
-3. **`AIDemoSection.tsx`:**  
-   Permite al visitante alternar entre 4 escenarios interactivos en vivo (Clínicas dentales, Inmobiliarias, Tiendas de ropa y la propia Sofía). Muestra el tiempo de respuesta simulado (< 1.5s) y métricas de cada sector.
+3. **`SolutionsSection.tsx`:**  
+   Expone los 3 ejes de servicio mediante copy técnico y sobrio: *«Optimizado para cargas inferiores a 0.8s bajo condiciones objetivo»* e *«Infraestructura orientada a 99.9% de disponibilidad»*.
 
-4. **`ROICalculator.tsx`:**  
-   Slider interactivo donde el dueño de negocio ingresa el número de prospectos que recibe al mes y el valor de su ticket promedio. La calculadora estima en tiempo real cuántos millones de pesos está perdiendo por no responder en menos de 2 segundos.
+4. **`AIDemoSection.tsx`:**  
+   Permite al visitante alternar entre 4 escenarios interactivos en vivo (Clínicas dentales, Inmobiliarias, Tiendas de ropa y la propia Sofía). En móviles cuenta con ancho de tarjeta `w-[78vw]` (*peek-through affordance* que asoma la siguiente tarjeta para invitar al deslizamiento natural) y breadcrumbs de avance.
 
-5. **`PricingSection.tsx` & `AdditionalModules.tsx`:**  
-   Muestran los planes oficiales. Al hacer clic en un plan o marcar módulos (ej. Facturación DIAN o Instagram DM), el componente se comunica con el contexto global y pre-rellena el valor y el objetivo en el formulario de contacto.
+5. **`ProjectsShowcase.tsx`:**  
+   Casos de éxito reales estructurados narrativamente en 3 pasos: **🔴 1. PROBLEMA INICIAL** → **⚡ 2. SOLUCIÓN SINCROIA** → **📈 3. RESULTADO MEDIBLE**.
 
-6. **`ContactForm.tsx`:**  
-   Formulario con validación nativa, casilla obligatoria de Habeas Data (Ley 1581), selector accesible y envío asíncrono al backend `/api/leads`.
+6. **`ROICalculator.tsx`:**  
+   Calculadora interactiva con jerarquía visual de 2 segundos: cifra masiva de pérdida mensual (`-$3.500.000 COP`) y 3 stat pills inmediatas (`≈Ventas perdidas`, `≈Horas ahorradas`, `≈Retorno estimado`), acompañada de disclaimer legal transparente.
 
-7. **`MobileBottomBar.tsx`:**  
-   Barra fija en la parte inferior visible exclusivamente en pantallas móviles (`md:hidden`). Ofrece 2 botones de máxima conversión: `[ 📋 Diagnóstico ]` (hace scroll suave al formulario) y `[ 💬 Probar en WhatsApp ]` (abre WhatsApp con Sofía).
+7. **`PricingSection.tsx`:**  
+   Incorpora el asistente interactivo **«🎯 ¿Cuál de estas soluciones necesitas?»** que erradica la fatiga de decisión conectando 4 dolores empresariales concretos con su plan ideal, iluminando el plan sugerido y desplegando un banner contextual directo hacia los módulos compatibles.
+
+8. **`AdditionalModules.tsx`:**  
+   Módulos complementarios con reconocimiento dinámico del plan activo (`★ Ideal para tu plan`), revelación progresiva móvil (`+ Ver todos los módulos ↓`) y botón Fast-Track para saltar directo al diagnóstico sin fricción.
+
+9. **`FaqSection.tsx`:**  
+   Acordeón con transición CSS Grid (`grid-rows-[0fr]` a `grid-rows-[1fr]`), garantizando que el 100% del contenido de las 8 respuestas esté siempre presente en el DOM para rastreadores de Google (SEO) y accesibilidad sin Cumulative Layout Shift.
+
+10. **`ContactForm.tsx`:**  
+    Formulario con validación nativa, casilla obligatoria de Habeas Data (Ley 1581), selector accesible sincronizado en tiempo real con el estado global y envío asíncrono al backend `/api/leads`.
+
+11. **`MobileBottomBar.tsx`:**  
+    Barra fija en la parte inferior visible exclusivamente en pantallas móviles (`md:hidden`). Ofrece 2 botones de máxima conversión: `[ 📋 Diagnóstico ]` (hace scroll suave al formulario) y `[ 💬 Probar en WhatsApp ]` (abre WhatsApp con Sofía).
 
 ---
 
@@ -297,18 +309,24 @@ sequenceDiagram
 
 ---
 
-## 8. ESTRATEGIA DE RENDIMIENTO Y OPTIMIZACIÓN EDGE
+## 8. ESTRATEGIA DE RENDIMIENTO, ACCESIBILIDAD Y OPTIMIZACIÓN EDGE
 
-1. **Turbopack:** El proyecto compila con `--turbopack`, reduciendo los tiempos de compilación local y de despliegue a menos de 3 segundos.
-2. **Cero Dependencias Pesadas en Cliente:**
-   - La librería `@whiskeysockets/baileys` y `@google/genai` solo se importan en el servidor (`server-side`), jamás se envían al navegador del usuario.
-   - El bundle de JavaScript transferido al navegador es inferior a 199 kB, garantizando que cargue en 4G o 3G sin retraso.
-3. **Imágenes y Favicons Optimizados:**
-   - Uso de formatos modernos (`.webp`, `.jpg` optimizados) con dimensiones adaptativas para celulares.
-4. **Seguridad Integrada:**
-   - Rate limiting en memoria por IP para mitigar ataques de denegación de servicio o llenado masivo de formularios.
+1. **Turbopack:** El proyecto compila con `--turbopack`, reduciendo los tiempos de compilación local y de despliegue a menos de 3 segundos con 0 advertencias de tipo.
+2. **Blindaje de Viewport & Cero Desbordamiento (Zero Overflow):**
+   - En `app/globals.css`: `html, body { overflow-x: hidden; max-width: 100vw; }`.
+   - En `<main className="overflow-x-hidden max-w-full">`: Aislamiento estricto de columnas y efectos de halo luminoso difuminado para garantizar 100% de compatibilidad con pantallas compactas (iPhone SE, Galaxy A).
+3. **SEO Crawleable & Cero Cumulative Layout Shift (CLS):**
+   - El acordeón de preguntas frecuentes (`FaqSection.tsx`) no desmonta elementos en React; utiliza interpolación de CSS Grid (`grid-template-rows: 0fr -> 1fr`). Las 8 respuestas están presentes permanentemente en el HTML inicial para el rastreo e indexación de Googlebot sin penalizaciones de SEO ni saltos de contenido.
+4. **Cero Dependencias Pesadas en Cliente:**
+   - La librería `@whiskeysockets/baileys` y `@google/genai` solo se importan en el backend (`server-side`), jamás se envían al navegador del usuario.
+   - El bundle de JavaScript transferido al navegador es de ~200 kB en First Load JS, garantizando carga inmediata en redes móviles 4G.
+5. **Auto-Recuperación del Puente WhatsApp (`scripts/whatsapp-bridge.js`):**
+   - Daemon con *self-healing reconnect*: si Meta invalida la sesión o existe conflicto de dispositivo (error 401/408/515), el script elimina automáticamente las credenciales obsoletas, regenera un nuevo socket y sirve el código QR actualizado en pantalla grande en `http://localhost:3000/whatsapp-qr.html`.
+6. **Seguridad Integrada:**
+   - Rate limiting en memoria por IP (`/lib/rate-limiter.ts`) para mitigar ataques de denegación de servicio o spam masivo en el formulario.
    - Variables de entorno sensibles (`TELEGRAM_BOT_TOKEN`, `GEMINI_API_KEY`, `LEADS_WEBHOOK_URL`) blindadas en el servidor, inaccesibles desde el cliente.
 
 ---
 
 *Documento de referencia técnica oficial para el equipo de desarrollo, operaciones y liderazgo de SincroIA.*
+

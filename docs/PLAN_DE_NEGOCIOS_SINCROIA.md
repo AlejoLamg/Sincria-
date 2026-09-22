@@ -65,7 +65,7 @@ flowchart TD
 
 | Variable | Agencias Tradicionales | Creadores de Bots Baratos (Chatfuel/ManyChat) | **SincroIA.lat** |
 |---|---|---|---|
-| **Tecnología Web** | WordPress lento, plantillas pesadas | No ofrecen web | **Next.js 15, Vercel Edge (< 0.8s)** |
+| **Tecnología Web** | WordPress lento, plantillas pesadas | No ofrecen web | **Next.js 15, Vercel Edge (Optimizado < 0.8s)** |
 | **Cerebro del Bot** | No implementan IA real | Menús rígidos con botones *(«Presione 1»)* | **LLM Generativo (Gemini Flash)** con lenguaje natural y catálogo |
 | **Atención en WhatsApp** | Manual por humanos | Rígida y propensa a fallar | **Respuestas en < 2s con Relevo Humano automático** |
 | **Cobros & Pasarelas** | Woocommerce lento o Shopify con comisiones | Enlaces externos genéricos | **Integración nativa Wompi, Bold, PSE, Nequi (0% comisiones de plataforma)** |
@@ -84,7 +84,7 @@ SincroIA opera con un modelo dual: **Tarifa de Implementación Inicial (Cash Flo
 * **Dirigido a:** Empresas que necesitan presencia digital rápida, profesional y con máxima velocidad para pauta.
 * **Incluye:**
   * Portal web a medida en Next.js 15 y Tailwind CSS.
-  * Arquitectura optimizada para carga < 0.8s en celulares (Edge Computing).
+  * Arquitectura optimizada para cargas inferiores a 0.8s bajo condiciones objetivo (Edge Computing).
   * Dominio profesional .com o .co por 1 año incluido.
   * Configuración técnica SEO inicial para indexación en Google.
   * Entrega ágil: **5 a 7 días hábiles** tras recepción de insumos y accesos.
@@ -129,6 +129,26 @@ Los módulos se venden como complementos en el formulario de cotización:
 * **Gestor de Blog y Contenidos SEO:** +$550.000 COP
 * **Sistema Multi-idioma (Español / Inglés):** +$450.000 COP
 * **Sistema de Suscripciones y Cobros Recurrentes:** +$690.000 COP
+
+---
+
+### 4.3 Embudo Psicológico de Conversión y Selección Guiada («¿Cuál de estas soluciones necesitas?»)
+
+Para erradicar la sobrecarga cognitiva (*decision fatigue*) en dispositivos móviles —donde enfrentarse de golpe a 4 planes y 8 módulos dispersos elevaba el rebote—, la versión final de la web implementa un embudo de decisión en 3 etapas:
+
+1. **Selector Guiado por Reto Real de Negocio:**  
+   El prospecto no tiene que adivinar qué tecnología necesita; simplemente elige su principal dolor:
+   - 💬 *«Pierdo clientes en WhatsApp»* ➔ Recomienda y enfoca **Plan IA PRO ($2.490.000)**.
+   - ⚡ *«Mi web actual es lenta o anticuada»* ➔ Recomienda y enfoca **Plan WEB BASE ($1.890.000)**.
+   - 🛍️ *«Quiero vender y cobrar en línea»* ➔ Recomienda y enfoca **Plan E-COMMERCE ($3.690.000)**.
+   - 🚀 *«Quiero todo el ecosistema (VIP)»* ➔ Recomienda y enfoca **Plan ECOSISTEMA TOTAL ($4.890.000)** con ahorro de $700.000 COP.
+
+2. **Recomendación Contextual Inteligente en Módulos:**  
+   La sección de módulos detecta automáticamente el plan seleccionado por el usuario y etiqueta únicamente los complementos de alto valor con la insignia `★ Ideal para tu plan` (ej. si elige *IA Pro*, destaca *Instagram DM*, *Google Calendar* y *CRM en Google Sheets*), reduciendo drásticamente la fricción mental.
+
+3. **Acción Rápida Fast-Track (Cierre Directo):**  
+   Para clientes que ya tienen clara su inversión y no desean complementos, se habilitó el botón directo:  
+   *«¿No necesitas módulos extra? Pasar directo al diagnóstico con [Nombre del Plan] →»*, que realiza scroll fluido hacia el formulario y pre-llena los datos para el envío inmediato al CRM de Google Sheets y bot de Telegram.
 
 ---
 
