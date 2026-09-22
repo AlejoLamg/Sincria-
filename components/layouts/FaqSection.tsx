@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // Primera abierta por defecto
@@ -25,7 +25,7 @@ export default function FaqSection() {
     },
     {
       question: "¿El agente funciona si mi computador está apagado o se va la luz?",
-      answer: "Sí, 100%. Tu agente opera en servidores dedicados en la nube 24/7 con disponibilidad 99.9%. No depende de que tu computador o celular estén encendidos ni conectados a Wi-Fi; atiende, cotiza y califica prospectos incluso mientras duermes o estás de viaje."
+      answer: "Sí, 100%. Tu agente opera en infraestructura Cloud Edge administrada 24/7 con disponibilidad 99.9%. No depende de que tu computador o celular estén encendidos ni conectados a Wi-Fi; atiende, cotiza y califica prospectos incluso mientras duermes o estás de viaje."
     },
     {
       question: "¿Qué pasa si ya tengo un hosting o dominio comprado?",
@@ -111,23 +111,20 @@ export default function FaqSection() {
                   </span>
                 </button>
 
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      id={`faq-answer-${index}`}
-                      role="region"
-                      aria-labelledby={`faq-question-${index}`}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                    >
-                      <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-2 text-gray-300 text-sm leading-relaxed border-t border-white/5 pl-6 sm:pl-12">
-                        {faq.answer}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <div
+                  id={`faq-answer-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${index}`}
+                  className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-2 text-gray-300 text-sm leading-relaxed border-t border-white/5 pl-6 sm:pl-12">
+                      {faq.answer}
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             );
           })}

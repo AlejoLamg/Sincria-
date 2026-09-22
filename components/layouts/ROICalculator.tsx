@@ -184,44 +184,45 @@ export default function ROICalculator() {
             className="w-full min-w-0 lg:col-span-5 bg-gradient-to-b from-brand-surface to-[#0d1326] p-5 sm:p-8 rounded-2xl sm:rounded-3xl border-2 border-brand-cyan/40 shadow-[0_20px_50px_rgba(0,229,255,0.12)] flex flex-col justify-between"
           >
             <div>
-              <span className="text-[10px] font-mono tracking-widest text-brand-cyan uppercase block mb-2">
-                Pérdida Mensual Estimada (Simulación)
+              <span className="text-[10px] font-mono tracking-widest text-brand-cyan uppercase block mb-1">
+                Pérdida mensual estimada
               </span>
               
               {/* Cifra de Pérdida en Grande */}
-              <div className="mb-6">
-                <div className="text-2xl sm:text-4xl font-extrabold text-white font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-rose-300 to-white break-words">
+              <div className="mb-5">
+                <div className="text-3xl sm:text-5xl font-black text-white font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-rose-300 to-white break-words">
                   -{formatCOP(lostMoneyMonth)}
                 </div>
                 <p className="text-xs text-gray-400 mt-1 font-light">
-                  Ventas no concretadas que terminan comprando a competidores más rápidos.
+                  Capital que tu empresa deja de facturar por responder tarde.
                 </p>
               </div>
 
-              {/* Métricas de Impacto */}
-              <div className="space-y-3 pt-4 border-t border-white/10 mb-6">
-                <div className="flex justify-between items-center text-xs">
-                  <span className="text-gray-300 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
-                    Clientes perdidos por lentitud:
+              {/* Métricas de Impacto: 3 Stat Pills de Alta Velocidad Visual (Lectura en 2 segundos) */}
+              <div className="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-neutral-900/80 border border-white/10 mb-6 text-center">
+                <div className="space-y-0.5">
+                  <span className="text-base sm:text-xl font-bold font-mono text-rose-400 block truncate">
+                    ≈{lostLeads}
                   </span>
-                  <span className="font-bold text-white font-mono">~{lostLeads} ventas/mes</span>
+                  <span className="text-[10px] text-gray-300 block font-medium leading-tight">
+                    Ventas perdidas
+                  </span>
                 </div>
-                
-                <div className="flex justify-between items-center text-xs">
-                  <span className="text-gray-300 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan" />
-                    Tiempo operativo ahorrado:
+                <div className="space-y-0.5 border-x border-white/10 px-1">
+                  <span className="text-base sm:text-xl font-bold font-mono text-brand-cyan block truncate">
+                    ≈{hoursSaved}h
                   </span>
-                  <span className="font-bold text-brand-cyan font-mono">~{hoursSaved} hrs/mes</span>
+                  <span className="text-[10px] text-gray-300 block font-medium leading-tight">
+                    Horas ahorradas
+                  </span>
                 </div>
-
-                <div className="flex justify-between items-center text-xs">
-                  <span className="text-gray-300 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                    Retorno de inversión estimado:
+                <div className="space-y-0.5">
+                  <span className="text-base sm:text-xl font-bold font-mono text-emerald-400 block truncate">
+                    ≈{paybackDays}d
                   </span>
-                  <span className="font-bold text-emerald-400 font-mono">En {paybackDays} días</span>
+                  <span className="text-[10px] text-gray-300 block font-medium leading-tight">
+                    Retorno estimado
+                  </span>
                 </div>
               </div>
             </div>

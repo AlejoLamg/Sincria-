@@ -146,7 +146,7 @@ export default function ContactForm() {
           Solicita tu Diagnóstico Técnico y Cotización
         </h2>
         <p className="text-gray-300 text-sm max-w-lg mx-auto font-light">
-          Cuéntanos sobre tu negocio. En menos de 2 horas hábiles analizaremos tu caso y te presentaremos una propuesta exacta para acelerar tus ventas con software e IA.
+          Cuéntanos sobre tu negocio. En menos de 2 horas hábiles analizaremos tu caso y te presentaremos una propuesta ajustada a tu caso para acelerar tus ventas con software e IA.
         </p>
       </motion.div>
 

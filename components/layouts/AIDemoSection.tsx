@@ -95,8 +95,10 @@ export default function AIDemoSection() {
               <span className="text-xs font-mono uppercase tracking-wider text-gray-400">
                 Selecciona una industria:
               </span>
-              <span className="text-[10px] font-mono text-brand-cyan/70 md:hidden">
-                Desliza →
+              <span className="text-[10px] font-mono text-brand-cyan md:hidden flex items-center gap-1.5">
+                <span className="truncate max-w-[120px]">{scenarios[activeScenario].industry.split('/')[0]}</span>
+                <span className="text-gray-500 font-mono">({activeScenario + 1}/4)</span>
+                <span>Desliza →</span>
               </span>
             </div>
             
@@ -110,7 +112,7 @@ export default function AIDemoSection() {
                   <button
                     key={scen.id}
                     onClick={() => setActiveScenario(idx)}
-                    className={`min-w-[240px] md:min-w-0 md:w-full text-left p-3.5 rounded-xl border transition-all duration-300 cursor-pointer snap-start shrink-0 ${
+                    className={`w-[78vw] max-w-[280px] md:w-full md:max-w-none text-left p-3.5 rounded-xl border transition-all duration-300 cursor-pointer snap-start shrink-0 ${
                       isSelected
                         ? "bg-brand-surface border-brand-cyan shadow-[0_0_20px_rgba(0,229,255,0.2)]"
                         : "bg-white/[0.02] border-white/10 hover:border-white/20 hover:bg-white/[0.04]"
