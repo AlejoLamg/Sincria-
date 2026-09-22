@@ -351,6 +351,7 @@ sequenceDiagram
 * **Manual de Operaciones, Soporte, Seguridad y Finanzas (SOP):** Los protocolos de freno a peticiones infinitas (*Scope Creep*), acuerdos de nivel de servicio (SLA), custodia de credenciales, programa de referidos del Día 21 y la regla financiera 50/30/20 se encuentran detallados en [**`docs/MANUAL_DE_OPERACIONES_Y_PROTOCOLOS_SINCROIA.md`**](./MANUAL_DE_OPERACIONES_Y_PROTOCOLOS_SINCROIA.md).
 * **Infraestructura Cloud 24/7 & Boilerplate de Despliegue Rápido (< 2 Horas):** La arquitectura profesional dual (Meta Cloud API vs Evolution Docker con Redis) y el template de aprovisionamiento ágil se detallan en [**`docs/ARQUITECTURA_FARM_CLIENTES_BOILERPLATE.md`**](./ARQUITECTURA_FARM_CLIENTES_BOILERPLATE.md).
 * **Reporte de Impacto Mensual (Día 28) & Cobranza Amigable:** Las métricas de retención, cálculo de nómina ahorrada y mensajes amigables se encuentran en [**`docs/PLANTILLA_REPORTE_IMPACTO_SINCROCARE.md`**](./PLANTILLA_REPORTE_IMPACTO_SINCROCARE.md).
+* **Blueprint Técnico y Arquitectura de Software:** El mapa gráfico de componentes, diagrama de datos de leads, flujo del estado reactivo (`ProjectConfigContext`) y arquitectura de endpoints se encuentra detallado en [**`docs/ARQUITECTURA_TECNICA_Y_MAPA_WEB.md`**](./ARQUITECTURA_TECNICA_Y_MAPA_WEB.md).
 
 ---
 
