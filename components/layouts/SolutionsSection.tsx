@@ -21,13 +21,13 @@ export default function SolutionsSection() {
   ];
 
   return (
-    <section id="soluciones" className="py-32 bg-brand-navy" aria-label="Nuestras soluciones de ingeniería">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="soluciones" className="py-16 md:py-32 bg-brand-navy overflow-hidden" aria-label="Nuestras soluciones de ingeniería">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="mb-24">
+        <div className="mb-10 md:mb-24">
           <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block font-mono">01 / Soluciones Estratégicas</span>
-          <h2 className="text-4xl md:text-6xl font-light text-white tracking-tight">
-            Eliminamos la fricción operativa <br />
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-light text-white tracking-tight">
+            Eliminamos la fricción operativa <br className="hidden sm:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-violet font-semibold">
               para multiplicar tus ventas.
             </span>
@@ -38,7 +38,7 @@ export default function SolutionsSection() {
           {solutions.map((item) => (
             <li 
               key={item.id} 
-              className="group flex flex-col md:flex-row py-12 border-b border-white/10 transition-all duration-500 hover:border-brand-cyan/50 list-none"
+              className="group flex flex-col md:flex-row py-8 md:py-12 border-b border-white/10 transition-all duration-500 hover:border-brand-cyan/50 list-none"
             >
               <article className="flex flex-col md:flex-row w-full gap-4 md:gap-8">
                 <div className="md:w-1/12 text-brand-cyan font-mono text-sm" aria-hidden="true">

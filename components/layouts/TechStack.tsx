@@ -14,22 +14,22 @@ export default function TechStack() {
 
   return (
     // 1. Semantic Section
-    <section className="py-20 bg-[#050505]" aria-label="Tecnologías utilizadas">
+    <section className="py-12 md:py-20 bg-[#050505]" aria-label="Tecnologías utilizadas">
       <div className="max-w-5xl mx-auto px-6 text-center">
         {/* H2 semántico para SEO de stack tecnológico */}
-        <h2 className="text-sm uppercase tracking-[0.3em] text-gray-500 mb-12">
+        <h2 className="text-sm uppercase tracking-[0.3em] text-gray-500 mb-8 md:mb-12">
           Tecnología de precisión
         </h2>
         
         {/* 2. Lista semántica <ul> para motores de búsqueda */}
-        <ul className="flex flex-wrap justify-center gap-4" role="list">
+        <ul className="flex flex-wrap justify-center gap-2.5 sm:gap-4" role="list">
           {stack.map((item, index) => (
             <motion.li 
               key={item.name}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.05 }}
-              className="flex items-center gap-3 px-6 py-3 border border-white/5 rounded-full bg-white/[0.02] hover:border-brand-cyan/30 transition-all list-none"
+              className="flex items-center gap-2.5 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 border border-white/5 rounded-full bg-white/[0.02] hover:border-brand-cyan/30 transition-all list-none"
             >
               {/* 3. Atributo aria-hidden para iconos decorativos */}
               <div className="text-brand-cyan" aria-hidden="true">{item.icon}</div>

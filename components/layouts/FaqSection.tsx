@@ -46,7 +46,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-24 bg-brand-navy border-t border-white/5" aria-labelledby="faq-heading">
+    <section id="faq" className="py-16 md:py-24 bg-brand-navy border-t border-white/5" aria-labelledby="faq-heading">
       <div className="max-w-4xl mx-auto px-6">
         
         <motion.div 
@@ -54,7 +54,7 @@ export default function FaqSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block">06 / FAQ</span>
           <h2 id="faq-heading" className="text-3xl md:text-5xl font-light text-white tracking-tight">
@@ -88,7 +88,7 @@ export default function FaqSection() {
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                   id={`faq-question-${index}`}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
+                  className="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
                 >
                   <div className="flex items-center gap-3">
                     <span className="text-brand-cyan font-mono text-xs shrink-0">
@@ -122,7 +122,7 @@ export default function FaqSection() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-6 pt-2 text-gray-300 text-sm leading-relaxed border-t border-white/5 pl-12">
+                      <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-2 text-gray-300 text-sm leading-relaxed border-t border-white/5 pl-6 sm:pl-12">
                         {faq.answer}
                       </div>
                     </motion.div>

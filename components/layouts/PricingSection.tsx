@@ -72,7 +72,7 @@ export default function PricingSection() {
   ];
 
   return (
-    <section id="planes" className="py-24 bg-brand-navy relative overflow-hidden" aria-label="Planes de inversión">
+    <section id="planes" className="py-16 md:py-24 bg-brand-navy relative overflow-hidden" aria-label="Planes de inversión">
       {/* Halo de luz difuminada (Blur de fondo) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-brand-cyan/5 blur-[140px] pointer-events-none rounded-full" />
 
@@ -82,7 +82,7 @@ export default function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block font-mono">03 / Inversión Transparente</span>
           <h2 className="text-4xl md:text-6xl font-light text-white tracking-tight">
@@ -193,7 +193,7 @@ export default function PricingSection() {
         </ul>
 
         {/* PLAN DE CONTINUIDAD OPERATIVA Y RETENCIÓN (SincroCare) */}
-        <div className="mt-14 p-8 rounded-2xl bg-gradient-to-br from-brand-surface/90 via-neutral-900/90 to-brand-surface/90 border border-brand-cyan/30 shadow-[0_15px_40px_rgba(0,0,0,0.6)]">
+        <div className="mt-10 md:mt-14 p-5 sm:p-8 rounded-2xl bg-gradient-to-br from-brand-surface/90 via-neutral-900/90 to-brand-surface/90 border border-brand-cyan/30 shadow-[0_15px_40px_rgba(0,0,0,0.6)]">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-white/10">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan font-mono text-[10px] tracking-wider uppercase mb-2">
@@ -240,7 +240,7 @@ export default function PricingSection() {
         </div>
 
         {/* Garantías y Reducción de Riesgo (Neuromarketing) */}
-        <div className="mt-8 p-6 rounded-2xl bg-brand-surface/70 border border-white/10 grid md:grid-cols-3 gap-6 text-center">
+        <div className="mt-6 sm:mt-8 p-4 sm:p-6 rounded-2xl bg-brand-surface/70 border border-white/10 grid md:grid-cols-3 gap-4 sm:gap-6 text-center">
           <div className="flex items-center justify-center gap-3">
             <span className="text-2xl text-brand-cyan" aria-hidden="true">⚡</span>
             <div className="text-left">

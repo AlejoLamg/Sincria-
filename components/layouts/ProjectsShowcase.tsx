@@ -49,7 +49,7 @@ export default function ProjectsShowcase() {
   ];
 
   return (
-    <section id="proyectos" className="py-28 bg-brand-navy relative overflow-hidden border-t border-white/5" aria-label="Casos de arquitectura y proyectos desarrollados">
+    <section id="proyectos" className="py-16 md:py-28 bg-brand-navy relative overflow-hidden border-t border-white/5" aria-label="Casos de arquitectura y proyectos desarrollados">
       {/* Halo ambiental */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-violet/10 blur-[140px] pointer-events-none rounded-full" />
 
@@ -81,7 +81,7 @@ export default function ProjectsShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
               viewport={{ once: true }}
-              className="p-7 rounded-2xl bg-brand-surface/60 border border-white/10 hover:border-brand-cyan/40 transition-all duration-300 flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:-translate-y-1.5 group"
+              className="p-5 sm:p-7 rounded-2xl bg-brand-surface/60 border border-white/10 hover:border-brand-cyan/40 transition-all duration-300 flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:-translate-y-1.5 group"
             >
               <div>
                 {/* Header del Caso */}
@@ -119,16 +119,16 @@ export default function ProjectsShowcase() {
                 </div>
 
                 {/* Métricas de Rendimiento */}
-                <div className="grid grid-cols-3 gap-2 p-3 rounded-xl bg-neutral-900/80 border border-white/5 mb-6 text-center">
+                <div className="grid grid-cols-3 gap-1.5 sm:gap-2 p-2.5 sm:p-3 rounded-xl bg-neutral-900/80 border border-white/5 mb-6 text-center">
                   {project.metrics.map((metric) => (
-                    <div key={metric.label} className="space-y-0.5">
-                      <span className="text-base sm:text-lg font-bold font-mono text-white block">
+                    <div key={metric.label} className="space-y-0.5 min-w-0">
+                      <span className="text-sm sm:text-lg font-bold font-mono text-white block truncate">
                         {metric.value}
                       </span>
-                      <span className="text-[10px] font-medium text-brand-cyan block">
+                      <span className="text-[9px] sm:text-[10px] font-medium text-brand-cyan block break-words leading-tight">
                         {metric.label}
                       </span>
-                      <span className="text-[9px] text-gray-400 block font-mono">
+                      <span className="text-[8px] sm:text-[9px] text-gray-400 block font-mono truncate">
                         {metric.detail}
                       </span>
                     </div>
@@ -152,15 +152,15 @@ export default function ProjectsShowcase() {
         </div>
 
         {/* Banner de Cierre hacia Acción */}
-        <div className="mt-14 p-6 rounded-2xl bg-gradient-to-r from-brand-surface via-neutral-900 to-brand-surface border border-brand-cyan/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="mt-12 sm:mt-14 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-brand-surface via-neutral-900 to-brand-surface border border-brand-cyan/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div>
             <h4 className="text-sm font-bold text-white">¿Quieres un diagnóstico de rendimiento para tu empresa?</h4>
             <p className="text-xs text-gray-400 mt-0.5">Analizamos tu velocidad actual, fugas de prospectos y potencial de automatización en 24h.</p>
           </div>
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex flex-col sm:flex-row items-center gap-2.5 sm:gap-3 w-full sm:w-auto shrink-0">
             <a
               href="#contacto"
-              className="px-5 py-2.5 rounded-xl bg-brand-cyan hover:bg-white text-brand-navy font-bold font-mono text-xs tracking-wider transition-all shadow-md"
+              className="w-full sm:w-auto text-center px-5 py-2.5 rounded-xl bg-brand-cyan hover:bg-white text-brand-navy font-bold font-mono text-xs tracking-wider transition-all shadow-md"
             >
               SOLICITAR DIAGNÓSTICO
             </a>
@@ -168,7 +168,7 @@ export default function ProjectsShowcase() {
               href="https://wa.me/573124630488?text=Hola%20Sof%C3%ADa%2C%20quiero%20ver%20c%C3%B3mo%20vendes%20en%20vivo%20y%20hacerte%20unas%20preguntas."
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 rounded-xl border border-white/20 hover:border-brand-cyan text-white hover:text-brand-cyan font-mono text-xs transition-all"
+              className="w-full sm:w-auto text-center px-5 py-2.5 rounded-xl border border-white/20 hover:border-brand-cyan text-white hover:text-brand-cyan font-mono text-xs transition-all"
             >
               CHATEAR CON SOFÍA
             </a>

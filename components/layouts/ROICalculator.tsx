@@ -50,7 +50,7 @@ export default function ROICalculator() {
   };
 
   return (
-    <section id="calculadora-roi" className="py-24 bg-brand-navy border-t border-white/5 relative overflow-hidden" aria-labelledby="roi-heading">
+    <section id="calculadora-roi" className="py-16 md:py-24 bg-brand-navy border-t border-white/5 relative overflow-hidden" aria-labelledby="roi-heading">
       {/* Luz ambiental difuminada */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-brand-violet/10 blur-[160px] pointer-events-none rounded-full" />
 
@@ -62,7 +62,7 @@ export default function ROICalculator() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block font-mono">
             02.5 / Calculadora de Retorno de Inversión
@@ -87,7 +87,7 @@ export default function ROICalculator() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-7 bg-brand-surface/50 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col justify-between space-y-8"
+            className="lg:col-span-7 bg-brand-surface/50 backdrop-blur-md p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col justify-between space-y-6 sm:space-y-8"
           >
             
             {/* Control 1: Consultas al mes */}
@@ -159,7 +159,7 @@ export default function ROICalculator() {
                       key={opt.label}
                       type="button"
                       onClick={() => setResponseTime(index)}
-                      className={`p-3 rounded-xl border text-center transition-all cursor-pointer ${
+                      className={`p-2 sm:p-3 rounded-xl border text-center transition-all cursor-pointer ${
                         isSelected
                           ? "bg-brand-cyan/15 border-brand-cyan text-white shadow-[0_0_15px_rgba(0,229,255,0.25)]"
                           : "bg-white/[0.02] border-white/10 text-gray-400 hover:border-white/20 hover:text-white"
@@ -181,7 +181,7 @@ export default function ROICalculator() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="lg:col-span-5 bg-gradient-to-b from-brand-surface to-[#0d1326] p-6 sm:p-8 rounded-3xl border-2 border-brand-cyan/40 shadow-[0_20px_50px_rgba(0,229,255,0.12)] flex flex-col justify-between"
+            className="lg:col-span-5 bg-gradient-to-b from-brand-surface to-[#0d1326] p-5 sm:p-8 rounded-2xl sm:rounded-3xl border-2 border-brand-cyan/40 shadow-[0_20px_50px_rgba(0,229,255,0.12)] flex flex-col justify-between"
           >
             <div>
               <span className="text-[10px] font-mono tracking-widest text-brand-cyan uppercase block mb-2">
@@ -190,7 +190,7 @@ export default function ROICalculator() {
               
               {/* Cifra de Pérdida en Grande */}
               <div className="mb-6">
-                <div className="text-3xl sm:text-4xl font-extrabold text-white font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-rose-300 to-white">
+                <div className="text-2xl sm:text-4xl font-extrabold text-white font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-rose-300 to-white break-words">
                   -{formatCOP(lostMoneyMonth)}
                 </div>
                 <p className="text-xs text-gray-400 mt-1 font-light">

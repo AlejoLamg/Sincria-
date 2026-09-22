@@ -63,7 +63,7 @@ export default function AIDemoSection() {
   ];
 
   return (
-    <section id="demo-ia" className="py-24 bg-brand-navy border-t border-white/5 relative overflow-hidden" aria-labelledby="demo-heading">
+    <section id="demo-ia" className="py-16 md:py-24 bg-brand-navy border-t border-white/5 relative overflow-hidden" aria-labelledby="demo-heading">
       {/* Luz ambiental */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-brand-violet/10 blur-[150px] pointer-events-none rounded-full" />
 
@@ -198,16 +198,16 @@ export default function AIDemoSection() {
               </div>
 
               {/* Barra inferior de entrada simulada */}
-              <div className="p-4 bg-neutral-900/60 border-t border-white/10 flex items-center gap-3">
+              <div className="p-3.5 sm:p-4 bg-neutral-900/60 border-t border-white/10 flex items-center gap-2 sm:gap-3">
                 <input 
                   type="text" 
                   disabled 
-                  value="Elige una industria a la izquierda para ver cómo responde..." 
-                  className="w-full bg-neutral-950/80 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-gray-400 outline-none"
+                  value="Elige una industria para ver cómo responde..." 
+                  className="w-full bg-neutral-950/80 border border-white/10 rounded-xl px-3.5 sm:px-4 py-2 text-xs text-gray-400 outline-none truncate"
                 />
                 <button 
                   disabled 
-                  className="p-2.5 rounded-xl bg-brand-cyan text-brand-navy font-bold text-xs opacity-80"
+                  className="p-2 sm:p-2.5 rounded-xl bg-brand-cyan text-brand-navy font-bold text-xs opacity-80 shrink-0"
                 >
                   ➤
                 </button>
@@ -223,16 +223,16 @@ export default function AIDemoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mt-12 max-w-4xl mx-auto p-6 rounded-2xl bg-gradient-to-r from-brand-surface via-neutral-900 to-brand-surface border-2 border-emerald-500/40 shadow-[0_0_40px_rgba(16,185,129,0.15)] flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left"
+          className="mt-8 md:mt-12 max-w-4xl mx-auto p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-brand-surface via-neutral-900 to-brand-surface border-2 border-emerald-500/40 shadow-[0_0_40px_rgba(16,185,129,0.15)] flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left"
         >
           <div className="space-y-1">
             <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-[10px] uppercase tracking-wider">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
               Agente en Vivo Disponible
             </div>
-            <h3 className="text-lg font-bold text-white">¿Quieres probar a Sofía en tu propio WhatsApp ahora mismo?</h3>
+            <h3 className="text-base sm:text-lg font-bold text-white">¿Quieres probar a Sofía en tu propio WhatsApp?</h3>
             <p className="text-xs text-gray-400 max-w-lg">
-              Haz clic y envíale cualquier pregunta difícil sobre desarrollo o cotizaciones. Te responderá en menos de 2 segundos.
+              Haz clic y envíale cualquier pregunta sobre desarrollo o cotizaciones. Te responderá en menos de 2 segundos.
             </p>
           </div>
 
@@ -240,15 +240,15 @@ export default function AIDemoSection() {
             href="https://wa.me/573124630488?text=Hola%20Sof%C3%ADa%2C%20quiero%20ver%20c%C3%B3mo%20vendes%20en%20vivo%20y%20hacerte%20unas%20preguntas."
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-neutral-950 font-bold font-mono text-xs tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(16,185,129,0.4)] active:scale-95 flex items-center gap-2"
+            className="w-full sm:w-auto shrink-0 px-5 sm:px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-neutral-950 font-bold font-mono text-xs tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(16,185,129,0.4)] active:scale-95 flex items-center justify-center gap-2 text-center"
           >
             <span>💬 CHATEAR CON SOFÍA EN VIVO</span>
             <span>→</span>
           </a>
         </motion.div>
 
-        {/* CASOS DE ESTUDIO / VERTICALES DE NEGOCIO */}
-        <div className="mt-20">
+        {/* CASOS DE ESTUDIO / VERTICALES DE NEGOCIO (Visibles en tablet/desktop para no saturar mobile) */}
+        <div className="mt-16 hidden md:block">
           <div className="text-center mb-10">
             <span className="text-[10px] font-mono uppercase tracking-widest text-brand-cyan">Sectores de Alto Impacto</span>
             <h3 className="text-2xl font-light text-white mt-1">Soluciones diseñadas para los dolores de tu industria</h3>

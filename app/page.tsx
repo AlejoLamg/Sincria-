@@ -16,7 +16,7 @@ import FaqSection from "@/components/layouts/FaqSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-brand-navy pb-20 md:pb-0">
+    <main className="min-h-screen bg-brand-navy pb-20 md:pb-0 w-full max-w-full overflow-x-hidden">
       <Navbar />
       <HeroSection />
       <SolutionsSection />

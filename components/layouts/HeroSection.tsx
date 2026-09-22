@@ -45,11 +45,11 @@ export default function HeroSection() {
             href="https://wa.me/573124630488?text=Hola%20Sof%C3%ADa%2C%20quiero%20ver%20c%C3%B3mo%20vendes%20en%20vivo%20y%20hacerte%20unas%20preguntas."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-teal-400 to-brand-cyan text-brand-navy font-bold font-mono tracking-wider text-xs sm:text-sm transition-all duration-300 hover:shadow-[0_0_35px_rgba(0,229,255,0.5)] active:scale-[0.98] shadow-lg flex items-center justify-center gap-3 group"
+            className="w-full sm:w-auto px-4 sm:px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-teal-400 to-brand-cyan text-brand-navy font-bold font-mono tracking-wider text-xs sm:text-sm transition-all duration-300 hover:shadow-[0_0_35px_rgba(0,229,255,0.5)] active:scale-[0.98] shadow-lg flex items-center justify-center gap-2 sm:gap-3 group text-center"
           >
-            <span className="w-2.5 h-2.5 rounded-full bg-brand-navy animate-ping" />
-            <span>PROBAR AGENTE EN TU WHATSAPP (EN VIVO)</span>
-            <span className="group-hover:translate-x-1 transition-transform">→</span>
+            <span className="w-2.5 h-2.5 rounded-full bg-brand-navy animate-ping shrink-0" />
+            <span>PROBAR AGENTE EN WHATSAPP (EN VIVO)</span>
+            <span className="group-hover:translate-x-1 transition-transform shrink-0">→</span>
           </a>
 
           <a

@@ -10,15 +10,15 @@ export default function WorkProcess() {
   ];
 
   return (
-    <section id="proceso" className="py-24 bg-brand-navy border-t border-white/5" aria-labelledby="process-heading">
+    <section id="proceso" className="py-16 md:py-24 bg-brand-navy border-t border-white/5" aria-labelledby="process-heading">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-20">
+        <div className="mb-10 md:mb-16">
           <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block font-mono">02 / Metodología</span>
           <h2 id="process-heading" className="text-4xl md:text-6xl font-light text-white tracking-tight">Tu transformación, <br />en cuatro etapas claras.</h2>
         </div>
 
         {/* Lista semántica para procesos */}
-        <ol className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" role="list">
+        <ol className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8" role="list">
           {steps.map((step, index) => (
             <motion.li 
               key={step.num}
@@ -29,7 +29,7 @@ export default function WorkProcess() {
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
               className="list-none"
             >
-              <article className="relative p-6 border border-white/10 rounded-2xl bg-white/[0.02] hover:border-brand-cyan/50 hover:bg-white/[0.04] transition-all duration-300 h-full flex flex-col justify-between">
+              <article className="relative p-5 sm:p-6 border border-white/10 rounded-2xl bg-white/[0.02] hover:border-brand-cyan/50 hover:bg-white/[0.04] transition-all duration-300 h-full flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-brand-cyan/25 text-4xl font-bold font-mono group-hover:text-brand-cyan/50">
