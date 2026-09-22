@@ -21,8 +21,8 @@ export default function PricingSection() {
       price: "1.890.000",
       billing: "Pago único • Sin mensualidades",
       features: [
-        "Arquitectura de alto rendimiento optimizada para carga < 0.8s (Next.js 15)",
-        "Infraestructura Cloud Edge con disponibilidad 99.9% (Vercel)",
+        "Arquitectura de alto rendimiento optimizada para cargas inferiores a 0.8s bajo condiciones objetivo (Next.js 15)",
+        "Infraestructura Cloud Edge orientada a 99.9% de disponibilidad (Vercel)",
         "Dominio profesional .com o .co incluido por 1 año",
         "Configuración SEO técnica inicial para facilitar indexación en Google",
         "Diseño impecable y 100% Mobile-First de alta conversión",
@@ -49,7 +49,7 @@ export default function PricingSection() {
       features: [
         "Tienda virtual transaccional de alta velocidad optimizada para vender",
         "Integración de pasarelas Colombia: Wompi, Bold, PSE, Nequi y Tarjetas",
-        "Optimización de velocidad < 0.8s para reducir el abandono de carritos",
+        "Optimizado para cargas inferiores a 0.8s bajo condiciones objetivo para reducir rebote",
         "Gestión ágil de catálogo, inventario, tallas y pedidos",
         "Botón de pedido asistido directo a WhatsApp con resumen de orden",
         "Capacitación personalizada y acompañamiento de lanzamiento"
@@ -61,7 +61,7 @@ export default function PricingSection() {
       billing: "Pago único • Ahorras $700.000 COP",
       popular: true,
       features: [
-        "Portal Web Ultra Veloz (<0.8s) + Agente de IA para WhatsApp y Web",
+        "Portal Web optimizado < 0.8s + Agente de IA para WhatsApp y Web",
         "Sincronización total: los leads web pasan a WhatsApp en automático",
         "Pasarela de pagos colombiana o cotizador dinámico incluido",
         "Calificación de prospectos y agendamiento 24/7 sin intervención humana",
@@ -70,6 +70,36 @@ export default function PricingSection() {
       ],
     }
   ];
+
+  const decisionPriorities = [
+    { 
+      label: "💬 Atención WhatsApp", 
+      plan: "IA PRO", 
+      desc: "Ventas y citas 24/7",
+      reason: "Atiende en 2s, filtra presupuesto y sincroniza citas en Google Calendar." 
+    },
+    { 
+      label: "⚡ Web Ultra Rápida", 
+      plan: "WEB BASE", 
+      desc: "Carga veloz < 0.8s",
+      reason: "Portal corporativo en Next.js 15 optimizado para cargas < 0.8s bajo condiciones objetivo." 
+    },
+    { 
+      label: "🛍️ Tienda Virtual", 
+      plan: "E-COMMERCE", 
+      desc: "Wompi / PSE / Bold",
+      reason: "Catálogo transaccional rápido, 0% comisiones por venta y cobro asistido por WhatsApp." 
+    },
+    { 
+      label: "🚀 Todo en Uno (VIP)", 
+      plan: "ECOSISTEMA TOTAL", 
+      desc: "Web + Bot IA", 
+      popular: true,
+      reason: "Solución llave en mano con integración total. Ahorras $700.000 COP frente a planes por separado." 
+    },
+  ];
+
+  const activePriority = decisionPriorities.find((p) => p.plan === selectedPlan?.name);
 
   return (
     <section id="planes" className="py-16 md:py-24 bg-brand-navy relative overflow-hidden" aria-label="Planes de inversión">
@@ -82,7 +112,7 @@ export default function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-10 md:mb-16"
+          className="text-center mb-10 md:mb-14"
         >
           <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block font-mono">03 / Inversión Transparente</span>
           <h2 className="text-4xl md:text-6xl font-light text-white tracking-tight">
@@ -93,20 +123,18 @@ export default function PricingSection() {
           </p>
         </motion.div>
 
-        {/* Selector Comercial Guiado: ¿Cuál es tu prioridad? */}
+        {/* Guía Interactiva de Decisión: "¿Cuál de estas soluciones necesitas?" */}
         <div className="mb-10 max-w-4xl mx-auto">
-          <div className="text-center mb-3">
-            <span className="text-[11px] font-mono uppercase tracking-widest text-brand-cyan">
-              ¿Cuál es tu prioridad comercial hoy? Selecciona para recomendarte:
+          <div className="text-center mb-4">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan font-mono text-[10px] tracking-wider uppercase mb-1">
+              <span>🎯</span> ¿Cuál de estas soluciones necesitas?
             </span>
+            <p className="text-xs text-gray-300">
+              Selecciona tu objetivo principal para recomendarte la configuración exacta para tu empresa:
+            </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5">
-            {[
-              { label: "💬 Atención WhatsApp", plan: "IA PRO", desc: "Ventas y citas 24/7" },
-              { label: "⚡ Web Ultra Rápida", plan: "WEB BASE", desc: "Carga < 0.8s" },
-              { label: "🛍️ Tienda Virtual", plan: "E-COMMERCE", desc: "Wompi / PSE / Bold" },
-              { label: "🚀 Todo en Uno (VIP)", plan: "ECOSISTEMA TOTAL", desc: "Web + Bot IA", popular: true },
-            ].map((item) => {
+            {decisionPriorities.map((item) => {
               const isMatch = selectedPlan?.name === item.plan;
               return (
                 <button
@@ -132,6 +160,27 @@ export default function PricingSection() {
               );
             })}
           </div>
+
+          {/* Banner de Recomendación Contextual */}
+          {activePriority && selectedPlan && (
+            <div className="mt-4 p-3.5 sm:p-4 rounded-xl bg-brand-surface/90 border border-brand-cyan/40 shadow-[0_0_25px_rgba(0,229,255,0.15)] flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+              <div>
+                <span className="text-[10px] font-mono text-brand-cyan uppercase tracking-widest block font-bold">
+                  🎯 Recomendación para tu caso:
+                </span>
+                <p className="text-white text-xs sm:text-sm font-semibold mt-0.5">
+                  {selectedPlan.name} (${selectedPlan.price.toLocaleString("es-CO")} COP) — <span className="font-normal text-gray-300">{activePriority.reason}</span>
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => document.getElementById('modulos')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-4 py-2 bg-brand-cyan text-brand-navy font-mono text-xs font-bold rounded-lg hover:bg-white transition-all shrink-0 cursor-pointer shadow-md"
+              >
+                Ver Módulos Compatibles ↓
+              </button>
+            </div>
+          )}
         </div>
         
         <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch" role="list">
@@ -256,7 +305,7 @@ export default function PricingSection() {
               <span className="text-emerald-400 text-base shrink-0">✓</span>
               <div>
                 <strong className="text-white block mb-0.5">Infraestructura Cloud Edge & Monitoreo 24/7:</strong>
-                Tu bot y web se mantienen en infraestructura Cloud Edge administrada con disponibilidad 99.9%.
+                Tu bot y web se mantienen en infraestructura Cloud Edge administrada y orientada a 99.9% de disponibilidad.
               </div>
             </div>
             <div className="flex items-start gap-3">

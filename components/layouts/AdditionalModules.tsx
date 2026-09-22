@@ -5,18 +5,69 @@ import { motion } from "framer-motion";
 import { useProjectConfig, formatCOP } from "@/context/ProjectConfigContext";
 
 export default function AdditionalModules() {
-  const { toggleModule, isModuleSelected, selectedModules, modulesPrice } = useProjectConfig();
+  const { selectedPlan, toggleModule, isModuleSelected, selectedModules, modulesPrice } = useProjectConfig();
   const [showAllModules, setShowAllModules] = useState(false);
 
   const modules = [
-    { name: "Agente IA para Instagram DM y Messenger", desc: "Centraliza WhatsApp, Instagram y Facebook en el mismo cerebro inteligente.", price: "+$750.000", priceNum: 750000, popular: true },
-    { name: "Pasarela Colombia (Wompi / PSE / Bold)", desc: "Recibe pagos instantáneos con Nequi, Daviplata, PSE y tarjetas sin fricción.", price: "+$590.000", priceNum: 590000, popular: true },
-    { name: "Sistema de Citas y Reservas Sincronizado", desc: "Agenda conectada a Google Calendar con recordatorios automáticos anti-inasistencias.", price: "+$490.000", priceNum: 490000, popular: true },
-    { name: "Facturación Electrónica DIAN Automática", desc: "Conexión directa con Siigo, Alegra o Factus para emitir facturas legales.", price: "+$850.000", priceNum: 850000 },
-    { name: "CRM y Base de Datos de Clientes", desc: "Registro automático de prospectos en Google Sheets/CRM con métricas de ventas.", price: "+$490.000", priceNum: 490000 },
-    { name: "Blog y Gestor de Contenidos SEO", desc: "Panel autogestionable para posicionar artículos y captar tráfico en Google.", price: "+$550.000", priceNum: 550000 },
-    { name: "Sistema Multi-idioma (Español / Inglés)", desc: "Traducción optimizada y detección automática para clientes internacionales.", price: "+$450.000", priceNum: 450000 },
-    { name: "Cobros Recurrentes & Suscripciones", desc: "Automatiza cobros periódicos y membresías mensuales sin gestión manual.", price: "+$690.000", priceNum: 690000 },
+    { 
+      name: "Agente IA para Instagram DM y Messenger", 
+      desc: "Centraliza WhatsApp, Instagram y Facebook en el mismo cerebro inteligente.", 
+      price: "+$750.000", 
+      priceNum: 750000, 
+      popular: true,
+      recommendedFor: ["IA PRO", "ECOSISTEMA TOTAL"]
+    },
+    { 
+      name: "Pasarela Colombia (Wompi / PSE / Bold)", 
+      desc: "Recibe pagos instantáneos con Nequi, Daviplata, PSE y tarjetas sin fricción.", 
+      price: "+$590.000", 
+      priceNum: 590000, 
+      popular: true,
+      recommendedFor: ["WEB BASE", "IA PRO"]
+    },
+    { 
+      name: "Sistema de Citas y Reservas Sincronizado", 
+      desc: "Agenda conectada a Google Calendar con recordatorios automáticos anti-inasistencias.", 
+      price: "+$490.000", 
+      priceNum: 490000, 
+      popular: true,
+      recommendedFor: ["IA PRO", "ECOSISTEMA TOTAL", "WEB BASE"]
+    },
+    { 
+      name: "Facturación Electrónica DIAN Automática", 
+      desc: "Conexión directa con Siigo, Alegra o Factus para emitir facturas legales.", 
+      price: "+$850.000", 
+      priceNum: 850000,
+      recommendedFor: ["E-COMMERCE", "ECOSISTEMA TOTAL"]
+    },
+    { 
+      name: "CRM y Base de Datos de Clientes", 
+      desc: "Registro automático de prospectos en Google Sheets/CRM con métricas de ventas.", 
+      price: "+$490.000", 
+      priceNum: 490000,
+      recommendedFor: ["IA PRO", "ECOSISTEMA TOTAL", "E-COMMERCE"]
+    },
+    { 
+      name: "Blog y Gestor de Contenidos SEO", 
+      desc: "Panel autogestionable para posicionar artículos y captar tráfico en Google.", 
+      price: "+$550.000", 
+      priceNum: 550000,
+      recommendedFor: ["WEB BASE", "ECOSISTEMA TOTAL"]
+    },
+    { 
+      name: "Sistema Multi-idioma (Español / Inglés)", 
+      desc: "Traducción optimizada y detección automática para clientes internacionales.", 
+      price: "+$450.000", 
+      priceNum: 450000,
+      recommendedFor: ["WEB BASE", "ECOSISTEMA TOTAL"]
+    },
+    { 
+      name: "Cobros Recurrentes & Suscripciones", 
+      desc: "Automatiza cobros periódicos y membresías mensuales sin gestión manual.", 
+      price: "+$690.000", 
+      priceNum: 690000,
+      recommendedFor: ["E-COMMERCE", "ECOSISTEMA TOTAL"]
+    },
   ];
 
   return (
@@ -30,10 +81,14 @@ export default function AdditionalModules() {
         >
           <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block font-mono">05 / MÓDULOS DE INTEGRACIÓN</span>
           <h2 id="modules-heading" className="text-3xl font-light text-white mb-2">
-            Módulos complementarios para tu ecosistema
+            {selectedPlan 
+              ? `Módulos complementarios para tu ${selectedPlan.name}`
+              : "Módulos complementarios para tu ecosistema"}
           </h2>
           <p className="text-gray-400 text-sm max-w-xl mx-auto font-light">
-            Componentes especializados listos para acoplarse a tu Web o Agente de IA. Selecciona únicamente las integraciones que tu empresa necesita para operar.
+            {selectedPlan 
+              ? `Personaliza tu solución. Puedes añadir únicamente lo que necesites o continuar directo al diagnóstico.`
+              : "Componentes especializados listos para acoplarse a tu Web o Agente de IA. Selecciona únicamente las integraciones que tu empresa necesita para operar."}
           </p>
         </motion.div>
 
@@ -47,6 +102,7 @@ export default function AdditionalModules() {
         >
           {modules.map((mod, idx) => {
             const isSelected = isModuleSelected(mod.name);
+            const isRecommendedForActivePlan = selectedPlan ? mod.recommendedFor.includes(selectedPlan.name) : false;
             const hideOnMobile = idx >= 3 && !showAllModules;
 
             return (
@@ -56,18 +112,29 @@ export default function AdditionalModules() {
                 className={`min-w-[280px] md:min-w-0 p-6 border rounded-xl bg-white/[0.02] transition-all flex flex-col justify-between snap-center shrink-0 ${
                   hideOnMobile ? "hidden md:flex" : "flex"
                 } ${
-                  isSelected ? "border-brand-cyan bg-brand-cyan/10 shadow-[0_0_20px_rgba(0,229,255,0.2)]" : "border-white/10 hover:border-brand-cyan/50"
+                  isSelected 
+                    ? "border-brand-cyan bg-brand-cyan/10 shadow-[0_0_20px_rgba(0,229,255,0.2)]" 
+                    : isRecommendedForActivePlan
+                    ? "border-brand-cyan/40 bg-brand-cyan/[0.04]"
+                    : "border-white/10 hover:border-brand-cyan/50"
                 }`}
               >
                 <article className="flex flex-col h-full justify-between">
                   <div>
-                    <div className="flex items-center justify-between gap-2 mb-1">
-                      <h3 className="text-white font-medium">{mod.name}</h3>
-                      {mod.popular && (
-                        <span className="text-[8px] font-mono px-1.5 py-0.5 rounded bg-brand-cyan/15 text-brand-cyan font-bold uppercase shrink-0 border border-brand-cyan/20">
-                          Popular
-                        </span>
-                      )}
+                    <div className="flex items-center justify-between gap-2 mb-1 flex-wrap">
+                      <h3 className="text-white font-medium text-sm">{mod.name}</h3>
+                      <div className="flex items-center gap-1 shrink-0">
+                        {isRecommendedForActivePlan && (
+                          <span className="text-[8px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-400 font-bold uppercase border border-emerald-500/30">
+                            ★ Ideal
+                          </span>
+                        )}
+                        {mod.popular && (
+                          <span className="text-[8px] font-mono px-1.5 py-0.5 rounded bg-brand-cyan/15 text-brand-cyan font-bold uppercase border border-brand-cyan/20">
+                            Top
+                          </span>
+                        )}
+                      </div>
                     </div>
                     <p className="text-gray-400 text-[11px] mb-4">{mod.desc}</p>
                     <div className="text-brand-cyan font-bold text-sm mb-4 font-mono">
@@ -105,12 +172,27 @@ export default function AdditionalModules() {
           </div>
         )}
 
+        {/* Acción Rápida: Pasar directo sin módulos si el usuario ya eligió plan */}
+        <div className="mt-8 text-center">
+          <button
+            type="button"
+            onClick={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })}
+            className="inline-flex items-center gap-2 text-xs font-mono text-gray-400 hover:text-brand-cyan transition-colors cursor-pointer py-2 px-4 rounded-lg border border-white/10 hover:border-brand-cyan/30 bg-white/[0.02]"
+          >
+            <span>
+              {selectedPlan 
+                ? `¿No necesitas módulos extra? Pasar directo al diagnóstico con ${selectedPlan.name} →`
+                : "Solicitar diagnóstico técnico personalizado →"}
+            </span>
+          </button>
+        </div>
+
         {/* Barra de confirmación rápida si hay módulos seleccionados */}
         {selectedModules.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mt-8 p-4 rounded-xl bg-brand-surface border border-brand-cyan/30 flex flex-col sm:flex-row justify-between items-center gap-4 max-w-2xl mx-auto shadow-[0_0_30px_rgba(0,229,255,0.15)]"
+            className="mt-6 p-4 rounded-xl bg-brand-surface border border-brand-cyan/30 flex flex-col sm:flex-row justify-between items-center gap-4 max-w-2xl mx-auto shadow-[0_0_30px_rgba(0,229,255,0.15)]"
           >
             <div className="text-center sm:text-left">
               <p className="text-xs text-brand-cyan font-mono uppercase tracking-wider">

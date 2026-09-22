@@ -4,7 +4,7 @@ export default function SolutionsSection() {
       id: "01", 
       title: "Portales Web de Alto Impacto (Next.js 15)", 
       problem: "Más del 53% de los usuarios abandonan si una web tarda más de 2.5s en abrir en celular, desperdiciando tu inversión en publicidad.",
-      desc: "Desarrollamos código nativo que abre en menos de 0.8 segundos. Retén cada visitante, transmite máxima credibilidad corporativa y optimiza la tasa de conversión de tus campañas." 
+      desc: "Optimizado para cargas inferiores a 0.8s bajo condiciones objetivo. Retén cada visitante, transmite máxima credibilidad corporativa y optimiza la tasa de conversión de tus campañas." 
     },
     { 
       id: "02", 
@@ -16,7 +16,7 @@ export default function SolutionsSection() {
       id: "03", 
       title: "Infraestructura Cloud & Pagos Directos", 
       problem: "Caídas de servidor en picos de ventas, procesos manuales de facturación y carritos abandonados por pasarelas confusas.",
-      desc: "Arquitectura serverless en Vercel Edge con 99.9% de disponibilidad garantizada, pasarelas colombianas en un clic (Wompi, Bold, PSE, Nequi) y cobro asistido por WhatsApp." 
+      desc: "Arquitectura serverless en Vercel Edge con infraestructura orientada a 99.9% de disponibilidad, pasarelas colombianas en un clic (Wompi, Bold, PSE, Nequi) y cobro asistido por WhatsApp." 
     }
   ];
 

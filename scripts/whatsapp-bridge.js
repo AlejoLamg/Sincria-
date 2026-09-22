@@ -213,7 +213,14 @@ async function startWhatsAppBridge() {
           startWhatsAppBridge();
         }, 3000);
       } else {
-        console.log("❌ Sesión cerrada por el usuario en WhatsApp. Por favor reinicia para generar un nuevo QR.");
+        console.log("❌ Sesión cerrada o invalidada en WhatsApp. Limpiando credenciales para nuevo QR...");
+        try {
+          fs.rmSync(AUTH_DIR, { recursive: true, force: true });
+        } catch (e) {}
+        console.log("🔄 Generando nuevo código QR en 2 segundos...");
+        setTimeout(() => {
+          startWhatsAppBridge();
+        }, 2000);
       }
     } else if (connection === "open") {
       console.log("\n=======================================================");

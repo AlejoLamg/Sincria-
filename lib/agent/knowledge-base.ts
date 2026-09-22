@@ -21,7 +21,7 @@ BASE DE CONOCIMIENTO OFICIAL Y PLAYBOOK ESTRATÉGICO - SINCROIA.LAT
 
 2. PROPUESTA DE VALOR & VENTAJAS COMPETITIVAS INJUSTAS
 - Cero plataformas cautivas: No usamos WordPress con plugins saturados ni plantillas lentas de Elementor. Todo el desarrollo es código nativo moderno (Next.js 15, React, TypeScript, Tailwind CSS).
-- Velocidad extrema Edge (< 0.8 segundos): Sitios web que cargan instantáneamente en celulares. Reducimos el rebote y duplicamos la conversión de pauta en Meta y Google Ads.
+- Velocidad extrema Edge: Sitios web optimizados para cargas inferiores a 0.8s bajo condiciones objetivo. Reducimos el rebote y duplicamos la conversión de pauta en Meta y Google Ads.
 - Código 100% propio del cliente: Una vez cancelado el proyecto, el cliente es dueño absoluto de su repositorio, dominio y base de datos. Cero secuestros de agencia.
 - Inteligencia Artificial Generativa Real: No usamos árboles de decisión rígidos ni menús de botones torpes tipo "marque 1". Sofía y los agentes de SincroIA operan con Gemini Flash, comprendiendo modismos colombianos y latinoamericanos, contexto previo y psicología de ventas consultiva.
 
@@ -34,12 +34,12 @@ BASE DE CONOCIMIENTO OFICIAL Y PLAYBOOK ESTRATÉGICO - SINCROIA.LAT
 - Dirigido a: Empresas, firmas de abogados, consultorios y negocios que necesitan presencia digital corporativa ultra rápida, moderna y optimizada para campañas de pauta.
 - Incluye:
   * Desarrollo web a medida en Next.js 15 y Tailwind CSS (hasta 5 secciones principales).
-  * Velocidad de carga < 0.8s en celulares (PageSpeed 90+ y Core Web Vitals optimizados).
+  * Optimizado para cargas inferiores a 0.8s bajo condiciones objetivo (PageSpeed 90+ y Core Web Vitals).
   * Dominio .com o .co incluido por 1 año.
   * Certificado SSL, SEO técnico para indexación en Google.
   * Formulario conectado a CRM (Google Sheets) y alertas push instantáneas en Telegram.
   * Botón inteligente flotante de WhatsApp.
-  * Despliegue en Vercel Edge con 99.9% de disponibilidad.
+  * Despliegue en Vercel Edge con infraestructura orientada a 99.9% de disponibilidad.
 
 ★ PLAN 02: AGENTE DE IA PRO 24/7
 - Inversión: $2.490.000 COP (Pago único)
@@ -106,7 +106,7 @@ BASE DE CONOCIMIENTO OFICIAL Y PLAYBOOK ESTRATÉGICO - SINCROIA.LAT
 6. INFRAESTRUCTURA TÉCNICA PROFESIONAL 24/7 (CERO CAÍDAS DE WHATSAPP)
 - Estándar Corporativo (Meta WhatsApp Cloud API Oficial):
   * Conexión por Webhooks directos con los servidores de Meta.
-  * Cero teléfonos encendidos, cero códigos QR y 99.99% de disponibilidad en servidores cloud.
+  * Cero teléfonos encendidos, cero códigos QR e infraestructura orientada a 99.9% de disponibilidad en servidores cloud.
   * Inmunidad ante caídas por batería, fallas de wifi o reinicio de celulares.
 - Estándar Chip Físico (Evolution API Cloud Docker):
   * Contenedor Docker con almacenamiento SSD persistente y Redis en la nube (Railway/VPS).
@@ -137,9 +137,9 @@ Si una agencia de marketing digital, traffiker, consultor o diseñador web nos c
 1. "¿Cobran mensualidades o cuánto cuesta mantenerlo?":
    "El desarrollo, diseño y entrenamiento es un *pago único*. Te incluimos el primer mes de servidor en la nube y bolsa de mensajes totalmente gratis. Luego, para mantener el asistente activo 24/7 y darte soporte, tenemos SincroCare desde *$190.000 COP/mes*, sin contratos de permanencia. O si prefieres, te entregamos el código completo para que lo autogestiones sin costo mensual. ¿Te gustaría ver cómo funcionaría en tu empresa?"
 2. "Está muy costoso / no tengo tanto presupuesto":
-   "Te entiendo totalmente. Una agencia tradicional te cobraría de $8M a $15M COP por una web pesada en WordPress. En SincroIA entregamos ingeniería en Next.js con carga en < 0.8s y código 100% tuyo. Con solo 2 o 3 ventas extra que recuperes al responder en menos de 2 segundos, la inversión se paga sola el primer mes. Además, se cancela en 2 desembolsos del 50%. ¿Te gustaría revisar el plan base o evaluar el alcance en una llamada corta de 15 min?"
+   "Te entiendo totalmente. Una agencia tradicional te cobraría de $8M a $15M COP por una web pesada en WordPress. En SincroIA entregamos ingeniería en Next.js optimizada para cargas < 0.8s y código 100% tuyo. Con solo 2 o 3 ventas extra que recuperes al responder en menos de 2 segundos, la inversión se paga sola el primer mes. Además, se cancela en 2 desembolsos del 50%. ¿Te gustaría revisar el plan base o evaluar el alcance en una llamada corta de 15 min?"
 3. "Ya tengo página en WordPress / Wix / Shopify":
-   "¡Excelente que ya tengas presencia! El reto es que más del 60% de los usuarios abandonan si la página demora más de 2.5s en abrir en el celular. Nosotros optimizamos para que abra en menos de 0.8s y conectamos un agente en WhatsApp que atiende en 2 segundos, multiplicando la efectividad de tus anuncios. ¿Sientes que tu web actual te está convirtiendo los visitantes en clientes?"
+   "¡Excelente que ya tengas presencia! El reto es que más del 60% de los usuarios abandonan si la página demora más de 2.5s en abrir en el celular. Nosotros optimizamos para cargas inferiores a 0.8s y conectamos un agente en WhatsApp que atiende en 2 segundos, multiplicando la efectividad de tus anuncios. ¿Sientes que tu web actual te está convirtiendo los visitantes en clientes?"
 4. "Tengo miedo de que un bot responda mal o alucine":
    "Es una preocupación muy acertada. Sofía no es un chatbot de botones torpes; está programada con guardarraíles estrictos que respetan únicamente tu catálogo y políticas oficiales. Jamás inventa precios ni descuentos. Además, cuenta con *Relevo Humano*: si tú o tu equipo escriben en el chat, el agente se silencia de inmediato para que tomes el control. ¿Quieres ver una demo en vivo aplicada a tu sector?"
 5. "¿Funciona para comidas, clínicas, inmobiliarias, servicios?":

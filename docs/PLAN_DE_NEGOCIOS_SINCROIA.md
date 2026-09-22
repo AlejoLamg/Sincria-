@@ -36,7 +36,7 @@
 ### 1.1 ¿Qué es SincroIA?
 **SincroIA** es una agencia tecnológica especializada en **ingeniería de software de alto impacto y automatización con agentes autónomos de Inteligencia Artificial**. 
 
-A diferencia de agencias de marketing digital tradicionales (que venden publicidad sin solucionar la operatividad de los negocios) o software houses pesadas (con tarifas fuera del alcance de las pymes), SincroIA construye **ecosistemas digitales llave en mano**: portales web nativos en Next.js 15 que abren en menos de 0.8 segundos y asistentes de IA conversacional (Gemini) en WhatsApp que califican prospectos, entregan presupuestos y agendan citas 24/7 sin descanso.
+A diferencia de agencias de marketing digital tradicionales (que venden publicidad sin solucionar la operatividad de los negocios) o software houses pesadas (con tarifas fuera del alcance de las pymes), SincroIA construye **ecosistemas digitales llave en mano**: portales web nativos en Next.js 15 optimizados para cargas inferiores a 0.8s bajo condiciones objetivo y asistentes de IA conversacional (Gemini) en WhatsApp que califican prospectos, entregan presupuestos y agendan citas 24/7 sin descanso.
 
 ### 1.2 Misión y Visión
 * **Misión:** Eliminar la fricción operativa y el abandono de prospectos en empresas de habla hispana mediante software ultra veloz y agentes de IA autónomos que convierten visitas en dinero real.
@@ -239,7 +239,7 @@ flowchart TD
 
 ### Guion 2: Sector Retail & E-commerce de Moda / Calzado
 > *"Hola equipo de [Marca], felicitaciones por la colección que tienen en pauta. Noté que al abrir su tienda desde el celular tarda más de 4 segundos en cargar el catálogo, y en móviles cada segundo de espera causa hasta un 30% de carritos abandonados.*  
-> *En SincroIA desarrollamos tiendas en Next.js que cargan en menos de 0.8 segundos con botón de cobro directo a Wompi/Nequi y compra asistida por WhatsApp.*  
+> *En SincroIA desarrollamos tiendas en Next.js optimizadas para cargas inferiores a 0.8s bajo condiciones objetivo con botón de cobro directo a Wompi/Nequi y compra asistida por WhatsApp.*  
 > *Si les interesa, les comparto una auditoría rápida de 1 minuto con las 3 mejoras técnicas clave para duplicar la retención de sus campañas. ¿Les gustaría revisarla?"*
 
 ### Guion 3: Sector B2B & Servicios Industriales / Logística
