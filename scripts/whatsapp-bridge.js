@@ -1,4 +1,4 @@
-const {
+﻿const {
   default: makeWASocket,
   useMultiFileAuthState,
   DisconnectReason,
@@ -7,6 +7,7 @@ const {
 const pino = require("pino");
 const qrcodeTerminal = require("qrcode-terminal");
 const QRCode = require("qrcode");
+const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
@@ -28,18 +29,31 @@ function loadEnv() {
 }
 loadEnv();
 
-const AUTH_DIR = path.join(__dirname, "..", "whatsapp_auth");
+// Directorio de autenticación: soporta volumen persistente de Railway (/app/whatsapp_auth) o local
+const AUTH_DIR = process.env.WHATSAPP_AUTH_DIR || path.join(__dirname, "..", "whatsapp_auth");
 const QR_HTML_PATH = path.join(__dirname, "..", "public", "whatsapp-qr.html");
-const API_URL = process.env.AGENT_API_URL || "http://localhost:3000/api/agent/chat";
+const PORT = process.env.PORT || 8080;
 
-async function writeQrHtml(qrString) {
-  try {
-    const qrDataUrl = await QRCode.toDataURL(qrString, { width: 340, margin: 2 });
-    const htmlContent = `<!DOCTYPE html>
+// URL de la API del agente: en producción apunta a Vercel, en desarrollo a localhost
+const API_URL =
+  process.env.AGENT_API_URL ||
+  (process.env.NODE_ENV === "production"
+    ? "https://www.sincroia.lat/api/agent/chat"
+    : "http://localhost:3000/api/agent/chat");
+
+// Estado en memoria para el servidor HTTP embebido
+let latestQrDataUrl = null;
+let isConnected = false;
+let startTime = Date.now();
+
+// Plantillas HTML para el servidor embebido
+function renderQrHtml(qrDataUrl) {
+  return `<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Vincular WhatsApp - SincroIA Sofía</title>
+  <title>Vincular WhatsApp - SincroIA Sofía 24/7</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="refresh" content="25">
   <style>
     body {
@@ -62,7 +76,7 @@ async function writeQrHtml(qrString) {
       border-radius: 24px;
       box-shadow: 0 10px 40px rgba(0,0,0,0.8);
       text-align: center;
-      max-width: 420px;
+      max-width: 440px;
       width: 100%;
     }
     h1 { font-size: 20px; margin-bottom: 8px; color: #00E5FF; }
@@ -89,58 +103,56 @@ async function writeQrHtml(qrString) {
     .steps li { margin-bottom: 6px; }
     .badge {
       display: inline-block;
-      padding: 4px 10px;
+      padding: 5px 12px;
       border-radius: 20px;
-      font-size: 10px;
-      background: rgba(37, 211, 102, 0.15);
-      color: #25D366;
-      border: 1px solid rgba(37, 211, 102, 0.3);
+      font-size: 11px;
+      background: rgba(0, 229, 255, 0.12);
+      color: #00E5FF;
+      border: 1px solid rgba(0, 229, 255, 0.3);
       margin-top: 15px;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Conectar WhatsApp Business</h1>
-    <p>Escanea este código QR con tu celular para activar a <strong>Sofía (Agente de IA 24/7)</strong> en tu WhatsApp.</p>
+    <h1>Vincular Sofía IA en la Nube</h1>
+    <p>Escanea este código QR con tu WhatsApp Business para dejar a <strong>Sofía activa 24/7</strong> sin depender de tu laptop.</p>
     <div class="qr-container">
       <img src="${qrDataUrl}" alt="Código QR WhatsApp" />
     </div>
     <div class="steps">
       <ol>
-        <li>Abre <strong>WhatsApp</strong> en tu celular.</li>
-        <li>Toca los tres puntos ⋮ o <strong>Ajustes</strong>.</li>
-        <li>Toca <strong>Dispositivos vinculados</strong>.</li>
-        <li>Toca <strong>Vincular un dispositivo</strong> y apunta tu cámara hacia esta pantalla.</li>
+        <li>Abre <strong>WhatsApp</strong> en tu teléfono.</li>
+        <li>Toca Ajustes o los tres puntos ⋮.</li>
+        <li>Selecciona <strong>Dispositivos vinculados</strong>.</li>
+        <li>Toca <strong>Vincular un dispositivo</strong> y apunta tu cámara.</li>
       </ol>
     </div>
     <div class="badge">⚡ Actualización automática cada 25s</div>
   </div>
 </body>
 </html>`;
-    fs.writeFileSync(QR_HTML_PATH, htmlContent, "utf-8");
-  } catch (err) {
-    console.error("Error al generar HTML de QR:", err);
-  }
 }
 
-function writeConnectedHtml() {
-  try {
-    const htmlContent = `<!DOCTYPE html>
+function renderConnectedHtml() {
+  return `<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>WhatsApp Conectado - SincroIA</title>
+  <title>WhatsApp Conectado 24/7 - SincroIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background-color: #070B14;
       color: #FFFFFF;
-      font-family: sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
     }
     .card {
       background: #10172A;
@@ -148,32 +160,174 @@ function writeConnectedHtml() {
       padding: 40px;
       border-radius: 24px;
       text-align: center;
-      max-width: 400px;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
     }
-    .check { font-size: 50px; margin-bottom: 10px; }
+    .check { font-size: 54px; margin-bottom: 15px; }
     h1 { color: #25D366; font-size: 22px; margin: 0 0 10px 0; }
-    p { color: #94A3B8; font-size: 14px; line-height: 1.5; }
+    p { color: #94A3B8; font-size: 14px; line-height: 1.6; }
+    .status-badge {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(37, 211, 102, 0.15);
+      color: #25D366;
+      font-size: 12px;
+      font-weight: bold;
+      border: 1px solid rgba(37, 211, 102, 0.3);
+    }
   </style>
 </head>
 <body>
   <div class="card">
     <div class="check">✅</div>
-    <h1>¡WhatsApp Vinculado con Éxito!</h1>
-    <p>Sofía ya está activa y respondiendo mensajes en tu WhatsApp Business 24/7 con Gemini 3.6 Flash.</p>
-    <p style="margin-top: 15px; font-size: 12px; color: #00E5FF;">Ya puedes cerrar esta ventana y usar tu WhatsApp normalmente.</p>
+    <h1>¡Sofía IA Conectada 24/7!</h1>
+    <p>El asistente de ventas de <strong>SincroIA.lat</strong> está operando en la nube con Gemini 3.6 Flash y respondiendo en menos de 2 segundos.</p>
+    <div class="status-badge">🟢 Sesión Activa &bull; 100% Autónoma</div>
   </div>
 </body>
 </html>`;
-    fs.writeFileSync(QR_HTML_PATH, htmlContent, "utf-8");
+}
+
+function renderLoadingHtml() {
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciando Sofía IA - SincroIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="5">
+  <style>
+    body {
+      background-color: #070B14;
+      color: #FFFFFF;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #10172A;
+      border: 1px solid rgba(0, 229, 255, 0.2);
+      padding: 40px;
+      border-radius: 24px;
+      text-align: center;
+      max-width: 400px;
+    }
+    h1 { color: #00E5FF; font-size: 18px; }
+    p { color: #94A3B8; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🚀 Iniciando Conexión...</h1>
+    <p>Generando código QR seguro. Esta página se actualizará en unos segundos.</p>
+  </div>
+</body>
+</html>`;
+}
+
+// Iniciar mini servidor HTTP embebido para Railway
+function startHttpServer() {
+  const server = http.createServer((req, res) => {
+    const url = req.url || "/";
+
+    if (url === "/health") {
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(
+        JSON.stringify({
+          status: "ok",
+          connected: isConnected,
+          uptimeSeconds: Math.floor((Date.now() - startTime) / 1000),
+          apiUrl: API_URL,
+        })
+      );
+      return;
+    }
+
+    res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+    if (isConnected) {
+      res.end(renderConnectedHtml());
+    } else if (latestQrDataUrl) {
+      res.end(renderQrHtml(latestQrDataUrl));
+    } else {
+      res.end(renderLoadingHtml());
+    }
+  });
+
+  server.listen(PORT, "0.0.0.0", () => {
+    console.log(`🌐 Servidor HTTP para QR y Healthcheck escuchando en puerto ${PORT}`);
+  });
+}
+
+// Notificaciones a Telegram sobre el estado del daemon
+async function notifyTelegramBridgeStatus(status) {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+  if (!token || !chatId) return;
+
+  const publicUrl = process.env.RAILWAY_PUBLIC_DOMAIN
+    ? `https://${process.env.RAILWAY_PUBLIC_DOMAIN}`
+    : process.env.PUBLIC_URL || "";
+
+  let text = "";
+  if (status === "CONNECTED") {
+    text = `🎉 *SINCROIA - SOFÍA IA CONECTADA 24/7 EN RAILWAY*
+
+✅ *Estado:* En línea y respondiendo mensajes
+⚡ *Motor:* Gemini 3.6 Flash
+🌐 *API de Destino:* ${API_URL}
+
+Sofía está operando en la nube de forma 100% autónoma. Tu laptop ya no necesita estar encendida. 🚀`;
+  } else if (status === "DISCONNECTED") {
+    text = `⚠️ *SINCROIA - ATENCIÓN: WHATSAPP DESCONECTADO*
+
+Se cerró la sesión o se requiere escanear un nuevo código QR.
+${publicUrl ? `👉 *Escanear nuevo QR:* ${publicUrl}` : "Abre la URL de tu servicio en Railway para escanear el QR."}`;
+  }
+
+  try {
+    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text,
+        parse_mode: "Markdown",
+      }),
+    });
   } catch (err) {
-    console.error("Error al escribir HTML conectado:", err);
+    console.error("Error al enviar alerta Telegram de estado:", err.message);
+  }
+}
+
+async function writeLocalQrHtml(qrString) {
+  try {
+    const qrDataUrl = await QRCode.toDataURL(qrString, { width: 340, margin: 2 });
+    latestQrDataUrl = qrDataUrl;
+    // Si la carpeta public existe (desarrollo local), escribir el archivo
+    if (fs.existsSync(path.dirname(QR_HTML_PATH))) {
+      fs.writeFileSync(QR_HTML_PATH, renderQrHtml(qrDataUrl), "utf-8");
+    }
+  } catch (err) {
+    console.error("Error al generar HTML de QR:", err);
   }
 }
 
 async function startWhatsAppBridge() {
   console.log("\n=======================================================");
   console.log("🚀 SINCROIA - INICIANDO PUENTE WHATSAPP CON SOFÍA IA");
+  console.log(`📁 Auth Dir: ${AUTH_DIR}`);
+  console.log(`🎯 API Target: ${API_URL}`);
   console.log("=======================================================\n");
+
+  if (!fs.existsSync(AUTH_DIR)) {
+    fs.mkdirSync(AUTH_DIR, { recursive: true });
+  }
 
   const { state, saveCreds } = await useMultiFileAuthState(AUTH_DIR);
   const { version } = await fetchLatestBaileysVersion();
@@ -196,17 +350,18 @@ async function startWhatsAppBridge() {
     if (qr) {
       console.log("📲 CÓDIGO QR GENERADO. Escanéalo en terminal o en el navegador:");
       qrcodeTerminal.generate(qr, { small: true });
-      await writeQrHtml(qr);
-      console.log("\n👉 También puedes abrir en tu navegador para escanear en pantalla grande:");
-      console.log("   http://localhost:3000/whatsapp-qr.html\n");
+      await writeLocalQrHtml(qr);
+      console.log(`\n👉 Abre en tu navegador para escanear en pantalla grande: puerto ${PORT}\n`);
     }
 
     if (connection === "close") {
-      const shouldReconnect =
-        lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut;
+      isConnected = false;
+      const statusCode = lastDisconnect?.error?.output?.statusCode;
+      const shouldReconnect = statusCode !== DisconnectReason.loggedOut;
       console.log(
         `⚠️ Conexión cerrada. Razón: ${lastDisconnect?.error?.message || "Desconocida"}. ¿Reconectando?: ${shouldReconnect}`
       );
+
       if (shouldReconnect) {
         console.log("🔄 Reintentando conexión en 3 segundos...");
         setTimeout(() => {
@@ -217,17 +372,23 @@ async function startWhatsAppBridge() {
         try {
           fs.rmSync(AUTH_DIR, { recursive: true, force: true });
         } catch (e) {}
+        await notifyTelegramBridgeStatus("DISCONNECTED");
         console.log("🔄 Generando nuevo código QR en 2 segundos...");
         setTimeout(() => {
           startWhatsAppBridge();
         }, 2000);
       }
     } else if (connection === "open") {
+      isConnected = true;
+      latestQrDataUrl = null;
       console.log("\n=======================================================");
       console.log("🎉 ¡CONECTADO CON ÉXITO A TU WHATSAPP BUSINESS!");
       console.log("🤖 Sofía está escuchando y respondiendo en vivo 24/7.");
       console.log("=======================================================\n");
-      writeConnectedHtml();
+      if (fs.existsSync(path.dirname(QR_HTML_PATH))) {
+        fs.writeFileSync(QR_HTML_PATH, renderConnectedHtml(), "utf-8");
+      }
+      await notifyTelegramBridgeStatus("CONNECTED");
     }
   });
 
@@ -320,4 +481,6 @@ async function startWhatsAppBridge() {
   });
 }
 
+// Iniciar servidor HTTP y puente de WhatsApp
+startHttpServer();
 startWhatsAppBridge();
