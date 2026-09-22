@@ -79,7 +79,7 @@ export default function ROICalculator() {
         </motion.div>
 
         {/* Panel Interactivo de la Calculadora */}
-        <div className="grid lg:grid-cols-12 gap-8 items-stretch max-w-6xl mx-auto">
+        <div className="w-full max-w-6xl mx-auto grid lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Columna Izquierda: Parámetros y Sliders */}
           <motion.div 
@@ -87,7 +87,7 @@ export default function ROICalculator() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-7 bg-brand-surface/50 backdrop-blur-md p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col justify-between space-y-6 sm:space-y-8"
+            className="w-full min-w-0 lg:col-span-7 bg-brand-surface/50 backdrop-blur-md p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col justify-between space-y-6 sm:space-y-8"
           >
             
             {/* Control 1: Consultas al mes */}
@@ -181,7 +181,7 @@ export default function ROICalculator() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="lg:col-span-5 bg-gradient-to-b from-brand-surface to-[#0d1326] p-5 sm:p-8 rounded-2xl sm:rounded-3xl border-2 border-brand-cyan/40 shadow-[0_20px_50px_rgba(0,229,255,0.12)] flex flex-col justify-between"
+            className="w-full min-w-0 lg:col-span-5 bg-gradient-to-b from-brand-surface to-[#0d1326] p-5 sm:p-8 rounded-2xl sm:rounded-3xl border-2 border-brand-cyan/40 shadow-[0_20px_50px_rgba(0,229,255,0.12)] flex flex-col justify-between"
           >
             <div>
               <span className="text-[10px] font-mono tracking-widest text-brand-cyan uppercase block mb-2">

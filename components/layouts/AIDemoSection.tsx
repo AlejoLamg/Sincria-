@@ -67,13 +67,13 @@ export default function AIDemoSection() {
       {/* Luz ambiental */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-brand-violet/10 blur-[150px] pointer-events-none rounded-full" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <span className="text-[10px] tracking-[0.3em] text-brand-cyan uppercase mb-4 block font-mono">
             Demostración en Vivo
@@ -87,10 +87,10 @@ export default function AIDemoSection() {
         </motion.div>
 
         {/* Contenedor del Simulador */}
-        <div className="max-w-5xl mx-auto grid md:grid-cols-12 gap-8 items-center">
+        <div className="w-full max-w-5xl mx-auto grid md:grid-cols-12 gap-6 md:gap-8 items-center">
           
           {/* Selector de Escenarios: Horizontal scroll en móviles, vertical en desktop */}
-          <div className="md:col-span-5">
+          <div className="w-full min-w-0 md:col-span-5">
             <div className="flex items-center justify-between mb-2">
               <span className="text-xs font-mono uppercase tracking-wider text-gray-400">
                 Selecciona una industria:
@@ -102,7 +102,7 @@ export default function AIDemoSection() {
             
             <div 
               style={{ WebkitOverflowScrolling: "touch" }}
-              className="flex md:flex-col overflow-x-auto md:overflow-visible gap-2.5 md:space-y-3 md:gap-0 pb-3 md:pb-0 snap-x snap-mandatory scrollbar-none"
+              className="w-full min-w-0 max-w-full flex md:flex-col overflow-x-auto md:overflow-visible gap-2.5 md:space-y-3 md:gap-0 pb-3 md:pb-0 snap-x snap-mandatory scrollbar-none"
             >
               {scenarios.map((scen, idx) => {
                 const isSelected = activeScenario === idx;
@@ -139,31 +139,31 @@ export default function AIDemoSection() {
           </div>
 
           {/* Ventana de Chat Mockup */}
-          <div className="md:col-span-7">
-            <div className="bg-brand-surface/90 border border-brand-cyan/30 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden backdrop-blur-xl">
+          <div className="w-full min-w-0 md:col-span-7">
+            <div className="w-full max-w-full bg-brand-surface/90 border border-brand-cyan/30 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden backdrop-blur-xl">
               
               {/* Header de la ventana de chat */}
-              <div className="bg-neutral-900/80 px-6 py-4 border-b border-white/10 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="relative">
-                    <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-brand-cyan to-brand-violet flex items-center justify-center text-brand-navy font-bold text-xs">
+              <div className="bg-neutral-900/80 px-4 sm:px-6 py-3.5 sm:py-4 border-b border-white/10 flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                  <div className="relative shrink-0">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-tr from-brand-cyan to-brand-violet flex items-center justify-center text-brand-navy font-bold text-xs">
                       IA
                     </div>
                     <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-neutral-900" />
                   </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-white">Sofía • Sincro Asistente Pro</h4>
-                    <p className="text-[11px] text-emerald-400 font-mono">● En línea 24/7 (Respuesta &lt; 2s)</p>
+                  <div className="min-w-0">
+                    <h4 className="text-xs sm:text-sm font-semibold text-white truncate">Sofía • Sincro Asistente Pro</h4>
+                    <p className="text-[10px] sm:text-[11px] text-emerald-400 font-mono truncate">● En línea 24/7 (Respuesta &lt; 2s)</p>
                   </div>
                 </div>
 
-                <span className="text-[10px] font-mono uppercase tracking-widest text-gray-400 bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
+                <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-gray-400 bg-white/5 px-2.5 py-1 rounded-full border border-white/10 shrink-0">
                   Simulación
                 </span>
               </div>
 
               {/* Cuerpo de Mensajes */}
-              <div className="p-6 space-y-4 min-h-[300px] flex flex-col justify-end bg-gradient-to-b from-transparent to-black/20">
+              <div className="p-3.5 sm:p-6 space-y-3 sm:space-y-4 min-h-[260px] sm:min-h-[300px] flex flex-col justify-end bg-gradient-to-b from-transparent to-black/20">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeScenario}
@@ -171,22 +171,22 @@ export default function AIDemoSection() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3 }}
-                    className="space-y-4"
+                    className="space-y-3 sm:space-y-4 w-full"
                   >
                     {/* Mensaje del Usuario */}
-                    <div className="flex justify-end">
-                      <div className="max-w-[85%] bg-brand-cyan/20 border border-brand-cyan/40 text-white rounded-2xl rounded-tr-sm px-4 py-3 text-xs md:text-sm leading-relaxed shadow-sm">
+                    <div className="flex justify-end w-full">
+                      <div className="max-w-[90%] sm:max-w-[85%] bg-brand-cyan/20 border border-brand-cyan/40 text-white rounded-2xl rounded-tr-sm px-3.5 py-2.5 sm:px-4 sm:py-3 text-xs md:text-sm leading-relaxed shadow-sm break-words">
                         {scenarios[activeScenario].userQuestion}
                         <span className="block text-[9px] text-gray-400 text-right mt-1 font-mono">Ahora</span>
                       </div>
                     </div>
 
                     {/* Mensaje del Agente IA */}
-                    <div className="flex justify-start items-start gap-2">
+                    <div className="flex justify-start items-start gap-2 w-full">
                       <div className="w-6 h-6 rounded-full bg-brand-cyan/30 text-brand-cyan flex items-center justify-center text-[10px] font-bold shrink-0 mt-1">
                         IA
                       </div>
-                      <div className="max-w-[85%] bg-neutral-900 border border-white/10 text-gray-200 rounded-2xl rounded-tl-sm px-4 py-3 text-xs md:text-sm leading-relaxed shadow-md">
+                      <div className="max-w-[90%] sm:max-w-[85%] bg-neutral-900 border border-white/10 text-gray-200 rounded-2xl rounded-tl-sm px-3.5 py-2.5 sm:px-4 sm:py-3 text-xs md:text-sm leading-relaxed shadow-md break-words">
                         {scenarios[activeScenario].botAnswer}
                         <span className="block text-[9px] text-brand-cyan text-right mt-1 font-mono">
                           ✓✓ Atendido en tiempo récord
@@ -198,12 +198,12 @@ export default function AIDemoSection() {
               </div>
 
               {/* Barra inferior de entrada simulada */}
-              <div className="p-3.5 sm:p-4 bg-neutral-900/60 border-t border-white/10 flex items-center gap-2 sm:gap-3">
+              <div className="p-3 sm:p-4 bg-neutral-900/60 border-t border-white/10 flex items-center gap-2 sm:gap-3">
                 <input 
                   type="text" 
                   disabled 
                   value="Elige una industria para ver cómo responde..." 
-                  className="w-full bg-neutral-950/80 border border-white/10 rounded-xl px-3.5 sm:px-4 py-2 text-xs text-gray-400 outline-none truncate"
+                  className="w-full min-w-0 bg-neutral-950/80 border border-white/10 rounded-xl px-3 sm:px-4 py-2 text-xs text-gray-400 outline-none truncate"
                 />
                 <button 
                   disabled 
