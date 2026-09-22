@@ -92,6 +92,47 @@ export default function PricingSection() {
             Tecnología de nivel corporativo a una fracción del costo de agencias tradicionales ($8.000.000 a $15.000.000 COP) o nóminas internas. Precios en pesos colombianos, sin costes ocultos.
           </p>
         </motion.div>
+
+        {/* Selector Comercial Guiado: ¿Cuál es tu prioridad? */}
+        <div className="mb-10 max-w-4xl mx-auto">
+          <div className="text-center mb-3">
+            <span className="text-[11px] font-mono uppercase tracking-widest text-brand-cyan">
+              ¿Cuál es tu prioridad comercial hoy? Selecciona para recomendarte:
+            </span>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5">
+            {[
+              { label: "💬 Atención WhatsApp", plan: "IA PRO", desc: "Ventas y citas 24/7" },
+              { label: "⚡ Web Ultra Rápida", plan: "WEB BASE", desc: "Carga < 0.8s" },
+              { label: "🛍️ Tienda Virtual", plan: "E-COMMERCE", desc: "Wompi / PSE / Bold" },
+              { label: "🚀 Todo en Uno (VIP)", plan: "ECOSISTEMA TOTAL", desc: "Web + Bot IA", popular: true },
+            ].map((item) => {
+              const isMatch = selectedPlan?.name === item.plan;
+              return (
+                <button
+                  key={item.plan}
+                  type="button"
+                  onClick={() => selectPlanByName(item.plan)}
+                  className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
+                    isMatch
+                      ? "bg-brand-cyan/20 border-brand-cyan text-white shadow-[0_0_20px_rgba(0,229,255,0.3)] ring-1 ring-brand-cyan"
+                      : "bg-white/[0.03] border-white/10 text-gray-300 hover:border-brand-cyan/40 hover:text-white"
+                  }`}
+                >
+                  <div className="flex items-center justify-between gap-1">
+                    <span className="font-semibold text-xs block truncate text-white">{item.label}</span>
+                    {item.popular && (
+                      <span className="text-[8px] font-mono px-1.5 py-0.5 rounded bg-brand-cyan text-brand-navy font-bold uppercase shrink-0">
+                        Top
+                      </span>
+                    )}
+                  </div>
+                  <span className="text-[10px] text-gray-400 font-mono block mt-1 truncate">{item.desc}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
         
         <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch" role="list">
           {plans.map((plan, index) => {
@@ -214,8 +255,8 @@ export default function PricingSection() {
             <div className="flex items-start gap-3">
               <span className="text-emerald-400 text-base shrink-0">✓</span>
               <div>
-                <strong className="text-white block mb-0.5">Servidor Cloud 24/7 & Hosting Edge:</strong>
-                Tu bot y web se mantienen en servidores dedicados de alta disponibilidad con uptime 99.9%.
+                <strong className="text-white block mb-0.5">Infraestructura Cloud Edge & Monitoreo 24/7:</strong>
+                Tu bot y web se mantienen en infraestructura Cloud Edge administrada con disponibilidad 99.9%.
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -244,8 +285,8 @@ export default function PricingSection() {
           <div className="flex items-center justify-center gap-3">
             <span className="text-2xl text-brand-cyan" aria-hidden="true">⚡</span>
             <div className="text-left">
-              <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono">Arquitectura &lt; 0.8s</h4>
-              <p className="text-[11px] text-gray-400">Optimización orientada a score 90+ en Google PageSpeed.</p>
+              <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono">Objetivo &lt; 0.8s</h4>
+              <p className="text-[11px] text-gray-400">Arquitectura de ingeniería orientada a score 90+ en PageSpeed.</p>
             </div>
           </div>
           <div className="flex items-center justify-center gap-3">

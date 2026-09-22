@@ -102,37 +102,42 @@ export default function ProjectsShowcase() {
                 </p>
 
                 {/* Problema vs Solución */}
-                <div className="space-y-4 text-xs leading-relaxed mb-6">
+                <div className="space-y-3 text-xs leading-relaxed mb-5">
                   <div className="p-3.5 rounded-xl bg-red-500/5 border border-red-500/20 text-gray-300">
-                    <strong className="text-red-400 block mb-1 font-mono uppercase text-[10px]">
-                      ⚠️ Cuello de botella inicial:
+                    <strong className="text-red-400 block mb-1 font-mono uppercase text-[10px] tracking-wider">
+                      🔴 1. PROBLEMA INICIAL:
                     </strong>
                     {project.problem}
                   </div>
 
                   <div className="p-3.5 rounded-xl bg-emerald-500/5 border border-emerald-500/20 text-gray-300">
-                    <strong className="text-emerald-400 block mb-1 font-mono uppercase text-[10px]">
-                      ⚡ Solución SincroIA:
+                    <strong className="text-emerald-400 block mb-1 font-mono uppercase text-[10px] tracking-wider">
+                      ⚡ 2. SOLUCIÓN SINCROIA:
                     </strong>
                     {project.solution}
                   </div>
                 </div>
 
-                {/* Métricas de Rendimiento */}
-                <div className="grid grid-cols-3 gap-1.5 sm:gap-2 p-2.5 sm:p-3 rounded-xl bg-neutral-900/80 border border-white/5 mb-6 text-center">
-                  {project.metrics.map((metric) => (
-                    <div key={metric.label} className="space-y-0.5 min-w-0">
-                      <span className="text-sm sm:text-lg font-bold font-mono text-white block truncate">
-                        {metric.value}
-                      </span>
-                      <span className="text-[9px] sm:text-[10px] font-medium text-brand-cyan block break-words leading-tight">
-                        {metric.label}
-                      </span>
-                      <span className="text-[8px] sm:text-[9px] text-gray-400 block font-mono truncate">
-                        {metric.detail}
-                      </span>
-                    </div>
-                  ))}
+                {/* Métricas de Rendimiento (Resultado) */}
+                <div className="mb-6">
+                  <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest block mb-2 text-center">
+                    📈 3. RESULTADO MEDIBLE:
+                  </span>
+                  <div className="grid grid-cols-3 gap-1.5 sm:gap-2 p-2.5 sm:p-3 rounded-xl bg-neutral-900/80 border border-brand-cyan/20 text-center">
+                    {project.metrics.map((metric) => (
+                      <div key={metric.label} className="space-y-0.5 min-w-0">
+                        <span className="text-sm sm:text-lg font-bold font-mono text-white block truncate">
+                          {metric.value}
+                        </span>
+                        <span className="text-[9px] sm:text-[10px] font-medium text-brand-cyan block break-words leading-tight">
+                          {metric.label}
+                        </span>
+                        <span className="text-[8px] sm:text-[9px] text-gray-400 block font-mono truncate">
+                          {metric.detail}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 

@@ -71,10 +71,10 @@ export default function HeroSection() {
         </div>
 
         {/* BARRA DE AUTORIDAD Y MÉTRICAS (Social Proof) */}
-        <div className="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
           <div className="space-y-1">
             <span className="text-2xl sm:text-3xl font-bold font-mono text-brand-cyan">&lt; 0.8s</span>
-            <p className="text-xs text-gray-400">Tiempo de carga promedio</p>
+            <p className="text-xs text-gray-400">Carga móvil instantánea</p>
           </div>
           <div className="space-y-1">
             <span className="text-2xl sm:text-3xl font-bold font-mono text-white">24/7</span>
@@ -82,11 +82,11 @@ export default function HeroSection() {
           </div>
           <div className="space-y-1">
             <span className="text-2xl sm:text-3xl font-bold font-mono text-brand-cyan">&lt; 2s</span>
-            <p className="text-xs text-gray-400">Tiempo objetivo de respuesta</p>
+            <p className="text-xs text-gray-400">Respuesta de IA en vivo</p>
           </div>
           <div className="space-y-1">
             <span className="text-2xl sm:text-3xl font-bold font-mono text-white">100%</span>
-            <p className="text-xs text-gray-400">Código a medida en Next.js</p>
+            <p className="text-xs text-gray-400">Código propio sin ataduras</p>
           </div>
         </div>
 

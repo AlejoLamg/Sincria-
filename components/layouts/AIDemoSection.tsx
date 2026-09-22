@@ -87,10 +87,10 @@ export default function AIDemoSection() {
         </motion.div>
 
         {/* Contenedor del Simulador */}
-        <div className="w-full max-w-5xl mx-auto grid md:grid-cols-12 gap-6 md:gap-8 items-center">
+        <div className="w-full max-w-5xl mx-auto flex flex-col md:grid md:grid-cols-12 gap-6 md:gap-8 items-center">
           
           {/* Selector de Escenarios: Horizontal scroll en móviles, vertical en desktop */}
-          <div className="w-full min-w-0 md:col-span-5">
+          <div className="w-full min-w-0 md:col-span-5 overflow-hidden">
             <div className="flex items-center justify-between mb-2">
               <span className="text-xs font-mono uppercase tracking-wider text-gray-400">
                 Selecciona una industria:
