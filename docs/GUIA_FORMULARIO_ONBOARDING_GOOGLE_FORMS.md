@@ -3,6 +3,8 @@
 
 **Objetivo:** Este formulario se envía al cliente **inmediatamente después de que paga el 50% de anticipo**. Permite recopilar todos los insumos necesarios para que el Ing. Alejandro inicie el proyecto sin tener que pasar horas pidiendo datos por chat.
 
+* **Enlace Público Oficial de Onboarding:** https://docs.google.com/forms/d/e/1FAIpQLSc7c7tLvjDAPBVnvJkYF8KwiTXC9eB-CAjr4oWBija2dawZvQ/viewform
+
 ---
 
 ### CÓMO CREARLO EN GOOGLE FORMS (5 Minutos):
