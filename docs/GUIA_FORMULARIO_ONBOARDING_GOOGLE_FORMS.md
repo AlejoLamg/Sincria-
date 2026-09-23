@@ -80,4 +80,4 @@
 
 ### NOTA FINAL AUTOMÁTICA EN GOOGLE FORMS:
 En la pestaña de **Configuración > Presentación > Mensaje de confirmación**:
-> *"¡Información recibida con éxito! 🚀 El cronómetro oficial de entrega de tu proyecto se ha activado. Nuestro Director de Ingeniería, Alejandro Lamus, revisará tus insumos y te contactará en las próximas 2 horas para coordinar tu breve sesión de Kickoff. ¡Gracias por confiar en SincroIA!"*
+> *"¡Información recibida con éxito! 🚀 El cronómetro oficial de entrega de tu proyecto se ha activado. Nuestro Director de Ingeniería, Alejandro Melo Gutiérrez, revisará tus insumos y te contactará en las próximas 2 horas para coordinar tu breve sesión de Kickoff. ¡Gracias por confiar en SincroIA!"*

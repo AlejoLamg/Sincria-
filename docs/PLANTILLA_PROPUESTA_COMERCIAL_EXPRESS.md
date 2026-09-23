@@ -7,7 +7,7 @@
 **Empresa / Cliente:** `[NOMBRE DEL CLIENTE / RAZÓN SOCIAL]`  
 **NIT / C.C.:** `[NÚMERO DE IDENTIFICACIÓN FISCAL]`  
 **Contacto Principal:** `[NOMBRE Y CARGO DEL CONTACTO]`  
-**Líder Técnico SincroIA:** Ing. Alejandro Lamus — Director de Ingeniería (`contacto@sincroia.lat` | `+57 312 463 0488`)
+**Líder Técnico SincroIA:** Ing. Alejandro Melo Gutiérrez — Director de Ingeniería (`contacto@sincroia.lat` | `+57 312 463 0488`)
 
 ---
 
@@ -113,7 +113,7 @@ La implementación tiene como meta alcanzar los siguientes objetivos operativos 
 * **Hito 1 (Anticipo 50%):** Requisito previo indispensable para reserva de capacidad técnica, diseño de arquitectura e inicio de desarrollo.
 * **Hito 2 (Saldo 50%):** Pagadero una vez culminadas las revisiones funcionales en el entorno de pruebas (Staging) a satisfacción, de forma previa y obligatoria al apuntamiento del dominio definitivo, entrega de credenciales o puesta en producción.
 * **Datos Bancarios Oficiales:**
-  * **Titular:** Alejandro Lamus *(Director de Ingeniería & Representante SincroIA)*
+  * **Titular:** Alejandro Melo Gutiérrez *(Director de Ingeniería & Representante SincroIA)*
   * **Banco:** Bancolombia
   * **Tipo de Cuenta:** Cuenta de Ahorros N° `031-852963-04`
   * **C.C. / Identificación:** `[NÚMERO DE IDENTIFICACIÓN]`
@@ -141,7 +141,7 @@ Una vez formalizada la aceptación y efectuado el anticipo, este documento y el 
 
 | POR SINCROIA.LAT | POR EL CLIENTE CONTRATANTE |
 | :--- | :--- |
-| **Ing. Alejandro Lamus** | **Nombre:** `[NOMBRE REPRESENTANTE LEGAL]` |
+| **Ing. Alejandro Melo Gutiérrez** | **Nombre:** `[NOMBRE REPRESENTANTE LEGAL]` |
 | Director de Ingeniería & Operaciones | **C.C. / NIT:** `[NÚMERO DE IDENTIFICACIÓN]` |
 | Firma: ________________________________ | Firma: ________________________________ |
 | Fecha: `[FECHA DE ACEPTACIÓN]` | Fecha: `[FECHA DE ACEPTACIÓN]` |
