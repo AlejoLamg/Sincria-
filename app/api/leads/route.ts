@@ -71,7 +71,9 @@ ${comentarios ? comentarios : "Sin comentarios adicionales."}`;
     }
 
     // 2. CANAL WEBHOOK UNIVERSAL (Google Sheets CRM / Discord / Slack / Zapier)
-    const webhookUrl = process.env.LEADS_WEBHOOK_URL;
+    const webhookUrl =
+      process.env.LEADS_WEBHOOK_URL ||
+      "https://script.google.com/macros/s/AKfycbxSJlke_sz9jxwaMqo0GaPclRE5S2cEC8E55oYk3AFSrp0Cd3rBGU_5-2vMOm6xBNNy/exec";
     if (webhookUrl) {
       try {
         const isDiscord = webhookUrl.includes("discord.com");

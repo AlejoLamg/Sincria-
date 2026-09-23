@@ -242,8 +242,10 @@ ${waLink ? `💬 *Abrir chat:* [Chatear con el cliente](${waLink})` : ""}
     }
   }
 
-  // 2. Registro automático en Google Sheets CRM (si LEADS_WEBHOOK_URL está configurado)
-  const webhookUrl = process.env.LEADS_WEBHOOK_URL;
+  // 2. Registro automático en Google Sheets CRM (si LEADS_WEBHOOK_URL está configurado o usa el webhook oficial)
+  const webhookUrl =
+    process.env.LEADS_WEBHOOK_URL ||
+    "https://script.google.com/macros/s/AKfycbxSJlke_sz9jxwaMqo0GaPclRE5S2cEC8E55oYk3AFSrp0Cd3rBGU_5-2vMOm6xBNNy/exec";
   if (webhookUrl) {
     try {
       const isGoogleAppsScript = webhookUrl.includes("script.google.com");
