@@ -1,4 +1,4 @@
-﻿# Guía Oficial de Despliegue 24/7 en Railway: Sofía IA (WhatsApp Bridge)
+# Guía Oficial de Despliegue 24/7 en Railway: Sofía IA (WhatsApp Bridge)
 
 Esta guía documenta el procedimiento exacto paso a paso para desplegar el agente de WhatsApp de **SincroIA.lat** en la nube de **Railway** utilizando Docker y un Volumen Persistente.
 

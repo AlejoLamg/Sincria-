@@ -1,4 +1,4 @@
-﻿# Imagen base Node.js 20 Alpine (ultra liviana y eficiente)
+# Imagen base Node.js 20 Alpine (ultra liviana y eficiente)
 FROM node:20-alpine
 
 # Dependencias nativas mínimas

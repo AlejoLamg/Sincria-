@@ -1,4 +1,4 @@
-﻿// Test suite para verificar las capacidades consultivas de Sofía IA
+// Test suite para verificar las capacidades consultivas de Sofía IA
 const API_URL = "http://localhost:3000/api/agent/chat";
 
 const scenarios = [
