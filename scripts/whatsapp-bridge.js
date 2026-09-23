@@ -450,6 +450,7 @@ async function startWhatsAppBridge() {
             message: text,
             sessionId: senderNumber,
             contactName: senderName,
+            apiKey: process.env.GEMINI_API_KEY,
           }),
         });
 
