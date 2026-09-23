@@ -113,10 +113,11 @@ La implementación tiene como meta alcanzar los siguientes objetivos operativos 
 * **Hito 1 (Anticipo 50%):** Requisito previo indispensable para reserva de capacidad técnica, diseño de arquitectura e inicio de desarrollo.
 * **Hito 2 (Saldo 50%):** Pagadero una vez culminadas las revisiones funcionales en el entorno de pruebas (Staging) a satisfacción, de forma previa y obligatoria al apuntamiento del dominio definitivo, entrega de credenciales o puesta en producción.
 * **Datos Bancarios Oficiales:**
-  * **Titular:** Alejandro Melo Gutiérrez *(Director de Ingeniería & Representante SincroIA)*
+  * **Titular:** Alejandro Melo Gutiérrez
+  * **Calidad:** Director de Ingeniería — SincroIA
   * **Banco:** Bancolombia
   * **Tipo de Cuenta:** Cuenta de Ahorros N° `031-852963-04`
-  * **C.C. / Identificación:** `[NÚMERO DE IDENTIFICACIÓN]`
+  * **C.C.:** `[NÚMERO DE IDENTIFICACIÓN]`
   * **Medios Digitales:** Disponible enlace para pago con Tarjeta de Crédito / PSE / Wompi.
 
 ---
@@ -128,7 +129,7 @@ Para asegurar que la infraestructura se mantenga operativa, monitoreada y actual
 * **Planes SincroCare a partir del Mes 2 (Opcionales y sin permanencia forzosa):**
   * 🔹 **SincroCare Starter ($190.000 COP/mes):** Servidor cloud 24/7, monitoreo de disponibilidad, bolsa de hasta 5.000 mensajes de IA mensuales, copias de seguridad periódicas y 1 actualización menor de catálogo/precios al mes.
   * 🔹 **SincroCare Growth ($350.000 COP/mes):** Hasta 20.000 mensajes de IA mensuales, soporte técnico prioritario en < 4 horas hábiles y 2 actualizaciones mensuales de catálogo.
-* **Consumos Extraordinarios:** Si el volumen operativo del cliente supera la bolsa mensual incluida en su plan SincroCare, los mensajes adicionales se facturarán a razón de \$25 COP por mensaje adicional, o el cliente podrá realizar un upgrade de plan.
+* **Consumos Extraordinarios:** Si el volumen operativo del cliente supera la bolsa mensual incluida en su plan SincroCare, cada mensaje procesado por el agente de IA que exceda la bolsa contratada se facturará a razón de \$25 COP, o el cliente podrá realizar un upgrade de plan.
 * **Libertad de Autogestión:** Si el cliente decide no renovar SincroCare, se le facilitará la entrega de documentación y credenciales para que asuma directamente los costos de sus proveedores cloud sin penalizaciones ni bloqueos de código.
 
 ---
@@ -142,7 +143,7 @@ Una vez formalizada la aceptación y efectuado el anticipo, este documento y el 
 | POR SINCROIA.LAT | POR EL CLIENTE CONTRATANTE |
 | :--- | :--- |
 | **Ing. Alejandro Melo Gutiérrez** | **Nombre:** `[NOMBRE REPRESENTANTE LEGAL]` |
-| Director de Ingeniería & Operaciones | **C.C. / NIT:** `[NÚMERO DE IDENTIFICACIÓN]` |
+| Director de Ingeniería — SincroIA | **C.C. / NIT:** `[NÚMERO DE IDENTIFICACIÓN]` |
 | Firma: ________________________________ | Firma: ________________________________ |
 | Fecha: `[FECHA DE ACEPTACIÓN]` | Fecha: `[FECHA DE ACEPTACIÓN]` |
 
@@ -173,7 +174,7 @@ Para garantizar la predictibilidad del proyecto y evitar desviaciones de alcance
 ### 10. EL CRONÓMETRO DE ENTREGA ("EL RELOJ DEL CLIENTE")
 * **Inicio del Cómputo:** Los plazos de entrega en días hábiles comenzarán a computarse a partir del día hábil siguiente a la entrega completa del **Formulario de Onboarding** y la totalidad de los insumos obligatorios (logo en alta resolución, catálogo con precios definitivos y accesos técnicos necesarios).
 * **Demoras del Cliente:** Las demoras del cliente en aprobaciones, insumos o respuestas suspenderán automáticamente el cronograma por el mismo número de días de demora, sin penalidad para SincroIA.
-* **Periodo de Revisión:** El cliente dispondrá de **cinco (5) días hábiles** tras la entrega del entorno de pruebas para remitir un listado consolidado con sus observaciones. Se incluyen hasta **dos (2) rondas de ajustes menores** dentro del alcance original.
+* **Periodo de Revisión:** El cliente dispondrá de **cinco (5) días hábiles** tras la entrega del entorno de pruebas para remitir un listado consolidado con sus observaciones. Se incluyen hasta **dos (2) rondas de ajustes menores** dentro del alcance original. Cada ronda corresponde a un listado único y consolidado de observaciones entregado por el cliente dentro del plazo establecido.
 
 ---
 
@@ -194,7 +195,7 @@ Para garantizar la predictibilidad del proyecto y evitar desviaciones de alcance
 
 ### 13. DEPENDENCIAS DE TERCEROS & LÍMITES DE IA
 * **Proveedores Externos:** Las soluciones operan sobre infraestructura de terceros líderes (WhatsApp / Meta Platforms, Google Cloud, Vercel Inc.). Los cambios de políticas, precios, límites o condiciones de uso de dichos proveedores externos podrán requerir ajustes técnicos o económicos no imputables a SincroIA.
-* **Naturaleza de la Inteligencia Artificial:** El agente de IA opera con modelos de lenguaje natural sobre la información suministrada por el cliente. Debido a su naturaleza probabilística, SincroIA implementa restricciones estrictas y el protocolo de **Relevo Humano** (pausa de 45 minutos que se reactiva automáticamente para retomar la atención continua, salvo nueva intervención humana), permitiendo la supervisión y control del equipo humano.
+* **Naturaleza de la Inteligencia Artificial:** El agente de IA opera con modelos de lenguaje natural sobre la información suministrada por el cliente. Debido a su naturaleza probabilística, SincroIA implementa restricciones estrictas y el protocolo de **Relevo Humano** (pausa de 45 minutos desde la última intervención humana, reactivándose automáticamente al finalizar dicho periodo salvo nueva intervención de un asesor o activación del comando directivo #pausar), permitiendo la supervisión y control del equipo humano.
 
 ---
 
