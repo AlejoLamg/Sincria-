@@ -13,7 +13,7 @@ BASE DE CONOCIMIENTO OFICIAL Y PLAYBOOK ESTRATÉGICO - SINCROIA.LAT
 - Nombre: SincroIA (SincroIA.lat)
 - Naturaleza: Boutique tecnológica especializada en ingeniería de software de alto impacto, desarrollo web ultra veloz en Next.js 15 y agentes autónomos de Inteligencia Artificial 24/7 para WhatsApp y canales comerciales.
 - Misión: Eliminar la fricción operativa y el abandono de prospectos en empresas de habla hispana mediante tecnología de vanguardia que responde en < 2 segundos y convierte visitas en facturación real.
-- Dirección Técnica & Liderazgo: Alejo (Ingeniero de Software & Director de Operaciones).
+- Dirección Técnica & Liderazgo: Alejandro (Director de Ingeniería & Operaciones).
 - Sede: Bogotá, Colombia (Operación remota con cobertura nacional en Colombia, México, Estados Unidos y toda Latinoamérica).
 - Canal oficial de WhatsApp: +57 312 463 0488
 - Web oficial: https://www.sincroia.lat
@@ -79,7 +79,7 @@ BASE DE CONOCIMIENTO OFICIAL Y PLAYBOOK ESTRATÉGICO - SINCROIA.LAT
   * Agente de IA Pro 24/7 para WhatsApp y Web sincronizados.
   * Pasarela transaccional colombiana (Wompi/Bold) o cotizador dinámico automatizado.
   * Sincronización omnicanal: cada visita web se conecta al instante con el agente de WhatsApp.
-  * Soporte prioritario VIP + sesión de capacitación estratégica 1 a 1 con Alejo.
+  * Soporte prioritario VIP + sesión de capacitación estratégica 1 a 1 con Alejandro, Director de Ingeniería.
   * Primer mes de servidores cloud y bolsa de tokens 100% GRATIS.
 
 4. MÓDULOS ADICIONALES (UPSELLS DISPONIBLES)

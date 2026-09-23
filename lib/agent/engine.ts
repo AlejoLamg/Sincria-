@@ -37,12 +37,12 @@ export async function processAgentMessage(
 
   // 2. Detección rápida de solicitud de humano
   const lowerMsg = userMessage.toLowerCase();
-  const humanKeywords = ["humano", "persona", "asesor", "hablar con alguien", "hablar con alejo", "llamada directa"];
+  const humanKeywords = ["humano", "persona", "asesor", "hablar con alguien", "hablar con alejo", "hablar con alejandro", "ingeniero", "llamada directa"];
   const directHumanRequest = humanKeywords.some((kw) => lowerMsg.includes(kw));
 
   if (directHumanRequest) {
     pauseSession(sessionId, 24);
-    const takeoverMsg = `¡Claro que sí${contactName ? ` ${contactName}` : ""}! Con mucho gusto te comunico en este momento con Alejo, nuestro Director de Ingeniería, para que revise tu caso personalmente. Te responderá por este mismo chat en breve. 👨‍💻`;
+    const takeoverMsg = `¡Claro que sí${contactName ? ` ${contactName}` : ""}! Con mucho gusto te comunico en este momento con Alejandro, nuestro Director de Ingeniería, para que revise tu caso de forma personalizada. Te responderá por este mismo chat en breve. 👨‍💻`;
     addMessage(sessionId, "user", userMessage);
     addMessage(sessionId, "model", takeoverMsg);
 
@@ -201,7 +201,7 @@ async function notifyTelegramAlert(data: {
 
   let title = "🤖 *ALERTA DE AGENTE IA*";
   if (data.type === "HUMAN_TAKEOVER") {
-    title = "🚨 *CLIENTE SOLICITA ATENCIÓN HUMANA (ALEJO)*";
+    title = "🚨 *CLIENTE SOLICITA ATENCIÓN HUMANA (ING. ALEJANDRO)*";
   } else if (data.type === "SCHEDULE_MEETING") {
     title = "📅 *PROSPECTO INTERESADO EN AGENDAR REUNIÓN*";
   } else if (data.type === "READY_TO_BUY") {
