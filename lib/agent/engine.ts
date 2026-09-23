@@ -192,33 +192,33 @@ async function notifyTelegramAlert(data: {
   message: string;
   details?: Record<string, string>;
 }): Promise<void> {
+  // 1. Notificación a Telegram (si está configurado)
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
-  if (!token || !chatId) return;
+  if (token && chatId) {
+    const phone = data.sessionId.replace(/\D/g, "");
+    const waLink = phone ? `https://wa.me/${phone}` : "";
 
-  const phone = data.sessionId.replace(/\D/g, "");
-  const waLink = phone ? `https://wa.me/${phone}` : "";
+    let title = "🤖 *ALERTA DE AGENTE IA*";
+    if (data.type === "HUMAN_TAKEOVER") {
+      title = "🚨 *CLIENTE SOLICITA ATENCIÓN HUMANA (ING. ALEJANDRO)*";
+    } else if (data.type === "SCHEDULE_MEETING") {
+      title = "📅 *PROSPECTO INTERESADO EN AGENDAR REUNIÓN*";
+    } else if (data.type === "READY_TO_BUY") {
+      title = "🔥 *¡PROSPECTO LISTO PARA COTIZACIÓN / PAGO!*";
+    } else if (data.type === "PARTNER_LEAD") {
+      title = "🤝 *¡AGENCIA / PARTNER B2B INTERESADO EN ALIANZA!*";
+    }
 
-  let title = "🤖 *ALERTA DE AGENTE IA*";
-  if (data.type === "HUMAN_TAKEOVER") {
-    title = "🚨 *CLIENTE SOLICITA ATENCIÓN HUMANA (ING. ALEJANDRO)*";
-  } else if (data.type === "SCHEDULE_MEETING") {
-    title = "📅 *PROSPECTO INTERESADO EN AGENDAR REUNIÓN*";
-  } else if (data.type === "READY_TO_BUY") {
-    title = "🔥 *¡PROSPECTO LISTO PARA COTIZACIÓN / PAGO!*";
-  } else if (data.type === "PARTNER_LEAD") {
-    title = "🤝 *¡AGENCIA / PARTNER B2B INTERESADO EN ALIANZA!*";
-  }
+    let detailsText = "";
+    if (data.details && Object.keys(data.details).length > 0) {
+      const lines = Object.entries(data.details).map(
+        ([k, v]) => `• *${k.charAt(0).toUpperCase() + k.slice(1)}:* ${v}`
+      );
+      detailsText = `\n📋 *Ficha Resumen del Lead:*\n${lines.join("\n")}\n`;
+    }
 
-  let detailsText = "";
-  if (data.details && Object.keys(data.details).length > 0) {
-    const lines = Object.entries(data.details).map(
-      ([k, v]) => `• *${k.charAt(0).toUpperCase() + k.slice(1)}:* ${v}`
-    );
-    detailsText = `\n📋 *Ficha Resumen del Lead:*\n${lines.join("\n")}\n`;
-  }
-
-  const text = `${title}
+    const text = `${title}
 
 👤 *Contacto:* ${data.contactName || "Usuario WhatsApp"}
 📱 *Chat ID:* ${data.sessionId}${detailsText}
@@ -227,18 +227,63 @@ ${waLink ? `💬 *Abrir chat:* [Chatear con el cliente](${waLink})` : ""}
 "${data.message}"
 `;
 
-  try {
-    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text,
-        parse_mode: "Markdown",
-      }),
-    });
-  } catch (err) {
-    console.error("Error al enviar alerta Telegram del agente:", err);
+    try {
+      await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text,
+          parse_mode: "Markdown",
+        }),
+      });
+    } catch (err) {
+      console.error("Error al enviar alerta Telegram del agente:", err);
+    }
+  }
+
+  // 2. Registro automático en Google Sheets CRM (si LEADS_WEBHOOK_URL está configurado)
+  const webhookUrl = process.env.LEADS_WEBHOOK_URL;
+  if (webhookUrl) {
+    try {
+      const isGoogleAppsScript = webhookUrl.includes("script.google.com");
+      const fechaBogota = new Date().toLocaleString("es-CO", {
+        timeZone: "America/Bogota",
+        dateStyle: "medium",
+        timeStyle: "short",
+      });
+      const cleanPhone = data.sessionId.replace(/\D/g, "");
+
+      let statusLabel = "🟡 1. Lead Nuevo";
+      if (data.type === "READY_TO_BUY") statusLabel = "🟣 4. Propuesta 50/50";
+      else if (data.type === "SCHEDULE_MEETING") statusLabel = "🟢 3. Sesión Agendada";
+      else if (data.type === "HUMAN_TAKEOVER") statusLabel = "🔵 2. Diagnóstico Sofía (Atención Alejandro)";
+
+      const payload = {
+        fecha: fechaBogota,
+        nombre: data.contactName || data.details?.lead || "Prospecto WhatsApp",
+        telefono: cleanPhone ? `+${cleanPhone}` : data.sessionId,
+        email: data.details?.email || "",
+        empresa: data.details?.empresa || data.details?.sector || "No especificada",
+        tipoProyecto: data.details?.plan || data.type,
+        presupuesto: data.details?.presupuesto || "Por cotizar",
+        comentarios: `[Acción IA: ${data.type}] ${data.message}`,
+        estado: statusLabel,
+      };
+
+      await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": isGoogleAppsScript
+            ? "text/plain;charset=utf-8"
+            : "application/json",
+        },
+        body: JSON.stringify(payload),
+        redirect: "follow",
+      });
+    } catch (whErr) {
+      console.error("Error al registrar lead en Google Sheets:", whErr);
+    }
   }
 }
 
