@@ -1,4 +1,4 @@
-# PROPUESTA TÉCNICO-COMERCIAL & ESPECIFICACIÓN DE PROYECTO
+# PROPUESTA TÉCNICO-COMERCIAL & CONDICIONES DE SERVICIO
 ## SINCROIA.LAT — INGENIERÍA DIGITAL & SISTEMAS DE CONVERSIÓN 24/7
 
 **Código de Propuesta:** `SINCRO-2026-` `[AÑO][MES]-[NÚMERO]`  
@@ -11,211 +11,133 @@
 
 ---
 
-## 01. RESUMEN EJECUTIVO & PRINCIPIO DE TRANSPARENCIA
-En SincroIA operamos bajo una filosofía estricta de ingeniería: **valor comercial medible antes que tecnología abstracta y transparencia radical en el alcance**. 
-
-Este documento establece con precisión milimétrica los problemas de su negocio que resolveremos, la arquitectura técnica que implementaremos, qué incluye y qué **NO** incluye el proyecto, los criterios formales para darlo por entregado a satisfacción y el modelo de continuidad operativa.
+# PARTE I: PROPUESTA EJECUTIVA & CONDICIONES COMERCIALES
+*(Documento principal de decisión e inversión)*
 
 ---
 
-## 02. DIAGNÓSTICO CONSULTIVO
-Con base en las sesiones de análisis previas sobre los canales digitales y comerciales de **`[EMPRESA CLIENTE]`**, se han identificado las siguientes fricciones críticas:
+### 01. RESUMEN EJECUTIVO & FILOSOFÍA DE TRABAJO
+En SincroIA operamos bajo una premisa fundamental de ingeniería: **valor comercial medible antes que tecnología abstracta y transparencia radical en el alcance**. 
 
-* 🔴 **Fuga de Prospectos fuera de horario:** Mensajes de clientes potenciales recibidos en las noches, fines de semana o festivos que no reciben atención inmediata y acuden a la competencia.
-* 🔴 **Demoras en Tiempos de Respuesta Manual:** Tiempos de primera respuesta superiores a 15–30 minutos durante el horario laboral, reduciendo el retorno de inversión publicitaria.
-* 🔴 **Fricción en Conversión Web:** Presencia digital con tiempos de carga elevados, interfaces no optimizadas para dispositivos móviles o dependencia de constructores visuales lentos que incrementan la tasa de rebote.
-* 🔴 **Carga Operativa Repetitiva:** Personal humano dedicando entre el 60% y 70% de su tiempo a responder las mismas preguntas frecuentes, consultas de catálogo o agendamiento manual.
+Diseñamos soluciones tecnológicas orientadas a resolver cuellos de botella específicos en la adquisición y retención de clientes, garantizando una entrega predecible, código de alta velocidad y continuidad operativa.
 
 ---
 
-## 03. OBJETIVOS E IMPACTO ESPERADO (MÉTRICAS CLAVE)
-La intervención tecnológica tiene como propósito transformar su infraestructura comercial mediante metas operativas concretas:
+### 02. DIAGNÓSTICO CONSULTIVO
+Con base en el levantamiento de información y el diagnóstico preliminar realizado con **`[EMPRESA CLIENTE]`**, se han identificado las siguientes fricciones comerciales:
 
-| Indicador Clave (KPI) | Estado Típico Inicial | Objetivo Técnico con SincroIA |
+* 🔴 **Fuga de Prospectos fuera de horario:** Mensajes de clientes potenciales en horarios no laborales (noches, fines de semana y festivos) que no reciben atención inmediata y acuden a alternativas de la competencia.
+* 🔴 **Tiempos de Respuesta Manual Elevados:** Demoras en la primera respuesta durante el horario comercial, reduciendo el retorno de inversión de las campañas publicitarias.
+* 🔴 **Fricción en Conversión Web:** Presencia digital con tiempos de carga lentos o plataformas no optimizadas para móviles, incrementando la tasa de abandono de usuarios.
+* 🔴 **Carga Operativa Repetitiva:** Horas de trabajo dedicadas por el personal a resolver las mismas consultas básicas de catálogo, tarifas y agendamiento manual.
+
+---
+
+### 03. OBJETIVOS E IMPACTO ESPERADO (MÉTRICAS CLAVE)
+La implementación tiene como meta alcanzar los siguientes objetivos operativos bajo condiciones estándar de funcionamiento:
+
+| Indicador Clave (KPI) | Situación Inicial Estimada | Objetivo Operativo con SincroIA |
 | :--- | :--- | :--- |
-| **Tiempo de Primera Respuesta** | 15 a 120 minutos (o al día siguiente) | **< 2 segundos** (condiciones estándar) |
-| **Disponibilidad Comercial** | 8 a 9 horas / día (Lunes a Viernes) | **24 horas / 7 días / 365 días al año** |
-| **Velocidad de Carga Web Móvil** | 3.5 a 6.0 segundos (WordPress/Elementor) | **Objetivo Edge < 0.8s - 1.2s** (Next.js) |
-| **Calificación y Filtro de Leads** | Manual y desestructurada | **Automática en tiempo real con ficha ejecutiva** |
-| **Retención de Oportunidades** | Pérdida estimada del 30% al 45% de leads | **100% de consultas atendidas y registradas** |
+| **Tiempo de Primera Respuesta** | Superior a 15–30 minutos (manual) | **Objetivo técnico < 2 segundos** (en infraestructura controlada) |
+| **Disponibilidad Comercial** | 8 a 9 horas / día (Lunes a Viernes) | **Cobertura de atención automatizada 24/7** |
+| **Velocidad de Carga Web Móvil** | 3.5 a 6.0 segundos (plataformas tradicionales) | **Objetivo de rendimiento Edge < 0.8s – 1.2s** (Next.js 15) |
+| **Calificación de Prospectos** | Desestructurada y variable | **Automática en tiempo real con ficha ejecutiva** |
+| **Registro de Oportunidades** | Registro manual incompleto | **Captura y trazabilidad centralizada de prospectos** |
 
 ---
 
-## 04. SOLUCIÓN PROPUESTA & ARQUITECTURA TÉCNICA
-Se proyecta una arquitectura desacoplada, moderna y de nivel empresarial sin ataduras a plataformas cautivas:
-
-* **Frontend & Web:** Código nativo en **Next.js 15** (React 19, TypeScript, Tailwind CSS) alojado en la red global Anycast Edge de **Vercel** con disponibilidad objetivo del 99.9%.
-* **Motor de Inteligencia Artificial:** Orquestación y contextualización mediante modelos **Gemini Flash** con guardarraíles deterministas de venta consultiva, memoria de contexto multi-turno y detección semántica de intención de compra.
-* **Integración WhatsApp:** Conexión continua a su línea comercial con protocolo de **Relevo Humano** (silenciado automático ante intervención de un asesor).
-* **Gestión de Prospectos:** Sistema automatizado de captura y centralización de leads conectado en tiempo real a Google Workspace (Google Sheets CRM) y alertas instantáneas a Telegram/Correo.
-
----
-
-## 05. ALCANCE ESPECÍFICO & ENTREGABLES EXACTOS
+### 04. SELECCIÓN DE PLAN & ENTREGABLES EXACTOS
 
 > *(Marcar el plan acordado y suprimir los restantes para la versión final del cliente)*
 
-### [ ] OPCIÓN 1: AGENTE DE IA COMERCIAL PRO 24/7 (WhatsApp)
-* **Inversión:** $2.490.000 COP (Pago único de implementación)
-* **Tiempo de Entrega:** 7 a 10 días hábiles (a partir de insumos completos).
+#### [ ] OPCIÓN 1: AGENTE DE IA COMERCIAL PRO 24/7 (WhatsApp)
+* **Inversión de Implementación:** **$2.490.000 COP** (Pago único)
+* **Plazo de Entrega:** 7 a 10 días hábiles (a partir de insumos completos).
 * **Entregables Concretos:**
-  1. **Contextualización & Guardarraíles:** Configuración del agente con hasta 50 productos/servicios, precios oficiales, políticas de envío/garantía y preguntas frecuentes (FAQs).
-  2. **Conexión a Línea de WhatsApp:** Vinculación a 1 número comercial provisto por el cliente.
-  3. **Módulo de Calificación & Agendamiento:** Detección de necesidad, presupuesto y enlace sincronizado con Google Calendar.
-  4. **Protocolo de Relevo Humano:** El bot entra en pausa preventiva de 45 minutos cuando un asesor humano interviene o mediante comando `#bot`.
-  5. **Ficha Ejecutiva de Oportunidades:** Alerta instantánea vía Telegram/WhatsApp al celular del líder comercial cuando un cliente califica para compra inmediata.
-  6. **Sistema de Trazabilidad:** Conexión de cada conversación calificada a una hoja centralizada en Google Workspace.
-  7. **Mes de Cortesía SincroCare:** 30 días calendario de servidor cloud 24/7 y bolsa estándar de hasta 2.500 mensajes de IA incluidos.
+  1. **Contextualización & Guardarraíles:** Configuración del agente de IA sobre modelos Gemini Flash, contextualizado con hasta 50 productos/servicios, precios oficiales, políticas de atención y preguntas frecuentes (FAQs) aprobadas por el cliente.
+  2. **Conexión WhatsApp:** Vinculación a 1 línea de WhatsApp Business provista por el cliente.
+  3. **Calificación & Agendamiento:** Filtro de necesidades, presupuesto y enlace sincronizado con Google Calendar.
+  4. **Protocolo de Relevo Humano:** Pausa automática de 45 minutos cuando un asesor humano interviene en el chat o mediante comando directivo (`#bot`).
+  5. **Ficha Ejecutiva de Oportunidades:** Alerta instantánea a Telegram/WhatsApp cuando un cliente califica para compra o reunión con el equipo.
+  6. **Sistema de Captura de Prospectos:** Sincronización en tiempo real de cada lead calificado hacia Google Workspace.
+  7. **Primer Mes Incluido sin Costo:** 30 días calendario de servidor cloud 24/7 y bolsa estándar de hasta 2.500 mensajes de IA.
 
 ---
 
-### [ ] OPCIÓN 2: WEB COMERCIAL DE ALTO RENDIMIENTO (Next.js 15)
-* **Inversión:** $1.890.000 COP (Pago único de implementación)
-* **Tiempo de Entrega:** 5 a 7 días hábiles (a partir de insumos completos).
+#### [ ] OPCIÓN 2: WEB COMERCIAL DE ALTO RENDIMIENTO (Next.js 15)
+* **Inversión de Implementación:** **$1.890.000 COP** (Pago único)
+* **Plazo de Entrega:** 5 a 7 días hábiles (a partir de insumos completos).
 * **Entregables Concretos:**
-  1. **Desarrollo en Código Nativo:** Hasta 5 secciones estratégicas de alto impacto (Hero con propuesta de valor, Servicios/Soluciones, Diferenciales, Casos/Testimonios, Formulario de Captación).
-  2. **Optimización de Rendimiento:** Arquitectura Mobile-First orientada a métricas PageSpeed 90+ bajo condiciones estándar de medición (Lighthouse móvil sobre página principal en producción).
-  3. **Infraestructura Anual Incluida:** Registro de dominio `.com` o `.co` por 1 año, certificado de seguridad SSL HTTPS y despliegue en Vercel Edge.
-  4. **Captura Automatizada de Leads:** Formulario validado con protección antispam y despacho automático a CRM (Google Workspace) y notificaciones instantáneas.
-  5. **Botón Flotante Inteligente:** Enlace directo de conversión a WhatsApp con mensaje contextual predeterminado.
-  6. **Entrega de Código Fuente:** Entrega del repositorio específico del proyecto desarrollado para el cliente.
+  1. **Desarrollo en Código Nativo:** Hasta 5 secciones estratégicas diseñadas en Next.js 15 y Tailwind CSS (Hero con propuesta de valor, Servicios, Diferenciales, Prueba Social/Testimonios, Formulario de Conversión).
+  2. **Optimización de Rendimiento:** Arquitectura Mobile-First orientada a métricas PageSpeed 90+ (medidas en Lighthouse móvil sobre la página principal en producción).
+  3. **Infraestructura Anual:** Dominio `.com` o `.co` por 1 año, certificado de seguridad SSL HTTPS y despliegue global en Vercel Edge.
+  4. **Sistema de Captura de Prospectos:** Formulario integrado a Google Workspace con alertas push instantáneas.
+  5. **Botón Flotante Contextual:** Enlace directo de conversión a WhatsApp.
+  6. **Código Específico del Proyecto:** Entrega del repositorio de software desarrollado para la empresa.
 
 ---
 
-### [ ] OPCIÓN 3: E-COMMERCE TRANSACCIONAL PRO
-* **Inversión:** $3.690.000 COP (Pago único de implementación)
-* **Tiempo de Entrega:** 12 a 15 días hábiles (a partir de insumos completos).
+#### [ ] OPCIÓN 3: E-COMMERCE TRANSACCIONAL PRO
+* **Inversión de Implementación:** **$3.690.000 COP** (Pago único)
+* **Plazo de Entrega:** 12 a 15 días hábiles (a partir de insumos completos).
 * **Entregables Concretos:**
-  1. Catálogo estructurado para hasta 50 productos con soporte para variantes (tallas, colores, atributos).
+  1. Catálogo estructurado para hasta 50 productos con variantes (talla, color, referencia).
   2. Integración de pasarelas de pago colombianas (Wompi / Bold / Mercado Pago / PSE / Tarjetas).
-  3. Panel administrativo intuitivo para actualización de inventario, precios y visualización de pedidos.
-  4. Módulo de cálculo de fletes/envíos configurable por zonas.
-  5. Notificaciones transaccionales automáticas al comprador vía correo electrónico.
+  3. Carrito de compras y checkout optimizado sin fricción.
+  4. Panel administrativo para gestión de pedidos, actualización de inventario y precios.
+  5. Configuración de tarifas de envío por zonas y notificaciones automáticas por correo.
 
 ---
 
-### [ ] OPCIÓN 4: ECOSISTEMA TOTAL SINCROIA (Sistema Comercial Integral)
-* **Inversión:** **$4.890.000 COP** (Pago único de implementación)
+#### [ ] OPCIÓN 4: ECOSISTEMA TOTAL SINCROIA (Sistema Comercial Integral)
+* **Inversión de Implementación:** **$4.890.000 COP** (Pago único)
 * **Ahorro Real Documentado:** **$700.000 COP** frente a contratación modular separada:
   * *Web Comercial de Alto Rendimiento ($1.890.000 COP)*
   * *Agente de IA Comercial Pro 24/7 ($2.490.000 COP)*
   * *Módulo Transaccional / Cotizador Dinámico Interactivo ($1.210.000 COP)*
   * *Valor Contratación Individual:* **$5.590.000 COP** ➔ **Inversión en Ecosistema: $4.890.000 COP** *(Ahorro exacto de $700.000 COP)*.
-* **Tiempo de Entrega:** 14 a 18 días hábiles.
-* **Entregables Concretos:** La integración completa de la Web Comercial y el Agente de IA para WhatsApp, interactuando sobre una misma base de datos de prospectos y sincronizados en tiempo real.
+* **Plazo de Entrega:** 14 a 18 días hábiles.
+* **Entregables Concretos:** Sincronización integral de la Web Comercial y el Agente de IA para WhatsApp sobre una base unificada de prospectos.  
+* *Nota Aclaratoria de Alcance:* El Módulo Transaccional / Cotizador Dinámico del Ecosistema permite cotización automatizada, cálculo de valores y pago/reserva asistida; no constituye una tienda virtual con carrito multirruta ni gestión avanzada de inventario masivo (funcionalidades exclusivas de la Opción 3).
 
 ---
 
-## 06. EXCLUSIONES Y LÍMITES DE ALCANCE (LO QUE NO ESTÁ INCLUIDO)
-Para garantizar la predictibilidad del proyecto y evitar sobrecostos, se definen taxativamente las siguientes exclusiones:
-
-1. **Creación y Producción de Contenidos:** Redacción de textos definitivos no suministrados, fotografía profesional de productos, diseño o rediseño de identidad corporativa (logos, manuales de marca) o producción audiovisual.
-2. **Costos y Licencias de Plataformas de Terceros:** Tarifas por conversación de Meta Cloud API / WhatsApp (si el cliente opta por la API oficial empresarial de Meta), suscripciones a software contable externo (ej: Siigo, Alegra), pasarelas de pago o dominios premium.
-3. **Campañas Publicitarias y Gestión de Tráfico:** SincroIA entrega la infraestructura técnica optimizada para conversión; la configuración, gestión o presupuesto de anuncios en Meta Ads o Google Ads es responsabilidad del cliente o su agencia de pauta.
-4. **Desarrollos Adicionales Post-Aprobación:** Cualquier funcionalidad, pantalla, integración con ERP/CRM de terceros o módulo que no se encuentre expresamente detallado en la Sección 05.
-5. **Soporte Presencial y Mantenimiento Evolutivo:** Todo el soporte se presta de forma remota. Modificaciones periódicas de catálogo fuera del periodo de garantía se gestionan mediante SincroCare.
-
----
-
-## 07. CRITERIOS DE ACEPTACIÓN FORMAL & DEFINICIÓN DE BUG VS. CAMBIO
-Para delimitar con rigor técnico la finalización del proyecto:
-
-### A. Criterios de Aceptación Funcional (Staging):
-El proyecto se considerará formalmente terminado y apto para su paso a producción cuando:
-* Todos los entregables especificados en la Sección 05 se encuentren desplegados en el entorno de pruebas (Staging).
-* Los flujos de conversación del agente o formularios web procesen la información y ejecuten los disparos acordados.
-* No existan **errores críticos bloqueantes** que impidan la operación comercial normal del sistema.
-* Se hayan completado las revisiones acordadas dentro de los plazos establecidos.
-* *Nota Técnica:* Las diferencias de preferencia estética subjetiva (ej: "un tono de azul más claro", "mover un texto 2 milímetros") o cambios de opinión sobre contenidos previamente aprobados **no constituyen fallas funcionales**.
-
-### B. Distinción Rigurosa: Bug vs. Cambio de Alcance
-* 🟢 **Error / Incidencia (Bug - Cubierto sin costo):** Se define como un comportamiento del software o del agente que desvíe su operación de las especificaciones pactadas en esta propuesta (ej: un formulario que no envíe los datos, un enlace roto, una respuesta del bot que se congele).
-* 🔵 **Cambio de Alcance (Requerimiento Nuevo - Cotizable aparte):** Cualquier solicitud que añada campos nuevos, modifique la lógica comercial aprobada, incorpore productos adicionales o integre sistemas no previstos inicialmente.
-
----
-
-## 08. CRONOGRAMA, RESPONSABILIDAD DEL CLIENTE & "EL RELOJ DEL CLIENTE"
-
-```mermaid
-flowchart LR
-    P1["1. Anticipo 50%"] --> P2["2. Onboarding Completo<br>(Se activa el Reloj)"]
-    P2 --> P3["3. Sprint Ingeniería<br>(Staging)"]
-    P3 --> P4["4. Ronda de Ajustes<br>(Máx. 2 rondas)"]
-    P4 --> P5["5. Aprobación & Saldo 50%"]
-    P5 --> P6["6. Despliegue en Producción"]
-```
-
-* **Activación del Cronómetro ("El Reloj del Cliente"):** Los plazos de entrega en días hábiles pactados comenzarán a computarse **a partir del día hábil siguiente a la entrega completa del Formulario de Onboarding y la totalidad de insumos obligatorios** (logo, catálogo con precios definitivos y accesos técnicos).
-* **Demoras del Cliente:** Si el cliente presenta retrasos en el suministro de insumos, respuestas o aprobaciones, el cronograma quedará suspendido automáticamente por el mismo número de días de demora, sin que ello constituya penalidad ni retraso atribuible a SincroIA.
-* **Procedimiento de Revisión:** Una vez entregado el entorno de Staging, el cliente contará con **cinco (5) días hábiles** para consolidar y remitir por escrito sus observaciones. La propuesta incluye hasta **dos (2) rondas de ajustes menores** dentro del alcance original. Transcurridos 5 días hábiles sin observaciones formales, operará la **aceptación tácita** del proyecto.
-
----
-
-## 09. MODELO ECONÓMICO & CONDICIONES DE PAGO (REGLA 50/50)
+### 05. MODELO ECONÓMICO & CONDICIONES DE PAGO (REGLA 50/50)
 
 | Concepto Comercial | Monto Oficial ($ COP) |
 | :--- | :--- |
 | **Inversión Total de Implementación** | **$`[VALOR TOTAL]` COP** |
-| **Anticipo Indispensable para Inicio de Ingeniería (50%)** | **$`[VALOR ANTICIPO 50%]` COP** |
-| **Saldo Final contra Demostración en Staging (50%)** | **$`[VALOR SALDO 50%]` COP** |
+| **Anticipo para Inicio de Ingeniería (50%)** | **$`[VALOR ANTICIPO 50%]` COP** |
+| **Saldo contra Aceptación Funcional en Staging (50%)** | **$`[VALOR SALDO 50%]` COP** |
 
-* **Hito 1 (Anticipo 50%):** Requisito previo obligatorio para reservar cupo de ingeniería, asignar infraestructura e iniciar desarrollo.
-* **Hito 2 (Saldo 50%):** Pagadero una vez culminadas las revisiones en Staging a entera satisfacción y de forma previa y obligatoria al apuntamiento del dominio definitivo, entrega de credenciales o puesta en producción.
-* **Canales Oficiales de Pago:**
-  * **Banco:** Bancolombia — Cuenta de Ahorros N° `031-852963-04`
-  * **Titular:** SincroIA.lat S.A.S. (o a nombre de Alejandro Lamus según corresponda)
-  * **NIT / C.C.:** `[NÚMERO DE IDENTIFICACIÓN]`
+* **Hito 1 (Anticipo 50%):** Requisito previo indispensable para reserva de capacidad técnica, diseño de arquitectura e inicio de desarrollo.
+* **Hito 2 (Saldo 50%):** Pagadero una vez culminadas las revisiones funcionales en el entorno de pruebas (Staging) a satisfacción, de forma previa y obligatoria al apuntamiento del dominio definitivo, entrega de credenciales o puesta en producción.
+* **Datos Bancarios Oficiales:**
+  * **Titular:** Alejandro Lamus *(Director de Ingeniería & Representante SincroIA)*
+  * **Banco:** Bancolombia
+  * **Tipo de Cuenta:** Cuenta de Ahorros N° `031-852963-04`
+  * **C.C. / Identificación:** `[NÚMERO DE IDENTIFICACIÓN]`
   * **Medios Digitales:** Disponible enlace para pago con Tarjeta de Crédito / PSE / Wompi.
 
 ---
 
-## 10. CONTINUIDAD OPERATIVA: SINCROCARE & COSTOS RECURRENTES
-A diferencia de agencias que abandonan el software tras la entrega, SincroIA ofrece un modelo de continuidad operativa para garantizar que la infraestructura nunca se caiga y se mantenga actualizada:
+### 06. CONTINUIDAD OPERATIVA: SINCROCARE & COSTOS RECURRENTES
+Para asegurar que la infraestructura se mantenga operativa, monitoreada y actualizada:
 
-* **Primer Mes de Cortesía (Garantizado):** Todos los planes con Agente de IA o Web incluyen **treinta (30) días calendario de servidor cloud 24/7 y monitoreo técnico sin costo adicional** tras el pase a producción.
-* **Planes de Continuidad a partir del Mes 2 (Opcionales y sin permanencia forzosa):**
-  * 🔹 **SincroCare Starter ($190.000 COP/mes):** Hosting Edge / servidor cloud 24/7, monitoreo de disponibilidad, bolsa de hasta 5.000 mensajes de IA mensuales, backups periódicos y 1 actualización menor de catálogo mensual.
-  * 🔹 **SincroCare Growth ($350.000 COP/mes):** Hasta 20.000 mensajes de IA mensuales, soporte técnico prioritario en < 4 horas hábiles y 2 actualizaciones mensuales de catálogo/precios.
-* **Libertad de Autogestión:** Si el cliente decide no renovar SincroCare, se le facilitará la entrega de documentación y credenciales para que asuma directamente los costos de sus servidores y proveedores cloud sin penalizaciones ni bloqueos.
-
----
-
-## 11. GARANTÍA TÉCNICA
-* SincroIA otorga una **Garantía Técnica de treinta (30) días calendario** posteriores a la puesta en producción definitiva.
-* **Cobertura:** Corrección sin costo alguno de cualquier error o mal funcionamiento (Bug) directamente atribuible a la programación realizada dentro del alcance original convenido.
-* **Exclusiones de Garantía:** Modificaciones de código realizadas por terceros o por el cliente, fallas masivas o caídas globales de proveedores externos (Meta, Vercel, Google), cambios imprevistos en APIs externas ajenas al control de SincroIA o incompatibilidad por falta de pago del cliente a proveedores de dominios o servidores.
+* **Primer Mes Incluido sin Costo:** Treinta (30) días calendario de servidor cloud 24/7 y monitoreo preventivo tras la puesta en producción.
+* **Planes SincroCare a partir del Mes 2 (Opcionales y sin permanencia forzosa):**
+  * 🔹 **SincroCare Starter ($190.000 COP/mes):** Servidor cloud 24/7, monitoreo de disponibilidad, bolsa de hasta 5.000 mensajes de IA mensuales, copias de seguridad periódicas y 1 actualización menor de catálogo/precios al mes.
+  * 🔹 **SincroCare Growth ($350.000 COP/mes):** Hasta 20.000 mensajes de IA mensuales, soporte técnico prioritario en < 4 horas hábiles y 2 actualizaciones mensuales de catálogo.
+* **Consumos Extraordinarios:** Si el volumen operativo del cliente supera la bolsa mensual incluida en su plan SincroCare, los mensajes adicionales se facturarán a razón de \$25 COP por mensaje adicional, o el cliente podrá realizar un upgrade de plan.
+* **Libertad de Autogestión:** Si el cliente decide no renovar SincroCare, se le facilitará la entrega de documentación y credenciales para que asuma directamente los costos de sus proveedores cloud sin penalizaciones ni bloqueos de código.
 
 ---
 
-## 12. PROPIEDAD INTELECTUAL, DATOS & CONFIDENCIALIDAD
-* **Propiedad del Entregable:** Una vez cancelado el 100% del valor pactado, el cliente es **titular exclusivo de los contenidos, bases de datos de clientes capturados, catálogo y el código fuente específico** desarrollado para su empresa.
-* **Know-How de SincroIA:** SincroIA retiene la titularidad moral y patrimonial sobre sus herramientas preexistentes, librerías base, prompts propietarios genéricos y metodologías de ingeniería.
-* **Propiedad y Privacidad de los Datos:** Todos los datos personales, números de contacto, leads y conversaciones generadas por los usuarios pertenecen de forma privativa al cliente. En cumplimiento de la **Ley 1581 de 2012 de Habeas Data**, SincroIA actúa exclusivamente como encargado técnico y no comercializa, transfiere ni utiliza los datos del cliente para fines ajenos al contrato.
-* **Confidencialidad:** Ambas partes acuerdan mantener bajo estricta reserva toda información técnica, financiera o comercial intercambiada durante la ejecución del proyecto.
-
----
-
-## 13. DEPENDENCIAS DE PLATAFORMAS DE TERCEROS & LÍMITES DE IA
-* **Infraestructura Externa:** El cliente reconoce que las soluciones operan sobre infraestructura provista por terceros líderes en la industria (WhatsApp / Meta Platforms, Google Cloud, Vercel Inc.). SincroIA garantiza la correcta integración y guardarraíles técnicos, pero no ejerce control societario sobre dichas entidades ni asume responsabilidad por interrupciones ajenas a sus sistemas.
-* **Naturaleza de la Inteligencia Artificial:** El agente de IA opera con base en modelos de lenguaje natural contextualizados sobre la información del cliente. Debido a la naturaleza probabilística de la tecnología, SincroIA implementa restricciones estrictas, filtros de seguridad y el protocolo de **Relevo Humano** para que un asesor intervenga ante cualquier duda no tipificada.
-
----
-
-## 14. POLÍTICA DE SUSPENSIÓN Y DESISTIMIENTO
-* **Desistimiento Unilateral:** Si el cliente decide cancelar el proyecto una vez iniciado el desarrollo técnico, el anticipo del 50% no será reembolsable, compensando las horas de arquitectura, ingeniería y reserva de capacidad técnica devengadas por SincroIA.
-* **Pausa del Proyecto:** Si el proyecto queda en pausa por más de treinta (30) días debido a inactividad o falta de insumos por parte del cliente, SincroIA podrá reprogramar la fecha de entrega según la disponibilidad de cupos de ingeniería al momento de su reactivación.
-
----
-
-## 15. ACEPTACIÓN & VALIDEZ LEGAL DIGITAL
+### 07. ACEPTACIÓN & FORMALIZACIÓN
 De conformidad con la legislación colombiana (Ley 527 de 1999 sobre Comercio Electrónico y Mensajes de Datos):
 > *La aceptación de la presente propuesta podrá realizarse mediante firma física, firma electrónica o confirmación expresa por medios electrónicos (correo electrónico o WhatsApp oficial), acompañada del comprobante de transferencia correspondiente al anticipo del 50% y copia del RUT de la empresa.*
 
-Una vez formalizada la aceptación y efectuado el pago del anticipo, la presente propuesta y el **Contrato Marco de Prestación de Servicios de SincroIA** constituirán el acuerdo integral vinculante entre las partes.
-
----
-
-### ACEPTACIÓN FORMAL DE LA PROPUESTA:
+Una vez formalizada la aceptación y efectuado el anticipo, este documento y el **Contrato Marco de Prestación de Servicios de SincroIA** (incorporado por referencia) regularán la relación contractual entre las partes.
 
 | POR SINCROIA.LAT | POR EL CLIENTE CONTRATANTE |
 | :--- | :--- |
@@ -223,3 +145,59 @@ Una vez formalizada la aceptación y efectuado el pago del anticipo, la presente
 | Director de Ingeniería & Operaciones | **C.C. / NIT:** `[NÚMERO DE IDENTIFICACIÓN]` |
 | Firma: ________________________________ | Firma: ________________________________ |
 | Fecha: `[FECHA DE ACEPTACIÓN]` | Fecha: `[FECHA DE ACEPTACIÓN]` |
+
+---
+
+# PARTE II: ANEXO TÉCNICO, EXCLUSIONES & CRITERIOS DE INGENIERÍA
+*(Marco técnico y operativo de respaldo)*
+
+---
+
+### 08. EXCLUSIONES Y LÍMITES DE ALCANCE (TAXATIVO)
+Para garantizar la predictibilidad del proyecto y evitar desviaciones de alcance (*scope creep*), se definen taxativamente las siguientes exclusiones:
+1. **Contenidos y Producción Audiovisual:** Redacción de textos definitivos no provistos, fotografía profesional de productos, diseño o rediseño de identidad corporativa (logos, manuales de marca) o producción de videos.
+2. **Costos y Licencias de Terceros:** Tarifas por conversación de Meta Cloud API / WhatsApp (en caso de utilizar API oficial corporativa), suscripciones a software externo (contable, ERP, CRM) o dominios premium.
+3. **Pauta y Campañas Publicitarias:** SincroIA entrega la infraestructura técnica optimizada; la configuración, gestión o presupuesto de anuncios en Meta Ads o Google Ads es responsabilidad del cliente.
+4. **Desarrollos Adicionales Post-Aprobación:** Cualquier funcionalidad, pantalla o integración no descrita expresamente en la Sección 04.
+5. **Soporte Presencial y Mantenimiento Evolutivo:** Todo el servicio se presta de forma remota.
+
+---
+
+### 09. CRITERIOS DE ACEPTACIÓN & DEFINICIÓN DE BUG VS. CAMBIO
+* **Criterio de Aceptación Funcional (Staging):** El proyecto se considerará formalmente aceptado cuando los entregables descritos estén operativos en el entorno de pruebas, los formularios o flujos de IA procesen datos correctamente y no existan errores críticos bloqueantes. Las preferencias de apreciación estética subjetiva no constituyen fallas funcionales.
+* 🟢 **Error / Incidencia (Bug - Cubierto sin costo):** Comportamiento del sistema que desvíe su operación de las especificaciones pactadas en esta propuesta.
+* 🔵 **Cambio de Alcance (Requerimiento Nuevo - Cotizable aparte):** Cualquier solicitud que añada campos nuevos, modifique la lógica comercial aprobada, incorpore productos adicionales o integre sistemas no previstos inicialmente.
+
+---
+
+### 10. EL CRONÓMETRO DE ENTREGA ("EL RELOJ DEL CLIENTE")
+* **Inicio del Cómputo:** Los plazos de entrega en días hábiles comenzarán a computarse a partir del día hábil siguiente a la entrega completa del **Formulario de Onboarding** y la totalidad de los insumos obligatorios (logo en alta resolución, catálogo con precios definitivos y accesos técnicos necesarios).
+* **Demoras del Cliente:** Las demoras del cliente en aprobaciones, insumos o respuestas suspenderán automáticamente el cronograma por el mismo número de días de demora, sin penalidad para SincroIA.
+* **Periodo de Revisión:** El cliente dispondrá de **cinco (5) días hábiles** tras la entrega del entorno de pruebas para remitir un listado consolidado con sus observaciones. Se incluyen hasta **dos (2) rondas de ajustes menores** dentro del alcance original.
+
+---
+
+### 11. GARANTÍA TÉCNICA
+* **Plazo:** Treinta (30) días calendario posteriores a la puesta en producción definitiva.
+* **Cobertura:** Corrección sin costo adicional de incidencias (bugs) directamente atribuibles al código o configuración desarrollada por SincroIA dentro del alcance contratado.
+* **Exclusiones:** Modificaciones realizadas por terceros, caídas globales de proveedores externos (Meta, Vercel, Google), cambios imprevistos en APIs de terceros o falta de pago del cliente a sus proveedores de servicios.
+
+---
+
+### 12. PROPIEDAD INTELECTUAL, DATOS & CONFIDENCIALIDAD
+* **Derechos Patrimoniales del Software:** Una vez cancelado el 100% del valor pactado, se transfieren al cliente los derechos patrimoniales sobre el código fuente específico desarrollado para su proyecto, sus bases de datos y contenidos.
+* **Componentes Propietarios de SincroIA:** SincroIA conserva la titularidad sobre sus herramientas preexistentes, librerías base, algoritmos genéricos y metodologías de trabajo, otorgando al cliente una licencia de uso perpetua y no exclusiva sobre los mismos para la operación de su solución.
+* **Tratamiento de Datos Personales (Ley 1581 de 2012):** El cliente conservará el control y la calidad de **Responsable del Tratamiento** sobre las bases de datos y datos personales recopilados. SincroIA actuará exclusivamente en calidad de **Encargado del Tratamiento**, aplicando medidas de seguridad técnicas para su custodia y sin emplear dicha información para fines ajenos al proyecto.
+* **Confidencialidad:** Ambas partes acuerdan mantener estricta reserva sobre la información comercial, técnica y operativa intercambiada.
+
+---
+
+### 13. DEPENDENCIAS DE TERCEROS & LÍMITES DE IA
+* **Proveedores Externos:** Las soluciones operan sobre infraestructura de terceros líderes (WhatsApp / Meta Platforms, Google Cloud, Vercel Inc.). Los cambios de políticas, precios, límites o condiciones de uso de dichos proveedores externos podrán requerir ajustes técnicos o económicos no imputables a SincroIA.
+* **Naturaleza de la Inteligencia Artificial:** El agente de IA opera con modelos de lenguaje natural sobre la información suministrada por el cliente. Debido a su naturaleza probabilística, SincroIA implementa restricciones estrictas y el protocolo de **Relevo Humano** (pausa de 45 minutos que se reactiva automáticamente para retomar la atención continua, salvo nueva intervención humana), permitiendo la supervisión y control del equipo humano.
+
+---
+
+### 14. POLÍTICA DE SUSPENSIÓN Y DESISTIMIENTO
+* **Desistimiento Unilateral:** El anticipo del 50% remunera la reserva de capacidad técnica, levantamiento de requerimientos, diseño de arquitectura e inicio de ingeniería. Una vez iniciadas dichas actividades, el anticipo no será reembolsable.
+* **Inactividad Prolongada:** Proyectos pausados por más de treinta (30) días por falta de insumos del cliente podrán requerir reprogramación de fecha de entrega según la disponibilidad técnica de SincroIA al momento de su reactivación.
