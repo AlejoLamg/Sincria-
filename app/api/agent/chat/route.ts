@@ -3,6 +3,9 @@ import { processAgentMessage } from "@/lib/agent/engine";
 import { clearSession, resumeSession, pauseSession, isSessionPaused } from "@/lib/agent/memory";
 import { checkRateLimit, getClientIp } from "@/lib/rate-limiter";
 
+// Permitir hasta 30 segundos de ejecución en Vercel para respuestas de IA
+export const maxDuration = 30;
+
 export async function GET() {
   return NextResponse.json({
     hasGeminiKey: Boolean(process.env.GEMINI_API_KEY),
