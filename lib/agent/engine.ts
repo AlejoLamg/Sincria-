@@ -264,7 +264,7 @@ ${waLink ? `💬 *Abrir chat:* [Chatear con el cliente](${waLink})` : ""}
       const payload = {
         fecha: fechaBogota,
         nombre: data.contactName || data.details?.lead || "Prospecto WhatsApp",
-        telefono: cleanPhone ? `+${cleanPhone}` : data.sessionId,
+        telefono: cleanPhone ? `'+${cleanPhone}` : `'${data.sessionId}`,
         email: data.details?.email || "",
         empresa: data.details?.empresa || data.details?.sector || "No especificada",
         tipoProyecto: data.details?.plan || data.type,

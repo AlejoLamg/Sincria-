@@ -88,7 +88,7 @@ ${comentarios ? comentarios : "Sin comentarios adicionales."}`;
               nombre,
               empresa: data.empresa || "No especificada",
               email: email || "No especificado",
-              telefono: telefono || "No especificado",
+              telefono: telefono ? `'${telefono}` : "No especificado",
               tipoProyecto: objetivo || "Diagnóstico general",
               presupuesto: formattedPrice,
               objetivo: objetivo || "Diagnóstico general",
