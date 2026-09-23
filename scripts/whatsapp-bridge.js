@@ -417,9 +417,9 @@ async function startWhatsAppBridge() {
 
       if (!text.trim()) continue;
 
-      // 1. RELEVO HUMANO: Si Alejo envió el mensaje desde el celular o la PC
+      // 1. RELEVO HUMANO: Si Alejandro envió el mensaje desde el celular o la PC
       if (msg.key.fromMe) {
-        console.log(`👨‍💻 [ALEJO INTERVINO EN CHAT] Con: ${senderNumber}. Bot en pausa por 2 horas.`);
+        console.log(`👨‍💻 [ALEJANDRO INTERVINO EN CHAT] Con: ${senderNumber}. Bot en pausa por 2 horas.`);
         try {
           await fetch(API_URL, {
             method: "POST",
@@ -431,6 +431,30 @@ async function startWhatsAppBridge() {
             }),
           });
         } catch {}
+        continue;
+      }
+
+      // 1.1 COMANDO DE CONTROL: #activar o #reset para reactivar el bot en pruebas
+      const cleanCmd = text.trim().toLowerCase();
+      if (cleanCmd === "#activar" || cleanCmd === "#reset" || cleanCmd === "!reset" || cleanCmd === "!activar") {
+        console.log(`🔄 [COMANDO DE CONTROL] Reactivando sesión para: ${senderNumber}`);
+        try {
+          await fetch(API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ action: "resume", sessionId: senderNumber }),
+          });
+          await fetch(API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ action: "reset", sessionId: senderNumber }),
+          });
+          await sock.sendMessage(remoteJid, {
+            text: "🟢 *[SESIÓN REACTIVADA]* Sofía está lista de nuevo y el historial ha sido reiniciado. Puedes escribirle cualquier mensaje para probar."
+          });
+        } catch (err) {
+          console.error("Error al reactivar sesión:", err);
+        }
         continue;
       }
 
