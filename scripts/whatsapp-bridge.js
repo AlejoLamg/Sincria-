@@ -417,16 +417,41 @@ async function startWhatsAppBridge() {
 
       if (!text.trim()) continue;
 
-      // 1. RELEVO HUMANO: Si Alejandro envió el mensaje desde el celular o la PC
+      // 1. RELEVO HUMANO Y COMANDOS DEL DUEÑO (ALEJANDRO)
       if (msg.key.fromMe) {
-        console.log(`👨‍💻 [ALEJANDRO INTERVINO EN CHAT] Con: ${senderNumber}. Bot en pausa por 2 horas.`);
+        const lowerText = text.trim().toLowerCase();
+        // Si Alejandro escribe un comando de reactivación desde su propio celular
+        if (lowerText === "#bot" || lowerText === "#sofia" || lowerText === "#activar" || lowerText === "#reset" || lowerText === "#reanudar") {
+          console.log(`🟢 [ALEJANDRO REACTIVÓ A SOFÍA] En chat: ${senderNumber}`);
+          try {
+            await fetch(API_URL, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ action: "resume", sessionId: senderNumber }),
+            });
+            await fetch(API_URL, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ action: "reset", sessionId: senderNumber }),
+            });
+            await sock.sendMessage(remoteJid, {
+              text: "🟢 *[SOFÍA REACTIVADA]* He retomado el control de este chat y reiniciado el historial. Sofía vuelve a responder."
+            });
+          } catch (e) {
+            console.error("Error al reactivar desde fromMe:", e);
+          }
+          continue;
+        }
+
+        // Si Alejandro escribe un mensaje normal a un cliente, pausar por 45 minutos
+        console.log(`👨‍💻 [ALEJANDRO INTERVINO EN CHAT] Con: ${senderNumber}. Bot en pausa por 45 minutos.`);
         try {
           await fetch(API_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               action: "pause",
-              pauseHours: 2,
+              pauseHours: 0.75, // 45 minutos de ventana de cortesía
               sessionId: senderNumber,
             }),
           });

@@ -41,7 +41,7 @@ export async function processAgentMessage(
   const directHumanRequest = humanKeywords.some((kw) => lowerMsg.includes(kw));
 
   if (directHumanRequest) {
-    pauseSession(sessionId, 24);
+    pauseSession(sessionId, 1);
     const takeoverMsg = `¡Claro que sí${contactName ? ` ${contactName}` : ""}! Con mucho gusto te comunico en este momento con Alejandro, nuestro Director de Ingeniería, para que revise tu caso de forma personalizada. Te responderá por este mismo chat en breve. 👨‍💻`;
     addMessage(sessionId, "user", userMessage);
     addMessage(sessionId, "model", takeoverMsg);
@@ -132,7 +132,7 @@ Aún no se ha ingresado una *GEMINI_API_KEY*. Sin la clave de IA, el agente no p
 
     if (rawActionType === "HUMAN_TAKEOVER") {
       action = "HUMAN_TAKEOVER";
-      pauseSession(sessionId, 24);
+      pauseSession(sessionId, 1);
     } else if (rawActionType === "SCHEDULE_MEETING") {
       action = "SCHEDULE_MEETING";
     } else if (rawActionType === "READY_TO_BUY") {
