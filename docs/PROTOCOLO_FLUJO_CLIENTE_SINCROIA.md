@@ -27,7 +27,7 @@ flowchart TD
 * **Canales de Entrada:**
   1. *Inbound Web / WhatsApp:* El cliente escribe al `+57 312 463 0488` o llena el formulario en `sincroia.lat`.
   2. *Outbound:* Mensaje de auditoría de 45 segundos enviado por Instagram o WhatsApp a negocios con pauta activa.
-* **Actores:** Sofía IA (primeros 2 minutos) o Director Comercial (Alejo).
+* **Actores:** Sofía IA (primeros 2 minutos) o Dirección General / Dirección de Ingeniería (Alejandro).
 * **Entregable de la Fase:** Lead registrado en WhatsApp Business con etiqueta 🟡 **Amarillo (Nuevo Lead)** o 🔵 **Azul (Calificado)**.
 * **SLA de Respuesta:** **Menos de 2 minutos** (si entra por web/WhatsApp) o respuesta en el mismo día comercial.
 
