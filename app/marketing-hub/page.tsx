@@ -262,7 +262,13 @@ export default function MarketingHubPage() {
           accessToken: tokenToTest,
         }),
       });
-      const data = await res.json();
+      let data: any;
+      try {
+        data = await res.json();
+      } catch {
+        const text = await res.text().catch(() => "");
+        throw new Error(text || "Error de comunicación con el servidor.");
+      }
       if (data.success) {
         setTokenStatus({
           tested: true,
@@ -283,7 +289,7 @@ export default function MarketingHubPage() {
       setTokenStatus({
         tested: true,
         valid: false,
-        message: err.message,
+        message: err.message || "Error al verificar el token.",
       });
     } finally {
       setTestingToken(false);
