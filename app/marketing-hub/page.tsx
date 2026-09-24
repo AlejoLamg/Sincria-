@@ -233,11 +233,68 @@ export default function MarketingHubPage() {
     }
   };
 
+  const [testingToken, setTestingToken] = useState<boolean>(false);
+  const [tokenStatus, setTokenStatus] = useState<{
+    tested: boolean;
+    valid?: boolean;
+    name?: string;
+    message?: string;
+  } | null>(null);
+
+  const handleTestMetaToken = async (explicitToken?: string) => {
+    const tokenToTest = explicitToken || metaToken || localStorage.getItem("sincro_meta_token") || undefined;
+    if (!tokenToTest) {
+      setTokenStatus({
+        tested: true,
+        valid: false,
+        message: "Por favor ingresa un token de Meta antes de verificar.",
+      });
+      return;
+    }
+    setTestingToken(true);
+    setTokenStatus(null);
+    try {
+      const res = await fetch("/api/marketing", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "test_meta_token",
+          accessToken: tokenToTest,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setTokenStatus({
+          tested: true,
+          valid: true,
+          name: data.user?.name || "Meta User",
+          message: `¡Conexión verificada! Token activo y válido para ${data.user?.name || "tu cuenta de Meta"}.`,
+        });
+        setHasMetaKey(true);
+      } else {
+        setTokenStatus({
+          tested: true,
+          valid: false,
+          message: data.error || "Token inválido o sesión caducada.",
+        });
+        setHasMetaKey(false);
+      }
+    } catch (err: any) {
+      setTokenStatus({
+        tested: true,
+        valid: false,
+        message: err.message,
+      });
+    } finally {
+      setTestingToken(false);
+    }
+  };
+
   const handleSaveMetaToken = () => {
     if (metaToken.trim()) {
       localStorage.setItem("sincro_meta_token", metaToken.trim());
       setHasMetaKey(true);
-      setShowMetaModal(false);
+      handleTestMetaToken(metaToken.trim());
     }
   };
 
@@ -506,28 +563,149 @@ export default function MarketingHubPage() {
 
         {/* Expandable Meta API drawer */}
         {showMetaModal && (
-          <div className="max-w-7xl mx-auto mt-3 p-3.5 rounded-xl bg-slate-900/90 border border-blue-500/30 flex flex-col sm:flex-row items-center gap-2.5 animate-in fade-in slide-in-from-top-2">
-            <div className="text-xs text-slate-300 sm:w-1/3">
-              <span className="font-semibold text-white flex items-center gap-1">
-                <Share2 className="w-3.5 h-3.5 text-blue-400" /> Token de Meta Graph API:
-              </span>
-              <p className="text-[11px] text-slate-400 mt-0.5">
-                Para publicar posts e imágenes automáticamente en tu página de Facebook e Instagram.
-              </p>
+          <div className="max-w-7xl mx-auto mt-3 p-4 rounded-xl bg-slate-900/95 border border-blue-500/40 shadow-2xl animate-in fade-in slide-in-from-top-2">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3 pb-3 border-b border-slate-800">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-blue-500/20 border border-blue-500/40 flex items-center justify-center text-blue-400 shrink-0">
+                  <Share2 className="w-4 h-4" />
+                </div>
+                <div>
+                  <h3 className="text-xs font-semibold text-white flex items-center gap-2">
+                    Conexión Oficial Meta Graph API (Instagram & Facebook)
+                    {tokenStatus?.tested && (
+                      <span
+                        className={`text-[10px] px-2 py-0.5 rounded-full font-mono ${
+                          tokenStatus.valid
+                            ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
+                            : "bg-red-500/20 text-red-400 border border-red-500/30"
+                        }`}
+                      >
+                        {tokenStatus.valid ? "● Token Activo" : "● Token Expirado / Inválido"}
+                      </span>
+                    )}
+                  </h3>
+                  <p className="text-[11px] text-slate-400">
+                    Permite a los agentes de SincroIA publicar imágenes, carruseles y Reels automáticamente en Instagram (@sincroia.lat) y Facebook.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <a
+                  href="https://developers.facebook.com/tools/explorer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-blue-300 hover:text-white text-xs flex items-center gap-1.5 transition-colors border border-slate-700"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" />
+                  Abrir Graph API Explorer
+                </a>
+                <button
+                  onClick={() => setShowMetaModal(false)}
+                  className="text-slate-400 hover:text-white text-xs p-1"
+                >
+                  ✕
+                </button>
+              </div>
             </div>
-            <input
-              type="password"
-              placeholder="Ingresa tu META_ACCESS_TOKEN..."
-              value={metaToken}
-              onChange={(e) => setMetaToken(e.target.value)}
-              className="w-full sm:flex-1 bg-slate-950 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-400"
-            />
-            <button
-              onClick={handleSaveMetaToken}
-              className="w-full sm:w-auto px-3.5 py-1.5 rounded-lg bg-blue-600 text-white font-medium text-xs hover:bg-blue-500 transition-colors"
-            >
-              Guardar Token
-            </button>
+
+            {/* Input & Buttons */}
+            <div className="mt-3 flex flex-col sm:flex-row items-center gap-2">
+              <input
+                type="password"
+                placeholder="Ingresa tu META_ACCESS_TOKEN (EAANk...)"
+                value={metaToken}
+                onChange={(e) => setMetaToken(e.target.value)}
+                className="w-full sm:flex-1 bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-400 font-mono"
+              />
+              <button
+                onClick={handleSaveMetaToken}
+                className="w-full sm:w-auto px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs transition-colors flex items-center justify-center gap-1.5 shrink-0"
+              >
+                <Check className="w-3.5 h-3.5" />
+                Guardar Token
+              </button>
+              <button
+                onClick={() => handleTestMetaToken()}
+                disabled={testingToken}
+                className="w-full sm:w-auto px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors flex items-center justify-center gap-1.5 shrink-0 border border-slate-700"
+              >
+                <RefreshCw className={`w-3.5 h-3.5 ${testingToken ? "animate-spin" : ""}`} />
+                {testingToken ? "Verificando..." : "Verificar Token"}
+              </button>
+            </div>
+
+            {/* Status Message */}
+            {tokenStatus && (
+              <div
+                className={`mt-2.5 p-2 rounded-lg text-xs flex items-center gap-2 ${
+                  tokenStatus.valid
+                    ? "bg-emerald-950/40 text-emerald-300 border border-emerald-500/20"
+                    : "bg-red-950/40 text-red-300 border border-red-500/20"
+                }`}
+              >
+                {tokenStatus.valid ? (
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                ) : (
+                  <Flame className="w-4 h-4 text-red-400 shrink-0" />
+                )}
+                <span>{tokenStatus.message}</span>
+              </div>
+            )}
+
+            {/* Guía Rápida de Renovación y Token Permanente */}
+            <div className="mt-3 pt-3 border-t border-slate-800/80 grid grid-cols-1 md:grid-cols-2 gap-3 text-[11px] text-slate-300">
+              <div className="p-2.5 rounded-lg bg-slate-950/60 border border-slate-800">
+                <span className="font-semibold text-blue-400 flex items-center gap-1 mb-1">
+                  ⚡ Opción 1: Renovación Rápida (1 Minuto)
+                </span>
+                <ol className="list-decimal list-inside space-y-1 text-slate-400">
+                  <li>
+                    Abre el{" "}
+                    <a
+                      href="https://developers.facebook.com/tools/explorer/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 underline font-medium"
+                    >
+                      Graph API Explorer ↗
+                    </a>.
+                  </li>
+                  <li>Selecciona tu App y en <b>User or Page</b> elige tu Página <b>SincroIA</b>.</li>
+                  <li>
+                    Asegúrate de marcar los permisos: <code className="text-slate-300">pages_manage_posts</code>,{" "}
+                    <code className="text-slate-300">pages_read_engagement</code>, <code className="text-slate-300">pages_show_list</code>,{" "}
+                    <code className="text-slate-300">instagram_basic</code>, <code className="text-slate-300">instagram_content_publish</code>.
+                  </li>
+                  <li>Haz clic en <b>"Generate Access Token"</b>, cópialo y pégalo arriba.</li>
+                </ol>
+              </div>
+
+              <div className="p-2.5 rounded-lg bg-slate-950/60 border border-slate-800">
+                <span className="font-semibold text-emerald-400 flex items-center gap-1 mb-1">
+                  🛡️ Opción 2: Token Permanente (Nunca Caduca)
+                </span>
+                <p className="text-slate-400 leading-relaxed">
+                  Para que tu token <b>no caduque cada 24 horas</b>:
+                  <br />
+                  1. Ve a{" "}
+                  <a
+                    href="https://business.facebook.com/settings/system-users"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-400 underline font-medium"
+                  >
+                    Meta Business &gt; Usuarios del Sistema ↗
+                  </a>.
+                  <br />
+                  2. Crea un usuario (ej. <i>SincroIA Bot</i>), asígnale la Página y la cuenta de Instagram.
+                  <br />
+                  3. Haz clic en <b>Generar nuevo token</b> y selecciona caducidad: <b>"Nunca"</b>.
+                  <br />
+                  4. Ese token será permanente y podrás publicar indefinidamente sin renovaciones manuales.
+                </p>
+              </div>
+            </div>
           </div>
         )}
 
@@ -714,40 +892,62 @@ export default function MarketingHubPage() {
             {/* Notificación de Publicación en Meta si existe */}
             {publishResult && (
               <div
-                className={`p-3.5 rounded-xl border text-xs flex items-center justify-between ${
+                className={`p-3.5 rounded-xl border text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 ${
                   publishResult.success
                     ? "bg-emerald-950/60 border-emerald-500/50 text-emerald-300"
                     : "bg-red-950/60 border-red-500/50 text-red-300"
                 }`}
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-start sm:items-center gap-2.5">
                   {publishResult.success ? (
-                    <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5 sm:mt-0" />
                   ) : (
-                    <Flame className="w-4 h-4 text-red-400 shrink-0" />
+                    <Flame className="w-4 h-4 text-red-400 shrink-0 mt-0.5 sm:mt-0" />
                   )}
-                  <span>
-                    {publishResult.success ? (
-                      publishResult.instagramMediaId && publishResult.facebookPostId ? (
-                        `🎉 ¡Publicado automáticamente con éxito en Instagram y Facebook!`
-                      ) : publishResult.instagramMediaId ? (
-                        `🎉 ¡Publicado automáticamente con éxito en Instagram (@sincroia.lat)! ID: ${publishResult.instagramMediaId}`
+                  <div className="space-y-1">
+                    <p className="leading-relaxed">
+                      {publishResult.success ? (
+                        publishResult.instagramMediaId && publishResult.facebookPostId ? (
+                          `🎉 ¡Publicado automáticamente con éxito en Instagram y Facebook!`
+                        ) : publishResult.instagramMediaId ? (
+                          `🎉 ¡Publicado automáticamente con éxito en Instagram (@sincroia.lat)! ID: ${publishResult.instagramMediaId}`
+                        ) : (
+                          `🎉 ¡Publicado automáticamente con éxito en Facebook Page! ID: ${publishResult.facebookPostId}`
+                        )
                       ) : (
-                        `🎉 ¡Publicado automáticamente con éxito en Facebook Page! ID: ${publishResult.facebookPostId}`
-                      )
-                    ) : (
-                      `⚠️ ${publishResult.error}`
-                    )}
+                        `⚠️ ${publishResult.error}`
+                      )}
+                    </p>
                     {publishResult.success && publishResult.error && (
-                      <span className="block text-[11px] text-amber-300/80 mt-0.5">
+                      <span className="block text-[11px] text-amber-300/80">
                         Nota: {publishResult.error}
                       </span>
                     )}
-                  </span>
+                    {!publishResult.success &&
+                      (publishResult.error?.includes("Session has expired") ||
+                        publishResult.error?.includes("Error validating access token") ||
+                        publishResult.error?.includes("expired")) && (
+                        <div className="pt-1.5 flex flex-wrap items-center gap-2">
+                          <span className="text-[11px] text-amber-300">
+                            💡 Tu token temporal de Meta ha expirado (duró 24h). Renuévalo en 1 minuto:
+                          </span>
+                          <button
+                            onClick={() => {
+                              setShowMetaModal(true);
+                              window.scrollTo({ top: 0, behavior: "smooth" });
+                            }}
+                            className="px-2.5 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-[11px] transition-colors flex items-center gap-1 shadow"
+                          >
+                            <Share2 className="w-3 h-3" />
+                            Renovar Token de Meta
+                          </button>
+                        </div>
+                      )}
+                  </div>
                 </div>
                 <button
                   onClick={() => setPublishResult(null)}
-                  className="text-slate-400 hover:text-white text-xs px-1"
+                  className="text-slate-400 hover:text-white text-xs px-1 self-start sm:self-center"
                 >
                   ✕
                 </button>
@@ -1738,40 +1938,62 @@ export default function MarketingHubPage() {
                 {/* Banner de resultado de publicación si existe */}
                 {publishResult && (
                   <div
-                    className={`p-3.5 rounded-xl border text-xs flex items-center justify-between ${
+                    className={`p-3.5 rounded-xl border text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 ${
                       publishResult.success
                         ? "bg-emerald-950/60 border-emerald-500/50 text-emerald-300"
                         : "bg-red-950/60 border-red-500/50 text-red-300"
                     }`}
                   >
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-start sm:items-center gap-2.5">
                       {publishResult.success ? (
-                        <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                        <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5 sm:mt-0" />
                       ) : (
-                        <Flame className="w-4 h-4 text-red-400 shrink-0" />
+                        <Flame className="w-4 h-4 text-red-400 shrink-0 mt-0.5 sm:mt-0" />
                       )}
-                      <span>
-                        {publishResult.success ? (
-                          publishResult.instagramMediaId && publishResult.facebookPostId ? (
-                            `🎉 ¡Publicado automáticamente con éxito en Instagram y Facebook!`
-                          ) : publishResult.instagramMediaId ? (
-                            `🎉 ¡Publicado automáticamente con éxito en Instagram (@sincroia.lat)! ID: ${publishResult.instagramMediaId}`
+                      <div className="space-y-1">
+                        <p className="leading-relaxed">
+                          {publishResult.success ? (
+                            publishResult.instagramMediaId && publishResult.facebookPostId ? (
+                              `🎉 ¡Publicado automáticamente con éxito en Instagram y Facebook!`
+                            ) : publishResult.instagramMediaId ? (
+                              `🎉 ¡Publicado automáticamente con éxito en Instagram (@sincroia.lat)! ID: ${publishResult.instagramMediaId}`
+                            ) : (
+                              `🎉 ¡Publicado automáticamente con éxito en Facebook Page! ID: ${publishResult.facebookPostId}`
+                            )
                           ) : (
-                            `🎉 ¡Publicado automáticamente con éxito en Facebook Page! ID: ${publishResult.facebookPostId}`
-                          )
-                        ) : (
-                          `⚠️ ${publishResult.error}`
-                        )}
+                            `⚠️ ${publishResult.error}`
+                          )}
+                        </p>
                         {publishResult.success && publishResult.error && (
-                          <span className="block text-[11px] text-amber-300/80 mt-0.5">
+                          <span className="block text-[11px] text-amber-300/80">
                             Nota: {publishResult.error}
                           </span>
                         )}
-                      </span>
+                        {!publishResult.success &&
+                          (publishResult.error?.includes("Session has expired") ||
+                            publishResult.error?.includes("Error validating access token") ||
+                            publishResult.error?.includes("expired")) && (
+                            <div className="pt-1.5 flex flex-wrap items-center gap-2">
+                              <span className="text-[11px] text-amber-300">
+                                💡 Tu token temporal de Meta ha expirado (duró 24h). Renuévalo en 1 minuto:
+                              </span>
+                              <button
+                                onClick={() => {
+                                  setShowMetaModal(true);
+                                  window.scrollTo({ top: 0, behavior: "smooth" });
+                                }}
+                                className="px-2.5 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-[11px] transition-colors flex items-center gap-1 shadow"
+                              >
+                                <Share2 className="w-3 h-3" />
+                                Renovar Token de Meta
+                              </button>
+                            </div>
+                          )}
+                      </div>
                     </div>
                     <button
                       onClick={() => setPublishResult(null)}
-                      className="text-slate-400 hover:text-white text-xs px-1"
+                      className="text-slate-400 hover:text-white text-xs px-1 self-start sm:self-center"
                     >
                       ✕
                     </button>
@@ -2164,27 +2386,49 @@ export default function MarketingHubPage() {
               {/* Notificación de Publicación en Meta */}
               {publishResult && (
                 <div
-                  className={`mx-4 mt-3 p-3 rounded-xl border text-xs flex items-center justify-between ${
+                  className={`mx-4 mt-3 p-3.5 rounded-xl border text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 ${
                     publishResult.success
                       ? "bg-emerald-950/50 border-emerald-500/40 text-emerald-300"
                       : "bg-red-950/50 border-red-500/40 text-red-300"
                   }`}
                 >
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-start sm:items-center gap-2.5">
                     {publishResult.success ? (
-                      <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5 sm:mt-0" />
                     ) : (
-                      <Flame className="w-4 h-4 text-red-400 shrink-0" />
+                      <Flame className="w-4 h-4 text-red-400 shrink-0 mt-0.5 sm:mt-0" />
                     )}
-                    <span>
-                      {publishResult.success
-                        ? `🎉 ¡Publicado automáticamente con éxito en tus redes oficiales! (ID: ${publishResult.instagramMediaId || publishResult.facebookPostId})`
-                        : `⚠️ ${publishResult.error}`}
-                    </span>
+                    <div className="space-y-1">
+                      <p className="leading-relaxed">
+                        {publishResult.success
+                          ? `🎉 ¡Publicado automáticamente con éxito en tus redes oficiales! (ID: ${publishResult.instagramMediaId || publishResult.facebookPostId})`
+                          : `⚠️ ${publishResult.error}`}
+                      </p>
+                      {!publishResult.success &&
+                        (publishResult.error?.includes("Session has expired") ||
+                          publishResult.error?.includes("Error validating access token") ||
+                          publishResult.error?.includes("expired")) && (
+                          <div className="pt-1.5 flex flex-wrap items-center gap-2">
+                            <span className="text-[11px] text-amber-300">
+                              💡 Tu token temporal de Meta ha expirado (duró 24h). Renuévalo en 1 minuto:
+                            </span>
+                            <button
+                              onClick={() => {
+                                setShowMetaModal(true);
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                              }}
+                              className="px-2.5 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-[11px] transition-colors flex items-center gap-1 shadow"
+                            >
+                              <Share2 className="w-3 h-3" />
+                              Renovar Token de Meta
+                            </button>
+                          </div>
+                        )}
+                    </div>
                   </div>
                   <button
                     onClick={() => setPublishResult(null)}
-                    className="text-slate-400 hover:text-white text-xs px-1.5"
+                    className="text-slate-400 hover:text-white text-xs px-1.5 self-start sm:self-center"
                   >
                     ✕
                   </button>

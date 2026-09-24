@@ -91,6 +91,37 @@ export async function POST(request: Request) {
       return NextResponse.json(publishRes);
     }
 
+    // Acción especial: Verificar Token de Meta
+    if (rawBody.action === "test_meta_token") {
+      const token = rawBody.accessToken || process.env.META_ACCESS_TOKEN;
+      if (!token) {
+        return NextResponse.json({
+          success: false,
+          error: "No se proporcionó ningún token de Meta.",
+        });
+      }
+      try {
+        const meRes = await fetch(
+          `https://graph.facebook.com/v21.0/me?fields=id,name&access_token=${token}`
+        );
+        const meData = await meRes.json();
+        if (meData.error) {
+          return NextResponse.json({ success: false, error: meData.error.message });
+        }
+        const accountsRes = await fetch(
+          `https://graph.facebook.com/v21.0/me/accounts?fields=id,name,instagram_business_account&access_token=${token}`
+        );
+        const accountsData = await accountsRes.json();
+        return NextResponse.json({
+          success: true,
+          user: meData,
+          accounts: accountsData.data || [],
+        });
+      } catch (err: any) {
+        return NextResponse.json({ success: false, error: err.message });
+      }
+    }
+
     // Acción por defecto: Ejecutar agente de IA
     const body = rawBody as MarketingAgentRequest;
 
