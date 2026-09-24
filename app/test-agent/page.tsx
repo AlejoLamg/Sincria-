@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
@@ -240,6 +240,13 @@ export default function TestAgentPage() {
           >
             🔄 Reiniciar Chat
           </button>
+
+          <Link
+            href="/marketing-hub"
+            className="text-xs font-mono text-brand-cyan hover:text-white px-3 py-1.5 rounded-lg border border-brand-cyan/30 hover:border-brand-cyan transition-all flex items-center gap-1"
+          >
+            🚀 Marketing Hub
+          </Link>
 
           <Link
             href="/"

@@ -74,40 +74,36 @@ export async function processAgentMessage(
         : AGENT_SYSTEM_PROMPT;
 
       let response;
-      try {
-        response = await ai.models.generateContent({
-          model: "gemini-3.6-flash",
-          contents: [
-            ...history,
-            {
-              role: "user",
-              parts: [{ text: userMessage }],
+      const candidateModels = ["gemini-2.5-flash", "gemini-3.5-flash-lite", "gemini-3.6-flash"];
+      let lastErr = null;
+
+      for (const m of candidateModels) {
+        try {
+          response = await ai.models.generateContent({
+            model: m,
+            contents: [
+              ...history,
+              {
+                role: "user",
+                parts: [{ text: userMessage }],
+              },
+            ],
+            config: {
+              systemInstruction,
+              temperature: 0.6,
             },
-          ],
-          config: {
-            systemInstruction,
-            temperature: 0.6,
-          },
-        });
-      } catch {
-        // Fallback a gemini-3.5-flash-lite
-        response = await ai.models.generateContent({
-          model: "gemini-3.5-flash-lite",
-          contents: [
-            ...history,
-            {
-              role: "user",
-              parts: [{ text: userMessage }],
-            },
-          ],
-          config: {
-            systemInstruction,
-            temperature: 0.6,
-          },
-        });
+          });
+          if (response?.text) break;
+        } catch (e) {
+          lastErr = e;
+        }
       }
 
-      rawReply = response.text || "";
+      if (!response?.text && lastErr) {
+        throw lastErr;
+      }
+
+      rawReply = response?.text || "";
     } catch (error: unknown) {
       const errDetail = error instanceof Error ? error.message : "Error desconocido";
       console.error("Error en GoogleGenAI engine:", error);
