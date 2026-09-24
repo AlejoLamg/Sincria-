@@ -1,389 +1,434 @@
-# 🚀 PLAN DE NEGOCIOS Y PLAYBOOK ESTRATÉGICO
+# 🚀 PLAN DE NEGOCIOS Y PLAYBOOK ESTRATÉGICO MAESTRO
 ## SincroIA — Software de Alto Rendimiento & Automatización con IA
 
-**Versión:** 1.0 (Oficial)  
+**Versión:** 2.0 (Oficial — Actualizada con Suite de Mercadeo & Embudo Dual)  
 **Fecha de Actualización:** Septiembre 2026  
-**Sede Principal:** Bogotá, Colombia  
+**Sede Principal:** Bogotá D.C., Colombia  
 **Cobertura:** Colombia y Latinoamérica  
+**Representante Legal & Director de Ingeniería:** Ing. Alejandro Melo Gutiérrez  
 **Dominio Oficial:** [https://www.sincroia.lat](https://www.sincroia.lat)  
-**Contacto Oficial:** +57 312 463 0488  
+**Centro de Operaciones de Marketing:** [https://www.sincroia.lat/marketing-hub](https://www.sincroia.lat/marketing-hub)  
+**Contacto Directo & WhatsApp Business:** [+57 312 463 0488](https://wa.me/573124630488)  
+**Correo Institucional:** `contacto@sincroia.lat`  
+**Instagram Oficial:** [@sincroia.lat](https://www.instagram.com/sincroia.lat/)  
+**Facebook Oficial:** [SincroIA — Software de Alto Rendimiento](https://www.facebook.com/profile.php?id=61594315517827#)  
 
 ---
 
 ## ÍNDICE GENERAL
 
-1. [Resumen Ejecutivo & Tesis de Inversión](#1-resumen-ejecutivo--tesis-de-inversión)
-2. [El Problema de Mercado & Oportunidad](#2-el-problema-de-mercado--oportunidad)
+1. [Resumen Ejecutivo, Tesis de Inversión & Gobernanza](#1-resumen-ejecutivo-tesis-de-inversión--gobernanza)
+2. [El Problema de Mercado & Ventana de Oportunidad](#2-el-problema-de-mercado--ventana-de-oportunidad)
 3. [Propuesta de Valor & Ventaja Competitiva Injusta](#3-propuesta-de-valor--ventaja-competitiva-injusta)
 4. [Arquitectura de Servicios & Modelo de Monetización](#4-arquitectura-de-servicios--modelo-de-monetización)
 5. [Estrategia de Ingresos Recurrentes (MRR - SincroCare)](#5-estrategia-de-ingresos-recurrentes-mrr---sincrocare)
 6. [Unit Economics & Estructura de Márgenes](#6-unit-economics--estructura-de-márgenes)
-7. [Perfil de Cliente Ideal (ICP) & Nichos Clave](#7-perfil-de-cliente-ideal-icp--nichos-clave)
-8. [Estrategia Go-To-Market & Los 3 Motores de Adquisición](#8-estrategia-go-to-market--los-3-motores-de-adquisición)
-9. [Guiones de Prospección Fría (Listos para Enviar)](#9-guiones-de-prospección-fría-listos-para-enviar)
-10. [Framework de Cierre en Meet (15 Minutos) & Manejo de Objeciones](#10-framework-de-cierre-en-meet-15-minutos--manejo-de-objeciones)
-11. [Gestión Comercial, Pipeline en WhatsApp & Rutina Diaria](#11-gestión-comercial-pipeline-en-whatsapp--rutina-diaria)
-12. [Modelo Operativo, Stack Técnico & Entrega Ágil](#12-modelo-operativo-stack-técnico--entrega-ágil)
+7. [Perfil de Cliente Ideal (ICP) & Criterios de Selección](#7-perfil-de-cliente-ideal-icp--criterios-de-selección)
+8. [Embudo Comercial Unificado & La Estrategia Dual de Conversión](#8-embudo-comercial-unificado--la-estrategia-dual-de-conversión)
+9. [Motor Integral de Marketing, Adquisición & Activos Digitales](#9-motor-integral-de-marketing-adquisición--activos-digitales)
+10. [Framework de Cierre Consultivo (15 Minutos) & Manejo de Objeciones](#10-framework-de-cierre-consultivo-15-minutos--manejo-de-objeciones)
+11. [Gestión Comercial, CRM Centralizado & Pipeline en WhatsApp](#11-gestión-comercial-crm-centralizado--pipeline-en-whatsapp)
+12. [Modelo Operativo, Stack Técnico & "El Reloj del Cliente"](#12-modelo-operativo-stack-técnico--el-reloj-del-cliente)
 13. [Proyección Financiera a 12 Meses](#13-proyección-financiera-a-12-meses)
-14. [Gestión de Riesgos & Blindaje Jurídico](#14-gestión-de-riesgos--blindaje-jurídico)
+14. [Gestión de Riesgos, Blindaje Jurídico & Normativa Colombiana](#14-gestión-de-riesgos-blindaje-jurídico--normativa-colombiana)
 15. [Plan de Escalabilidad, Delegación & Contratación por Hitos](#15-plan-de-escalabilidad-delegación--contratación-por-hitos)
-16. [Programa de Partners & Marca Blanca para Agencias (SincroPartners B2B)](#16-programa-de-partners--marca-blanca-para-agencias-sincropartners-b2b)
+16. [Programa SincroPartners: Alianzas B2B & Marca Blanca para Agencias](#16-programa-sincropartners-alianzas-b2b--marca-blanca-para-agencias)
+17. [Hoja de Ruta de Ejecución Inmediata](#17-hoja-de-ruta-de-ejecución-inmediata)
 
 ---
 
-## 1. RESUMEN EJECUTIVO & TESIS DE INVERSIÓN
+## 1. RESUMEN EJECUTIVO, TESIS DE INVERSIÓN & GOBERNANZA
 
 ### 1.1 ¿Qué es SincroIA?
-**SincroIA** es una agencia tecnológica especializada en **ingeniería de software de alto impacto y automatización con agentes autónomos de Inteligencia Artificial**. 
+**SincroIA** es una firma de ingeniería tecnológica especializada en **software de ultra alto rendimiento y automatización de procesos comerciales mediante agentes autónomos de Inteligencia Artificial**. 
 
-A diferencia de agencias de marketing digital tradicionales (que venden publicidad sin solucionar la operatividad de los negocios) o software houses pesadas (con tarifas fuera del alcance de las pymes), SincroIA construye **ecosistemas digitales llave en mano**: portales web nativos en Next.js 15 optimizados para cargas inferiores a 0.8s bajo condiciones objetivo y asistentes de IA conversacional (Gemini) en WhatsApp que califican prospectos, entregan presupuestos y agendan citas 24/7 sin descanso.
+A diferencia de las agencias de marketing digital tradicionales (que enfocan su oferta en impresiones, métricas vanidosas y pauta sin solucionar la operatividad ni la conversión interna) o de las fábricas de software pesadas (cuyos presupuestos superan los $15.000.000 COP y tardan meses en entregar), SincroIA construye **sistemas llave en mano**:
+* **Portales Web Nativos en Next.js 15:** Con arquitectura *Edge Serverless* optimizada para cargas inferiores a 0.8s en dispositivos móviles bajo condiciones objetivo.
+* **Agentes de IA Conversacional (Gemini Flash):** Conectados a WhatsApp Business oficial, entrenados con el catálogo y políticas del negocio, capaces de atender a 50 clientes simultáneamente, calificar presupuestos, entregar cotizaciones y agendar reuniones 24/7 sin descanso.
 
-### 1.2 Misión y Visión
-* **Misión:** Eliminar la fricción operativa y el abandono de prospectos en empresas de habla hispana mediante software ultra veloz y agentes de IA autónomos que convierten visitas en dinero real.
-* **Visión a 3 Años:** Convertirnos en la firma de referencia en automatización con IA y desarrollo web moderno para más de 300 medianas empresas en Colombia, México y la región andina, consolidando una base de ingresos recurrentes (MRR) superior a los $50.000.000 COP mensuales.
+### 1.2 Gobernanza & Representación Legal
+* **Director de Ingeniería & Representante Legal:** Ing. Alejandro Melo Gutiérrez.
+* **Jurisdicción:** República de Colombia, operando bajo cumplimiento formal de la legislación comercial, tributaria (RUT activo) y régimen de protección de datos personales.
+* **Filosofía de Trabajo:** *Ingeniería antes que retórica*. Transparencia radical en alcances técnicos, código de alto rendimiento libre de ataduras cautivas y enfoque estricto en el Retorno de Inversión (ROI) del cliente.
+
+### 1.3 Misión y Visión
+* **Misión:** Erradicar la fuga silenciosa de ingresos y el abandono de prospectos en medianas empresas de habla hispana, dotándolas de infraestructura digital instantánea y agentes de IA que transforman visitas en ventas efectivas.
+* **Visión a 3 Años (2026 - 2029):** Consolidar a SincroIA como la firma referente de automatización con IA y desarrollo web moderno para más de 300 empresas en Colombia y la región andina, cimentando una facturación recurrente (MRR) superior a los **$50.000.000 COP mensuales**.
 
 ---
 
-## 2. EL PROBLEMA DE MERCADO & OPORTUNIDAD
+## 2. EL PROBLEMA DE MERCADO & VENTANA DE OPORTUNIDAD
 
-En Colombia y América Latina existen más de 1.8 millones de empresas formales. El 90% enfrenta tres problemas críticos y costosos:
+En Colombia y América Latina existen más de 1.8 millones de empresas registradas. Al evaluar sus canales comerciales digitales, más del 90% padece tres problemas crónicos:
 
 ```mermaid
 flowchart TD
-    P1["Problema 1: Webs Lentas (>3.5s)<br/>WordPress pesados que pierden el 45% del tráfico en celulares"] --> C["Pérdida Masiva de Dinero en Pauta"]
-    P2["Problema 2: WhatsApp Manual y Lento<br/>Demoran horas en responder; el 78% del cliente compra al primero"] --> C
-    P3["Problema 3: Costos de Nómina 24/7 Prohibitivos<br/>Contratar turnos nocturnos o recepcionistas cuesta $2.5M+/mes"] --> C
+    P1["Fuga 1: Webs Lentas (>3.5s)<br/>WordPress saturados que pierden 40%+ del tráfico"] --> C["Destrucción del ROI en Pauta & Pérdida Masiva de Ventas"]
+    P2["Fuga 2: WhatsApp Desatendido<br/>Respuestas manuales lentas; 78% compra al primero"] --> C
+    P3["Fuga 3: Costos Inviables de Nómina 24/7<br/>Nómina humana nocturna cuesta $2.5M+/mes por turno"] --> C
 ```
 
-1. **Lentitud Web en Móviles:** La mayoría de empresas tienen páginas construidas en WordPress/Elementor con plugins saturados que tardan más de 3 segundos en abrir en celulares. En campañas de Instagram y Facebook Ads, cada segundo extra de carga reduce las ventas en un 20%.
-2. **Pérdida de Prospectos en WhatsApp por Espera:** El 78% de los compradores en internet cierran con el primer negocio que les responde. Cuando una consulta llega después de las 6:00 PM o un domingo, el cliente busca a la competencia.
-3. **El Costo Imposible de la Nómina 24/7:** Contratar una recepcionista o asesor de ventas en Colombia cuesta como mínimo un salario mínimo legal + prestaciones + recargos nocturnos y dominicales (**~$2.200.000 a $2.800.000 COP/mes por persona**), y solo cubre un turno de 8 horas. Un Agente de IA de SincroIA atiende a 50 clientes en paralelo, no descansa nunca y cuesta una fracción mensual.
+1. **Lentitud Crítica en Móviles:** La mayoría de páginas corporativas y tiendas virtuales fueron creadas en WordPress/Elementor con decenas de plugins. Tardan entre 3.5 y 6 segundos en cargar en smartphones. En campañas de Meta Ads y Google Ads, **cada segundo de espera reduce las conversiones en un 20%**.
+2. **Abandono en WhatsApp por Respuestas Tardías:** El 78% de los compradores digitales compran al primer comercio que les contesta. Cuando un prospecto escribe a las 8:00 PM o un domingo y debe esperar hasta el lunes a las 9:00 AM, la venta ya se perdió a favor del competidor.
+3. **El Dilema Financiero de la Atención 24/7:** Contratar un asesor humano para cubrir noches y fines de semana implica salario mínimo legal + prestaciones sociales + auxilio de transporte + recargos nocturnos y dominicales (**~$2.400.000 a $2.800.000 COP/mes por persona**), cubriendo solo 8 horas y con capacidad de chatear con una sola persona a la vez.
+
+**La Oportunidad SincroIA:** Entregar un sistema integral que cuesta menos que un mes de nómina, no duerme, procesa 50 chats en paralelo y se entrega totalmente terminado en 7 a 15 días hábiles.
 
 ---
 
 ## 3. PROPUESTA DE VALOR & VENTAJA COMPETITIVA INJUSTA
 
-| Variable | Agencias Tradicionales | Creadores de Bots Baratos (Chatfuel/ManyChat) | **SincroIA.lat** |
+| Variable Estratégica | Agencias Tradicionales | Bots Baratos (Chatfuel / ManyChat) | **SincroIA.lat** |
 |---|---|---|---|
-| **Tecnología Web** | WordPress lento, plantillas pesadas | No ofrecen web | **Next.js 15, Vercel Edge (Optimizado < 0.8s)** |
-| **Cerebro del Bot** | No implementan IA real | Menús rígidos con botones *(«Presione 1»)* | **LLM Generativo (Gemini Flash)** con lenguaje natural y catálogo |
-| **Atención en WhatsApp** | Manual por humanos | Rígida y propensa a fallar | **Respuestas en < 2s con Relevo Humano automático** |
-| **Cobros & Pasarelas** | Woocommerce lento o Shopify con comisiones | Enlaces externos genéricos | **Integración nativa Wompi, Bold, PSE, Nequi (0% comisiones de plataforma)** |
-| **Propiedad del Código** | Cautivos en plugins de terceros | Plataforma rentada | **100% propiedad del cliente sin ataduras** |
-| **Precio de Entrada** | $8.000.000 - $15.000.000 COP | $300.000 COP (inútil para ventas complejas) | **$1.890.000 - $4.890.000 COP (Equilibrio perfecto de alto valor)** |
+| **Arquitectura Web** | WordPress lento, plugins pesados | No incluyen desarrollo web | **Next.js 15, Tailwind, Vercel Edge (<0.8s)** |
+| **Motor de Inteligencia** | No usan IA real | Menús rígidos con botones *(«Marque 1»)* | **LLM Generativo (Gemini Flash) con lenguaje natural** |
+| **Tiempo de Respuesta** | Horas o días hábiles | Rápido pero mecánico y frustrante | **Menos de 2.0s con empatía ejecutiva contextual** |
+| **Protocolo de Relevo Humano** | Desorden manual en la bandeja | Requiere cambiar de ventana/panel | **Silenciado automático inteligente de 45 min o comando `#bot`** |
+| **Propiedad del Software** | Cautivos en plugins y servidores de agencia | Plataforma rentada de terceros | **100% código entregado al cliente, sin retención** |
+| **Integración de Pasarelas** | Woocommerce pesado o Shopify con % | Enlaces externos genéricos | **Wompi, Bold, PSE, Nequi (0% comisiones a SincroIA)** |
+| **Inversión de Implementación** | $8.000.000 – $18.000.000 COP | $300.000 COP (inútil para ventas) | **$1.890.000 – $4.890.000 COP (Punto óptimo de alto valor)** |
 
 ---
 
 ## 4. ARQUITECTURA DE SERVICIOS & MODELO DE MONETIZACIÓN
 
-SincroIA opera con un modelo dual: **Tarifa de Implementación Inicial (Cash Flow inmediato)** + **Mantenimiento Recurrente Mensual (MRR para estabilidad financiera)**.
+El modelo de ingresos de SincroIA se estructura en un esquema híbrido de alta rentabilidad: **Tarifa de Implementación Inicial (Flujo de Caja Inmediato)** + **Mantenimiento y Servidores Cloud Recurrentes (MRR)**.
 
-### 4.1 Paquetes Principales (Pago Único de Entrada)
+```mermaid
+flowchart LR
+    A["Adquisición<br/>(Meta Ads / Outbound / B2B)"] --> B["Cierre 50/50<br/>($1.89M - $4.89M COP)"]
+    B --> C["Despliegue Rápido<br/>(5 - 18 Días Hábiles)"]
+    C --> D["SincroCare Cloud<br/>($190k - $350k COP/mes)"]
+```
+
+### 4.1 Paquetes Principales de Implementación (Pago Único)
 
 #### 1. Plan Web Base — $1.890.000 COP
-* **Dirigido a:** Empresas que necesitan presencia digital rápida, profesional y con máxima velocidad para pauta.
-* **Incluye:**
-  * Portal web a medida en Next.js 15 y Tailwind CSS.
-  * Arquitectura optimizada para cargas inferiores a 0.8s bajo condiciones objetivo (Edge Computing).
-  * Dominio profesional .com o .co por 1 año incluido.
-  * Configuración técnica SEO inicial para indexación en Google.
-  * Entrega ágil: **5 a 7 días hábiles** tras recepción de insumos y accesos.
+* **Perfil:** Negocios que necesitan modernizar su presencia digital y maximizar la retención de sus campañas de publicidad.
+* **Alcance:**
+  * Portal web a medida de hasta 5 secciones en Next.js 15 y Tailwind CSS.
+  * Carga instantánea inferior a 0.8s en celulares bajo condiciones objetivo.
+  * Dominio `.com` o `.co` por 1 año y certificado SSL HTTPS incluido.
+  * Formulario conectado en tiempo real al CRM de Google Sheets y Telegram Push.
+  * Botón flotante contextual con enlace directo a WhatsApp.
+  * Entrega ágil: **5 a 7 días hábiles** tras recepción de insumos completos.
 
 #### 2. Plan Agente IA Pro — $2.490.000 COP
-* **Dirigido a:** Negocios que ya tienen tráfico o mensajes diarios pero pierden ventas por demoras en la respuesta manual.
-* **Incluye:**
-  * Agente de IA entrenado con el catálogo, preguntas frecuentes y políticas de la empresa.
-  * Conexión a WhatsApp Business (Multi-Device) y widget web.
-  * Calificación automática de prospectos y agendamiento en Google Calendar.
-  * Protocolo de Relevo Humano (si el asesor escribe, la IA se silencia 2 horas automáticamente).
-  * Alertas push de compra al celular del dueño.
-  * Entrega ágil: **7 a 10 días hábiles** tras recepción de catálogo y vinculación de WhatsApp.
+* **Perfil:** Empresas con flujo diario de mensajes en WhatsApp que buscan calificar prospectos y agendar citas en automático.
+* **Alcance:**
+  * Agente de IA (Sofía o personalizada) entrenada con catálogo de hasta 50 productos/servicios, tarifas y políticas.
+  * Conexión a 1 línea de WhatsApp Business del cliente (infraestructura Baileys 24/7 en Railway o Meta Cloud API).
+  * Calificación automática de presupuesto y sincronización con Google Calendar.
+  * Protocolo de Relevo Humano (pausa inteligente de 45 minutos si un asesor interviene o mediante comando `#pausar`).
+  * Ficha ejecutiva de compra disparada a Telegram o WhatsApp del equipo comercial.
+  * Primer mes de servidor cloud 24/7 y 5.000 mensajes incluidos.
+  * Entrega ágil: **7 a 10 días hábiles** tras insumos y vinculación.
 
 #### 3. Plan E-commerce Pro — $3.690.000 COP
-* **Dirigido a:** Marcas de moda, calzado, tecnología o retail que quieren vender online sin pagar comisiones mensuales a Shopify o pasarelas extranjeras.
-* **Incluye:**
-  * Tienda online transaccional de ultra alta velocidad.
-  * Pasarelas Colombia: Wompi (Bancolombia), Bold, PSE, Nequi y Tarjetas.
-  * Botón de compra asistida directo a WhatsApp con resumen de pedido.
-  * Cero comisiones de plataforma por venta realizada.
-  * Entrega ágil: **12 a 15 días hábiles** tras recepción de catálogo y aprobación de pasarelas.
+* **Perfil:** Marcas de retail, moda, calzado o productos físicos que quieren vender en línea sin pagar comisiones mensuales a Shopify.
+* **Alcance:**
+  * Tienda virtual en código nativo de ultra alta velocidad para hasta 50 productos con variantes.
+  * Integración de pasarelas colombianas: Wompi (Bancolombia), Bold, PSE, Nequi y tarjetas.
+  * Carrito y checkout fluido sin fricción; botón de compra asistida por WhatsApp.
+  * Panel administrativo privado para gestión de pedidos, stock y precios.
+  * Entrega ágil: **12 a 15 días hábiles**.
 
 #### 4. Plan Ecosistema Total (Paquete Insignia) — $4.890.000 COP
-* **Dirigido a:** Empresas que buscan transformar completamente su canal comercial digital.
-* **Incluye:**
-  * Portal Web Ultra Veloz + Agente de IA para WhatsApp + Pasarela de pagos o cotizador dinámico.
-  * Sincronización completa: cada visitante web puede continuar la compra en WhatsApp.
-  * Soporte prioritario y capacitación privada de entrega.
-  * Entrega integral: **15 a 20 días hábiles** tras recepción de insumos completos.
-  * *(Ahorro comercial de $700.000 COP frente a contratar los servicios por separado).*
+* **Perfil:** Empresas que buscan una transformación comercial completa de 360 grados.
+* **Desglose de Valor Individual:**
+  * Web Comercial de Alto Rendimiento: $1.890.000 COP
+  * Agente de IA Comercial Pro 24/7: $2.490.000 COP
+  * Módulo Transaccional / Cotizador Dinámico Paramétrico: $1.210.000 COP
+  * *Valor Contratación Individual:* **$5.590.000 COP**
+  * **Inversión Oficial Ecosistema:** **$4.890.000 COP** *(Ahorro exacto y documentado de $700.000 COP)*.
+* **Alcance:** Web + Agente WhatsApp + Cotizador interactivo sincronizados sobre una misma base de datos.
+* **Entrega ágil:** **14 a 18 días hábiles**.
 
 ---
 
 ### 4.2 Módulos Adicionales (Upselling de Alto Margen)
-Los módulos se venden como complementos en el formulario de cotización:
-* **Facturación Electrónica DIAN Automática (Siigo/Alegra/Factus):** +$850.000 COP
-* **Agente IA para Instagram DM y Facebook Messenger:** +$750.000 COP
-* **Pasarelas de Pago Colombia (Wompi/Bold/PSE):** +$590.000 COP
-* **Sistema de Citas y Reservas Sincronizado:** +$490.000 COP
-* **CRM y Base de Datos Automatizada en Google Sheets:** +$490.000 COP
-* **Gestor de Blog y Contenidos SEO:** +$550.000 COP
-* **Sistema Multi-idioma (Español / Inglés):** +$450.000 COP
-* **Sistema de Suscripciones y Cobros Recurrentes:** +$690.000 COP
-
----
-
-### 4.3 Embudo Psicológico de Conversión y Selección Guiada («¿Cuál de estas soluciones necesitas?»)
-
-Para erradicar la sobrecarga cognitiva (*decision fatigue*) en dispositivos móviles —donde enfrentarse de golpe a 4 planes y 8 módulos dispersos elevaba el rebote—, la versión final de la web implementa un embudo de decisión en 3 etapas:
-
-1. **Selector Guiado por Reto Real de Negocio:**  
-   El prospecto no tiene que adivinar qué tecnología necesita; simplemente elige su principal dolor:
-   - 💬 *«Pierdo clientes en WhatsApp»* ➔ Recomienda y enfoca **Plan IA PRO ($2.490.000)**.
-   - ⚡ *«Mi web actual es lenta o anticuada»* ➔ Recomienda y enfoca **Plan WEB BASE ($1.890.000)**.
-   - 🛍️ *«Quiero vender y cobrar en línea»* ➔ Recomienda y enfoca **Plan E-COMMERCE ($3.690.000)**.
-   - 🚀 *«Quiero todo el ecosistema (VIP)»* ➔ Recomienda y enfoca **Plan ECOSISTEMA TOTAL ($4.890.000)** con ahorro de $700.000 COP.
-
-2. **Recomendación Contextual Inteligente en Módulos:**  
-   La sección de módulos detecta automáticamente el plan seleccionado por el usuario y etiqueta únicamente los complementos de alto valor con la insignia `★ Ideal para tu plan` (ej. si elige *IA Pro*, destaca *Instagram DM*, *Google Calendar* y *CRM en Google Sheets*), reduciendo drásticamente la fricción mental.
-
-3. **Acción Rápida Fast-Track (Cierre Directo):**  
-   Para clientes que ya tienen clara su inversión y no desean complementos, se habilitó el botón directo:  
-   *«¿No necesitas módulos extra? Pasar directo al diagnóstico con [Nombre del Plan] →»*, que realiza scroll fluido hacia el formulario y pre-llena los datos para el envío inmediato al CRM de Google Sheets y bot de Telegram.
+Disponibles como complementos directos en el simulador interactivo y cotizaciones:
+* **Facturación Electrónica DIAN Automática (Siigo / Factus / Alegra):** +$850.000 COP (+3 a 5 días).
+* **Agente IA para Instagram DM y Facebook Messenger:** +$750.000 COP (+2 a 3 días).
+* **Pasarelas de Pago Colombia (Wompi / Bold / PSE):** +$590.000 COP.
+* **Sistema de Citas y Reservas Sincronizado (Google Calendar):** +$490.000 COP.
+* **CRM y Base de Datos Automatizada en Google Sheets:** +$490.000 COP.
+* **Gestor de Blog y Contenidos SEO Dinámico:** +$550.000 COP.
+* **Sistema Multi-idioma (Español / Inglés):** +$450.000 COP.
+* **Sistema de Suscripciones y Cobros Recurrentes:** +$690.000 COP.
 
 ---
 
 ## 5. ESTRATEGIA DE INGRESOS RECURRENTES (MRR - SINCROCARE)
 
-Para evitar la trampa de las agencias de depender exclusivamente de vender proyectos nuevos cada mes, todo cliente pasa a formar parte de **SincroCare**.
+Para blindar la estabilidad financiera de la agencia frente a la volatilidad de proyectos nuevos, todo cliente es incorporado al ecosistema de continuidad operativa **SincroCare**.
 
-### 5.1 Los 3 Tiers Escalonados de SincroCare (Por Volumen y Tráfico)
+### 5.1 Niveles Oficiales de SincroCare
 
-| Nivel | Inversión Mensual | Volumen de Mensajes IA | Servidor Cloud & Hosting | Soporte & Mantenimiento |
+| Nivel | Inversión Mensual | Bolsa de Mensajes IA | Servidor Cloud & Hosting | Nivel de Servicio (SLA) |
 |---|:---:|:---:|:---:|---|
-| 🥉 **Starter**<br>*(Estándar)* | **$190.000 COP/mes** | Hasta **5.000 chats/mes** | Servidor Cloud 24/7 + Hosting Edge 99.9% | 1 ajuste mensual de catálogo, reconexión de sesión y monitoreo. |
-| 🥈 **Growth**<br>*(Pauta Activa)* | **$350.000 COP/mes** | Hasta **20.000 chats/mes** | Instancia cloud optimizada para picos | 2 ajustes mensuales de catálogo, alertas push de compra y soporte en < 4h. |
-| 🥇 **Enterprise**<br>*(Alto Volumen)* | **$590.000 COP/mes** | **Chats Ilimitados** | Servidor exclusivo de alto rendimiento | Soporte VIP en < 1 hora, recalibración quincenal y reportes de conversión. |
+| 🥉 **Starter**<br>*(Estándar Pyme)* | **$190.000 COP/mes** | Hasta **5.000 chats/mes** | Servidor Docker 24/7 + Edge Vercel 99.9% | 1 ajuste mensual de catálogo, reconexión de sesión y monitoreo preventivo. |
+| 🥈 **Growth**<br>*(Pauta Activa)* | **$350.000 COP/mes** | Hasta **20.000 chats/mes** | Instancia optimizada para picos de tráfico | 2 ajustes mensuales de catálogo, alertas push prioritarias y soporte en < 4 horas. |
+| 🥇 **Enterprise**<br>*(Corporativo)* | **$590.000 COP/mes** | **Chats Ilimitados** | Servidor cloud exclusivo de alta potencia | Soporte VIP en < 1 hora, calibración quincenal de prompts y reporte ejecutivo de conversión. |
 
-> **Condición Comercial:** Todo paquete de implementación incluye el **primer mes de SincroCare Starter 100% GRATIS**. A partir del día 31, el cliente continúa en su nivel correspondiente según su volumen de atención.
+### 5.2 Políticas de Transparencia y Consumo Excedente
+* **Primer Mes 100% Bonificado:** Toda contratación de implementación incluye los primeros 30 días calendario de SincroCare Starter sin costo.
+* **Consumo Extraordinario Transparente:** Si una campaña publicitaria hace que el cliente sobrepase los 5.000 chats de su bolsa Starter, cada mensaje procesado por la IA se factura a tan solo **$25 COP**, o el cliente puede ascender al plan Growth. Cero cortes de servicio abruptos.
+* **Libertad de Autogestión (Cero Ataduras):** Si un cliente prefiere administrar sus propios servidores, SincroIA le transfiere repositorios, credenciales y documentación sin trabas ni penalizaciones. SincroCare se mantiene por su indiscutible valor y tranquilidad, no por cautiverio.
 
 ---
 
 ## 6. UNIT ECONOMICS & ESTRUCTURA DE MÁRGENES
 
-La ventaja de la arquitectura moderna (Next.js serverless + Gemini API) es que los costos variables por cliente son extremadamente bajos:
+Gracias a la arquitectura *Serverless* (Next.js) y la eficiencia del modelo Gemini Flash, los costos marginales directos son mínimos, permitiendo márgenes brutos superiores al 85%.
 
-### 6.1 Costos Directos por Cliente de SincroCare ($190.000 COP/mes)
+### 6.1 Desglose de Costos Directos SincroCare Starter ($190.000 COP/mes)
 
-| Rubro de Costo | Costo Estimado en USD | Costo en COP (TRM 4.000) |
+| Componente Técnico | Costo Mensual USD | Costo en COP (TRM ~$4.000) |
 |---|---|---|
-| Hosting Edge Web (Vercel Hobby/Pro distribuido) | $0.50 USD | ~$2.000 COP |
-| Servidor VPS/Docker WhatsApp (Railway/Render) | $3.50 USD | ~$14.000 COP |
-| Consumo Tokens IA (Gemini 3.6 Flash ~5.000 chats) | $1.50 USD | ~$6.000 COP |
-| Margen de seguridad operativa | $1.00 USD | ~$4.000 COP |
-| **COSTO TOTAL DIRECTO MENSUAL** | **$6.50 USD** | **~$26.000 COP** |
-| **PRECIO DE VENTA SINCROCARE** | **$47.50 USD** | **$190.000 COP** |
-| **MARGEN BRUTO MENSUAL POR CLIENTE** | **$41.00 USD** | **$164.000 COP (86.3% de Margen)** |
+| Hosting Edge Web (Vercel distribuido) | $0.50 USD | ~$2.000 COP |
+| Servidor VPS/Docker WhatsApp (Railway) | $3.50 USD | ~$14.000 COP |
+| Consumo Tokens IA (Gemini Flash ~5.000 chats) | $1.50 USD | ~$6.000 COP |
+| Reserva de Contingencia Técnica | $1.00 USD | ~$4.000 COP |
+| **COSTO DIRECTO MENSUAL TOTAL** | **$6.50 USD** | **~$26.000 COP** |
+| **PRECIO DE VENTA OFICIAL** | **$47.50 USD** | **$190.000 COP** |
+| **MARGEN BRUTO POR CLIENTE** | **$41.00 USD** | **$164.000 COP (86.3% de Margen)** |
 
 > [!TIP]
-> **Poder del MRR:** Con 25 clientes activos en SincroCare, la agencia genera **$4.750.000 COP/mes** de facturación recurrente con más de **$4.100.000 COP de utilidad bruta**, cubriendo costos fijos operativos antes de vender un solo proyecto nuevo.
+> **El Efecto Bola de Nieve del MRR:** Al alcanzar 30 clientes en SincroCare ($190k promedio), la empresa genera **$5.700.000 COP/mes de ingreso recurrente puro con más de $4.900.000 COP de utilidad neta recurrente**, cubriendo la totalidad de los costos fijos operativos antes de vender un solo proyecto en el mes.
 
 ---
 
-## 7. PERFIL DE CLIENTE IDEAL (ICP) & NICHOS CLAVE
+## 7. PERFIL DE CLIENTE IDEAL (ICP) & CRITERIOS DE SELECCIÓN
 
-No le vendemos a todo el mundo. Nos enfocamos en 4 nichos que ya tienen demanda y flujo de caja diario:
+Para garantizar casos de éxito de alto impacto y evitar clientes conflictivos o sin capacidad de pago, SincroIA aplica un filtro estricto:
 
-```mermaid
-graph TD
-    N1["Nicho 1: Clínicas & Estética<br/>Odontología, estética, dermatología<br/>Dolor: Citas nocturnas desatendidas"]
-    N2["Nicho 2: Retail & Moda Urbana<br/>Calzado, ropa, accesorios<br/>Dolor: Carritos abandonados, dudas de tallas"]
-    N3["Nicho 3: B2B & Servicios Industriales<br/>Logística, ingeniería, suministros<br/>Dolor: Demora de 48h en cotizaciones"]
-    N4["Nicho 4: Inmobiliarias & Concesionarios<br/>Venta/alquiler, autos<br/>Dolor: Pérdida de tiempo con curiosos sin dinero"]
-```
+### 7.1 Los 4 Nichos de Enfoque Primario
+1. **Clínicas Médicas, Odontológicas & Centros de Estética:** Alto ticket promedio ($300k a $5M COP), consultas nocturnas constantes de pacientes y necesidad urgente de sincronización con Google Calendar.
+2. **Marcas de Retail, Moda Urbana & Calzado:** Gran volumen de tráfico en redes sociales, alta tasa de abandono en carritos lentos y saturación de preguntas rutinarias sobre tallas y envíos.
+3. **Servicios B2B, Ingeniería, Logística & Suministros:** Ventas corporativas donde la cotización tradicional tarda 48 horas. Un cotizador interactivo y un agente que responde en 2 segundos asegura el contrato frente a la competencia.
+4. **Inmobiliarias & Concesionarios:** Cientos de prospectos curiosos al mes. El agente califica capacidad financiera y ubicación antes de pasar el lead al asesor comercial.
 
-### Criterios de Calificación de Prospectos (Filtro Anti-Clientes Tóxicos):
-* ✅ Facturación mensual demostrable superior a $15.000.000 COP.
-* ✅ Invierten activamente en publicidad digital (Meta Ads o Google Ads) o tienen un flujo de al menos 15-20 mensajes diarios en WhatsApp.
-* ✅ Venden productos o servicios con ticket promedio superior a $100.000 COP.
-* ❌ **Descartar:** Emprendedores sin presupuesto que buscan "un logo barato" o que pretenden regatear precios por debajo de $1.89M.
+### 7.2 Criterios de Calificación Innegociables
+* ✅ Facturación mensual mínima demostrable de $12.000.000 COP.
+* ✅ Inversión activa en Meta Ads/Google Ads o flujo orgánico superior a 15 mensajes diarios en WhatsApp.
+* ✅ Ticket promedio de venta superior a $80.000 COP.
+* ❌ **Descartar de Inmediato:** Emprendimientos en fase de idea sin clientes reales, cazadores de precios bajos que comparan con bots de $100.000 COP o clientes que solicitan reuniones presenciales interminables antes de revisar la propuesta.
 
 ---
 
-## 8. ESTRATEGIA GO-TO-MARKET & LOS 3 MOTORES DE ADQUISICIÓN
+## 8. EMBUDO COMERCIAL UNIFICADO & LA ESTRATEGIA DUAL DE CONVERSIÓN
 
-Para escalar la facturación sin depender de la suerte o de que alguien encuentre la web por casualidad, SincroIA opera con **3 motores comerciales simultáneos**:
+Tradicionalmente, las agencias cometen el error de forzar a todo prospecto a una llamada de Google Meet de 45 minutos. SincroIA opera con un **Embudo de Doble Ruta (Dual-Path Funnel)** que se adapta al nivel de sofisticación y urgencia del cliente:
 
 ```mermaid
 flowchart TD
-    M1["Motor 1: Outbound Quirúrgico<br/>(Semana 1 - $0 COP - Prospección Directa)"] --> Pipe["Pipeline de Ventas en WhatsApp Business"]
-    M2["Motor 2: Inbound con Meta Ads<br/>($25.000 COP/día - Anuncio a WhatsApp con Sofía)"] --> Pipe
-    M3["Motor 3: Oferta 'Cliente Fundador'<br/>(Red Cercana & Alianzas Estratégicas B2B)"] --> Pipe
-    Pipe --> Meet["Demo y Diagnóstico en Meet (15 min)"]
-    Meet --> Pay["Cierre Comercial & Anticipo 50%"]
+    Lead["Lead Capturado<br/>(Simulador Web / Meta Ads / WhatsApp Sofía)"] --> Qual["Calificación Automática<br/>(CRM Google Sheets + Telegram Push)"]
+    Qual --> Decision{"¿Nivel de Decisión del Cliente?"}
+    
+    Decision -->|"Ruta B: Cliente Decidido / Rápido"| Express["Ruta B: Cierre Express 50/50<br/>• Envío de Propuesta Técnico-Comercial en PDF<br/>• Enlace de Anticipo Bancolombia/Wompi<br/>• Formulario Oficial de Onboarding"]
+    Decision -->|"Ruta A: Cliente Técnico / Consultivo"| Meet["Ruta A: Sesión Consultiva en Meet (15 min)<br/>• Diagnóstico con Calculadora ROI<br/>• Demostración técnica en vivo de Sofía<br/>• Formalización y Pago de Anticipo"]
+    
+    Express --> Start["Inicio de Ingeniería & Cronómetro Activo"]
+    Meet --> Start
 ```
 
-### Motor 1: Outbound Quirúrgico ("La Auditoría de 60 Segundos")
-* **Objetivo:** Generar los primeros ingresos de inmediato con $0 de inversión en pauta.
-* **Proceso de Prospección:**
-  1. Identificar en Instagram o Facebook Ad Library 10 empresas de tu ciudad que estén pagando publicidad en los nichos clave (clínicas odontológicas/estéticas, tiendas de calzado/moda o empresas B2B).
-  2. Abrir su enlace web desde el celular y medir el tiempo de carga.
-  3. Escribir a su WhatsApp a las 7:30 PM para medir su tiempo de respuesta manual.
-  4. Enviar un mensaje personalizado no invasivo ofreciéndoles un video de 45 segundos con el diagnóstico exacto.
-* **Métrica de conversión esperada:**
-  * 10 mensajes diarios = 50 a la semana.
-  * 12 a 15 respuestas positivas.
-  * 4 a 5 diagnósticos agendados.
-  * **1 a 2 cierres semanales ($2.49M a $4.89M COP facturados por semana)**.
+### 8.1 Ruta A: Sesión Consultiva en Google Meet (15 Minutos)
+* **Para quién:** Directores generales, comités corporativos o dueños de negocio que requieren ver la tecnología funcionando en vivo y entender la arquitectura.
+* **Estructura de la Reunión:**
+  * Minutos 0 a 4: Diagnóstico y cálculo de fuga de prospectos.
+  * Minutos 5 a 9: Demostración técnica de Sofía en tiempo real.
+  * Minutos 10 a 12: Simulación de rentabilidad con la Calculadora de ROI en `sincroia.lat#calculadora-roi`.
+  * Minutos 13 a 15: Cierre comercial y emisión de propuesta formal.
 
-### Motor 2: Inbound con "Efecto Demostración" (Meta Ads a WhatsApp)
-* **Presupuesto recomendado:** $20.000 a $30.000 COP / día.
-* **El Anuncio:** Video corto mostrando la pantalla del celular:
-  > *«¿Tu equipo tarda horas en responder WhatsApp y pierdes ventas en las noches? Mira cómo Sofía atiende en 1.8 segundos, califica el presupuesto del cliente y agenda citas en automático. Toca el botón, escríbele ahora mismo y ponla a prueba en vivo.»*
-* **Por qué es imbatible:** En lugar de prometer en una landing estática, el cliente experimenta la tecnología en su propio WhatsApp. Sofía se encarga de venderse a sí misma, responder preguntas y filtrar el interés del prospecto antes de transferirlo al fundador para cerrar.
-* **Costo por conversación iniciada:** ~$1.500 a $3.000 COP en Colombia. Con $25.000 COP diarios se generan entre 8 y 15 conversaciones con dueños de negocio al día.
-
-### Motor 3: Oferta "Cliente Fundador" para Red Cercana
-* **Objetivo:** Conseguir los primeros 3 casos de éxito documentados en los primeros 10 días.
-* **La Oferta:**
-  > *"Estamos seleccionando a 3 empresas aliadas para implementarles nuestro Agente de IA para WhatsApp con un 30% de descuento y el primer mes de mantenimiento en la nube GRATIS, a cambio de que nos permitan documentar sus métricas y grabar un testimonio corto de 30 segundos tras los primeros 30 días."*
-* Esto remueve cualquier fricción de precio y activa de inmediato ingresos recurrentes en SincroCare.
+### 8.2 Ruta B: Cierre Directo Express 50/50 (Sin Esperas)
+* **Para quién:** Compradores decididos, negocios con campañas de pauta activas perdiendo dinero hoy o prospectos que ya utilizaron el simulador web y eligieron su paquete.
+* **Mecanismo:**
+  1. Sofía o el Director Comercial emite la [Plantilla de Propuesta Comercial Express](docs/PLANTILLA_PROPUESTA_COMERCIAL_EXPRESS.md) personalizada con código oficial `SINCRO-2026-XX`.
+  2. El cliente confirma por WhatsApp o correo su aceptación (conforme a la Ley 527 de 1999 de Comercio Electrónico).
+  3. Realiza la transferencia del anticipo del 50% a la cuenta oficial de Bancolombia o enlace Wompi.
+  4. Recibe inmediatamente el enlace al [Formulario Oficial de Onboarding en Google Forms](docs/GUIA_FORMULARIO_ONBOARDING_GOOGLE_FORMS.md).
+  5. Una vez diligenciado, se activa el cómputo oficial de días hábiles ("El Reloj del Cliente").
 
 ---
 
-## 9. GUIONES DE PROSPECCIÓN FRÍA (LISTOS PARA ENVIAR)
+## 9. MOTOR INTEGRAL DE MARKETING, ADQUISICIÓN & ACTIVOS DIGITALES
 
-### Guion 1: Sector Clínicas Dentales & Medicina Estética
-> *"Hola [Nombre del Doctor o Clínica], un gusto saludarte. Vi que tienen campañas activas en Instagram ofreciendo [Tratamiento / Valoración], pero al consultar por WhatsApp después de las 7:00 PM no encontré atención automática para apartar cita.*  
-> *En clínicas similares, hasta el 55% de los pacientes consultan de noche y el 70% termina agendando con el primer consultorio que les responde de inmediato.*  
-> *Les grabé un video rápido de 45 segundos mostrando cómo un Agente de IA califica el tratamiento y sincroniza la cita directo en Google Calendar en 1.8 segundos. ¿A qué número o correo les puedo compartir el video sin compromiso?"*
+Para alimentar continuamente el pipeline comercial, SincroIA implementa un ecosistema de mercadeo multicanal apoyado en agentes autónomos internos y activos creativos de alto impacto.
 
-### Guion 2: Sector Retail & E-commerce de Moda / Calzado
-> *"Hola equipo de [Marca], felicitaciones por la colección que tienen en pauta. Noté que al abrir su tienda desde el celular tarda más de 4 segundos en cargar el catálogo, y en móviles cada segundo de espera causa hasta un 30% de carritos abandonados.*  
-> *En SincroIA desarrollamos tiendas en Next.js optimizadas para cargas inferiores a 0.8s bajo condiciones objetivo con botón de cobro directo a Wompi/Nequi y compra asistida por WhatsApp.*  
-> *Si les interesa, les comparto una auditoría rápida de 1 minuto con las 3 mejoras técnicas clave para duplicar la retención de sus campañas. ¿Les gustaría revisarla?"*
-
-### Guion 3: Sector B2B & Servicios Industriales / Logística
-> *"Hola [Nombre], qué tal. Noté que para cotizar sus servicios de [Servicio específico] los clientes deben enviar un formulario y esperar entre 24 y 48 horas una respuesta por correo.*  
-> *Hoy en día los compradores corporativos cierran con el proveedor más ágil. Implementamos portales con cotizador dinámico paramétrico y Agentes de IA que entregan un presupuesto preliminar y agendan reunión por Meet en menos de 10 segundos.*  
-> *¿Tendrías 10 minutos esta semana para mostrarte cómo funciona en vivo con un caso real de tu sector?"*
-
----
-
-## 10. FRAMEWORK DE CIERRE EN MEET (15 MINUTOS) & MANEJO DE OBJECIONES
-
-Las reuniones comerciales no deben ser charlas largas de 1 hora que aburren al cliente. Se cierran en **15 a 20 minutos** siguiendo esta estructura estricta:
+### 9.1 El Centro de Operaciones: Marketing Hub Autónomo (`/marketing-hub`)
+Ubicado en `https://www.sincroia.lat/marketing-hub`, este panel de control interno centraliza la inteligencia comercial de la agencia y coordina el trabajo de 4 agentes especializados desarrollados en `lib/marketing-agents/`:
 
 ```mermaid
 flowchart LR
-    F1["Min 0-4: Diagnóstico<br/>(Preguntas de dolor)"] --> F2["Min 5-9: Demo en Vivo<br/>(Probar a Sofía y la web)"]
-    F2 --> F3["Min 10-12: El Retorno (ROI)<br/>(Simular su caso con la calculadora)"]
-    F3 --> F4["Min 13-15: Cierre & Anticipo<br/>(Pagar 50% para agendar entrega)"]
+    A1["1. Content Strategist Agent<br/>(Calendarios, Pilares & Hooks)"] --> A2["2. Copywriter Agent<br/>(Copys persuasivos IG, FB, TikTok)"]
+    A2 --> A3["3. Art Director Agent<br/>(Diseño, Prompts de Mockups & Formatos)"]
+    A3 --> A4["4. Social Publisher Agent<br/>(Planificación & Salida Multicanal)"]
 ```
 
-1. **Minutos 0 a 4 (Diagnóstico y Cuello de Botella):**  
-   * *«¿Cuántos mensajes o visitas reciben hoy al día?»*  
-   * *«¿Qué pasa cuando alguien escribe a las 9:00 PM o un domingo?»*  
-   * *«¿Cuánto tiempo le toma a tu equipo responder y cotizar?»*
-2. **Minutos 5 a 9 (Demostración de Impacto en Vivo):**  
-   * Compartir pantalla: mostrar la web de SincroIA cargando al instante en celular.
-   * Abrir WhatsApp y hacer que el cliente mismo le escriba una pregunta real a Sofía. Dejar que el cliente se sorprenda con la respuesta en 1.8 segundos.
-3. **Minutos 10 a 12 (El Retorno de Inversión):**  
-   * Abrir la Calculadora de ROI en `sincroia.lat#calculadora-roi` con los números del cliente:  
-     *«Si recibes 300 mensajes al mes con un ticket de $150.000 COP y tardas 1 hora en responder, estás perdiendo cerca de $2.500.000 COP mensuales. El plan IA Pro cuesta $2.490.000 COP pago único. Se paga solo en el primer mes.»*
-4. **Minutos 13 a 15 (Llamado a la Acción y Cierre):**  
-   * *«Podemos iniciar tu implementación mañana mismo y tenerlo funcionando en tu WhatsApp en 10 a 12 días hábiles. Iniciamos con el 50% de anticipo y el saldo contra entrega. ¿Prefieres hacer la transferencia por Bancolombia, Wompi o PSE?»*
-
-### Respuestas Maestras a Objeciones:
-* **Objeción 1: *"Es que ya tenemos una persona atendiendo el WhatsApp."***  
-  * *Respuesta:* «Excelente, y esa persona es indispensable para cerrar los clientes grandes. El problema es que una persona no puede atender a 5 clientes a la vez ni responde a medianoche. Nuestro bot filtra a los curiosos, responde horarios y precios, y le entrega a tu asesor solo a los clientes calificados con intención de compra. Es un asistente para multiplicar sus ventas, no para reemplazarla.»
-* **Objeción 2: *"Me parece costoso comparado con otras opciones de $500.000."***  
-  * *Respuesta:* «Totalmente comprensible fijarse en el costo inicial. Esas opciones baratas son bots antiguos de botones rígidos ('Presione 1 o 2') que enfurecen a los clientes y no entienden lenguaje natural. SincroIA implementa IA generativa con el catálogo completo de tu empresa y código propio. Con solo 2 ventas extras que recuperes en una noche, la inversión queda pagada.»
-* **Objeción 3: *"¿Y si el bot se equivoca o inventa información?"***  
-  * *Respuesta:* «Programamos guardarraíles técnicos estrictos: la IA solo responde lo que esté en tu dossier oficial autorizado. Si le preguntan algo fuera de catálogo, dice con educación: 'Ese detalle específico prefiero consultarlo con un especialista del equipo; ya mismo te pongo en contacto'. Y si tú escribes en el chat, el bot se silencia al instante gracias al protocolo de relevo humano.»
+1. **Content Strategist Agent:** Analiza tendencias del mercado de IA, define los 4 pilares editoriales (Dolor Operativo, Demostración de Velocidad, Desglose Financiero de ROI y Autoridad Técnica) y genera los ganchos (*hooks*) de alta retención.
+2. **Copywriter Agent:** Redacta textos persuasivos bajo marcos AIDA y PAS, formateados con saltos de línea optimizados para lectura móvil y llamadas a la acción (*CTAs*) directas a WhatsApp.
+3. **Visual Art Director Agent:** Estandariza la paleta cromática de la marca (fondo obsidian `#030712`, acentos cian `#06b6d4` e índigo `#6366f1`), generando especificaciones precisas para carruseles, infografías y mockups en Figma o IA generativa.
+4. **Social Publisher Agent:** Gestiona la distribución y sincronización de contenidos en los canales oficiales.
 
 ---
 
-## 11. GESTIÓN COMERCIAL, PIPELINE EN WHATSAPP & RUTINA DIARIA
-
-Para gestionar los prospectos sin pagar costosos CRMs en la etapa inicial, se utiliza el sistema de **Etiquetas de WhatsApp Business**:
-
-### Las 4 Etiquetas del Embudo:
-* 🟡 **Amarillo - Nuevo Prospecto:** El usuario escribió por primera vez o hizo clic en el anuncio. Sofía está en conversación activa.
-* 🔵 **Azul - Calificado / Interesado:** El prospecto ya confirmó volumen de mensajes, presupuesto y solicitó cotización.
-* 🟣 **Morado - Demo Agendada (Meet):** Tiene videollamada programada en Google Calendar para ver la propuesta.
-* 🟢 **Verde - Cliente Ganado (Anticipo 50% Pagado):** Se envía el formulario de onboarding y se asigna fecha de entrega en el cronograma.
-
-### La Rutina Diaria del Fundador / Director Comercial:
-* **09:00 AM – 10:30 AM (Bloque Sagrado de Prospección):** Enviar 10 mensajes de auditoría en frío por Instagram a negocios calificados.
-* **10:30 AM – 12:30 PM (Seguimiento y Chats Calientes):** Revisar las conversaciones donde Sofía detectó interés y responder dudas avanzadas.
-* **02:30 PM – 05:00 PM (Llamadas de Cierre en Meet):** Ejecutar las demos de 15 minutos agendadas y enviar enlaces de pago de anticipo por Bancolombia/Wompi.
-* **05:00 PM – 06:00 PM (Supervisión Operativa):** Revisar avances técnicos de entregas y calibración de prompts.
+### 9.2 Canales Oficiales de Distribución Digital
+* **Instagram ([@sincroia.lat](https://www.instagram.com/sincroia.lat/)):** Canal principal de atracción visual. Presenta reels de comparativas de velocidad, demostraciones en pantalla de Sofía respondiendo de noche y carruseles educativos de ROI.
+* **Facebook ([Página Oficial SincroIA](https://www.facebook.com/profile.php?id=61594315517827#)):** Dirigido al segmento de dueños de pymes tradicionales, gerentes comerciales y directores de empresas B2B. Conecta directamente el botón principal de la página a WhatsApp Business.
+* **TikTok & YouTube Shorts:** Clips verticales de 30 a 45 segundos con el formato *"Grabando pantalla a las 11:30 PM: Escribiéndole a 3 empresas vs cómo atiende un Agente de IA"*.
+* **WhatsApp Business (+57 312 463 0488):** Centro neurálgico de conversión, con catálogo de los 4 planes oficiales configurado y Sofía respondiendo en menos de 2 segundos.
 
 ---
 
-## 12. MODELO OPERATIVO, STACK TÉCNICO & ENTREGA ÁGIL
+### 9.3 Los 11 Activos Gráficos Creativos Oficiales en Producción (`public/marketing/`)
+Desplegados en alta resolución en la infraestructura web y listos para campañas orgánicas y pauta paga:
 
-Para mantener márgenes altos y relaciones comerciales saludables, la entrega de cada proyecto está estandarizada según el plan contratado y su nivel de complejidad técnica.
+1. **`post_01_vendedor_24_7.png` — El Vendedor Que Nunca Duerme:** Demuestra la atención ininterrumpida a las 11:45 PM cuando la competencia está fuera de línea.
+2. **`post_02_web_lenta.png` — ¿Tu Web Tarda Más de 3 Segundos?:** Visualiza la fuga del 40% del presupuesto de pauta en sitios WordPress lentos.
+3. **`post_03_nomina_vs_ia.png` — Nómina Nocturna vs. Agente de IA:** Comparativa matemática limpia: $2.5M COP/mes por un turno humano vs. $2.49M pago único por un Agente 24/7.
+4. **`post_04_embudo_whatsapp.png` — De Clic en Redes a Compra en WhatsApp:** Flujo continuo sin fricción ni carritos abandonados.
+5. **`post_05_costo_inaccion.png` — El Costo Invisible de Responder Tarde:** Revela el dato de la industria: el 78% de los prospectos compran al primer comercio que contesta.
+6. **`post_06_stack_nextjs.png` — Next.js 15 Edge vs. Plugins Obsoletos:** Posicionamiento de ingeniería de software para tomadores de decisiones técnicos.
+7. **`post_07_calculadora_roi.png` — Simula tu Retorno de Inversión en Vivo:** Invitación directa a utilizar la herramienta interactiva en `sincroia.lat#calculadora-roi`.
+8. **`post_08_caso_clinicas.png` — Caso de Estudio Clínicas & Estética:** Agendamiento de citas en Google Calendar en menos de 90 segundos.
+9. **`post_09_sin_comisiones_ecommerce.png` — Adiós a las Comisiones de Shopify:** Tienda online propia con pasarelas colombianas Wompi/Bold y 0% comisión a terceros.
+10. **`post_10_seguridad_guardarrailes.png` — Blindaje y Guardarraíles de IA:** Tranquilidad para el cliente: el agente solo responde información del catálogo oficial y cuenta con protocolo de relevo humano.
+11. **`post_11_oferta_fundador.png` — Convocatoria Cliente Fundador:** Oferta de tracción acelerada con 30% de descuento a cambio de testimonio documentado.
 
-### 12.1 Matriz Oficial de Tiempos de Entrega por Plan y Complejidad
+---
 
-| Plan | Complejidad Técnica | Tiempo de Entrega Estimado | Hito Crítico de Inicio |
+### 9.4 Estrategia Inbound: Meta Ads (Click-to-WhatsApp)
+* **Presupuesto Inicial Recomendado:** $25.000 a $35.000 COP / día.
+* **Público Objetivo:** Colombia (Bogotá, Medellín, Cali, Barranquilla, Bucaramanga), hombres y mujeres de 26 a 55 años, administradores de páginas de Facebook e Instagram, interesados en Comercio Electrónico, Emprendimiento o Gestión de Ventas.
+* **Destino del Anuncio:** WhatsApp Business oficial (`+57 312 463 0488`) con mensaje inicial predeterminado:  
+  *«Hola Sofía 👋 Vi el anuncio en Instagram y quiero saber cómo automatizar la atención y ventas de mi empresa con IA.»*
+* **Métrica Objetivo:** Costo por conversación iniciada entre **$1.800 y $3.200 COP**. Con $30.000 COP diarios se capturan entre 10 y 16 prospectos calificados por jornada.
+
+---
+
+### 9.5 Estrategia Outbound: Auditoría Quirúrgica "Mystery Shopper" (Cliente Incógnito)
+* **Mecánica de Prospección Fría a Costo $0:**
+  1. Explorar la Biblioteca de Anuncios de Meta (*Facebook Ad Library*) y seleccionar 10 empresas al día con pauta activa en los nichos clave.
+  2. Abrir su enlace publicitario desde un teléfono móvil y cronometrar los segundos de carga en PageSpeed Insights.
+  3. Enviar un mensaje a su WhatsApp comercial a las 7:45 PM consultando por un servicio o precio.
+  4. A la mañana siguiente, documentar la demora en un mensaje de diagnóstico respetuoso y personalizado:
+
+> **Guion de Contacto Mystery Shopper:**  
+> *"Hola [Nombre del Dueño o Empresa], un saludo cordial. Noté que tienen campañas activas en Instagram promocionando sus servicios de [Servicio], pero al consultar por WhatsApp anoche a las 7:45 PM el mensaje quedó sin respuesta hasta hoy.*  
+>  
+> *En empresas de su sector, más del 50% de las consultas ocurren en horario nocturno y el 78% de los prospectos cierran con el primer proveedor que les contesta de inmediato.*  
+>  
+> *Les grabé un video de 45 segundos mostrando cómo un Agente de IA califica al prospecto y entrega cotizaciones exactas en menos de 2 segundos 24/7. ¿A qué número o correo les puedo remitir la auditoría sin costo ni compromiso?"*
+
+---
+
+## 10. FRAMEWORK DE CIERRE CONSULTIVO (15 MINUTOS) & MANEJO DE OBJECIONES
+
+Las sesiones virtuales de SincroIA siguen una coreografía precisa de 15 a 20 minutos orientada a la toma de acción inmediata:
+
+```mermaid
+flowchart LR
+    F1["Min 0-4: Dolor Real<br/>Mensajes perdidos de noche"] --> F2["Min 5-9: Demo Sofía<br/>Probarla en su propio celular"]
+    F2 --> F3["Min 10-12: Números & ROI<br/>Calculadora interactiva en vivo"]
+    F3 --> F4["Min 13-15: Cierre 50/50<br/>Emisión de propuesta y cronograma"]
+```
+
+### Respuestas a Objeciones Habituales:
+* **"Ya tengo una recepcionista / asesora que responde el WhatsApp."**  
+  * *Respuesta:* «Totalmente de acuerdo, y tu asesora es fundamental para el cierre humano. El problema es que una persona no puede chatear con 8 personas a la vez ni responde un domingo a las 11:00 PM. Nuestro agente atiende en 2 segundos, filtra a los curiosos y le entrega a tu asesora el cliente listo para transferir o agendado en su calendario. Es un multiplicador para tu equipo, no un sustituto.»
+* **"Me ofrecieron un bot de $300.000 COP en otra parte."**  
+  * *Respuesta:* «Es comprensible mirar el precio de entrada. Esos sistemas económicos son árboles de decisión de botones rígidos ('marque 1 o 2') que enfurecen al usuario moderno y no entienden lenguaje natural. SincroIA implementa modelos de lenguaje generativo con el catálogo de tu empresa y código propio. Con 2 ventas que rescates un fin de semana, la inversión de $2.49M queda amortizada.»
+* **"¿Qué pasa si la IA se equivoca o inventa información falsa?"**  
+  * *Respuesta:* «Configuramos guardarraíles técnicos inquebrantables: la IA solo responde datos presentes en tu dossier oficial aprobado. Ante preguntas fuera de catálogo, deriva cortésmente con un especialista humano. Y si tú o tu equipo escriben en el chat, el protocolo de Relevo Humano silencia al bot de inmediato durante 45 minutos.»
+
+---
+
+## 11. GESTIÓN COMERCIAL, CRM CENTRALIZADO & PIPELINE EN WHATSAPP
+
+Para erradicar la pérdida de prospectos y garantizar un seguimiento comercial impecable sin incurrir en licencias costosas como HubSpot o Salesforce en etapas tempranas, SincroIA opera con una arquitectura de trazabilidad dual:
+
+### 11.1 Arquitectura del CRM en Google Sheets & Telegram Push
+Tanto el simulador interactivo de la web (`/api/leads`) como el motor de WhatsApp (`lib/agent/engine.ts`) transmiten los prospectos en tiempo real:
+
+```mermaid
+flowchart LR
+    Web["Simulador Web / Cotizador"] --> API["Endpoint Next.js /api/leads"]
+    WA["Conversación WhatsApp Sofía"] --> Engine["Motor IA SincroIA"]
+    
+    API --> AppsScript["Google Apps Script Webhook"]
+    Engine --> AppsScript
+    
+    AppsScript --> Sheet["Google Sheets Centralizado<br/>'CRM Leads SincroIA'"]
+    AppsScript --> TG["Bot de Telegram<br/>Push Alert al Celular de Alejandro"]
+```
+
+* **Ficha Técnica del Lead:** Cada registro incluye fecha y hora, nombre del contacto, empresa, número de teléfono (formateado como texto `'+\d+` para evitar errores de cálculo en hojas de cálculo), plan seleccionado, módulos adicionales, presupuesto estimado y origen (*Web Simulator* o *WhatsApp Agent*).
+* **Alerta Inmediata en Telegram:** Dispara una notificación sonora al celular del Director de Ingeniería en menos de 3 segundos con botón de marcado directo hacia el prospecto.
+
+### 11.2 Las 5 Etiquetas Oficiales en WhatsApp Business
+Para la gestión visual del pipeline en la aplicación móvil:
+1. 🟡 **Nuevo Prospecto (Lead):** Conversación iniciada por la web o pauta. Sofía en atención activa.
+2. 🔵 **Calificado / Propuesta Enviada:** Prospecto con presupuesto validado. Se emitió propuesta formal express o simulador.
+3. 🟣 **Sesión Consultiva Agendada:** Cita programada en Google Meet para validación de arquitectura.
+4. 🟢 **Cliente Ganado (Anticipo 50% Recibido):** Contrato perfeccionado, onboarding completado y proyecto en línea de desarrollo.
+5. ⚪ **Seguimiento Futuro:** Prospecto interesado para reactivación a 30 días.
+
+---
+
+## 12. MODELO OPERATIVO, STACK TÉCNICO & "EL RELOJ DEL CLIENTE"
+
+La rentabilidad de una agencia de ingeniería no depende únicamente de vender, sino de **entregar a tiempo sin desviaciones de alcance (*scope creep*)**.
+
+### 12.1 Matriz de Tiempos de Entrega Oficiales
+
+| Plan / Solución | Inversión Oficial | Plazo de Entrega Estándar | Hito Crítico de Activación |
 |---|:---:|:---:|---|
-| **1. Web Base** ($1.890.000) | 🟢 **Baja** | **5 a 7 días hábiles** (~1 semana) | Entrega de logo, textos, fotos y secciones aprobadas. |
-| **2. Agente IA Pro** ($2.490.000) | 🟡 **Media** | **7 a 10 días hábiles** (~1.5 a 2 semanas) | Carga de catálogo/precios y escaneo de QR WhatsApp. |
-| **3. E-commerce Pro** ($3.690.000) | 🟠 **Media - Alta** | **12 a 15 días hábiles** (~2.5 a 3 semanas) | Catálogo de productos y aprobación de cuenta Wompi/Bold. |
-| **4. Ecosistema Total** ($4.890.000) | 🔴 **Alta** | **15 a 20 días hábiles** (~3 a 4 semanas) | Entrega integral de insumos, web + IA + pasarelas. |
+| **Web Base Next.js 15** | $1.890.000 COP | **5 a 7 días hábiles** | Recepción de logo en alta resolución, textos y secciones aprobadas. |
+| **Agente IA Pro WhatsApp** | $2.490.000 COP | **7 a 10 días hábiles** | Carga del catálogo estructurado con precios y escaneo de QR. |
+| **E-commerce Pro** | $3.690.000 COP | **12 a 15 días hábiles** | Catálogo con variantes y aprobación de llaves API de pasarela (Wompi/Bold). |
+| **Ecosistema Total** | $4.890.000 COP | **14 a 18 días hábiles** | Entrega consolidada de insumos completos (Web + IA + Transaccional). |
 
-### 12.2 Factores que Modifican los Tiempos de Entrega (Módulos Complejos)
-Cuando el cliente contrata módulos adicionales, los plazos se ajustan de forma transparente en la cotización:
-* **Facturación Electrónica DIAN (Siigo / Factus / Alegra):** **+3 a 5 días hábiles** *(sujeto a que el cliente disponga de software contable activo y suministre las credenciales API)*.
-* **Catálogos Extensos (> 50 SKUs en E-commerce):** **+3 a 5 días hábiles** *(o se entrega la tienda con 30 productos y plantilla de importación masiva en CSV)*.
-* **Integración Omnicanal (Instagram DM + Messenger):** **+2 a 3 días hábiles** *(sujeto a permisos de administrador en Meta Business Suite)*.
-* **Sistema Multi-idioma:** **+2 días hábiles**.
-
-### 12.3 Cláusula de Protección Operativa: "El Reloj del Cliente"
-> **Regla de Oro:** Los días hábiles de entrega comienzan a contabilizarse **únicamente a partir del momento en que el cliente entrega el 100% de los insumos mínimos obligatorios** (formulario de onboarding diligenciado, catálogo con precios, logo y acceso a su WhatsApp o pasarela).  
-> Si el cliente demora 5 días en responder o enviar sus contenidos, el cronómetro de entrega de la agencia queda **automáticamente suspendido** hasta la recepción efectiva del material.
+### 12.2 La Regla de Oro: "El Reloj del Cliente"
+> **Cláusula Operativa Inamovible:** Los días hábiles estipulados para la entrega del proyecto comienzan a contabilizarse **única y exclusivamente a partir del momento en que el cliente entrega el 100% de los insumos obligatorios** a través del [Formulario Oficial de Onboarding en Google Forms](docs/GUIA_FORMULARIO_ONBOARDING_GOOGLE_FORMS.md).  
+> Si el cliente demora 4 días en enviar fotos o validar credenciales, el cronómetro de ingeniería queda automáticamente congelado sin que ello constituya retraso atribuible a SincroIA.
 
 ```mermaid
 sequenceDiagram
     autonumber
     actor Cliente
-    participant PM as SincroIA PM
-    participant Dev as Ingeniería Next.js
-    participant AI as Calibración Gemini
+    participant Ops as Dirección SincroIA
+    participant Dev as Fábrica de Software Next.js
+    participant AI as Entorno Gemini & WhatsApp
 
-    Cliente->>PM: Pago 50% anticipo + Formulario de Onboarding
-    Note over Cliente,PM: El reloj inicia al recibir 100% de insumos
-    PM->>Dev: Inicialización de Repositorio & Template Next.js 15
-    PM->>AI: Estructuración de Prompt, Catálogo y Reglas de Negocio
-    Dev->>Dev: Despliegue en Vercel Edge + Pasarelas Wompi/Bold
-    AI->>AI: Pruebas de simulación y conexión WhatsApp Baileys
-    PM->>Cliente: Entrega preliminar (Staging) & Demo de validación
-    Cliente->>PM: Aprobación + Pago saldo final (50%)
-    PM->>Cliente: Pase a Producción + Capacitación + Activación SincroCare
+    Cliente->>Ops: Pago del 50% de anticipo
+    Ops->>Cliente: Envío de Formulario Oficial de Onboarding
+    Cliente->>Ops: Entrega de insumos, logo y catálogo completo
+    Note over Ops,Dev: Se activa formalmente "El Reloj del Cliente"
+    Ops->>Dev: Despliegue de repositorio base & maquetación Edge
+    Ops->>AI: Estructuración de system prompt, guardarraíles & testing
+    Dev->>Ops: Entorno de pruebas preliminar (Staging)
+    Ops->>Cliente: Demostración funcional en Staging (Revisión)
+    Cliente->>Ops: Aprobación a satisfacción & Pago del saldo final (50%)
+    Ops->>Dev: Apuntamiento de dominio oficial en producción
+    Ops->>Cliente: Entrega de accesos, código & activación Mes 1 SincroCare
 ```
 
-### Reglas Operativas Financieras:
-* **Anticipo 50% / Saldo 50% contra entrega:** Nunca se inicia desarrollo sin el 50% de anticipo. Las llaves finales del dominio, código y accesos se transfieren exclusivamente contra la cancelación del 100%.
-* **Rondas de Ajustes:** La entrega preliminar incluye hasta **2 rondas de revisiones menores** dentro del alcance contratado, las cuales deben ser comunicadas por el cliente en un plazo máximo de 5 días hábiles.
-* **Procedimiento Operativo Estandarizado (SOP Completo):** El paso a paso detallado desde la prospección, kit de onboarding de insumos, línea de ensamblaje, capacitación 1 a 1 y plantillas de mensajes oficiales se encuentra documentado en [**`docs/PROTOCOLO_FLUJO_CLIENTE_SINCROIA.md`**](./PROTOCOLO_FLUJO_CLIENTE_SINCROIA.md).
-* **Manual de Operaciones, Soporte, Seguridad y Finanzas (SOP):** Los protocolos de freno a peticiones infinitas (*Scope Creep*), acuerdos de nivel de servicio (SLA), custodia de credenciales, programa de referidos del Día 21 y la regla financiera 50/30/20 se encuentran detallados en [**`docs/MANUAL_DE_OPERACIONES_Y_PROTOCOLOS_SINCROIA.md`**](./MANUAL_DE_OPERACIONES_Y_PROTOCOLOS_SINCROIA.md).
-* **Infraestructura Cloud 24/7 & Boilerplate de Despliegue Rápido (< 2 Horas):** La arquitectura profesional dual (Meta Cloud API vs Evolution Docker con Redis) y el template de aprovisionamiento ágil se detallan en [**`docs/ARQUITECTURA_FARM_CLIENTES_BOILERPLATE.md`**](./ARQUITECTURA_FARM_CLIENTES_BOILERPLATE.md).
-* **Reporte de Impacto Mensual (Día 28) & Cobranza Amigable:** Las métricas de retención, cálculo de nómina ahorrada y mensajes amigables se encuentran en [**`docs/PLANTILLA_REPORTE_IMPACTO_SINCROCARE.md`**](./PLANTILLA_REPORTE_IMPACTO_SINCROCARE.md).
-* **Blueprint Técnico y Arquitectura de Software:** El mapa gráfico de componentes, diagrama de datos de leads, flujo del estado reactivo (`ProjectConfigContext`) y arquitectura de endpoints se encuentra detallado en [**`docs/ARQUITECTURA_TECNICA_Y_MAPA_WEB.md`**](./ARQUITECTURA_TECNICA_Y_MAPA_WEB.md).
+### 12.3 Regla Financiera 50/50
+* **50% de Anticipo:** Obligatorio para reservar capacidad en el sprint de ingeniería y comenzar el desarrollo. No reembolsable una vez iniciados los trabajos.
+* **50% de Saldo:** Pagadero contra aprobación funcional en el entorno de pruebas (*Staging*). El apuntamiento de los dominios definitivos y la transferencia de repositorios se efectúa con el 100% de los valores cancelados.
 
 ---
 
 ## 13. PROYECCIÓN FINANCIERA A 12 MESES
 
-Proyección financiera realista basada en una meta de adquisición conservadora de **3 a 6 proyectos mensuales** y retención en SincroCare del 80%:
+Proyección financiera prudente basada en un ritmo de ventas de **3 a 7 proyectos mensuales** y una tasa de retención en SincroCare del 80%:
 
-### Métricas de Proyección (En Pesos Colombianos - COP)
+### 13.1 Tabla de Proyección Consolidada (Valores en Pesos Colombianos - COP)
 
-| Mes | Nuevos Proyectos | Facturación Proyectos | Clientes SincroCare Activos | Facturación Recurrente (MRR) | **Facturación Total Mes** | Utilidad Bruta Estimada (~85%) |
+| Mes | Nuevos Proyectos | Facturación Implementaciones | Clientes Activos SincroCare | Facturación Recurrente (MRR) | **Facturación Total Mes** | Utilidad Bruta Estimada (~85%) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Mes 1** | 2 proyectos ($2.49M + $1.89M) | $4.380.000 | 0 (Mes gratis) | $0 | **$4.380.000** | $3.723.000 |
+| **Mes 1** | 2 ($2.49M + $1.89M) | $4.380.000 | 0 *(Mes 1 bonificado)* | $0 | **$4.380.000** | $3.723.000 |
 | **Mes 2** | 3 proyectos | $8.670.000 | 2 | $380.000 | **$9.050.000** | $7.692.500 |
 | **Mes 3** | 4 proyectos | $11.560.000 | 5 | $950.000 | **$12.510.000** | $10.633.500 |
 | **Mes 4** | 4 proyectos | $12.300.000 | 8 | $1.520.000 | **$13.820.000** | $11.747.000 |
@@ -399,102 +444,102 @@ Proyección financiera realista basada en una meta de adquisición conservadora 
 
 ---
 
-## 14. GESTIÓN DE RIESGOS & BLINDAJE JURÍDICO
+## 14. GESTIÓN DE RIESGOS, BLINDAJE JURÍDICO & NORMATIVA COLOMBIANA
 
-Para garantizar la viabilidad a largo plazo de SincroIA en el marco legal colombiano:
+SincroIA opera con estricto apego al marco legal de la República de Colombia para salvaguardar la responsabilidad de la agencia y la de sus clientes:
 
-1. **Cumplimiento de Habeas Data (Ley 1581 de 2012):**  
-   Todo lead capturado en la web o por WhatsApp cuenta con la casilla de aceptación obligatoria de políticas de privacidad.
-2. **Prevención de Bloqueos de WhatsApp Business:**  
-   No realizamos envíos masivos de spam no solicitados (*outbound spam*). Sofía responde exclusivamente a **inbound** (usuarios que inician la conversación por iniciativa propia tras ver un anuncio o entrar a la web), operando 100% dentro de las directrices de Meta.
-3. **Contratos de Servicios de Software:**  
-   Todo cliente firma un acuerdo de alcance técnico detallando qué incluye el proyecto, plazos de entrega y aclarando que las integraciones con APIs externas (Google, Meta, pasarelas) están sujetas a la disponibilidad de sus respectivos proveedores.
+### 14.1 Validez de Contratación Electrónica (Ley 527 de 1999)
+* **Comercio Electrónico & Mensajes de Datos:** Conforme a la Ley 527 de 1999, los acuerdos comerciales formalizados mediante intercambio de mensajes de datos (correo electrónico institucional o confirmación vía WhatsApp oficial), acompañados del comprobante de transferencia bancaria del anticipo, gozan de plena validez jurídica, fuerza probatoria y perfeccionan el contrato de prestación de servicios de software.
+* **Propuesta Formal Vinculante:** Toda contratación se respalda en la [Plantilla de Propuesta Comercial Express](docs/PLANTILLA_PROPUESTA_COMERCIAL_EXPRESS.md) y en el [Contrato Marco de Servicios](docs/CONTRATO_MARCO_SERVICIOS_SINCROIA.md).
+
+### 14.2 Régimen de Protección de Datos Personales (Ley 1581 de 2012 - Habeas Data)
+Se delimitan taxativamente las responsabilidades legales sobre las bases de datos de prospectos y clientes:
+* **El Cliente Contratante como "Responsable del Tratamiento" (Controller):** Es el titular jurídico de la relación comercial con los usuarios finales que escriben a su WhatsApp o compran en su web. Es responsable de contar con sus políticas de privacidad visibles y autorizaciones correspondientes.
+* **SincroIA como "Encargado del Tratamiento" (Processor):** Proporciona la infraestructura técnica, el servidor cloud y la integración con modelos de IA. SincroIA **no comercializa, no cede ni explota las bases de datos** de los clientes de sus contratantes, limitándose a su procesamiento técnico bajo estrictos protocolos de confidencialidad.
+
+### 14.3 Blindaje Antispam en WhatsApp (Meta Compliance)
+* Sofía y los agentes desarrollados por SincroIA operan exclusivamente bajo la modalidad **Inbound**: atienden a usuarios que inician la interacción por voluntad propia o que hacen clic en un anuncio publicitario.
+* SincroIA prohíbe el uso de sus agentes para envíos masivos de spam en frío (*outbound spam* masivo), protegiendo la reputación del número del cliente contra bloqueos de Meta.
 
 ---
 
 ## 15. PLAN DE ESCALABILIDAD, DELEGACIÓN & CONTRATACIÓN POR HITOS
 
-El mayor riesgo de una agencia de desarrollo y automatización de alto rendimiento es el **cuello de botella del fundador** (*solopreneur trap*): cuando el fundador vende, programa, atiende el soporte y cobra, la capacidad máxima se satura en 3 a 5 clientes mensuales, frenando el crecimiento.
-
-Para escalar de forma rentable y ordenada sin inflar costos fijos antes de tiempo, SincroIA implementa un **modelo de delegación gatillado por hitos de facturación mensual sostenida (durante al menos 60 días consecutivos)**:
-
-```mermaid
-flowchart LR
-    H0["Hito 0 ($0 - $8M)<br/>Fundador Solo<br/>Ventas + Delivery Ágil"] --> H1["Hito 1 ($10M+/mes)<br/>+ Dev Frontend Jr (Freelance)<br/>Delegación de Maquetación"]
-    H1 --> H2["Hito 2 ($20M+/mes)<br/>+ Closer B2B (Comisión)<br/>Delegación de Cierres Meet"]
-    H2 --> H3["Hito 3 ($35M+/mes)<br/>+ PM / Client Success<br/>Onboarding & Soporte SincroCare"]
-```
-
-### 15.1 Matriz de Contratación Escalonada por Hitos
-
-| Hito Financiero | Rol a Incorporar | Modalidad & Remuneración | Responsabilidades Clave | Horas Liberadas para el Fundador |
-|:---:|---|---|---|:---:|
-| **Hito 0**<br>*(Etapa Semilla)*<br>Hasta **$8M COP/mes** | **Fundador / Operador Único** | 100% Utilidad neta reinvertible | • Prospección activa y llamadas de cierre.<br>• Ensamblaje modular en Next.js y calibración de prompts Gemini.<br>• Despliegues en Vercel y vinculación de WhatsApp. | 0 h (Fase de tracción y validación) |
-| **Hito 1**<br>*(Primer Cuello de Botella)*<br>**$10M COP/mes** sostenido | **Desarrollador Frontend Junior / Integrador** | Contrato de prestación de servicios por proyecto:<br>**$700.000 a $1.100.000 COP** por sitio web entregado | • Clonación y maquetación de componentes visuales en Tailwind.<br>• Carga de catálogos de productos (CSV/Sheets).<br>• Pruebas de responsividad móvil y verificación de enlaces.<br>• El fundador mantiene la arquitectura de IA y la relación con el cliente. | **15 - 20 horas / semana** (Permite duplicar la prospección comercial) |
-| **Hito 2**<br>*(Expansión Comercial)*<br>**$20M COP/mes** sostenido | **Closer Comercial B2B** | Sueldo base de apoyo ($800.000 COP) + **Comisión del 10% al 15%** sobre cada proyecto cerrado y cobrado | • Conducción de las sesiones de Meet de 15 minutos (diagnóstico y cierre).<br>• Seguimiento del pipeline de WhatsApp y reactivación de cotizaciones.<br>• El fundador pasa a ser Director de Operaciones y Estrategia. | **15 horas / semana** (El fundador ya no atiende llamadas rutinarias) |
-| **Hito 3**<br>*(Institucionalización)*<br>**$35M - $50M COP/mes** | **Project Manager (PM) & Soporte SincroCare** | Salario fijo: **$1.800.000 a $2.400.000 COP/mes** + bono por retención de MRR | • Gestión del formulario de onboarding y recolección de insumos con el cliente.<br>• Control del cronómetro de entrega ("El Reloj del Cliente").<br>• Atención de tickets de soporte SincroCare (< 4 horas).<br>• Protocolo de referidos del Día 21. | **20 horas / semana** (La operación corre en piloto automático) |
-
-### 15.2 Distribución del Tiempo del Fundador en Cada Etapa
-
-```
-Hito 0 ($0 - $8M):     [ 40% Ventas/Prospección ] [ 50% Programación/Técnico ] [ 10% Admin ]
-Hito 1 ($10M):          [ 60% Ventas/Prospección ] [ 25% Supervisión Técnica ]  [ 15% Admin ]
-Hito 2 ($20M):          [ 40% Alianzas/Partners  ] [ 30% Supervisión Delivery ] [ 30% Estrategia ]
-Hito 3 ($35M+):         [ 50% Estrategia/Scale   ] [ 30% Grandes Cuentas B2B  ] [ 20% Liderazgo ]
-```
-
----
-
-## 16. PROGRAMA DE PARTNERS & MARCA BLANCA PARA AGENCIAS (SINCROPARTNERS B2B)
-
-### 16.1 La Oportunidad B2B Desatendida
-En Colombia y Latinoamérica existen más de **4.500 agencias de marketing digital, traffikers independientes, community managers y diseñadores web** que enfrentan una debilidad crítica:
-* Son expertos en correr pauta publicitaria en Meta Ads o Google Ads.
-* **NO saben programar agentes autónomos de IA en WhatsApp ni webs de alto rendimiento en Next.js.**
-* Sus clientes les reclaman: *"Los anuncios traen leads pero nadie responde a tiempo en WhatsApp y no vendo, voy a cancelar la pauta"*.
-
-**SincroPartners** convierte a estas agencias en nuestro canal de distribución indirecto más potente, multiplicando las ventas de SincroIA sin gastar un solo peso en publicidad directa.
-
-### 16.2 Las 2 Modalidades de Alianza SincroPartners
+Para evitar que el Director de Ingeniería quede atrapado en tareas operativas rutinarias al superar los $10M COP mensuales de facturación, se implementa un modelo de delegación por hitos financieros sostenidos (60 días continuos):
 
 ```mermaid
 flowchart TD
-    SP["Agencia Aliada / Traffiker"] --> M1["Modalidad 1: Referidor Oficial (Comisión)<br/>• SincroIA atiende, cierra y entrega<br/>• La agencia gana 20% de la venta + 10% MRR"]
-    SP --> M2["Modalidad 2: Marca Blanca / White-Label<br/>• La agencia vende con su propio logo y marca<br/>• SincroIA actúa como fábrica de software invisible<br/>• Tarifa mayorista SincroIA con 25% de descuento"]
+    H0["Hito 0 (Hasta $8M COP/mes)<br/>Fundador Solo: Ventas + Arquitectura + Calibración"] --> H1["Hito 1 ($10M+ COP/mes)<br/>+ Desarrollador Frontend Jr (Freelance por Proyecto)<br/>Libera 15h/sem en maquetación de componentes"]
+    H1 --> H2["Hito 2 ($20M+ COP/mes)<br/>+ Closer Comercial B2B (Comisión 10-15%)<br/>Libera 15h/sem en sesiones de Google Meet"]
+    H2 --> H3["Hito 3 ($35M+ COP/mes)<br/>+ Project Manager & Client Success<br/>Control de Onboarding & Soporte SincroCare"]
 ```
 
-#### Modalidad 1: Afiliado / Referidor Oficial (Para creadores de contenido, consultores y traffikers)
-* La agencia o consultor detecta que su cliente de pauta pierde ventas por no tener bot de WhatsApp o web veloz.
-* Le presenta a SincroIA como su *socio tecnológico oficial*.
-* SincroIA conduce el diagnóstico en Meet, cobra y ejecuta el proyecto.
-* **Compensación a la agencia:**
-  * **20% de comisión inmediata** sobre la tarifa de implementación cobrada ($378.000 a $978.000 COP por cliente).
-  * **10% mensual recurrente** de la suscripción SincroCare mientras el cliente permanezca activo ($19.000 a $59.000 COP/mes por cliente de forma pasiva).
+### Matriz de Compensación y Responsabilidades
 
-#### Modalidad 2: Marca Blanca / White-Label (Para agencias medianas que no quieren perder protagonismo)
-* La agencia le ofrece a su cliente un *"Ecosistema Integral de Automatización"* bajo su propia identidad visual y nombre de agencia.
-* SincroIA opera como su **departamento de tecnología invisible** (*behind the scenes*).
-* SincroIA le factura a la agencia su tarifa base con un **25% de descuento mayorista**:
-  * Plan Agente IA Pro: Tarifa SincroIA mayorista **$1.867.500 COP** (la agencia suele venderlo en $2.800.000 a $3.500.000 COP a su cliente, embolsándose un margen de hasta $1.600.000 COP limpios).
-  * SincroCare Mayorista: **$140.000 COP/mes** (la agencia lo cobra a su cliente en $250.000 a $350.000 COP/mes).
-* Toda la comunicación técnica la canaliza el PM de la agencia.
-
-### 16.3 Guion de Prospección Fría para Directores de Agencia (LinkedIn / WhatsApp B2B)
-
-> **Mensaje de Apertura (Directo y de Alto Valor):**  
-> *"Hola [Nombre], vi los resultados de las campañas que corren en [Nombre de su Agencia], brutal el trabajo que hacen en pauta.*  
->  
-> *Te escribo porque muchos media buyers y agencias amigas tienen el mismo dolor de cabeza: le llenan el WhatsApp de prospectos a los clientes, pero el equipo de ventas del cliente demora 3 horas en responder y terminan culpando a la pauta por las pocas ventas.*  
->  
-> *Nosotros desarrollamos una infraestructura de agentes de IA en WhatsApp nativos para Next.js que responden y cotizan en menos de 2 segundos 24/7. Estamos operando como brazo tecnológico de marca blanca para agencias: ustedes se quedan con el cliente y el margen, y nosotros nos encargamos del software detrás de bambalinas.*  
->  
-> *¿Te interesaría ver una demo de 3 minutos de cómo se ve funcionando para implementarlo en tus cuentas actuales?"*
-
-### 16.4 Ventajas Estratégicas para SincroIA
-1. **Costo de Adquisición de Clientes (CAC) = $0 COP:** Cada alianza con una agencia puede inyectar entre 2 y 5 clientes nuevos recurrentes cada trimestre.
-2. **Volumen Predecible:** Las agencias ya tienen la cartera de clientes calientes pagando mensualmente; solo necesitan añadir este servicio adicional (*up-sell*).
-3. **Blindaje de Cartera:** La tasa de retención (*churn rate*) de agencias en marca blanca es inferior al 5% porque cambiar de proveedor de software les implica riesgo técnico.
+| Hito Facturación | Rol a Contratar | Modelo de Remuneración | Responsabilidad Principal |
+|---|---|---|---|
+| **Hito 1 ($10M/mes)** | Dev Frontend Jr / Integrador | Por entregable ($700.000 a $1.000.000 COP/web) | Maquetación visual en Tailwind, pruebas móviles y carga de catálogos CSV. |
+| **Hito 2 ($20M/mes)** | Closer B2B de Ventas | Sueldo base de apoyo + Comisión (10% a 15% por cierre) | Conducción de sesiones consultivas en Google Meet y seguimiento de cotizaciones. |
+| **Hito 3 ($35M/mes)** | Project Manager / Soporte | Salario fijo ($1.8M a $2.4M COP/mes) + Bono retención | Recepción de onboarding, control del "Reloj del Cliente" y tickets SincroCare. |
 
 ---
 
-*Documento confidencial para uso operativo, comercial y de planeación de SincroIA.*
+## 16. PROGRAMA SINCROPARTNERS: ALIANZAS B2B & MARCA BLANCA PARA AGENCIAS
+
+Existen más de 4.500 agencias de publicidad, traffickers y community managers en Colombia y la región que saben correr pauta publicitaria en Meta Ads, pero **no saben programar en Next.js ni construir agentes de IA para WhatsApp**.
+
+Cuando sus clientes se quejan de que *"la pauta no vende porque en WhatsApp responden a las 4 horas"*, la agencia pierde la cuenta. **SincroPartners** soluciona esta brecha mediante dos modalidades:
+
+```mermaid
+flowchart TD
+    Agency["Agencia Aliada / Trafficker"] --> Mod1["Modalidad 1: Referidor Oficial (Comisión Directa)<br/>• SincroIA lidera el cierre y la entrega técnica<br/>• La agencia gana 20% del cierre + 10% de SincroCare MRR"]
+    Agency --> Mod2["Modalidad 2: Marca Blanca / White-Label<br/>• La agencia vende con su propio logo y marca<br/>• SincroIA actúa como fábrica de software invisible<br/>• Descuento mayorista del 25% sobre la tarifa oficial"]
+```
+
+* **Modalidad 1 (Referidor):** La agencia aliada presenta a SincroIA como su socio de ingeniería. SincroIA cierra la venta y le liquida de inmediato a la agencia el **20% del valor de implementación ($378.000 a $978.000 COP)** más el **10% mensual recurrente de SincroCare** mientras el cliente continúe activo.
+* **Modalidad 2 (Marca Blanca):** La agencia revende el paquete a su cliente corporativo por $3.500.000 COP o más. SincroIA cobra a la agencia su tarifa con 25% de descuento mayorista ($1.867.500 COP para IA Pro), entregando la solución bajo el nombre y branding de la agencia aliada.
+
+---
+
+## 17. HOJA DE RUTA DE EJECUCIÓN INMEDIATA
+
+Con la plataforma web, el webhook de WhatsApp en Railway, el CRM automatizado y el Marketing Hub 100% operativos, el plan de acción de los próximos 30 días se enfoca en la generación activa de flujo de caja:
+
+```mermaid
+flowchart TD
+    D1["Día 1 a 3: Calentamiento de Redes<br/>Publicar los primeros 3 posts creativos en IG y FB"] --> D2["Día 4 a 7: Campaña Inbound Meta Ads<br/>Activar anuncio Click-to-WhatsApp ($25k COP/día)"]
+    D2 --> D3["Día 8 a 15: Outbound Mystery Shopper<br/>10 auditorías nocturnas diarias a clínicas y retail"]
+    D3 --> D4["Día 16 a 30: Conquista de Alianzas B2B<br/>Contactar 15 directores de agencias para SincroPartners"]
+```
+
+1. **Fase 1 (Días 1 a 3 — Autoridad Visual en Redes):**
+   * Publicar los primeros 3 activos de la suite (`post_01_vendedor_24_7.png`, `post_02_web_lenta.png`, `post_03_nomina_vs_ia.png`) en Instagram `@sincroia.lat` y Facebook.
+   * Fijar en historias destacadas los pilares: *¿Qué es SincroIA?*, *Demo Sofía*, *Precios Claros* y *Garantía Técnica*.
+2. **Fase 2 (Días 4 a 7 — Activación del Motor Inbound):**
+   * Configurar campaña de Meta Ads dirigida a WhatsApp Business oficial (+57 312 463 0488) con presupuesto de $25.000 COP diarios.
+   * Monitorear el embudo dual: Sofía atendiendo en 1.8s, leads ingresando al CRM de Google Sheets y alertas en Telegram.
+3. **Fase 3 (Días 8 a 15 — Prospección Outbound Quirúrgica):**
+   * Ejecutar la rutina matutina de 10 auditorías nocturnas Mystery Shopper a negocios en Meta Ad Library.
+   * Meta comercial: cerrar los primeros 2 proyectos de implementación ($3.78M a $4.98M COP).
+4. **Fase 4 (Días 16 a 30 — Activación de SincroPartners B2B):**
+   * Enviar el guion de prospección B2B a 15 directores de agencias de marketing digital en Colombia.
+   * Consolidar las 2 primeras agencias aliadas en modalidad de marca blanca.
+
+---
+
+### CONTROL DE VERSIONES Y DOCUMENTOS ASOCIADOS
+
+| Documento Referenciado | Ubicación en Repositorio | Propósito Operativo |
+|---|---|---|
+| **Propuesta Comercial Express** | [`docs/PLANTILLA_PROPUESTA_COMERCIAL_EXPRESS.md`](./PLANTILLA_PROPUESTA_COMERCIAL_EXPRESS.md) | Formato oficial para cotizaciones y cierres express 50/50. |
+| **Guía de Formulario de Onboarding** | [`docs/GUIA_FORMULARIO_ONBOARDING_GOOGLE_FORMS.md`](./GUIA_FORMULARIO_ONBOARDING_GOOGLE_FORMS.md) | Enlace y estructura del formulario de recepción de insumos. |
+| **Kit Maestro de Lanzamiento de Redes** | [`docs/KIT_LANZAMIENTO_REDES_SINCROIA.md`](./KIT_LANZAMIENTO_REDES_SINCROIA.md) | Biografías, copys fundacionales y calendario de publicación. |
+| **Contrato Marco de Servicios** | [`docs/CONTRATO_MARCO_SERVICIOS_SINCROIA.md`](./CONTRATO_MARCO_SERVICIOS_SINCROIA.md) | Marco contractual exhaustivo bajo legislación colombiana. |
+| **Guía CRM Google Sheets** | [`docs/GUIA_CONEXION_GOOGLE_SHEETS_CRM.md`](./GUIA_CONEXION_GOOGLE_SHEETS_CRM.md) | Código Google Apps Script y conexión de base de datos de leads. |
+| **Guía Despliegue Railway 24/7** | [`docs/GUIA_DESPLIEGUE_RAILWAY_24_7.md`](./GUIA_DESPLIEGUE_RAILWAY_24_7.md) | Manual de persistencia del daemon WhatsApp Baileys en Docker. |
+| **Protocolo Flujo del Cliente** | [`docs/PROTOCOLO_FLUJO_CLIENTE_SINCROIA.md`](./PROTOCOLO_FLUJO_CLIENTE_SINCROIA.md) | SOP paso a paso desde el primer contacto hasta el pase a producción. |
+| **Manual de Operaciones & Finanzas** | [`docs/MANUAL_DE_OPERACIONES_Y_PROTOCOLOS_SINCROIA.md`](./MANUAL_DE_OPERACIONES_Y_PROTOCOLOS_SINCROIA.md) | Freno a scope creep, acuerdos SLA y regla financiera 50/30/20. |
+
+---
+
+*Documento estratégico y operacional de carácter confidencial de SincroIA. Diseñado y supervisado por el Ing. Alejandro Melo Gutiérrez.*
